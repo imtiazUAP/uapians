@@ -1,0 +1,29 @@
+<!--  Edited by XMLSpy  -->
+<pages>
+<link>
+<title>Students</title>
+<url>https://localhost/mylab/Student_List.php</url>
+</link>
+<link>
+<title>Courses</title>
+<url>https://localhost/mylab/Course_List.php</url>
+</link>
+<link>
+<title>Blood Bank</title>
+<url>
+https://localhost/mylab/Blood_List.php
+</url>
+</link>
+<link>
+<title>Teachers</title>
+<url>https://localhost/mylab/Employee_List.php</url>
+</link>
+<link>
+<title>Book References</title>
+<url>https://localhost/mylab/Reference_List.php</url>
+</link>
+<link>
+<title>Home</title>
+<url>https://localhost/mylab/Home.php</url>
+</link>
+</pages>

@@ -1,0 +1,11 @@
+UPDATE s_info SET SMID=9 WHERE SMID=8;
+UPDATE s_info SET SMID=8 WHERE SMID=7;
+UPDATE s_info SET SMID=7 WHERE SMID=6;
+UPDATE s_info SET SMID=6 WHERE SMID=5;
+UPDATE s_info SET SMID=5 WHERE SMID=4;
+UPDATE s_info SET SMID=4 WHERE SMID=3;
+UPDATE s_info SET SMID=3 WHERE SMID=2;
+UPDATE s_info SET SMID=2 WHERE SMID=1;
+
+
+//run this query from phpmyadmin after every six month when semester is over.
