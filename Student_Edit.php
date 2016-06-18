@@ -33,12 +33,11 @@ $row = mysql_fetch_array($results);
 </tr>
 
 <tr>
-<td>Donor:</td>
+<td>District:</td>
 <td>
 <select name="district_id" id="district_id" selected="">
 <?php
-//$connect=mysql_connect("localhost","root","");
-//$select_db=mysql_select_db("example_db");
+
 $query="SELECT DISTINCT district_id,district_name FROM districts ORDER BY district_id";
 $rs = mysql_query($query) or die ('Error submitting');
 while ($rows = mysql_fetch_assoc($rs)) {
@@ -72,20 +71,13 @@ while ($rows = mysql_fetch_assoc($rs)) {
 <td><input name="SB_of_Date" type="text" id="SB_of_Date" value="<?php echo $row["SB_of_Date"]; ?>" /></td>
 </tr>
 
-<tr>
-<td>Portrait:</td>
-<td><input name="SPortrait" type="text" id="SPortrait" value="<?php echo $row["SPortrait"]; ?>" /></td>
-</tr>
-
-
+<input type="hidden" name="SPortrait" type="text" id="SPortrait" value="<?php echo $row["SPortrait"]; ?>" />
 
 <tr>
 <td>Semester</td>
 <td>
 <select name="SMID" id="SMID" selected="">
 <?php
-//$connect=mysql_connect("localhost","root","");
-//$select_db=mysql_select_db("example_db");
 $query="SELECT DISTINCT SMID,SMName FROM sm_info ORDER BY SMID";
 $rs = mysql_query($query) or die ('Error submitting');
 while ($rows = mysql_fetch_assoc($rs)) {
