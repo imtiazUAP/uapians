@@ -71,124 +71,8 @@ if (empty($_SESSION['username'])) {
 
 
 <div class="realbody">
+<?php include("menu.php"); ?>
 
-	<?php
-
-$strquery="SELECT SPortrait,username FROM s_info INNER JOIN userinfo ON s_info.SID=userinfo.SID WHERE username='{$b}'";
-$results=mysql_query($strquery);
-$num=mysql_numrows($results);
-
-
-$SPortrait=mysql_result($results,$i,"SPortrait");
-$username=mysql_result($results,$i,"username");
-?>
-
-						<?php
-
-$strquery="SELECT Employee_Portrait,username FROM e_info INNER JOIN userinfo ON e_info.SID=userinfo.SID WHERE username='{$b}'";
-$results=mysql_query($strquery);
-$num=mysql_numrows($results);
-
-
-$Employee_Portrait=mysql_result($results,$i,"Employee_Portrait");
-$username=mysql_result($results,$i,"username");
-?>
-
-
-
-<div id='cssmenu_new'>
-<ul>
-
-						<?php 
-					if ($userdata[admin] == '0') {
-					?>
-   <li><a href='My_Profile.php'><span><img style="width:13px; height:13px; border:1px solid white; vertical-align:middle"src="<?php echo $SPortrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
-					<?php
-					}
-	 				?>
-					
-					
-											<?php 
-					if ($userdata[admin] == '1') {
-					?>
-
-<li><a href='Admin_Control.php'><span>Administration</span></a></li>
-					<?php
-					}
-	 				?>
-					
-					
-					
-					
-						<?php 
-					if ($userdata[admin] == '4') {
-					?>
-		
-   <li><a href='My_Profile_Teacher.php'><span><img style="width:13px; height:13px; border:1px solid white; vertical-align:middle"src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
-					<?php
-					}
-	 				?>
-					
-											<?php 
-					if ($userdata[admin] == '5') {
-					?>
-   <li><a href='My_Profile_Staff.php'><span><img style="width:13px; height:13px; border:1px solid white; vertical-align:middle"src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
-					<?php
-					}
-	 				?>
-
-   <li><a href='Home.php'><span>Home</span></a></li>
-   <li class='active has-sub'><a href='#'><span>Students</span></a>
-      <ul>
-         <li class='has-sub'><a href='1st_Year_1st_Semester.php'><span>1st year 1st Semester</span></a>
-         </li>
-         <li class='has-sub'><a href='1st_Year_2nd_Semester.php'><span>1st year 2nd Semester</span></a>
-         </li>
-		          <li class='has-sub'><a href='2nd_Year_1st_Semester.php'><span>2nd year 1st Semester</span></a>
-         </li>
-		          <li class='has-sub'><a href='2nd_Year_2nd_Semester.php'><span>2nd year 2nd Semester</span></a>
-         </li>
-		          <li class='has-sub'><a href='3rd_Year_1st_Semester.php'><span>3rd year 1st Semester</span></a>
-         </li>
-		          <li class='has-sub'><a href='3rd_Year_2nd_Semester.php'><span>3rd year 2nd Semester</span></a>
-         </li>
-		          <li class='has-sub'><a href='4th_Year_1st_Semester.php'><span>4th year 1st Semester</span></a>
-         </li>
-		          </li>
-		          <li class='has-sub'><a href='4th_Year_2nd_Semester.php'><span>4th year 2nd Semester</span></a>
-         </li>
-		 <li class='has-sub'><a href='ExStudents.php'><span>Ex Students of CSE</span></a>
-         </li>
-      </ul>
-   </li>
-      <li class='active has-sub'><a href='#'><span>Faculties & Staffs</span></a>
-      <ul>
-         <li class='has-sub'><a href='Faculty_List.php'><span>Faculty</span></a>
-         </li>
-         <li class='has-sub'><a href='Staff_List.php'><span>Staff</span></a>
-         </li>
-
-      </ul>
-   </li>
-   
-   <li><a href='Course_List.php'><span>Courses & References</span></a></li>
-
-   
-   <li><a href='Blog_List.php'><span>CSE Blog</span></a></li>
-   <li><a href='Blood_List.php'><span>Blood Bank</span></a></li>
-   <li class='last'><a href='About.php'><span>About</span></a></li>
-</ul>
-</div>
-
-
-	<div id='cssmenu' align="center" style="vertical-align:middle">
-	</div>
-
-
-	
-	
-	
-	
 	<div id="content">
 	<div id="colOne">
 	
@@ -211,16 +95,15 @@ $username=mysql_result($results,$i,"username");
 			<h3  align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic Aspects</h3>
 			</div>
 			<ul class="bottom">
-				<li><a href="1st_Year_1st_Semester.php">1st Year 1st Semester</a></li>
-				<li><a href="1st_Year_2nd_Semester.php">1st Year 2nd Semester</a></li>
-				<li><a href="2nd_Year_1st_Semester.php">2nd Year 1st Semester</a></li>
-				<li><a href="2nd_Year_2nd_Semester.php">2nd Year 2nd Semester</a></li>
-				<li><a href="3rd_Year_1st_Semester.php">3rd Year 1st Semester</a></li>
-				<li><a href="3rd_Year_2nd_Semester.php">3rd Year 2nd Semester</a></li>
-				<li><a href="4th_Year_1st_Semester.php">4th Year 1st Semester</a></li>
-				<li><a href="4th_Year_2nd_Semester.php">4th Year 2nd Semester</a></li>
-                                <li><a href="28th_batch.php">28th Batch</a></li>
-				<li><a href="27th_batch.php">27th Batch</a></li>
+				<li><a href="semester_students.php?SMID=1">1st Year 1st Semester</a></li>
+				<li><a href="semester_students.php?SMID=2">1st Year 2nd Semester</a></li>
+				<li><a href="semester_students.php?SMID=3">2nd Year 1st Semester</a></li>
+				<li><a href="semester_students.php?SMID=4">2nd Year 2nd Semester</a></li>
+				<li><a href="semester_students.php?SMID=5">3rd Year 1st Semester</a></li>
+				<li><a href="semester_students.php?SMID=6">3rd Year 2nd Semester</a></li>
+				<li><a href="semester_students.php?SMID=7">4th Year 1st Semester</a></li>
+				<li><a href="semester_students.php?SMID=8">4th Year 2nd Semester</a></li>
+                <li><a href="semester_students.php?SMID=9">Ex Students</a></li>
 				
 			</ul>
 		</div>

@@ -66,24 +66,24 @@ $username=mysql_result($results,$i,"username");
    <li><a href='Home.php'><span>Home</span></a></li>
    <li class='active has-sub'><a href='#'><span>Students</span></a>
       <ul>
-         <li class='has-sub'><a href='1st_Year_1st_Semester.php'><span>1st year 1st Semester</span></a>
+         <li class='has-sub'><a href='semester_students.php?SMID=1'><span>1st year 1st Semester</span></a>
          </li>
-         <li class='has-sub'><a href='1st_Year_2nd_Semester.php'><span>1st year 2nd Semester</span></a>
+         <li class='has-sub'><a href='semester_students.php?SMID=2'><span>1st year 2nd Semester</span></a>
          </li>
-		          <li class='has-sub'><a href='2nd_Year_1st_Semester.php'><span>2nd year 1st Semester</span></a>
+		          <li class='has-sub'><a href='semester_students.php?SMID=3'><span>2nd year 1st Semester</span></a>
          </li>
-		          <li class='has-sub'><a href='2nd_Year_2nd_Semester.php'><span>2nd year 2nd Semester</span></a>
+		          <li class='has-sub'><a href='semester_students.php?SMID=4'><span>2nd year 2nd Semester</span></a>
          </li>
-		          <li class='has-sub'><a href='3rd_Year_1st_Semester.php'><span>3rd year 1st Semester</span></a>
+		          <li class='has-sub'><a href='semester_students.php?SMID=5'><span>3rd year 1st Semester</span></a>
          </li>
-		          <li class='has-sub'><a href='3rd_Year_2nd_Semester.php'><span>3rd year 2nd Semester</span></a>
+		          <li class='has-sub'><a href='semester_students.php?SMID=6'><span>3rd year 2nd Semester</span></a>
          </li>
-		          <li class='has-sub'><a href='4th_Year_1st_Semester.php'><span>4th year 1st Semester</span></a>
+		          <li class='has-sub'><a href='semester_students.php?SMID=7'><span>4th year 1st Semester</span></a>
          </li>
 		          </li>
-		          <li class='has-sub'><a href='4th_Year_2nd_Semester.php'><span>4th year 2nd Semester</span></a>
+		          <li class='has-sub'><a href='semester_students.php?SMID=8'><span>4th year 2nd Semester</span></a>
          </li>
-		 <li class='has-sub'><a href='ExStudents.php'><span>Ex Students of CSE</span></a>
+		 <li class='has-sub'><a href='semester_students.php?SMID=9'><span>Ex Students of CSE</span></a>
          </li>
       </ul>
    </li>
