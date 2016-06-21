@@ -3,7 +3,7 @@
 	error_reporting(0);
 	include("dbconnect.php");
 	include_once("page.inc.php");
-	
+
 	$b=$_SESSION['username'];
 	$userrole = mysql_query("select * from userinfo where username='{$b}'");
 	$userdata = mysql_fetch_assoc($userrole);
@@ -24,19 +24,19 @@ if (empty($_SESSION['username'])) {?>
 			<div id="logo">
 				<div class="realbody" style="height:2000px">
 					<?php include("menu.php"); ?>
-		
+
 					<div id="content">
 						<div id="colOne">
-							<?php include("sidebar.php"); ?>	
+							<?php include("sidebar.php"); ?>
 						</div>
-	
+
 						<div>
 							<div style="padding-top:40">
 								<form>
 								<div align="center">
 									<?php if (($userdata[admin] == '1')) {?>
 									<a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true" title="New Student" class="thickbox">Create New Student</a>
-									<?php}?>
+									<?php } ?>
 								</div>
 									<table class="hoverTable" border="1" align="center" width="800" >
 										<tr align="center">
@@ -44,15 +44,15 @@ if (empty($_SESSION['username'])) {?>
 											<td bgcolor="588C73" width="200">Name of Student</td>
 											<td bgcolor="588C73" width="100px"> Portrait </td>
 											<td bgcolor="588C73" > Semester </td>
-									
+
 											<?php if (($userdata[admin] == '1')) {?>
 											<td bgcolor="#006699" > Results </td>
 											<td bgcolor="#006699" width="100"> Admin|Panel </td>
 											<?php } ?>
 										</tr>
-					
+
 										<?php
-								                $sql = "SELECT SID,SName,SReg,SPortrait,SMName FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID='1' order by SReg";
+								                $sql = "SELECT SID,SName,SReg,SPortrait,SMName FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID='" . $_GET["SMID"] . "' order by SReg";
 								                $result = @mysql_query($sql);
 								                $total_records = @mysql_num_rows($result);
 								                $record_per_page = 13;
@@ -83,7 +83,7 @@ if (empty($_SESSION['username'])) {?>
 				</div>
 
 			<div class="footer">
-				<?php include("footer.php");?>		 
+				<?php include("footer.php");?>
 			</div>
 </body>
 </html>
