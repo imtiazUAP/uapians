@@ -6,6 +6,6 @@ $strquery="UPDATE blog SET Blog= '" . $_GET['Blog'] . "' where Blog_ID='".$_GET[
 
 $results=mysql_query ($strquery);
 
-header ('location: http://uapians.net/Blog_Edit.php '); 
+header ('location: https://localhost/uapians/Blog_Edit.php ');
 
 ?>

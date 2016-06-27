@@ -5,6 +5,6 @@
 	  
   
   
-  header ('location: http://uapians.net/Reference_Save_Confirmation.php '); 
+  header ('location: https://localhost/uapians/Reference_Save_Confirmation.php ');
 mysql_close($con)
 ?> 

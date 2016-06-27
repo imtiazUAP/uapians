@@ -18,7 +18,7 @@ $strquery="UPDATE s_info SET SRoll= '" . $_GET['SRoll'] . "',SName= '" . $_GET['
 
 $results=mysql_query ($strquery);
 
-header ('location: http://uapians.net/Student_Edit.php '); 
+header ('location: https://localhost/uapians/Student_Edit.php ');
 
 ?>
 ?>

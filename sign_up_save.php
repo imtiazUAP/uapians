@@ -52,6 +52,6 @@ else
   }
   
   
-  header ('location: http://uapians.net/sign_up_notification.php '); 
+  header ('location: https://localhost/uapians/sign_up_notification.php ');
 mysql_close($con)
 ?> 
