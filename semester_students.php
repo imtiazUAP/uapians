@@ -56,7 +56,7 @@ if (empty($_SESSION['username'])) {?>
                                             $record_per_page = 13;
                                             $scroll = 4;
                                             $page = new Page(); ///creating new instance of Class Page
-                                            $page->set_page_data($_SERVER['PHP_SELF'], $total_records, $record_per_page, $scroll, true, true, true);
+                                            $page->set_page_data($_SERVER['PHP_SELF'], $_GET["SMID"], $total_records, $record_per_page, $scroll, true, true, true);
                                             $result = @mysql_query($page->get_limit_query($sql));
 
                                         while ($data = mysql_fetch_assoc($result)) { ?>
