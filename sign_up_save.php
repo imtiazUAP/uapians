@@ -1,4 +1,6 @@
-<?php include("dbconnect.php"); ?>
+<?php
+error_reporting(0);
+include("dbconnect.php"); ?>
 <?php
 $allowedExts = array("gif", "jpeg", "jpg", "png");
 $temp = explode(".", $_FILES["file"]["name"]);
@@ -50,6 +52,6 @@ else
   }
   
   
-  header ('location: http://uapians.net/sign_up_notification.php '); 
+  header ('location: https://localhost/uapians/sign_up_notification.php ');
 mysql_close($con)
 ?> 

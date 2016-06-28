@@ -42,7 +42,7 @@
    <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="" class="thickbox"><span>CSE Blog</span></a></li>
    <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="" class="thickbox"><span>Blood Bank</span></a></li>
    <li><a href='About_for_index.php'><span>About</span></a></li>
-   <li class='last'><a href='sign_up.php'><span>Sign up</span></a></li>
+   <li class='last' style="background-color:deepskyblue"><a href='sign_up.php'><span>Sign up</span></a></li>
 </ul>
 </div>
 	<div id='cssmenu' align="center" style="vertical-align:middle">
