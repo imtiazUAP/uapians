@@ -106,15 +106,15 @@
 
         <p>
         <tr>
-             <td><label for="email" class="signup_field" data-icon="u">Your E Mail:</label> </td><td>
-             <input id="lastnamesignup" name="email" required="required" type="text" placeholder="example@yahoo.com" /></td>
+            <td><label for="email" class="signup_field" data-icon="u">Your E Mail:</label> </td>
+            <td><input id="lastnamesignup" name="email" required="required" type="text" placeholder="example@yahoo.com" /></td>
         </tr>
         </p>
 
 
         <p>
         <tr>
-             <td><label for="Portrait" class="signup_field" data-icon="u">Upload Photo:</label><p>(photo size < 500 KB)</p></td>
+             <td><label for="Portrait" class="signup_field" data-icon="u">Upload Photo:</label></td>
              <td><input id="file" name="file" required="required" type="file" placeholder="required" /></td>
         </tr>
         </p>
