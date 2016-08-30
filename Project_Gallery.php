@@ -90,54 +90,54 @@ include("sidebar.php");
 <table>
 	<tr>
 		<td>
-			<a href="Project_Gallery_Java.php"><img border="0" alt="W3Schools" src="images/java.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=1"><img border="0" alt="W3Schools" src="images/java.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_C.php"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=2"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_C++.php"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=3"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 		<tr>
 		<td>
-			<a href="Project_Gallery_Csharp.php"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=4"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_Android.php"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=5"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_Assembly.php"><img border="0" alt="W3Schools" src="images/assembly.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=6"><img border="0" alt="W3Schools" src="images/assembly.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 		<tr>
 		<td>
-			<a href="Project_Gallery_Webapps.php"><img border="0" alt="W3Schools" src="images/webapps.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=7"><img border="0" alt="W3Schools" src="images/webapps.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_Python.php"><img border="0" alt="W3Schools" src="images/python.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=8"><img border="0" alt="W3Schools" src="images/python.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_Database.php"><img border="0" alt="W3Schools" src="images/database.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=9"><img border="0" alt="W3Schools" src="images/database.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 			<tr>
 		<td>
-			<a href="Project_Gallery_Php.php"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=10"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_Graphics.php"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=11"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Project_Gallery_Wordpress.php"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
+			<a href="projects.php?language_id=12"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 </table>

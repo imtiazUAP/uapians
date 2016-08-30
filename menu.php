@@ -99,7 +99,7 @@ $username=mysql_result($results,$i,"username");
    
          <li class='active has-sub'><a href='Course_List.php'><span>Courses & References</span></a>
       <ul>
-         <li class='has-sub'><a href='Project_Gallery.php'><span>Project Gallery</span></a>
+         <li class='has-sub'><a href='project_gallery.php'><span>Project Gallery</span></a>
          </li>
 <li class='has-sub'><a href='video_tutorial_gallery.php'><span>Video Tutorials</span></a>
          </li>
