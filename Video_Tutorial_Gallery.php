@@ -77,119 +77,119 @@ include("sidebar.php");
 <table>
 	<tr>
 		<td>
-			<a href="Video_Tutorial_HTML.php"><img border="0" alt="W3Schools" src="images/videodefaultimage.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=1"><img border="0" alt="W3Schools" src="images/videodefaultimage.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_HTML5.php"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=2"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_CSS.php"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=3"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 		<tr>
 		<td>
-			<a href="Video_Tutorial_PHP.php"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=4"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_JAVASCRIPT.php"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=5"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_JQUERY.php"><img border="0" alt="W3Schools" src="images/assembly.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=6"><img border="0" alt="W3Schools" src="images/assembly.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 		<tr>
 		<td>
-			<a href="Video_Tutorial_WORDPRESS.php"><img border="0" alt="W3Schools" src="images/webapps.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=7"><img border="0" alt="W3Schools" src="images/webapps.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_AJAX.php"><img border="0" alt="W3Schools" src="images/python.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=8"><img border="0" alt="W3Schools" src="images/python.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_TWITTERBOOTSTRAP.php"><img border="0" alt="W3Schools" src="images/database.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=9"><img border="0" alt="W3Schools" src="images/database.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 			<tr>
 		<td>
-			<a href="Video_Tutorial_JOOMLA.php"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=10"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_PHOTOSHOP.php"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=11"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_ILLUSTRATOR.php"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=12"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 				<tr>
 		<td>
-			<a href="Video_Tutorial_SEO.php"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=13"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_CSHARP.php"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=14"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_ASPDOTNET.php"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=15"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 				<tr>
 		<td>
-			<a href="Video_Tutorial_CODEIGNITER.php"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=16"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_CAKEPHP.php"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=17"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_MYSQL.php"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=18"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 				<tr>
 		<td>
-			<a href="Video_Tutorial_MSSQL.php"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=19"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_C.php"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=20"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_CPLUSPLUS.php"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=21"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 				<tr>
 		<td>
-			<a href="Video_Tutorial_PYTHON.php"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=22"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_JAVA.php"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=23"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_GRAPHICS.php"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=24"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 				<tr>
 		<td>
-			<a href="Video_Tutorial_ANDROID.php"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=25"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="Video_Tutorial_ODESK.php"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=26"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a>
 		</td>
 		
 		<td>
-			<a href="#"><img border="0" alt="W3Schools" src="images/videodefaultimage.jpg" width="265" height="160"></a>
+			<a href="video_tutorial.php?vtid=27"><img border="0" alt="W3Schools" src="images/videodefaultimage.jpg" width="265" height="160"></a>
 		</td>
 	</tr>
 </table>

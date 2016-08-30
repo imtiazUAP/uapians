@@ -101,7 +101,7 @@ $username=mysql_result($results,$i,"username");
       <ul>
          <li class='has-sub'><a href='Project_Gallery.php'><span>Project Gallery</span></a>
          </li>
-<li class='has-sub'><a href='Video_Tutorial_Gallery.php'><span>Video Tutorials</span></a>
+<li class='has-sub'><a href='video_tutorial_gallery.php'><span>Video Tutorials</span></a>
          </li>
          <li class='has-sub'><a href='Course_List.php'><span>Course References</span></a>
          </li>
