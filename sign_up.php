@@ -16,10 +16,6 @@
 
     <?php include("menu_for_index.php");?>
 
-    <div id="wowslider-container1" style="height:200px">
-        <?php include("slider1.php");?>
-    </div>
-
         <div id="content">
         <div id="colOne" align="left">
             <?php include("sidebar_for_index.php");?>
@@ -27,9 +23,8 @@
 
         <br>
         <br>
-        <br>
-        <div style="font-size:24px; font-weight:bold; color:#FFFFFF">Sign Up</div>
-        <div style="font-size:18px">
+        <div style="font-size:18px; font-weight:bold; color:#FFFFFF">Sign Up</div>
+        <div style="font-size:14px">
             <p>After successful registration a email will be sent to your valid email account with username and password. Use that user name and password to log in... </p>
         </div>
         <br>
@@ -137,7 +132,7 @@
     <br>
     <br>
 
-        <p class="signin_button"><input type="Submit" value="Register"/></p>
+        <button type="Submit" class="button button_blue">Create an account</button>
     </form>
     </div>
     </div>

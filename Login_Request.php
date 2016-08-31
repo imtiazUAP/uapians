@@ -4,32 +4,27 @@ error_reporting(0);
 $connect=mysql_connect("localhost","root","");
 $select_db=mysql_select_db("mylab");
 ?>
-<?php //print $_SESSION['username'];                 ?>
-
 
 <html>
-<head>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/thickbox.js"></script>
-<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-</head>
-<body>
-<br>
-<div style="font-size:24px; color:#0000FF; font-weight:bold" align="center">
+    <head>
+        <?php include("header.php"); ?>
+    </head>
+    <body>
+        <br>
+            <div align="center">
+                <img src="images/tutorial.png"  style="height:100"/>
+            </div>
+        <div>
+            <p style="padding-left: 10px; font-size:14px; color:#0000FF; font-weight:bold; text-align: center">Please log in to continue...</p>
+            </br>
+            <p style="font-size:14px; color:#0000FF; text-align: center">If you don't have an account yet, then please sign up...</p>
+        </div>
+        </br>
 
-<div>
-<img src="images/tutorial.png"  style="height:150"/>
-</div>
-<p>Please Log in to continue...
-</p>
-</div>
-	
-</div>
-
-<div align="right"; style="padding-right:25">
-<label>
-<a href="#" onClick="tb_remove();">Close</a>
-</label>
-</div>
-</body>
+        <div align="right"; style="padding-right:25">
+            <button class="button button_green" onclick="window.open('index.php','_top')"> Log In </button>
+            <button class="button button_blue" onclick="window.open('sign_up.php','_top')"> Sign Up </button>
+            <button class="button button_red" onClick="tb_remove()"> Cancel </button>
+        </div>
+    </body>
 </html>

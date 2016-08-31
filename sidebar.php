@@ -2,7 +2,7 @@
 		<div class="box">
 		<br>
 		<br>
-		<div style="text-decoration:none;font-size:24px; color:#FFFFFF; font-weight:bold"><span>You are Logged in as  <?php print $_SESSION['username']?></span></div>
+		<div style="text-decoration:none;font-size:18px; color:#FFFFFF; font-weight:bold">You are Logged in as <span style="font-style: italic; font-size: 24px">...<?php print $_SESSION['username']?> </span> </div>
 				
 		<br>
 
@@ -16,7 +16,7 @@
 					}
 	 				?>
 
-		<a href="Log_Out.php" style="text-decoration:none;font-size:24px; font-weight:bold"><span>Log out</span></a>
+            <button class="button button_red" onclick="window.open('Log_Out.php','_top')"> Log Out </button>
 		
 		<br>
 		<br>
