@@ -6,7 +6,7 @@
         <form  action="" method="post" >
             <div class="tabledv"><div class="registername">User Name:</div><div class="registerfield"><input type="text" name="loginname" id="loginname" maxlength="30" size="29" value="" autofocus="autofocus"/></div></div>
             <div class="tabledv"><div class="registername">Password:</div><div class="registerfield"><input type="password" name="password" id="password" maxlength="30" size="29" value="" autofocus="autofocus"/></div></div>
-            <div class="tabledv"><div class="registername"></div><div class="registerfield"><input name="login" type="submit" value="Log In" /></div></div>
+            <button name="login" type="Submit" class="button button_blue">Log In</button>
         </form>
 		
 		
