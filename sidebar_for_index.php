@@ -6,8 +6,10 @@
         <form  action="" method="post" >
             <div class="tabledv"><div class="registername">User Name:</div><div class="registerfield"><input type="text" name="loginname" id="loginname" maxlength="30" size="29" value="" autofocus="autofocus"/></div></div>
             <div class="tabledv"><div class="registername">Password:</div><div class="registerfield"><input type="password" name="password" id="password" maxlength="30" size="29" value="" autofocus="autofocus"/></div></div>
-            <button name="login" type="Submit" class="button button_blue">Log In</button>
+			<button name="login" type="Submit" class="button button_blue">Log In</button>
         </form>
+		<button name="reset_pass" onclick="window.open('reset_pass.php','_top')" class="button button_red">Forgot Your Password.... ??? =></button>
+
 		
 		
 
