@@ -5,7 +5,6 @@ $strquery="SELECT SPortrait,username FROM s_info INNER JOIN userinfo ON s_info.S
 $results=mysql_query($strquery);
 $num=mysql_numrows($results);
 
-
 $SPortrait=mysql_result($results,$i,"SPortrait");
 $username=mysql_result($results,$i,"username");
 ?>
@@ -16,14 +15,13 @@ $strquery="SELECT Employee_Portrait,username FROM e_info INNER JOIN userinfo ON 
 $results=mysql_query($strquery);
 $num=mysql_numrows($results);
 
-
 $Employee_Portrait=mysql_result($results,$i,"Employee_Portrait");
 $username=mysql_result($results,$i,"username");
 ?>
 
-
 <div id='cssmenu_new'>
 <ul>
+
 
 						<?php 
 					if ($userdata[admin] == '0') {
