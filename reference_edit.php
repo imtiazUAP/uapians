@@ -1,11 +1,15 @@
 <html>
 <?php
-include("dbconnect.php");
-$strquery = "SELECT * from reference_info where ref_id= '" . $_GET["ref_id"] . "' ";
-$results = mysql_query ($strquery);
-$row = mysql_fetch_array($results);
+    include("dbconnect.php");
+    $strquery = "SELECT * from reference_info where ref_id= '" . $_GET["ref_id"] . "' ";
+    $results = mysql_query ($strquery);
+    $row = mysql_fetch_array($results);
 ?>
 <head>
+    <?php
+    include("header.php");
+    ?>
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/thickbox.js"></script>
 <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
