@@ -22,6 +22,7 @@ $username=mysql_result($results,$i,"username");
 <div id='cssmenu_new'>
 <ul>
 
+
 						<?php 
 					if ($userdata[admin] == '0') {
 					?>
