@@ -109,7 +109,7 @@ $username=mysql_result($results,$i,"username");
    </li>
 
 
-    
+
    <li><a href='Blog_List.php'><span>CSE Blog</span></a></li>
    <li><a href='Blood_List.php'><span>Blood Bank</span></a></li>
    <li class='last'><a href='About.php'><span>About</span></a></li>
