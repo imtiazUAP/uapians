@@ -31,13 +31,13 @@ if (empty($_SESSION['username'])) {
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/thickbox.js"></script>
 	<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">	
-	
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	
+
 	<link rel="stylesheet" type="text/css" href="engine1/style.css" />
 	<script type="text/javascript" src="engine1/jquery.js"></script>
-	
+
 
 	 <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -45,17 +45,17 @@ if (empty($_SESSION['username'])) {
    <link rel="stylesheet" href="css/style_new.css">
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script src="script.js"></script>
-	
 
-	
-	
-	
-	
+
+
+
+
+
 <script>
 function showResult(str)
 {
 if (str.length==0)
-  { 
+  {
   document.getElementById("livesearch").innerHTML="";
   document.getElementById("livesearch").style.border="0px";
   return;
