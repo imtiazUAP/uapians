@@ -2,20 +2,24 @@
 		<div class="box" align="left">
 		<br>
 					
-					        <p style="font-weight:bold; font-size:24px">Sign In</p>
+					        <p style="font-weight:bold; font-size:18px">Sign In</p></br>
         <form  action="" method="post" >
-            <div class="tabledv"><div class="registername">User Name:</div><div class="registerfield"><input type="text" name="loginname" id="loginname" maxlength="30" size="29" value="" autofocus="autofocus"/></div></div>
-            <div class="tabledv"><div class="registername">Password:</div><div class="registerfield"><input type="password" name="password" id="password" maxlength="30" size="29" value="" autofocus="autofocus"/></div></div>
-            <button name="login" type="Submit" class="button button_blue">Log In</button>
+            <div class="tabledv"><div class="registername"></div><div class="registerfield"><input type="text" name="loginname" id="loginname" maxlength="30" placeholder="Enter e-mail" required="required" size="29" value="" autofocus="autofocus"/></div></div> </br>
+
+            <div class="tabledv"><div class="registername"></div><div class="registerfield"><input required="required" type="password" name="password" id="password" maxlength="30" placeholder="Enter password" size="29" value="" autofocus="autofocus"/></div></div>
+
+			<button name="login" type="Submit" class="button button_blue">Log In</button>
         </form>
-		
-		
+
+		    <button name="reset_pass" onclick="window.open('reset_pass.php','_top')" class="button button_red">Forgot Password?</button>
+            <button name="sign_up" onclick="window.open('sign_up.php','_top')" class="button button_blue">Sign Up</button>
+
 
 		        <?php
-        if (isset($_REQUEST['login'])) {
+        if (isset($_REQUEST['login']) && !empty($_REQUEST['loginname'])) {
             $usname = $_REQUEST['loginname'];
             $uspass = $_REQUEST['password'];
-            $qry = "select * from userinfo where username='" . ($usname) . "' && password='" . md5($uspass) . "' ";
+            $qry = "select * from userinfo where SE_Mail='" . ($usname) . "' && password='" . md5($uspass) . "' ";
 
             $usresult = mysql_query($qry);
             $usdata = mysql_fetch_assoc($usresult);
@@ -32,6 +36,12 @@
 				window.location="Home.php";
 			</script>
              <?php
+            }elseif(empty($_SESSION['username'])){
+             ?>
+            <script language="JavaScript">
+                window.location="reset_pass.php?message=wrong_login_id__or_pass";
+			</script>
+            <?php
             }
         	}
         	?>
