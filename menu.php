@@ -93,7 +93,6 @@ $username=mysql_result($results,$i,"username");
          </li>
          <li class='has-sub'><a href='Staff_List.php'><span>Staff</span></a>
          </li>
-
       </ul>
    </li>
    
