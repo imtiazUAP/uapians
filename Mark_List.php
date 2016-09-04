@@ -1,44 +1,44 @@
 <?php
- session_start();
-include("dbconnect.php"); ?>
-<?php
-$b=$_SESSION['username'];
+session_start();
+error_reporting(0);
+include("dbconnect.php");
+include_once("page.inc.php");
+?>
+            <?php
+                $b=$_SESSION['username'];
 
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
-$userdata = mysql_fetch_assoc($userrole);
-//echo $userdata['admin'];
-
-
-
-
-if (empty($_SESSION['username'])) {
-    ?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script><?php } else { ?>
+                $userrole = mysql_query("select * from userinfo where username='{$b}'");
+                $userdata = mysql_fetch_assoc($userrole);
+                //echo $userdata['admin'];
+                if (empty($_SESSION['username'])) {
+            ?>
+                            <script language="JavaScript">
+                                window.location="index.php";
+                            </script>
+              <?php }
+                else {
+              ?>
 
 
 <html>
-<head>
-<title>Mark | Student Management Tool</title>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/thickbox.js"></script>
-<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
-</head>
+
+            <head>
+                <?php
+                include("header.php");
+                ?>
+
+            </head>
+
+
 <body>
-	<div id="grad1">
-	<div class="bodydiv">
+                            <div id="grad1">
+                            <div class="bodydiv">
 
-			<div id="logo" align="left">
-			<h1><a href="Home.php">Student Management Tool  </a></h1>
-			<p>A Software for Managing CSE Department</p>
-			</div>
+                            <?php include("logo.php"); ?>
+                            <div class="realbody" style="min-height:2300px">
+                            <?php include("menu.php"); ?>
 
-
-	<div class="realbody" style="min-height:600px">
-
-			<?php
+<?php
 
 //$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
@@ -52,30 +52,7 @@ $SPortrait=mysql_result($results,$i,"SPortrait");
 $username=mysql_result($results,$i,"username");
 ?>
 
-	<div id='cssmenu' align="center" style="vertical-align:middle">
-	<ul>
-			<li style="vertical-align:middle;"><a href='My_Profile.php'><span><img style="width:15px; height:15px; border:1px solid white; vertical-align:middle"src="<?php echo $SPortrait; ?>" alt="Profile Picture"><span> Profile</span></a></li>
-			
-   		<li><a href='Home.php'><span>Home</span></a></li>
-		
-		
 
-		
-			
-   		<li><a href='Student_List.php'><span>Students</span></a></li>
-
-		<li><a href='Employee_List.php'><span>Employees</span></a></li>
-   		<li><a href='Blog_List.php'><span>CSE Blog</span></a></li>   
-
-
-		
-   		<li><a href='Blood_List.php'><span>Blood</span></a></li>
-		<li><a href='About.php'><span>About</span></a></li>
-				
-	</ul>
-
-			</div>
-			
 			
 <form method="post">
 					<?php 
@@ -314,13 +291,10 @@ $f9=mysql_result($results,$i,"ECE_102");
 	
 	
 </div>
-
-		<div class="footer">
-		<div class="FooterText">
- 		<a href="http://www.emtiaj.blogspot.com" target="_blank">copyright @ www.emtiaj.blogspot.com</a>   |||||
-		<a href="http://uap-bd.edu/cse/index.html" target="_blank">copyright @ CSE Department, UAP</a> <br>
-		</div>			 
-		</div>
+                            <div class="footer">
+                                <?php include("footer.php");
+                                ?>
+                            </div>
 
 </body>
 </html>

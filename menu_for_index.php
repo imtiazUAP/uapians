@@ -1,8 +1,5 @@
 <div id='cssmenu_new'>
 <ul>
-
-
-
    <li><a href='index.php'><span>Home</span></a></li>
    <li class='active has-sub'><a href='#'><span>Students</span></a>
       <ul>
@@ -28,17 +25,15 @@
       </ul>
    </li>
       <li class='active has-sub'><a href='#'><span>Faculties & Staffs</span></a>
-      <ul>
-         <li class='has-sub'><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="" class="thickbox"><span>Faculty</span></a>
-         </li>
-         <li class='has-sub'><a href='#'><span>Staff</span></a>
-         </li>
-      </ul>
-   </li>
+              <ul>
+                 <li class='has-sub'><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="" class="thickbox"><span>Faculty</span></a>
+                 </li>
+                 <li class='has-sub'><a href='#'><span>Staff</span></a>
+                 </li>
+              </ul>
+      </li>
    
    <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="" class="thickbox"><span>Courses & References</span></a></li>
-
-   
    <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="" class="thickbox"><span>CSE Blog</span></a></li>
    <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="" class="thickbox"><span>Blood Bank</span></a></li>
    <li><a href='About_for_index.php'><span>About</span></a></li>

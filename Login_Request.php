@@ -1,14 +1,17 @@
 <?php
-session_start();
-error_reporting(0);
-$connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+     session_start();
+     error_reporting(0);
+     $connect=mysql_connect("localhost","root","");
+     $select_db=mysql_select_db("mylab");
 ?>
 
 <html>
     <head>
-        <?php include("header.php"); ?>
+        <?php
+        include("header.php");
+        ?>
     </head>
+
     <body>
         <br>
             <div align="center">

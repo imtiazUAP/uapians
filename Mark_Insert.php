@@ -1,9 +1,15 @@
+<?php
+    session_start();
+    error_reporting(0);
+    include("dbconnect.php");
+    include_once("page.inc.php");
+?>
 <html>
-<head>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/thickbox.js"></script>
-	<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-</head>
+    <head>
+        <?php
+            include("header.php");
+        ?>
+    </head>
 
 <body>
 <form action="Mark_Save.php" method="post">
