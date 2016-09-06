@@ -48,8 +48,8 @@ if (empty($_SESSION['username'])) {
                                     <?php
                                     if (($userdata[admin] == '1')) {
                                     ?>
-                                        <li><a href='php_sendmail_upload1.php'>Send Email</a></li>
-                                        <li><a href='Admin_Control.php'>Students Signup Confirmation </a></li>
+                                        <li><a href='sendmail1.php'>Send Email</a></li>
+                                        <li><a href='administration.php'>Students Signup Confirmation </a></li>
                                     <?php
                                     }
                                     ?>
@@ -65,19 +65,19 @@ if (empty($_SESSION['username'])) {
                             <?php
                             if (($userdata[admin] == '1')) {
                             ?>
-                            <li><a href='php_sendmail_upload1.php'>Send Email</a></li>
+                            <li><a href='sendmail1.php'>Send Email</a></li>
                             <?php
                             }
                             ?>
-                            <li><a href="upload_video_tutorial.php">Add Video Tutorial</a></li>
+                            <li><a href="upload_tutorial.php">Add Video Tutorial</a></li>
                             <li><a href="galary.php">Gallery</a></li>
-                            <li><a href="Blood_List_All.php">Blood Bank</a></li>
-                            <li><a href="Programing_Contest_Club.php">Programming Contest Club</a></li>
-                            <li><a href="Research_Publication_Club.php">Research and Publication Club</a></li>
-                            <li><a href="Sports_Club.php">Sports Club</a></li>
-                            <li><a href="Software_Hardware_Club.php">Software and Hardware Club</a></li>
-                            <li><a href="Cultural_Debating_Club.php">Cultural and Debating Club</a></li>
-                            <li><a href="Web_Club.php">Web Club</a></li>
+                            <li><a href="blood_list.php">Blood Bank</a></li>
+                            <li><a href="programing_contest_club.php">Programming Contest Club</a></li>
+                            <li><a href="research_publication_club.php">Research and Publication Club</a></li>
+                            <li><a href="sports_club.php">Sports Club</a></li>
+                            <li><a href="software_hardware_club.php">Software and Hardware Club</a></li>
+                            <li><a href="cultural_club.php">Cultural and Debating Club</a></li>
+                            <li><a href="web_club.php">Web Club</a></li>
                         </ul>
                     </div>
                     <br>
@@ -93,7 +93,7 @@ if (empty($_SESSION['username'])) {
                             <?php
                             if (($userdata[admin] == '1')) {
                             ?>
-                                <a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=600&width=350&modal=true" title="New Student" class="thickbox">Create New Student</a>
+                                <a href="student_insert.php?keepThis=true&TB_iframe=true&height=600&width=350&modal=true" title="New Student" class="thickbox">Create New Student</a>
                             <?php
                             }
                                 $strquery = "SELECT S.*, M.SMName FROM sign_up S, sm_info M WHERE S.SMID=M.SMID ORDER BY S.SReg";
@@ -133,7 +133,7 @@ if (empty($_SESSION['username'])) {
                                         <?php
                                         if (($userdata[admin] == '1')) {
                                         ?>
-                                        <td width="100"><a href='Sign_Up_Review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=300&width=350&do=edit&modal=true' class='thickbox'> Review</a> | <a href='Sign_Up_Review_Delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
+                                        <td width="100"><a href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=300&width=350&do=edit&modal=true' class='thickbox'> Review</a> | <a href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
                                         <?php
                                         }
                                         ?>

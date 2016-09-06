@@ -38,7 +38,7 @@ if (empty($_SESSION['username'])) {
                         ?>
                      </div>
 
-                    <form action="php_sendmail_upload2.php" method="post" name="form1" enctype="multipart/form-data">
+                    <form action="sendmail2.php" method="post" name="form1" enctype="multipart/form-data">
                         <table width="830" border="2" style="padding:100px;">
                             <tr>
                                 <td>Select Mail Contacts:</td>

@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<form id="form1" name="form1" method="get" action="Reference_Update.php">
+<form id="form1" name="form1" method="get" action="reference_update.php">
 
 <table>
 

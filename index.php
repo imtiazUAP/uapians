@@ -13,11 +13,11 @@ include("dbconnect.php");
         <div id="grad1">
             <div class="bodydiv" align="center">
                 <?php
-                include("logo_for_index.php");
+                include("logo_index.php");
                 ?>
                 <div class="realbody">
                     <?php
-                    include("menu_for_index.php");
+                    include("menu_index.php");
                     ?>
                     <div id="wowslider-container1" style="height:200px">
                         <?php
@@ -27,7 +27,7 @@ include("dbconnect.php");
 	            <div id="content">
 	                <div id="colOne" align="left">
                         <?php
-                        include("sidebar_for_index.php");
+                        include("sidebar_index.php");
                         ?>
 	                </div>
                     <div id="margin_figure" align="left">

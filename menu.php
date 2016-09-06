@@ -28,7 +28,7 @@
 					     if ($userdata[admin] == '0') {
 					?>
 
-                    <li><a href='My_Profile.php'><span><img  style="display:inline; width:13px; height:13px; border:1px solid white;" src="<?php echo $SPortrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+                    <li><a href='my_profile.php'><span><img  style="display:inline; width:13px; height:13px; border:1px solid white;" src="<?php echo $SPortrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
 
                      <?php
 					    }
@@ -39,7 +39,7 @@
 					    if ($userdata[admin] == '1') {
 					?>
 
-                    <li><a href='Admin_Control.php'><span>Administration</span></a></li>
+                    <li><a href='administration.php'><span>Administration</span></a></li>
 					<?php
 					    }
 	 				?>
@@ -51,7 +51,7 @@
 					    if ($userdata[admin] == '4') {
 					?>
 		
-                       <li><a href='My_Profile_Teacher.php'><span><img class="img-responsive img-circle margin" style="display:inline; width:20px; height:20px; border:1px solid white;" src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+                       <li><a href='my_profile_teacher.php'><span><img class="img-responsive img-circle margin" style="display:inline; width:20px; height:20px; border:1px solid white;" src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
 					<?php
 					}
 	 				?>
@@ -59,12 +59,12 @@
 					<?php
 					   if ($userdata[admin] == '5') {
 					?>
-                       <li><a href='My_Profile_Staff.php'><span><img class="img-responsive img-circle margin" style="display:inline; width:20px; height:20px; border:1px solid white; vertical-align:middle"src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+                       <li><a href='my_profile_staff.php'><span><img class="img-responsive img-circle margin" style="display:inline; width:20px; height:20px; border:1px solid white; vertical-align:middle"src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
 					<?php
 					}
 	 				?>
 
-   <li><a href='Home.php'><span>Home</span></a></li>
+   <li><a href='home.php'><span>Home</span></a></li>
    <li class='active has-sub'><a href='#'><span>Students</span></a>
       <ul>
          <li class='has-sub'><a href='semester_students.php?SMID=1'><span>1st year 1st Semester</span></a>
@@ -90,26 +90,26 @@
    </li>
       <li class='active has-sub'><a href='#'><span>Faculties & Staffs</span></a>
       <ul>
-         <li class='has-sub'><a href='Faculty_List.php'><span>Faculty</span></a>
+         <li class='has-sub'><a href='faculty_list.php'><span>Faculty</span></a>
          </li>
-         <li class='has-sub'><a href='Staff_List.php'><span>Staff</span></a>
+         <li class='has-sub'><a href='staff_list.php'><span>Staff</span></a>
          </li>
       </ul>
    </li>
    
-        <li class='active has-sub'><a href='Course_List.php'><span>Courses & References</span></a>
+        <li class='active has-sub'><a href='course_list.php'><span>Courses & References</span></a>
               <ul>
                      <li class='has-sub'><a href='project_gallery.php'><span>Project Gallery</span></a>
                      </li>
-                     <li class='has-sub'><a href='video_tutorial_gallery.php'><span>Video Tutorials</span></a>
+                     <li class='has-sub'><a href='tutorial_gallery.php'><span>Video Tutorials</span></a>
                      </li>
-                     <li class='has-sub'><a href='Course_List.php'><span>Course References</span></a>
+                     <li class='has-sub'><a href='course_list.php'><span>Course References</span></a>
                      </li>
               </ul>
         </li>
-           <li><a href='Blog_List.php'><span>CSE Blog</span></a></li>
-           <li><a href='Blood_List.php'><span>Blood Bank</span></a></li>
-           <li class='last'><a href='About.php'><span>About</span></a></li>
+           <li><a href='blog_list.php'><span>CSE Blog</span></a></li>
+           <li><a href='blood_list.php'><span>Blood Bank</span></a></li>
+           <li class='last'><a href='about.php'><span>About</span></a></li>
 </ul>
 </div>
 	<div id='cssmenu' align="center" style="vertical-align:middle">

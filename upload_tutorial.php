@@ -26,7 +26,7 @@
                 ?>
                 <div id="margin_figure">
                     <div align="center">
-                        <form action="upload_video_tutorial_save.php" method="post"
+                        <form action="upload_tutorial_save.php" method="post"
                               enctype="multipart/form-data">
                             <div>
                                 <br>

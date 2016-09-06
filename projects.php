@@ -62,7 +62,7 @@ if (empty($_SESSION['username'])) {
                                             <td style="border:inset" colspan=2 align="center"><a href='<?php echo $project_link; ?>'><span><img style="width:300px; height:200px; border:1px solid white; vertical-align:middle" src="<?php echo $project_screenshot; ?>"<span> Click to Download</span></a></td>
                                         </tr>
                                         <tr style="height:20px">
-                                            <td style="border:inset" align="center"><a href='Profile_List.php? SID=<?= $SID ?>'><?= $SName ?></a></td>
+                                            <td style="border:inset" align="center"><a href='profile_list.php? SID=<?= $SID ?>'><?= $SName ?></a></td>
                                             <td style="border:inset" align="center"><?php echo $project_cat_id; ?></td>
                                         </tr>
                                     </table>

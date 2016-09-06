@@ -38,7 +38,7 @@ if (empty($_SESSION['username'])) {
                 if (($userdata[admin] == '1')) {
                     ?>
                     <div>
-                        <a href="Gallery_Insert.php?keepThis=true&TB_iframe=true&height=100&width=400&modal=true" title="New Student" class="thickbox">Add New Photos</a>
+                        <a href="gallery_insert.php?keepThis=true&TB_iframe=true&height=100&width=400&modal=true" title="New Student" class="thickbox">Add New Photos</a>
                     </div>
                 <?php
                 }
@@ -60,7 +60,7 @@ if (empty($_SESSION['username'])) {
                     if (($userdata[admin] == '1')) {
                         ?>
                         <div>
-                            <?php echo " <a href='Gallery_Delete.php?Photo_Id=" . $Photo_Id . "'> delete </a> "; ?>
+                            <?php echo " <a href='gallery_delete.php?Photo_Id=" . $Photo_Id . "'> delete </a> "; ?>
                         </div>
                     <?php
                     }

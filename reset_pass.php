@@ -1,9 +1,11 @@
-<?phpsession_start();
+<?php
+session_start();
 error_reporting(0);
 include("dbconnect.php");
 $con = mysql_connect("localhost", "root", "");
 if (!$con) {
     die('Could Not Connect:' . mysql_error());
+}
 ?>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
@@ -14,15 +16,15 @@ if (!$con) {
 <body>
 <div id="grad1">
     <div class="bodydiv" align="center">
-        <?php include("logo_for_index.php"); ?>
+        <?php include("logo_index.php"); ?>
         <div class="realbody">
             <?php
-            include("menu_for_index.php");
+            include("menu_index.php");
             ?>
             <div id="content">
                 <div id="colOne" align="left">
                     <?php
-                    include("sidebar_for_index.php");
+                    include("sidebar_index.php");
                     ?>
                 </div>
                 <br>
@@ -74,7 +76,6 @@ if (!$con) {
                 $Results = mysql_fetch_array($result);
                 if (count($Results[userid]) >= 1) {
                 ?>
-                <body>
                 <div align="center">
                     </br>
                     <form action="reset_pass.php" method="post" id="reset">

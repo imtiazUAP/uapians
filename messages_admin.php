@@ -95,7 +95,7 @@
 
                 <td>
                     <?php
-                        echo " <a href='Message_Delete.php?Message_Id=" . $Message_Id. "'> delete </a> ";
+                        echo " <a href='message_delete.php?Message_Id=" . $Message_Id. "'> delete </a> ";
                     ?>
                 </td>
 					<?php

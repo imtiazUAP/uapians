@@ -43,7 +43,7 @@ if (empty($_SESSION['username'])) {
                                 <form>
                                     <div align="center">
                                         <?php if (($userdata[admin] == '1')) { ?>
-                                            <a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true"
+                                            <a href="student_insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true"
                                                title="New Student" class="thickbox">Create New Student
                                             </a>
                                         <?php
@@ -80,17 +80,17 @@ if (empty($_SESSION['username'])) {
                                         $result = @mysql_query($page->get_limit_query($sql));
                                         while ($data = mysql_fetch_assoc($result)) {
                                             ?>
-                                            <tr align="center" class="tablerow">
+                                            <tr align="center" class="tablerow"  onclick="document.location = 'profile_list.php?SID=<?= $data['SID'] ?>';">
                                                 <td width="120"><?= $data['SReg'] ?>
                                                 </td>
                                                 <td width="200">
                                                     <a
-                                                        href='Profile_List.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?>
+                                                        href='profile_list.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?>
                                                     </a>
                                                 </td>
                                                 <td width="100">
                                                     <a
-                                                        href='Profile_List.php? SID=<?= $data['SID'] ?>'><img
+                                                        href='profile_list.php? SID=<?= $data['SID'] ?>'><img
                                                             src=<?= $data['SPortrait'] ?> echo
                                                             style="height:100px;">
                                                     </a>
@@ -104,7 +104,7 @@ if (empty($_SESSION['username'])) {
                                                     ?>
                                                     <td>
                                                         <a
-                                                            href='Single_Mark_List.php? SID=<?=
+                                                            href='single_mark_list.php? SID=<?=
                                                             $data['SID']
                                                             ?>'>
                                                             Results
@@ -113,11 +113,11 @@ if (empty($_SESSION['username'])) {
                                                     <td
                                                         width="100">
                                                         <a
-                                                            href='Student_Edit.php?SID=<?= $data['SID'] ?>&keepThis=true&TB_iframe=true&height=300&width=350&do=edit&modal=true'
+                                                            href='student_edit.php?SID=<?= $data['SID'] ?>&keepThis=true&TB_iframe=true&height=300&width=350&do=edit&modal=true'
                                                             class='thickbox'> edit
                                                         </a> |
                                                         <a
-                                                            href='Student_Delete.php?SID=<?=
+                                                            href='student_delete.php?SID=<?=
                                                             $data['SID']
                                                             ?>'>
                                                             delete

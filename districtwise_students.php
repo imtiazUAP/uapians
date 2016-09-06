@@ -46,7 +46,7 @@ if (empty($_SESSION['username'])) {
                     <div style="padding-top:40">
                         <form method="post">
                             <tr>
-                                <td>District</td>
+                                <td>Select District</td>
                                 <td>
                                     <select name="district_id" id="district_id" selected="">
                                         <?php
@@ -64,9 +64,7 @@ if (empty($_SESSION['username'])) {
                                     </select>
                                 </td>
                             </tr>
-                            <p class="signin_button">
-                                <input type="Submit" value="Search......"/>
-                            </p>
+                            <button name="login" type="Submit" class="button button_blue">Search</button>
                             <br>
                             <br>
                             <table class="hoverTable" border="1" align="center" width="800">
@@ -91,8 +89,8 @@ if (empty($_SESSION['username'])) {
                                     ?>
                                     <tr align="center" class="tablerow">
                                         <td width="120"><?= $data['SReg'] ?></td>
-                                        <td width="200"><a href='Profile_List.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?></a> </td>
-                                        <td width="100"><a href='Profile_List.php? SID=<?= $data['SID'] ?>'><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
+                                        <td width="200"><a href='profile_list.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?></a> </td>
+                                        <td width="100"><a href='profile_list.php? SID=<?= $data['SID'] ?>'><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
                                         <td width="200"><?= $data['SMName'] ?></td>
                                         <td width="200"><?= $data['district_name'] ?></td>
                                     </tr>

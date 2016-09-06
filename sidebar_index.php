@@ -40,7 +40,7 @@
         if (!empty($_SESSION['username'])) {
             ?>
             <script language="JavaScript">
-                window.location = "Home.php";
+                window.location = "home.php";
             </script>
         <?php
         }elseif (empty($_SESSION['username'])){
@@ -62,15 +62,15 @@
         </h3>
     </div>
     <ul class="bottom">
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Teachers</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Students</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Courses</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Results</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">References</a></li>
     </ul>
 </div>
@@ -79,25 +79,25 @@
 <div class="box">
     <div id="paragraph_head">
         <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
-    </div>    .
+    </div>
     <ul class="bottom">
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Gallery</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Blood Bank</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Who is from my District</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Programming Contest Club</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Research and Publication Club</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Sports Club</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Software and Hardware Club</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Cultural and Debating Club</a></li>
-        <li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
                class="thickbox">Web Club</a></li>
     </ul>
 </div>
@@ -108,24 +108,24 @@
         <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
     </div>
     <ul>
-        <a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
            class="thickbox">
-            <li><img src="images/11391528_926647094024700_3742502908562004938_n.jpg" style="height:100"/> Nokib</li>
+            <li><img src="images/1234554321.jpg" style="width:238px "/> Nokib Mozumder</li>
         </a>
-        <p class="bottom">Nokib Mozumder, University of Asia Pacific
-            Phone:01670756503
+        <p class="bottom">Phone:01670756503
             E_Mail:nokib016@gmail.com
         </p>
+        <li><a href="https://www.facebook.com/nokib.mozumder" target="_blank">Find me on facebook</a></li>
         <br>
-        <a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+        <a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
            class="thickbox">
-            <li><img src="images/Picture 2963.jpg" style="height:100"/>MD. Mazharul islam jihan</li>
+            <li><img src="images/Picture 2963.jpg" style="width:238px"/>MD. Mazharul islam jihan</li>
         </a>
+        <p class="bottom">Phone:01752512666
+            E_Mail:jihanislam007@gmail.com
+        </p>
+        <li><a href="https://www.facebook.com/mazaharulislam.jihan" target="_blank">Find me on facebook</a></li>
     </ul>
-    <p class="bottom">Jihan, University of Asia Pacific
-        Phone:+8801752512666
-        E_Mail:jihanislam007@gmail.com
-        Website:https://www.facebook.com/mazaharulislam.jihan </p>
 </div>
 <br>
 <br>
@@ -133,15 +133,12 @@
     <div id="paragraph_head">
         <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us</h3>
     </div>
-    <p class="bottom">For any query, or any Information contact with us... <br> Student Management Tools,
+    <p class="bottom">For any query, or any Information contact with us... <br> Uapians.Net,
         University of Asia Pacific
-        Phone:+8801736516583
+        Phone:01720613683
         E_Mail:emtiaj@yahoo.com
-        Website:www.emtiaj.blogspot.com
-        <br>
-        <br>
-        For any Information to Add, Edit or Delete Contact with Admins
     </p>
+    <li style="list-style: none"><a href="http://www.emtiaj.blogspot.com" target="_blank">www.emtiaj.blogspot.com</a></li>
 </div>
 <br>
 <br>

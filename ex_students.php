@@ -44,7 +44,7 @@ if (empty($_SESSION['username'])) {
                                 <?php
                                 if (($userdata[admin] == '1')) {
                                 ?>
-                                    <a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true" title="New Student" class="thickbox">Create New Student</a>
+                                    <a href="student_insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true" title="New Student" class="thickbox">Create New Student</a>
                                 <?php
                                 }
                                 ?>
@@ -79,14 +79,14 @@ if (empty($_SESSION['username'])) {
                                     ?>
                                 <tr align="center" class="tablerow">
                                     <td width="120"><?php echo $f3; ?></td>
-                                    <td><?php echo " <a href='Profile_List.php? SID=" . $SID . "'>$f2</a>" ?></td>
-                                    <td width="100"><a href='Profile_List.php? SID=<?= $SID ?>'><img src=<?= $f12 ?> echo style="height:100px;"></a></td>
+                                    <td><?php echo " <a href='profile_list.php? SID=" . $SID . "'>$f2</a>" ?></td>
+                                    <td width="100"><a href='profile_list.php? SID=<?= $SID ?>'><img src=<?= $f12 ?> echo style="height:100px;"></a></td>
                                     <td width="120"><?php echo $semester; ?></td>
                                     <?php
                                     if (($userdata[admin] == '1')) {
                                     ?>
-                                        <td><?php echo " <a href='Single_Mark_List.php? SID=" . $SID . "'> Results </a>" ?></td>
-                                        <td width="100"><?php echo " <a href='Student_Edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true'     	class='thickbox' title='Edit Student - " . $f2 . "'> edit </a> "; ?> | <?php echo " <a href='Student_Delete.php?SID=" . $SID . "'> delete </a> "; ?></td>
+                                        <td><?php echo " <a href='single_mark_list.php? SID=" . $SID . "'> Results </a>" ?></td>
+                                        <td width="100"><?php echo " <a href='student_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true'     	class='thickbox' title='Edit Student - " . $f2 . "'> edit </a> "; ?> | <?php echo " <a href='student_delete.php?SID=" . $SID . "'> delete </a> "; ?></td>
                                     <?php
                                     }
                                     ?>
