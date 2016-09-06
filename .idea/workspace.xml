@@ -4,111 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/review_update.php" line="26" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4bc0e71-326c-4dce-bb81-b7ad83eacc53" name="Default" comment="page_name refactorized&#10;sidebar modified&#10;edit profile problem fixed&#10;reset_pass page bug fixed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/1176353_10201824031220250_299244289_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/12177_4319308698703_1275228451_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/20140228_154735.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/20140228_155057.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/971296_594950683868503_1156440747_n.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/arrows.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/bullet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/fullscreen.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/img_1894.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/img_2109.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/img_2141.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/data1/tooltips/img_2161.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/pause.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/play.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/shadow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/triangle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/about.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin_jihan.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/admin_nokib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blog_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/blood_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/comment_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/course_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designation_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designation_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/employee_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/employee_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/employee_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/employee_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/employee_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/employee_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/faculty_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gallery_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gallery_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gallery_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/home.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/iframe_index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log_out.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login_request.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mark_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mark_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mark_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/message_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/message_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/message_sent_notification.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_profile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_profile_staff.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_profile_teacher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/my_profile_teacher_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/news_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/news_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/news_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/news_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/news_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notice_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/notice_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/password_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/profile_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/programing_contest_club.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/project_gallery.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reference_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reference_list_all.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reference_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reference_save_confirmation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reference_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/reference_upload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/research_publication_club.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/review_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/semister_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/semister_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sign_up_review.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sign_up_review_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/single_blog_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/single_mark_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/software_hardware_club.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sports_club.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/staff_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student_delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student_edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student_insert.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/student_update.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/style.mod.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload_project.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/upload_project_save.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web_club.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/wowslider.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cultural_club/engine1/wowslider.mod.js" />
+    <list default="true" id="e4bc0e71-326c-4dce-bb81-b7ad83eacc53" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cultural_club/engine1/style.css" afterPath="$PROJECT_DIR$/cultural_club/engine1/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/blog_delete.php" afterPath="$PROJECT_DIR$/blog_delete.php" />
@@ -200,7 +96,9 @@
         <entry file="file://$PROJECT_DIR$/menu_index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="43" column="10" selection-start="3113" selection-end="3113" vertical-scroll-proportion="0.81386864" vertical-offset="285" max-vertical-offset="833">
-              <folding />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -407,7 +305,11 @@
       <created>1473188618188</created>
       <updated>1473188618188</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="page_name refactorized&#10;sidebar modified&#10;edit profile problem fixed&#10;reset_pass page bug fixed">
+      <created>1473190382339</created>
+      <updated>1473190382339</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -532,7 +434,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/login_request.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="860" selection-end="957" vertical-scroll-proportion="0.6060606" vertical-offset="85" max-vertical-offset="646" />
+        <state line="25" column="0" selection-start="860" selection-end="957" vertical-scroll-proportion="0.6060606" vertical-offset="85" max-vertical-offset="646">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sign_up_review_delete.php">
@@ -649,7 +553,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="115" selection-start="3314" selection-end="3387" vertical-scroll-proportion="-9.153846" vertical-offset="1071" max-vertical-offset="1887">
           <folding>
-            <element signature="e#3615#3636#0" expanded="true" />
+            <element signature="e#3615#3636#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -785,7 +689,9 @@
     <entry file="file://$PROJECT_DIR$/menu_index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="10" selection-start="3113" selection-end="3113" vertical-scroll-proportion="0.81386864" vertical-offset="285" max-vertical-offset="833">
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
