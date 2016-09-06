@@ -5,7 +5,7 @@
         ?>
     </head>
     <body>
-        <form action="Gallery_Save.php" method="post" enctype="multipart/form-data">
+        <form action="gallery_save.php" method="post" enctype="multipart/form-data">
             <table>
                 <tr>
                     <td>Upload Photo:</td>

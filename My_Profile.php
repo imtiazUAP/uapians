@@ -64,12 +64,12 @@ if (empty($_SESSION['username'])) {
             if (($userdata[admin] == '1')) {
                 ?>
                 <div align="center" style="background-color:#FFFF00; width:500px; height:20px">
-                    <?php echo " <a href='Student_Edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=500&width=300&do=edit&modal=true' class='thickbox' title='Edit Student - " . $Name . "'> Edit my Profile  </a> "; ?>
+                    <?php echo " <a href='student_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=500&width=300&do=edit&modal=true' class='thickbox' title='Edit Student - " . $Name . "'> Edit my Profile  </a> "; ?>
                     |
-                    <?php echo " <a href='Password_Edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $Name . "'> Change my Password  </a> "; ?>
+                    <?php echo " <a href='password_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $Name . "'> Change my Password  </a> "; ?>
                     |
-                    <?php echo " <a href='Single_Mark_List.php? SID=" . $SID . "'>My  Results Vault  </a>" ?> |
-                    <?php echo " <a href='Message_List_personal.php? SID=" . $SID . "'> My Messages  </a>" ?>
+                    <?php echo " <a href='single_mark_list.php? SID=" . $SID . "'>My  Results Vault  </a>" ?> |
+                    <?php echo " <a href='message_list.php? SID=" . $SID . "'> My Messages  </a>" ?>
                 </div>
             <?php
             }
@@ -79,21 +79,21 @@ if (empty($_SESSION['username'])) {
             ?>
                 <div align="center" style="background-color:#FFFF00; width:700px; height:20px">
                     <?php
-                    echo " <a href='Student_Edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=300&width=300&do=edit&modal=true'     	class='thickbox' title='Edit Student - " . $Name . "'> Edit my Profile </a> ";
+                    echo " <a href='student_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=300&width=300&do=edit&modal=true'     	class='thickbox' title='Edit Student - " . $Name . "'> Edit my Profile </a> ";
                     ?>
                     |
                     <?php
-                    echo " <a href='Password_Edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $Name . "'> Change my Password </a> ";
+                    echo " <a href='password_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $Name . "'> Change my Password </a> ";
                     ?>
                     |
                     <?php
-                    echo " <a href='Single_Mark_List.php? SID=" . $SID . "'> My Results Vault </a>"
+                    echo " <a href='single_mark_list.php? SID=" . $SID . "'> My Results Vault </a>"
                     ?> |
                     <?php
-                    echo " <a href='Message_List_personal.php? SID=" . $SID . "'> My Messages  </a>"
+                    echo " <a href='message_list.php? SID=" . $SID . "'> My Messages  </a>"
                     ?>
                     <?php
-                    echo " <a href='Upload_Project.php?SID=" . $SID . "'> | upload project  </a>"
+                    echo " <a href='upload_project.php?SID=" . $SID . "'> | upload project  </a>"
                     ?>
                 </div>
             <?php
@@ -102,7 +102,7 @@ if (empty($_SESSION['username'])) {
         </div>
         <div style="font-weight:bold; font-size:16px; padding-left:10px; color:#0099FF";}>
         <ul>
-            <li style="list-style-type: none;"><a href="send_message_to_your_friend.php">Send a Message...</a>
+            <li style="list-style-type: none;"><a href="message_to_friend.php">Send a Message...</a>
             </li>
         </ul>
     </div>

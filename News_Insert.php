@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<form action="News_Save.php" method="post">
+<form action="news_save.php" method="post">
     <table>
         <tr>
             <td>News Hints:</td>

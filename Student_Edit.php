@@ -1,4 +1,4 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <?php
     include('dbconnect.php');
     $strquery = "SELECT * from s_info where SID= '" . $_GET["SID"] . "' ";
@@ -6,13 +6,13 @@
     $row = mysql_fetch_array($results);
 ?>
 <head>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/thickbox.js"></script>
-    <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen"/>
+    <?php
+    include("header.php");
+    ?>
 </head>
 <body>
 
-<form id="form1" name="form1" method="get" action="Student_Update.php">
+<form id="form1" name="form1" method="get" action="student_update.php">
     <table>
         <tr>
             <td>Name:</td>
@@ -82,8 +82,6 @@
             <td>
                 <select name="Blood_Group_ID" id="Blood_Group_ID" selected="">
                     <?php
-                    //$connect=mysql_connect("localhost","root","");
-                    //$select_db=mysql_select_db("example_db");
                     $query = "SELECT DISTINCT Blood_Group_ID,Blood_Group_Name FROM blood_group_info ORDER BY Blood_Group_ID";
                     $rs = mysql_query($query) or die ('Error submitting');
                     while ($rows = mysql_fetch_assoc($rs)) {
@@ -103,8 +101,6 @@
             <td>
                 <select name="donor_value" id="donor_value" selected="">
                     <?php
-                    //$connect=mysql_connect("localhost","root","");
-                    //$select_db=mysql_select_db("example_db");
                     $query = "SELECT DISTINCT donor_value,Blood_Donor FROM blood_donor_yes_no ORDER BY donor_value";
                     $rs = mysql_query($query) or die ('Error submitting');
                     while ($rows = mysql_fetch_assoc($rs)) {
@@ -161,16 +157,10 @@
         </tr>
 
     </table>
-    </select>
-    <input name="SID" type="hidden" id="SID" value="
-    <?php
-    echo $row["SID"];
-    ?>"/>
-    <p>
-        <label>
-            <input type="submit" name="Submit" value="Update"/>
-            <a href="#" onClick="tb_remove();">Close</a>
-        </label>
-    </p>
+    <div style="text-align: right">
+    <input name="SID" type="hidden" id="SID" value="<?php echo($row["SID"]);?>"/>
+    <button name="login" type="Submit" class="button button_blue">Update</button>
+    <button class="button button_red" onClick="tb_remove();">Close</button>
+    </div>
 </form>
 </html>

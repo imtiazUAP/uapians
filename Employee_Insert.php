@@ -6,7 +6,7 @@
 </head>
 
 <body>
-<form action="Message_Save.php" method="post">
+<form action="message_save.php" method="post">
     <table>
         <tr>
             <td>EName:</td>

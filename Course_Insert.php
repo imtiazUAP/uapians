@@ -5,7 +5,7 @@
         ?>
     </head>
     <body>
-        <form action="Course_Save.php" method="post">
+        <form action="course_save.php" method="post">
             <table>
                 <tr>
                     <td>CCode:</td>

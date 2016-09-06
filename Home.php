@@ -23,7 +23,7 @@ if (empty($_SESSION['username'])) {
                 <?php
                 include("logo.php");
                 ?>
-                <div class="realbody" style="min-height:2300px">
+                <div class="realbody">
                     <?php
                     include("menu.php");
                     ?>
@@ -58,7 +58,7 @@ if (empty($_SESSION['username'])) {
                                     if (($userdata[admin] == '1')) {
                                         ?>
                                         <br>
-                                        <a href="News_Insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true" title="New Course" class="thickbox">Add New News</a>
+                                        <a href="news_insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true" title="New Course" class="thickbox">Add New News</a>
                                         <br>
                                     <?php
                                     }
@@ -77,8 +77,8 @@ if (empty($_SESSION['username'])) {
                                         <?php
                                         if (($userdata[admin] == '1')) {
                                             ?>
-                                            <td><?php echo " <a href='News_Edit.php?News_ID=" . $News_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $News_ID . "'> edit </a> "; ?>
-                                                | <?php echo " <a href='News_Delete.php?News_ID=" . $News_ID . "'> delete </a> "; ?></td>
+                                            <td><?php echo " <a href='news_edit.php?News_ID=" . $News_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $News_ID . "'> edit </a> "; ?>
+                                                | <?php echo " <a href='news_delete.php?News_ID=" . $News_ID . "'> delete </a> "; ?></td>
                                             <br>
                                         <?php
                                         }
@@ -109,7 +109,7 @@ if (empty($_SESSION['username'])) {
                                 <?php
                                     if (($userdata[admin] == '1')) {
                                         ?>
-                                        <td><?php echo " <a href='Notice_Edit.php?Notice_ID=" . $Notice_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Notice_ID . "'> Update Notice </a> "; ?></td>
+                                        <td><?php echo " <a href='notice_edit.php?Notice_ID=" . $Notice_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Notice_ID . "'> Update Notice </a> "; ?></td>
                                         <br>
                                     <?php
                                     }

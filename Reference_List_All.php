@@ -38,7 +38,6 @@
                         <td bgcolor="#006699" width="180">Detail</td>
                         <td bgcolor="#006699" width="100px">Download_Link</td>
                         <?php
-                        include("dbconnect.php");
                         $strquery = "SELECT CCode,CName,Reference_Link, EName,Detail,  SMName FROM reference_info
                                     INNER JOIN c_info
                                     ON reference_info.CID=c_info.CID

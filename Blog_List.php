@@ -34,7 +34,7 @@ if (empty($_SESSION['username'])) {
                         ?>
                     </div>
                     <div id="margin_figure">
-                        <div  id="new_blog_button"><a href="Blog_Insert.php"> আপনি একটি ব্লগ লিখুন</a></div>
+                        <div  id="new_blog_button"><a href="blog_insert.php"> আপনি একটি ব্লগ লিখুন</a></div>
                         <br>
                         <br>
                         <br>
@@ -65,21 +65,21 @@ if (empty($_SESSION['username'])) {
                             <div style="width:500px;padding:10px;margin:0px; font-size:11px"><?php echo $Date; ?></div>
                             <div><p style="font-size:14px; font-weight:bold">Article:</p></div>
                             <div style="width:700px;padding:10px;border:1px solid white;margin:0px; font-size:16px"><?php echo $Blog ; ?></div>
-                            <div id="detail_blog" ><?php echo " <a href='Single_Blog_List.php? Blog_ID=".$Blog_ID."'> বিস্তারির দেখুন </a>"?></div>
+                            <div id="detail_blog" ><?php echo " <a href='single_blog_list.php? Blog_ID=".$Blog_ID."'> বিস্তারির দেখুন </a>"?></div>
 
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
-                                <div align="right"><?php echo " <a href='Blog_Edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
-                                    | <?php echo " <a href='Blog_Delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
+                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
+                                    | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
                             <?php
                             }
                             ?>
                             <?php
                             if (($userdata['SID'] == $SID)) {
                                 ?>
-                                <div align="right"><?php echo " <a href='Blog_Edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
-                                    | <?php echo " <a href='Blog_Delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
+                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
+                                    | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
                             <?php
                             }
                             ?>

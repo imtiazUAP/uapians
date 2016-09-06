@@ -12,7 +12,7 @@
     </head>
 
 <body>
-<form action="Mark_Save.php" method="post">
+<form action="mark_save.php" method="post">
 <table>
 <tr>
 <td>Teacher's Name:</td>

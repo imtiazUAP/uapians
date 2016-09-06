@@ -117,9 +117,9 @@ if (empty($_SESSION['username'])) {
 
                             <tr align="center">
                                 <td height="40"><?php echo $SReg; ?></td>
-                                <td><a href='Profile_List.php?SID=<?php echo($SID) ?>'
+                                <td><a href='profile_list.php?SID=<?php echo($SID) ?>'
                                        target="_blank"> <?php echo $SName; ?></a></td>
-                                <td width="100"><a href='Profile_List.php?SID=<?php echo($SID) ?>' target="_blank"'><img
+                                <td width="100"><a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img
                                         src=<?= $SPortrait ?> echo style="height:100px;"></a></td>
                                 <td><?php echo $Blood_Group_Name; ?></td>
                             </tr>

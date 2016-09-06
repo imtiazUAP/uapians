@@ -11,7 +11,7 @@ $row = mysql_fetch_array($results);
         ?>
     </head>
     <body>
-        <form id="form1" name="form1" method="get" action="Password_Update.php">
+        <form id="form1" name="form1" method="get" action="password_update.php">
             <table style="padding:30px">
                 <tr>
                     <td>Your username:</td>

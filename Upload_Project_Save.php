@@ -27,6 +27,6 @@ if ((($_FILES["file"]["type"] == "image/gif")
 } else {
     echo "Registration Failed.... <br>Please Fill all the field Correctly";
 }
-header('location: http://localhost/uapians/Upload_Project_Save_Confirmation.php ');
+header('location: http://localhost/uapians/upload_project_confirmation.php ');
 mysql_close($con)
 ?> 

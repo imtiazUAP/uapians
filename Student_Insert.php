@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen"/>
 </head>
 <body>
-<form action="Student_Save.php" method="post"
+<form action="student_save.php" method="post"
       enctype="multipart/form-data">
     <table>
         <tr>

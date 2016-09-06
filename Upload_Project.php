@@ -27,7 +27,7 @@
                 ?>
                 <div id="margin_figure">
                     <div align="center">
-                        <form action="Upload_Project_Save.php" method="post"
+                        <form action="upload_project_save.php" method="post"
                               enctype="multipart/form-data">
                             <div>
                                 <br>

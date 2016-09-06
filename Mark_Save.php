@@ -22,6 +22,6 @@ if(!mysql_query($sql,$con))
 {
 	die('Error:'.mysql_error());
 }
-header ('location: https://localhost/mylab/Mark_Insert.php '); 
+header ('location: https://localhost/mylab/mark_insert.php ');
 mysql_close($con)
 ?>

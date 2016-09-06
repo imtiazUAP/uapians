@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen"/>
 </head>
 <body>
-<form id="form1" name="form1" method="get" action="News_Update.php">
+<form id="form1" name="form1" method="get" action="news_update.php">
     <table>
         <tr>
             <td>News Hints:</td>

@@ -13,7 +13,7 @@
         <?php include("header.php");?>
     </head>
     <body>
-        <form id="form1" name="form1" method="get" action="Review_Update.php">
+        <form id="form1" name="form1" method="get" action="review_update.php">
             <table  style="color: black">
                 <tr>
                     <td> Name: </td>

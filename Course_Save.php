@@ -10,6 +10,6 @@ values
 if (!mysql_query($sql, $con)) {
     die('Error:' . mysql_error());
 }
-header('location: https://localhost/mylab/Course_Insert.php ');
+header('location: https://localhost/mylab/course_insert.php ');
 mysql_close($con)
 ?>

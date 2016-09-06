@@ -10,6 +10,6 @@ values
 if (!mysql_query($sql, $con)) {
     die('Error:' . mysql_error());
 }
-header('location: https://localhost/mylab/Semister_Insert.php ');
+header('location: https://localhost/mylab/semister_insert.php ');
 mysql_close($con)
 ?>

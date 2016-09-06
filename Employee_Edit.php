@@ -12,7 +12,7 @@ $row = mysql_fetch_array($results);
         ?>
     </head>
     <body>
-        <form id="form1" name="form1" method="get" action="Employee_Update.php">
+        <form id="form1" name="form1" method="get" action="employee_update.php">
             <table>
                 <tr>
                     <td>EName:</td>

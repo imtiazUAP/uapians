@@ -32,7 +32,7 @@
             include("menu.php");
             ?>
             <br><br>
-            <form id="form1" name="form1" method="get" action="Reference_Save.php">
+            <form id="form1" name="form1" method="get" action="reference_save.php">
                 <div align="right" style="padding:20px; font-size:22px; font-weight:bold; color:#FFFFFF">Select
                     Course:<br>
                     <select name="CID" id="CID" selected="">

@@ -5,7 +5,7 @@
         ?>
     </head>
     <body>
-    <form action="Designation_Save.php" method="post">
+    <form action="designation_save.php" method="post">
         <table>
             <tr>
                 <td>DName:</td>

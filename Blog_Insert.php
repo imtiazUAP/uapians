@@ -31,7 +31,7 @@ if (empty($_SESSION['username'])) {
                             ?>
                         </div>
                     <div id="margin_figure">
-                        <form action="Blog_Save.php" method="post">
+                        <form action="blog_save.php" method="post">
                             <div>
                                 <input value="<?php echo $userdata['SID'];?>" name="SID" type="hidden"/>
                                 <br>
@@ -76,14 +76,14 @@ if (empty($_SESSION['username'])) {
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
-                                <div align="right"><?php echo " <a href='Blog_Edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='Blog_Delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
+                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
                             <?php
                             }
                             ?>
                             <?php
                             if (($userdata['SID'] == $SID)) {
                                 ?>
-                                <div align="right"><?php echo " <a href='Blog_Edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='Blog_Delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
+                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
                             <?php
                             }
                             ?>

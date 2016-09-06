@@ -6,6 +6,6 @@
     if (!mysql_query($sql)) {
         die('Error:' . mysql_error());
     }
-    header('location: http://www.uapians.net/News_Insert.php ');
+    header('location: http://www.uapians.net/news_insert.php ');
     mysql_close($con)
 ?>

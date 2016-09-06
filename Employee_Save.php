@@ -10,7 +10,7 @@ values
 if (!mysql_query($sql, $con)) {
     die('Error:' . mysql_error());
 }
-header('location: https://localhost/mylab/Employee_Insert.php ');
+header('location: https://localhost/mylab/employee_insert.php ');
 mysql_close($con)
 ?>
 
@@ -22,7 +22,7 @@ mysql_close($con)
 </head>
 
 <body>
-<form action="Employee_Save.php" method="post">
+<form action="employee_save.php" method="post">
     <table>
         <tr>
             <td>EName:</td>

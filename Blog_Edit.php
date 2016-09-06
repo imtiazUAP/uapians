@@ -11,7 +11,7 @@
         ?>
     </head>
     <body>
-        <form id="form1" name="form1" method="get" action="Blog_Update.php">
+        <form id="form1" name="form1" method="get" action="blog_update.php">
             <div>Blog:</div>
             <textarea name="Blog" type="text" id="Blog" cols="80" rows="15" >
             <?php echo $row["Blog"]; ?>

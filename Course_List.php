@@ -37,7 +37,7 @@ if (empty($_SESSION['username'])) {
                 <?php
                 if (($userdata[admin] == '1')) {
                     ?>
-                    <a href="Course_Insert.php?keepThis=true&TB_iframe=true&height=150&width=200&modal=true" title="New Course" class="thickbox">Create New Course</a>
+                    <a href="course_insert.php?keepThis=true&TB_iframe=true&height=150&width=200&modal=true" title="New Course" class="thickbox">Create New Course</a>
                 <?php
                 }
                 ?>
@@ -69,12 +69,12 @@ if (empty($_SESSION['username'])) {
                         <tr align="center">
                             <td height="40"><?php echo $CCode ; ?></td>
                             <td><?php echo $CName ; ?></td>
-                            <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
+                            <td ><?php echo " <a href='reference_list.php? CCode=".$CCode."'>Reference Source</a>"?></td>
                             <td><?php echo $SMName ; ?></td>
                                 <?php
                                 if (($userdata[admin] == '1')) {
                                     ?>
-                                    <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                                    <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                                 <?php
                                 }
                                 ?>
@@ -105,12 +105,12 @@ if (empty($_SESSION['username'])) {
                     <tr align="center">
                         <td height="40"><?php echo $CCode; ?></td>
                         <td><?php echo $CName; ?></td>
-                        <td><?php echo " <a href='Reference_List.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                        <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
                         <td><?php echo $SMName; ?></td>
                         <?php
                         if (($userdata[admin] == '1')) {
                             ?>
-                            <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                            <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                         <?php
                         }
                         ?>
@@ -142,12 +142,12 @@ if (empty($_SESSION['username'])) {
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='Reference_List.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
-                                <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                                <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                             <?php
                             }
                             ?>
@@ -178,12 +178,12 @@ if (empty($_SESSION['username'])) {
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='Reference_List.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
-                                <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                                <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                             <?php
                             }
                             ?>
@@ -214,13 +214,13 @@ if (empty($_SESSION['username'])) {
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='Reference_List.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
 
-                                <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                                <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                             <?php
                             }
                             ?>
@@ -251,12 +251,12 @@ if (empty($_SESSION['username'])) {
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='Reference_List.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
-                                <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                                <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                             <?php
                             }
                             ?>
@@ -287,13 +287,13 @@ if (empty($_SESSION['username'])) {
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='Reference_List.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
 
-                                <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                                <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                             <?php
                             }
                             ?>
@@ -324,12 +324,12 @@ if (empty($_SESSION['username'])) {
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='Reference_List.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if (($userdata[admin] == '1')) {
                                 ?>
-                                <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
+                                <td><?php echo " <a href='course_edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $CID . "'> edit </a> "; ?> | <?php echo " <a href='course_delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
                             <?php
                             }
                             ?>
