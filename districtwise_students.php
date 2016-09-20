@@ -31,11 +31,6 @@ if (empty($_SESSION['username'])) {
                 <?php
                 include("menu.php");
                 ?>
-                <div id="wowslider-container1" style="height:200px">
-                    <?php
-                    include("slider1.php");
-                    ?>
-                </div>
             <div id="content">
                 <div id="colOne">
                     <?php
@@ -45,28 +40,32 @@ if (empty($_SESSION['username'])) {
                 <div>
                     <div style="padding-top:40">
                         <form method="post">
-                            <tr>
-                                <td>Select District</td>
-                                <td>
-                                    <select name="district_id" id="district_id" selected="">
-                                        <?php
-                                        $query = "SELECT DISTINCT district_id, district_name FROM districts";
-                                        $rs = mysql_query($query) or die ('Error submitting');
-                                        while ($rows = mysql_fetch_assoc($rs)) {
-                                            if ($row["district_id"] == $rows["district_id"]) {
-                                                $selected = 'selected="selected"';
-                                            } else {
-                                                $selected = '';
-                                            }
-                                            print("<option value=\"" . $rows["district_id"] . "\" " . $selected . "  >" . $rows["district_name"] . "</option>");
-                                        }
-                                        ?>
-                                    </select>
-                                </td>
-                            </tr>
-                            <button name="login" type="Submit" class="button button_blue">Search</button>
-                            <br>
-                            <br>
+                            <div align="left" style="padding-left:30px;">
+                                <table>
+                                    <tr>
+                                        <td>Select Your District: </td>
+                                        <td>
+                                            <select name="district_id" id="district_id" selected="">
+                                                <?php
+                                                $query = "SELECT DISTINCT district_id, district_name FROM districts";
+                                                $rs = mysql_query($query) or die ('Error submitting');
+                                                while ($rows = mysql_fetch_assoc($rs)) {
+                                                    if ($row["district_id"] == $rows["district_id"]) {
+                                                        $selected = 'selected="selected"';
+                                                    } else {
+                                                        $selected = '';
+                                                    }
+                                                    print("<option value=\"" . $rows["district_id"] . "\" " . $selected . "  >" . $rows["district_name"] . "</option>");
+                                                }
+                                                ?>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <button name="login" type="Submit" class="button button_blue">Search</button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
                             <table class="hoverTable" border="1" align="center" width="800">
                                 <tr align="center">
                                     <td bgcolor="588C73" width="120"> Registration Number</td>
@@ -89,8 +88,8 @@ if (empty($_SESSION['username'])) {
                                     ?>
                                     <tr align="center" class="tablerow">
                                         <td width="120"><?= $data['SReg'] ?></td>
-                                        <td width="200"><a href='profile_list.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?></a> </td>
-                                        <td width="100"><a href='profile_list.php? SID=<?= $data['SID'] ?>'><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
+                                        <td width="200"><a href='profile_list.php? SID=<?= $data['SID'] ?> ' target="_blank"><?= $data['SName'] ?></a> </td>
+                                        <td width="100"><a href='profile_list.php? SID=<?= $data['SID'] ?>' target="_blank"><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
                                         <td width="200"><?= $data['SMName'] ?></td>
                                         <td width="200"><?= $data['district_name'] ?></td>
                                     </tr>

@@ -56,18 +56,18 @@
                         $Detail = mysql_result($results, $i, "Detail");
                         $f3 = mysql_result($results, $i, "Reference_Link");
                         ?>
-                    <table border="1" align="center" width="1100">
                         <tr align="center">
                             <td width="130" height="50"><?php echo $CCode; ?></td>
                             <td width="200" height="50"><?php echo $CName; ?></td>
                             <td align="center" width="220" height="50"><?php echo $f10; ?></td>
                             <td align="center" width="220" height="50"><?php echo $Detail; ?></td>
                             <td width="150" height="50"><a href="<?php echo $f3; ?>">Download</a></td>
-                    </table>
+                        </tr>
                     <?php
                     $i++;
                     }
                     ?>
+                </table>
             </form>
         </div>
     </div>

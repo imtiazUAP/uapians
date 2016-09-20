@@ -3,47 +3,38 @@ session_start();
 error_reporting(0);
 include("dbconnect.php");
 include_once("page.inc.php");
+$b=$_SESSION['username'];
+$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$userdata = mysql_fetch_assoc($userrole);
+if (empty($_SESSION['username'])) {
 ?>
-            <?php
-                $b=$_SESSION['username'];
-
-                $userrole = mysql_query("select * from userinfo where username='{$b}'");
-                $userdata = mysql_fetch_assoc($userrole);
-                //echo $userdata['admin'];
-                if (empty($_SESSION['username'])) {
-            ?>
-                            <script language="JavaScript">
-                                window.location="index.php";
-                            </script>
-              <?php }
-                else {
-              ?>
-
+    <script language="JavaScript">
+        window.location="index.php";
+    </script>
+<?php }
+else {
+?>
 
 <html>
-
-            <head>
-                <?php
-                include("header.php");
-                ?>
-
-            </head>
-
-
+    <head>
+        <?php
+        include("header.php");
+        ?>
+    </head>
 <body>
-                            <div id="grad1">
-                            <div class="bodydiv">
-
-                            <?php include("logo.php"); ?>
-                            <div class="realbody" style="min-height:2300px">
-                            <?php include("menu.php"); ?>
-
+      <div id="grad1">
+        <div class="bodydiv">
+            <?php include("logo.php"); ?>
+            <div class="realbody" style="min-height:2300px">
+                <?php include("menu.php"); ?>
+                <div id="content">
+                <div id="colOne">
+                    <?php
+                    include("sidebar.php");
+                    ?>
+                </div>
 <?php
-
-//$connect=mysql_connect("localhost","root","");
-//$select_db=mysql_select_db("mylab");
-
-$strquery="SELECT SPortrait,username FROM s_info INNER JOIN userinfo ON s_info.SID=userinfo.SID WHERE username='{$b}'";
+/* $strquery="SELECT SPortrait,username FROM s_info INNER JOIN userinfo ON s_info.SID=userinfo.SID WHERE username='{$b}'";
 $results=mysql_query($strquery);
 $num=mysql_numrows($results);
 
@@ -281,23 +272,23 @@ $f9=mysql_result($results,$i,"ECE_102");
   }
 
 }
+*/
 ?>
-
-
+<!-- Commented as it is under development
 </form>
-		</div>
+-->
+                            <?php
+                            include("under_development.php");
+                            ?>
 
-
-	
-	
-</div>
-                            <div class="footer">
-                                <?php include("footer.php");
-                                ?>
-                            </div>
-
-</body>
+		    </div>
+        </div>
+        <div class="footer">
+            <?php include("footer.php");
+            ?>
+        </div>
+    </body>
 </html>
 
-    <?php
+<?php
 }?>

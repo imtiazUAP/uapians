@@ -1,4 +1,8 @@
 <?php
+session_start();
+error_reporting(0);
+include("dbconnect.php");
+include_once("page.inc.php");
 
 $sql = "Insert into messages(SID,Receiver_Reg,Subject,Message)
 values

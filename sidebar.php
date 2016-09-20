@@ -67,6 +67,7 @@
         <p class="bottom">Phone:01670756503
             E_Mail:nokib016@gmail.com
         </p>
+        <li><a href="https://www.facebook.com/nokib.mozumder" target="_blank">Find me on facebook</a></li>
         <li><a href="message_to_admin.php">Send him a Message</a></li>
         <?php
         if (($userdata[admin] == '1')) {

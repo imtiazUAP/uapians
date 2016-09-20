@@ -27,7 +27,6 @@ if (empty($_SESSION['username'])) {
                 <?php
                 include("menu.php");
                 ?>
-            </div>
             <?php
             if (($userdata[admin] == '1')) {
             ?>

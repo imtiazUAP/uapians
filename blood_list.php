@@ -34,10 +34,11 @@ if (empty($_SESSION['username'])) {
                 <?php
                    include("menu.php");
                 ?>
-
-                <div>
-                    <img src="images/Donate_Blood.jpg" alt="" width="350" height="200" class="image"  align="left"/>
-                    <h1 style="color:#FFFFFF">why donate Blood?</h1>
+                    <div>
+                        <img src="images/Donate_Blood.jpg" alt="" width="350" height="200" class="image"  align="left"/>
+                    </div>
+                <div style="padding-left: 360px">
+                    <h1 style="color:#FFFFFF;">why donate Blood?</h1>
                     <p align="right" style="text-align:left"> You don’t need a special reason to give blood.
                         You just need your own reason.
                         Some of us give blood because we were asked by a friend.
@@ -63,30 +64,34 @@ if (empty($_SESSION['username'])) {
                 </div>
 
                 <form method="post">
-                    <tr>
-                        <td>Blood Group</td>
-                        <td>
-                            <select name="Blood_Group_ID" id="Blood_Group_ID" selected="">
-                                <?php
+                    <div align="left" style="padding-left:30px;">
+                        <table>
+                        <tr>
+                            <td>Select Blood Group</td>
+                            <td>
+                                <select name="Blood_Group_ID" id="Blood_Group_ID" selected="">
+                                    <?php
 
-                                $query = "SELECT DISTINCT Blood_Group_ID, Blood_Group_Name FROM blood_group_info";
-                                $rs = mysql_query($query) or die ('Error submitting');
-                                while ($rows = mysql_fetch_assoc($rs)) {
-                                    if ($row["Blood_Group_ID"] == $rows["Blood_Group_ID"]) {
-                                        $selected = 'selected="selected"';
-                                    } else {
-                                        $selected = '';
+                                    $query = "SELECT DISTINCT Blood_Group_ID, Blood_Group_Name FROM blood_group_info";
+                                    $rs = mysql_query($query) or die ('Error submitting');
+                                    while ($rows = mysql_fetch_assoc($rs)) {
+                                        if ($row["Blood_Group_ID"] == $rows["Blood_Group_ID"]) {
+                                            $selected = 'selected="selected"';
+                                        } else {
+                                            $selected = '';
+                                        }
+                                        print("<option value=\"" . $rows["Blood_Group_ID"] . "\" " . $selected . "  >" . $rows["Blood_Group_Name"] . "</option>");
                                     }
-                                    print("<option value=\"" . $rows["Blood_Group_ID"] . "\" " . $selected . "  >" . $rows["Blood_Group_Name"] . "</option>");
-                                }
-                                ?>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <p class="signin_button">
-                        <input type="Submit" value="Search"/>
-                    </p>
+                                    ?>
+                                </select>
+                            </td>
+                            <td>
+                                <button type="Submit" class="button button_red">Search
+                                </button>
+                            </td>
+                        </tr>
+                        </table>
+                    </div>
 
                     <table id="itable" width="1100" border="1">
                         <tr>
