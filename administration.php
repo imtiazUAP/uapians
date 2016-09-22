@@ -53,6 +53,7 @@ if (empty($_SESSION['username'])) {
                                         <li><a href="upload_tutorial.php">Add Video Tutorial</a></li>
                                         <li><a href="upload_material.php">Add Course Material</a></li>
                                         <li><a href="upload_project.php">Add Project</a></li>
+                                        <li><a href="news_insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true" title="Add News" class="thickbox">Add News</a></li>
                                     <?php
                                     }
                                     ?>
