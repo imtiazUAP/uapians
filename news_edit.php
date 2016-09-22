@@ -6,13 +6,13 @@
     $row = mysql_fetch_array($results);
 ?>
 <head>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/thickbox.js"></script>
-    <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen"/>
+    <?php
+    include("header.php");
+    ?>
 </head>
 <body>
 <form id="form1" name="form1" method="get" action="news_update.php">
-    <table>
+    <table style="color: #000000">
         <tr>
             <td>News Hints:</td>
             <td><input name="News_Hints" type="text" id="News_Hints" value=" <?php echo $row["News_Hints"]; ?>"/></td>
@@ -27,12 +27,10 @@
     <?php echo $row["News_ID"];
     ?>"/>
 
-    <p>
-        <label>
-            <input type="submit" name="Submit" value="Update"/>
-            <a href="#" onClick="tb_remove();">Close</a>
-        </label>
-    </p>
+    <div align="right" style="padding-right:25">
+    <button type="submit" class="button button_blue"> Save </button>
+    <button class="button button_red" onClick="tb_remove()"> Cancel </button>
+    </div>
 </form>
 
 </html>

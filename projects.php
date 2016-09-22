@@ -37,7 +37,7 @@ if (empty($_SESSION['username'])) {
                             ?>
                         </div>
                         <?php
-                        $strquery = "SELECT project.SID,project.project_name,project.project_screenshot,project_link,cat_name,SName,platform_name FROM project INNER JOIN project_category_table ON project.project_cat_id=project_category_table.cat_id INNER JOIN s_info ON project.SID=s_info.SID INNER JOIN platform_table ON project.platform_id=platform_table.platform_id WHERE project.language_id='" . $_GET["language_id"] . "'";
+                        $strquery = "SELECT project.SID,project.project_name,project.project_screenshot,project_link,source_code_link,cat_name,SName,platform_name FROM project INNER JOIN project_category_table ON project.project_cat_id=project_category_table.cat_id INNER JOIN s_info ON project.SID=s_info.SID INNER JOIN platform_table ON project.platform_id=platform_table.platform_id WHERE project.language_id='" . $_GET["language_id"] . "'";
                         $results = mysql_query($strquery);
                         $num = mysql_numrows($results);
 
@@ -50,6 +50,7 @@ if (empty($_SESSION['username'])) {
                                 $SName = mysql_result($results, $i, "SName");
                                 $SID = mysql_result($results, $i, "SID");
                                 $project_link = mysql_result($results, $i, "project_link");
+                                $source_code_link = mysql_result($results, $i, "source_code_link");
                                 $project_screenshot = mysql_result($results, $i, "project_screenshot");
                                 ?>
 
@@ -59,7 +60,14 @@ if (empty($_SESSION['username'])) {
                                             <td style="border:inset" colspan=2 align="center"><?php echo $project_name; ?></td>
                                         </tr>
                                         <tr style="height:100px">
-                                            <td style="border:inset" colspan=2 align="center"><a href='<?php echo $project_link; ?>'><span><img style="width:300px; height:200px; border:1px solid white; vertical-align:middle" src="<?php echo $project_screenshot; ?>"<span> Click to Download</span></a></td>
+                                            <td style="border:inset" colspan=2 align="center">
+                                                <a href='<?php echo $project_link; ?>'><span><img style="width:300px; height:200px; border:1px solid white; vertical-align:middle" src="<?php echo $project_screenshot; ?>"<span> Click for Demo</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr style="height:20px">
+                                            <td style="border:inset" colspan=2 align="center">
+                                                <a href='<?php echo $source_code_link; ?>'><span><span> Download Source Code</span></a>
+                                            </td>
                                         </tr>
                                         <tr style="height:20px">
                                             <td style="border:inset" align="center"><a href='profile_list.php? SID=<?= $SID ?>'><?= $SName ?></a></td>

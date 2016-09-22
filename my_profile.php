@@ -79,7 +79,7 @@ if (empty($_SESSION['username'])) {
             ?>
                 <div align="center" style="background-color:#FFFF00; width:700px; height:20px">
                     <?php
-                    echo " <a href='student_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=300&width=300&do=edit&modal=true'     	class='thickbox' title='Edit Student - " . $Name . "'> Edit my Profile </a> ";
+                    echo " <a href='student_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=450&width=300&do=edit&modal=true'     	class='thickbox' title='Edit Student - " . $Name . "'> Edit my Profile </a> ";
                     ?>
                     |
                     <?php
@@ -93,7 +93,10 @@ if (empty($_SESSION['username'])) {
                     echo " <a href='message_list.php? SID=" . $SID . "'> My Messages  </a>"
                     ?>
                     <?php
-                    echo " <a href='upload_project.php?SID=" . $SID . "'> | upload project  </a>"
+                    echo " <a href='upload_project.php?SID=" . $SID . "'> | Upload Project  </a>"
+                    ?>
+                    <?php
+                    echo " <a href='upload_material.php?SID=" . $SID . "'> | Upload Course Material  </a>"
                     ?>
                 </div>
             <?php

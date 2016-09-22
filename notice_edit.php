@@ -13,7 +13,7 @@ $row = mysql_fetch_array($results);
     <body>
 
     <form id="form1" name="form1" method="get" action="notice_update.php">
-        <table>
+        <table style="color: #000000">
             <tr>
                 <td>Notice:</td>
             </tr>
@@ -22,12 +22,10 @@ $row = mysql_fetch_array($results);
             <?php echo $row["Notice"]; ?>
         </textarea><br>
         <input name="Notice_ID" type="hidden" id="Notice_ID" value=" <?php echo $row["Notice_ID"]; ?>"/>
-        <p>
-            <label>
-                <input type="submit" name="Submit" value="Update"/>
-                <a href="#" onClick="tb_remove();">Close</a>
-            </label>
-        </p>
+        <div align="right" style="padding-right:25">
+            <button type="submit" class="button button_blue"> Save </button>
+            <button class="button button_red" onClick="tb_remove()"> Cancel </button>
+        </div>
     </form>
     </body>
 </html>

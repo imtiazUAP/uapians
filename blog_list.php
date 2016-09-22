@@ -35,6 +35,7 @@ if (empty($_SESSION['username'])) {
                     </div>
                     <div id="margin_figure">
                         <div  id="new_blog_button"><a href="blog_insert.php"> আপনি একটি ব্লগ লিখুন</a></div>
+
                         <br>
                         <br>
                         <br>

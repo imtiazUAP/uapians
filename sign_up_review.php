@@ -129,9 +129,10 @@
                     <td> <input type="text" name="SID" id="SPortrait" value="<?php echo $row["SID"]; ?>" /> </td>
                 </tr>
             </table>
-            <p>
-            <label><input type="submit" name="Submit" value="Update" /> <a href="#" onClick="tb_remove();">Close</a></label>
-            </p>
+            <div align="right"; style="padding-right:25">
+                <button type="submit" class="button button_green"> Approve </button>
+                <button class="button button_red" onClick="tb_remove()"> Cancel </button>
+            </div>
         </form>
     </body>
 </html>

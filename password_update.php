@@ -10,14 +10,16 @@
         $newpassword = $_GET['new_password'];
         $strquery = "UPDATE userinfo SET password='" . md5($newpassword) . "' where SID='" . $_GET['SID'] . "' ";
         $results = mysql_query($strquery);
-        echo "Profile is Activated!!!!! Thank you";
         ?>
         <div align="center">
-            <label>
-                <br>
-                <br>
-                <a href="#" onClick="tb_remove();">Close</a>
-            </label>
+            <label style="color: #000000; font-size:14px;">OK! <span style="color:#0000ff">Your password is updated</span>
+                Please <span style="color:red">log out</span> & log in with your new password</label>
+        </div>
+        </body>br>
+        <div align="center">
+            <button class="button button_blue" onclick="window.open('Log_Out.php','_top')"> Log Out
+            </button>
+            <button class="button button_red" onClick="tb_remove()"> Close </button>
         </div>
     </body>
 </html>

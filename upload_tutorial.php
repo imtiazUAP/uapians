@@ -62,8 +62,7 @@
                                                 <label for="email" class="signup_field" data-icon="u">Tutorial Embed
                                                     Link:</label></td>
                                             <td>
-                                                <textarea name="tutorial_link" rows="2" cols="40">
-                                                </textarea>
+                                                <textarea required="required" name="tutorial_link" rows="2" cols="40"></textarea>
                                             </td>
                                     </p>
                                     </tr></table>
@@ -75,7 +74,8 @@
                             </div>
                             <br><br>
                             <div align="right" style="padding-right:165px">
-                                <input type="Submit"/>
+                                <button name="login" type="Submit" class="button button_blue">Upload
+                                </button>
                             </div>
                         </form>
                     </div>

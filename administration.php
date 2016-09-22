@@ -50,6 +50,9 @@ if (empty($_SESSION['username'])) {
                                     ?>
                                         <li><a href='sendmail1.php'>Send Email</a></li>
                                         <li><a href='administration.php'>Students Signup Confirmation </a></li>
+                                        <li><a href="upload_tutorial.php">Add Video Tutorial</a></li>
+                                        <li><a href="upload_material.php">Add Course Material</a></li>
+                                        <li><a href="upload_project.php">Add Project</a></li>
                                     <?php
                                     }
                                     ?>
@@ -69,7 +72,6 @@ if (empty($_SESSION['username'])) {
                             <?php
                             }
                             ?>
-                            <li><a href="upload_tutorial.php">Add Video Tutorial</a></li>
                             <li><a href="galary.php">Gallery</a></li>
                             <li><a href="blood_list.php">Blood Bank</a></li>
                             <li><a href="programing_contest_club.php">Programming Contest Club</a></li>
@@ -128,12 +130,12 @@ if (empty($_SESSION['username'])) {
                                     <tr align="center">
                                         <td width="120"><?= $data['SReg'] ?></td>
                                         <td width="200"><?= $data['SName'] ?></td>
-                                        <td width="100"><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></td>
+                                        <td width="100"><img src=<?= $data['SPortrait'] ?> echo style="height:100px; border-radius:5px;"></td>
                                         <td width="200"><?= $data['SMName'] ?></td>
                                         <?php
                                         if (($userdata[admin] == '1')) {
                                         ?>
-                                        <td width="100"><a href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=300&width=350&do=edit&modal=true' class='thickbox'> Review</a> | <a href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
+                                        <td width="100"><a href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=250&width=300&do=edit&modal=true' class='thickbox'> Review</a> | <a href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
                                         <?php
                                         }
                                         ?>

@@ -22,11 +22,7 @@ error_reporting(0);
 ?>
 <div align="center">
     <label style="color: #000000"> <?php echo "This Profile is activated!  Message Sent!!! Thank you"; ?></label>
-    <label>
-        <br>
-        <br>
-        <a href="#" onClick="tb_remove();">Close</a>
-    </label>
+    <button class="button button_red" onClick="tb_remove()"> Cancel </button>
 </div>
 </body>
 </html>

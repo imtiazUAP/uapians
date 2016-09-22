@@ -32,19 +32,22 @@
                 <form>
                     <table class="hoverTable" border="1" align="center" width="1100">
                         <tr align="center">
-                            <td bgcolor="#006699" width="80">Course Code</td>
                             <td bgcolor="#006699" width="160">Course Name</td>
                             <td bgcolor="#006699" width="170">Course Teacher</td>
                             <td bgcolor="#006699" width="180">Detail</td>
                             <td bgcolor="#006699" width="100px">Download Link</td>
+                            <td bgcolor="#006699" width="170">Uploaded By</td>
+                            <td bgcolor="#006699" width="170">Upload Date</td>
                         </tr>
                         <?php
 
-                        $strquery = "SELECT ref_id,CCode,CName,Reference_Link, EName,Detail,  SMName FROM reference_info
+                        $strquery = "SELECT ref_id, CCode, CName, Reference_Link, EName, Detail, SMName, uploaded_by, SName, SPortrait, upload_date FROM reference_info
                                     INNER JOIN c_info
                                     ON reference_info.CID=c_info.CID
                                     INNER JOIN e_info
                                     ON reference_info.EID=e_info.EID
+                                    LEFT JOIN s_info
+                                    ON s_info.SID=reference_info.uploaded_by
                                     INNER JOIN sm_info
                                     ON reference_info.SMID=sm_info.SMID WHERE CCode='" . $_GET["CCode"] . "'";
                         $results = mysql_query($strquery);
@@ -55,15 +58,26 @@
                             $CCode = mysql_result($results, $i, "CCode");
                             $CName = mysql_result($results, $i, "CName");
                             $f10 = mysql_result($results, $i, "EName");
+                            $SID = mysql_result($results, $i, "uploaded_by");
+                            $uploaded_by = mysql_result($results, $i, "SName");
+                            $SPortrait = mysql_result($results, $i, "SPortrait");
+                            $upload_date = mysql_result($results, $i, "upload_date");
                             $Detail = mysql_result($results, $i, "Detail");
                             $f3 = mysql_result($results, $i, "Reference_Link");
                             ?>
                             <tr align="center" class="tablerow">
-                                <td width="130" height="50"><?php echo $CCode; ?></td>
                                 <td width="200" height="50"><?php echo $CName; ?></td>
                                 <td align="center" width="220" height="50"><?php echo $f10; ?></td>
                                 <td align="center" width="220" height="50"><?php echo $Detail; ?></td>
-                                <td width="150" height="50"><a href="<?php echo $f3; ?>">Download</a></td>
+                                <td width="150" height="50"><a href="<?php echo $f3; ?>">Click here</a></td>
+                                <td width="130" height="50">
+                                    <figure>
+                                        <a href='profile_list.php? SID=<?php echo $SID ? $SID : '29' ?>'><img src=<?php echo $SPortrait ? $SPortrait : 'images/14101071.jpg'?> style="height : 50px; border-radius: 25px;"></a>
+                                        <figcaption style="font-size: 10px;"><?php echo $uploaded_by ? $uploaded_by : Admin; ?></figcaption>
+                                    </figure>
+                                    </figure>
+                                </td>
+                                <td width="130" height="50"><?php echo $upload_date ? $upload_date : 'Unknown'; ?></td>
 
                                 <?php
                                 if (($userdata[admin] == '1')) {

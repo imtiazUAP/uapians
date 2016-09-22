@@ -92,7 +92,7 @@ if (empty($_SESSION['username'])) {
                                                     <a
                                                         href='profile_list.php? SID=<?= $data['SID'] ?>'><img
                                                             src=<?= $data['SPortrait'] ?> echo
-                                                            style="height:100px;">
+                                                            style="height:100px; border-radius:5px;">
                                                     </a>
                                                 </td>
                                                 <td

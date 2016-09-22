@@ -1,26 +1,28 @@
 <html>
 <head>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/thickbox.js"></script>
-    <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen"/>
+    <?php
+    include("header.php");
+    ?>
 </head>
 
 <body>
 <form action="news_save.php" method="post">
-    <table>
+    <table style="color: #000000">
         <tr>
             <td>News Hints:</td>
-            <td><input type="News_Hints" name="News_Hints"/></td>
+            <td><input type="text" name="News_Hints"/></td>
         </tr>
         <tr>
             <td>News Link:</td>
-            <td><input type"News_Link" name="News_Link"/></td>
+            <td><input  type="text" name="News_Link"/></td>
         </tr>
     </table>
     <br><br>
 
-    <input type="Submit"/>
-    <a href="#" onClick="tb_remove();">Close</a>
+    <div align="right" style="padding-right:25">
+        <button type="submit" class="button button_blue"> Save </button>
+        <button class="button button_red" onClick="tb_remove()"> Cancel </button>
+    </div>
 </form>
 
 </body>

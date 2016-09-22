@@ -21,12 +21,11 @@ if ((($_FILES["file"]["type"] == "image/gif")
             move_uploaded_file($_FILES["file"]["tmp_name"],
                 "images/" . $_FILES["file"]["name"]);
             $a = 'images/' . $_FILES["file"]["name"];
-            mysql_query($sql = "INSERT INTO project (language_id,project_name,platform_id,project_cat_id,SID,project_link,project_screenshot)VALUES ('" . $_REQUEST['language_id'] . "','" . $_REQUEST['project_name'] . "','" . $_REQUEST['platform_id'] . "','" . $_REQUEST['project_cat_id'] . "','" . $_REQUEST['SID'] . "','" . $_REQUEST['project_link'] . "','$a')");
+            mysql_query($sql = "INSERT INTO project (language_id,project_name,platform_id,project_cat_id,SID,project_link,source_code_link,project_screenshot)VALUES ('" . $_REQUEST['language_id'] . "','" . $_REQUEST['project_name'] . "','" . $_REQUEST['platform_id'] . "','" . $_REQUEST['project_cat_id'] . "','" . $_REQUEST['SID'] . "','" . $_REQUEST['project_link'] . "','" . $_REQUEST['source_code_link'] . "','$a')");
         }
     }
 } else {
-    echo "Registration Failed.... <br>Please Fill all the field Correctly";
+    echo "Project Upload Failed.... <br>Please Fill all the field Correctly";
 }
-header('location: http://localhost/uapians/upload_project_confirmation.php ');
-mysql_close($con)
+header('location: https://localhost/uapians/upload_project_confirmation.php ');
 ?> 

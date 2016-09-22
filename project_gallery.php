@@ -63,13 +63,13 @@ if (empty($_SESSION['username'])) {
                     <div id="margin_figure">
                         <table>
                             <tr>
-                                <td><a href="projects.php?language_id=1"><img border="0" alt="W3Schools" src="images/java.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=2"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=3"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a></td>
+                                <td><a href="projects.php?language_id=1"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a></td>
+                                <td><a href="projects.php?language_id=2"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a></td>
+                                <td><a href="projects.php?language_id=3"><img border="0" alt="W3Schools" src="images/java.jpg" width="265" height="160"></a></td>
                             </tr>
                                 <tr>
-                                <td><a href="projects.php?language_id=4"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=5"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a></td>
+                                <td><a href="projects.php?language_id=4"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a></td>
+                                <td><a href="projects.php?language_id=5"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a></td>
                                 <td><a href="projects.php?language_id=6"><img border="0" alt="W3Schools" src="images/assembly.jpg" width="265" height="160"></a></td>
                             </tr>
                             <tr>

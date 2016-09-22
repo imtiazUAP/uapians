@@ -77,7 +77,7 @@ if (empty($_SESSION['username'])) {
                                         <?php
                                         if (($userdata[admin] == '1')) {
                                             ?>
-                                            <td><?php echo " <a href='news_edit.php?News_ID=" . $News_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $News_ID . "'> edit </a> "; ?>
+                                            <td><?php echo " <a href='news_edit.php?News_ID=" . $News_ID . "&keepThis=true&TB_iframe=true&height=100&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $News_ID . "'> edit </a> "; ?>
                                                 | <?php echo " <a href='news_delete.php?News_ID=" . $News_ID . "'> delete </a> "; ?></td>
                                             <br>
                                         <?php
