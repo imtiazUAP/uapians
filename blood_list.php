@@ -34,10 +34,15 @@ if (empty($_SESSION['username'])) {
                 <?php
                    include("menu.php");
                 ?>
-                    <div>
+                    <div id="colOne">
+                        <?php
+                        include("sidebar.php");
+                        ?>
+                    </div>
+                    <div style="padding: 10px">
                         <img src="images/Donate_Blood.jpg" alt="" width="350" height="200" class="image"  align="left"/>
                     </div>
-                <div style="padding-left: 360px">
+                <div style="padding-left: 630px">
                     <h1 style="color:#FFFFFF;">why donate Blood?</h1>
                     <p align="right" style="text-align:left"> You don’t need a special reason to give blood.
                         You just need your own reason.
@@ -53,18 +58,10 @@ if (empty($_SESSION['username'])) {
                         Blood pressure
                         Body temperature
                         Hemoglobin</p>
-
-                    <h1 style="color:#FFFFFF">Benefits of Donating</h1>
-                    <p align="right" style="text-align:left">You don’t need a special reason to give blood.
-                        You just need your own reason.
-                        Some of us give blood because we were asked by a friend.
-                        Some know that a family member or a friend might need blood some day.
-                        Some believe it is the right thing we do.
-                        Whatever your reason, the need is constant and your contribution is important for a healthy and reliable blood supply.  And  you’ll feel good knowing you've helped change a life.</p>
                 </div>
 
                 <form method="post">
-                    <div align="left" style="padding-left:30px;">
+                    <div align="left" style="padding-left:630px;">
                         <table>
                         <tr>
                             <td>Select Blood Group</td>
@@ -93,20 +90,43 @@ if (empty($_SESSION['username'])) {
                         </table>
                     </div>
 
-                    <table id="itable" width="1100" border="1">
+                    <table id="itable" width="820" border="1">
                         <tr>
-                            <td align="center" height="50" bgcolor="#006699">Registration No</td>
                             <td align="center" bgcolor="#006699">Name</td>
-                            <td align="center" bgcolor="#006699">Blood holders profile</td>
-                            <td align="center" bgcolor="#006699">Blood Group Name</td>
+                            <td align="center" bgcolor="#006699">Phone No</td>
+                            <td align="center" bgcolor="#006699">Semester</td>
+                            <td align="center" bgcolor="#006699">Residence</td>
+                            <td align="center" bgcolor="#006699">Home District</td>
+                            <td align="center" bgcolor="#006699">Blood Group</td>
                         </tr>
 
                         <?php
-                        $strquery = "SELECT * FROM
-            (SELECT SID,S.SReg, S.SName, S.SPortrait, S.SPh_Number, B.Blood_Group_Name,B.Blood_Group_ID FROM s_info S, blood_group_info B
-            WHERE
-            S.Blood_Group_ID=B.Blood_Group_ID
-            ) A where blood_group_ID='" . $_POST[Blood_Group_ID] . "'";
+                        $strquery = "SELECT
+                                          SID,
+                                          S.SReg,
+                                          S.SName,
+                                          S.SHouse,
+                                          S.donor_value,
+                                          S.SPortrait,
+                                          S.SPh_Number,
+                                          B.Blood_Group_Name,
+                                          S.Blood_Group_ID,
+                                          S.SPh_Number,
+                                          SM.SMName,
+                                          D.district_name
+                                        FROM s_info S
+                                        INNER JOIN blood_group_info B
+                                        ON
+                                        S.Blood_Group_ID = B.Blood_Group_ID
+                                        INNER JOIN sm_info SM
+                                        ON
+                                        S.SMID = SM.SMID
+                                        INNER JOIN districts D
+                                        ON
+                                        D.district_id = S.district_id
+                                        WHERE
+                                        S.Blood_Group_ID='" . $_POST[Blood_Group_ID] . "'
+                                        ORDER BY S.SHouse DESC";
                         $results = mysql_query($strquery);
                         $num = mysql_numrows($results);
 
@@ -117,16 +137,35 @@ if (empty($_SESSION['username'])) {
                             $SName = mysql_result($results, $i, "SName");
                             $SID = mysql_result($results, $i, "SID");
                             $SPortrait = mysql_result($results, $i, "SPortrait");
+                            $SPh_Number = mysql_result($results, $i, "SPh_Number");
                             $Blood_Group_Name = mysql_result($results, $i, "Blood_Group_Name");
+                            $SMName = mysql_result($results, $i, "SMName");
+                            $SHouse = mysql_result($results, $i, "SHouse");
+                            $DistrictName = mysql_result($results, $i, "district_name");
                             ?>
 
                             <tr align="center">
-                                <td height="40"><?php echo $SReg; ?></td>
-                                <td><a href='profile_list.php?SID=<?php echo($SID) ?>'
-                                       target="_blank"> <?php echo $SName; ?></a></td>
-                                <td width="100"><a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img
-                                        src=<?= $SPortrait ?> echo style="height:100px;  border-radius: 5px;"></a></td>
-                                <td><?php echo $Blood_Group_Name; ?></td>
+                                <td>
+                                    <figure>
+                                        <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=<?= $SPortrait ? $SPortrait : 'images/14101071.jpg' ?> echo style="height : 70px; border-radius: 25px;"></a>
+                                        <figcaption><a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SName; ?></a></figcaption>
+                                    </figure>
+                                </td>
+                                <td>
+                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SPh_Number ? $SPh_Number : 'Contact with Admin' ?></a>
+                                </td>
+                                <td>
+                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SMName; ?></a>
+                                </td>
+                                <td>
+                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SHouse; ?></a>
+                                </td>
+                                <td>
+                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $DistrictName; ?></a>
+                                </td>
+                                <td width="100">
+                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/blood_groups/<?= $Blood_Group_Name.".png" ?> echo style="height:50px;  border-radius: 5px;"></a>
+                                </td>
                             </tr>
 
                             <?php
@@ -136,11 +175,11 @@ if (empty($_SESSION['username'])) {
                     </table>
                 </form>
             </div>
+                <div class="footer">
+                    <?php include("footer.php");
+                    ?>
+                </div>
             </div>
-        <div class="footer">
-        <?php include("footer.php");
-        ?>
-        </div>
     </body>
  </html>
 

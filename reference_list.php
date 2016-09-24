@@ -29,8 +29,15 @@
                 <?php
                 include("menu.php");
                 ?>
+                <div id="colOne">
+                    <?php
+                    include("sidebar.php");
+                    ?>
+                </div>
+                <br>
+                <br>
                 <form>
-                    <table class="hoverTable" border="1" align="center" width="1100">
+                    <table class="hoverTable" align="center" width="820">
                         <tr align="center">
                             <td bgcolor="#006699" width="160">Course Name</td>
                             <td bgcolor="#006699" width="170">Course Teacher</td>

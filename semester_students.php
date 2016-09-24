@@ -49,12 +49,12 @@ if (empty($_SESSION['username'])) {
                                         }
                                         ?>
                                     </div>
-                                    <table class="hoverTable" border="1" align="center" width="800">
-                                        <tr align="center">
-                                            <td bgcolor="588C73" width="120"> Registration Number</td>
-                                            <td bgcolor="588C73" width="200">Name of Student</td>
-                                            <td bgcolor="588C73" width="100px"> Portrait</td>
-                                            <td bgcolor="588C73"> Semester</td>
+                                    <table class="hoverTable" border="1px" align="center" width="800">
+                                        <tr align="center" bgcolor="588C73">
+                                            <td width="120"> Registration Number</td>
+                                            <td width="200">Name of Student</td>
+                                            <td width="100px"> Portrait</td>
+                                            <td > Semester</td>
                                             <?php
                                             if (($userdata[admin] == '1')) {
                                                 ?>
@@ -88,10 +88,7 @@ if (empty($_SESSION['username'])) {
                                                     </a>
                                                 </td>
                                                 <td width="100">
-                                                    <a
-                                                        href='profile_list.php? SID=<?= $data['SID'] ?>'><img
-                                                            src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : '14101071.jpg' ?> echo
-                                                            style="height:100px; border-radius:5px;">
+                                                    <a href='profile_list.php? SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : '14101071.jpg' ?> echo style="height:100px; border-radius:45px;">
                                                     </a>
                                                 </td>
                                                 <td

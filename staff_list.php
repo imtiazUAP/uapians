@@ -29,6 +29,11 @@
             <?php
             include("menu.php");
             ?>
+            <div id="colOne">
+                <?php
+                include("sidebar.php");
+                ?>
+            </div>
             <form>
                 <?php
                 if (($userdata[admin] == '1')) {
@@ -37,7 +42,7 @@
                    title="New Employee" class="thickbox">Create New Employee
                 </a>
                 <table
-                    class="hoverTable" width="1100" border="1"
+                    class="hoverTable" width="820" border="1"
                        style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
                     <tr align="center">
                         <td width="50" height="50" bgcolor="588C73">Employee Name</td>
@@ -52,7 +57,7 @@
                     <?php
                     if (($userdata[admin] == '4')) {
                     ?>
-                    <table class="hoverTable" width="1100" border="1"
+                    <table class="hoverTable" width="820" border="1"
                            style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
                         <tr align="center">
                             <td width="50" height="50" bgcolor="#006699">Employee Name</td>
@@ -67,7 +72,7 @@
                         <?php
                         if (($userdata[admin] == '0')) {
                         ?>
-                        <table class="hoverTable" width="1100" border="1"
+                        <table class="hoverTable" width="820" border="1"
                                style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
                             <tr align="center">
                                 <td width="50" height="50" bgcolor="#006699">Employee Name</td>
@@ -123,13 +128,12 @@
                             ?>
                         </table>
         </div>
-    </div>
-    <div class="footer">
         <div class="footer">
             <?php include("footer.php");
             ?>
         </div>
     </div>
+
 </body>
 </html>
 <?php

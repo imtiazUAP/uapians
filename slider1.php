@@ -24,7 +24,6 @@
             <a href="#" title="University Events...."><img src="data1/tooltips/slide2.jpg" alt="University Events...."/>4</a>
         </div>
     </div>
-    <span class="wsl"><a href="http://wowslider.com">HTML Picture Slideshow</a> by WOWSlider.com v4.9</span>
 
     <div class="ws_shadow">
     </div>

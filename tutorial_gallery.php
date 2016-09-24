@@ -207,13 +207,11 @@
        </body>
       </div>
      </div>
-    </div>
-
     <div class="footer">
         <?php include("footer.php");
         ?>
     </div>
-
+    </div>
     </body>
     </html>
 <?php

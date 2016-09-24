@@ -33,6 +33,11 @@ if (empty($_SESSION['username'])) {
             <?php
             include("menu.php");
             ?>
+            <div id="colOne">
+                <?php
+                include("sidebar.php");
+                ?>
+            </div>
                 <form>
                 <?php
                 if (($userdata[admin] == '1')) {
@@ -41,12 +46,12 @@ if (empty($_SESSION['username'])) {
                 <?php
                 }
                 ?>
-	 				
-	                <div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+                <div id="margin_figure">
+	                <div id="paragraph_head">
 	                    <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif;">1st year 1st semester</h1>
 	                </div>
 	
-                    <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                    <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
                         <tr align="center">
                             <td width="50" height="50" bgcolor="588C73">Course Code</td>
                             <td width="150" bgcolor="588C73">Course Name</td>
@@ -89,7 +94,7 @@ if (empty($_SESSION['username'])) {
                         <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">1st year 2nd semester</h1>
                     </div>
 
-                <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
                     <?php
                     $strquery = "SELECT c_info.CID,c_info.CCode,c_info.CName,sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID=sm_info.SMID where c_info.SMID='2'";
                     $results = mysql_query($strquery);
@@ -125,7 +130,7 @@ if (empty($_SESSION['username'])) {
                     <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">2nd year 1st semester</h1>
                 </div>
 
-                <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
 
                     <?php
                     $strquery = "SELECT c_info.CID,c_info.CCode,c_info.CName,sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID=sm_info.SMID where c_info.SMID='3'";
@@ -162,7 +167,7 @@ if (empty($_SESSION['username'])) {
                     <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">2nd year 2nd semester</h1>
                 </div>
 
-                <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
                     <?php
                     $strquery = "SELECT c_info.CID,c_info.CCode,c_info.CName,sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID=sm_info.SMID where c_info.SMID='4'";
                     $results = mysql_query($strquery);
@@ -198,7 +203,7 @@ if (empty($_SESSION['username'])) {
                     <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">3rd year 1st semester</h1>
                 </div>
 
-                <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
                     <?php
                     $strquery = "SELECT c_info.CID,c_info.CCode,c_info.CName,sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID=sm_info.SMID where c_info.SMID='5'";
                     $results = mysql_query($strquery);
@@ -235,7 +240,7 @@ if (empty($_SESSION['username'])) {
                     <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">3rd year 2nd semester</h1>
                 </div>
 
-                <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
                     <?php
                     $strquery = "SELECT c_info.CID,c_info.CCode,c_info.CName,sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID=sm_info.SMID where c_info.SMID='6'";
                     $results = mysql_query($strquery);
@@ -271,7 +276,7 @@ if (empty($_SESSION['username'])) {
                     <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">4th year 1st semester</h1>
                 </div>
 
-                <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
                     <?php
                     $strquery = "SELECT c_info.CID,c_info.CCode,c_info.CName,sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID=sm_info.SMID where c_info.SMID='7'";
                     $results = mysql_query($strquery);
@@ -308,7 +313,7 @@ if (empty($_SESSION['username'])) {
                     <h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">4th year 2nd semester</h1>
                 </div>
 
-                <table class="hoverTable" width="1100" border="1" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
+                <table class="hoverTable" width="820" style="padding-bottom:40px;padding-left:40px;padding-right:40px">
                     <?php
                     $strquery = "SELECT c_info.CID,c_info.CCode,c_info.CName,sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID=sm_info.SMID where c_info.SMID='8'";
                     $results = mysql_query($strquery);
@@ -340,10 +345,10 @@ if (empty($_SESSION['username'])) {
                     ?>
                 </table>
 		    </div>
-        </div>
-        <div class="footer">
-            <?php include("footer.php");
-            ?>
+            <div class="footer">
+                <?php include("footer.php");
+                ?>
+            </div>
         </div>
     </body>
 </html>

@@ -70,7 +70,7 @@ include("sidebar.php");
 	<div>
 	<div>
 			<div id="paragraph_head">
-			<h1 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">About Us</h1>
+			<h1 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif "><img src="images/system_images/founder_icon.png">Founders</h1>
 			</div>
 	<td width="100"><img src=images/11201028.jpg style="height:250px; padding:10px" align="right" ></td>
 	<td width="100"><img src=images/11201037.jpg style="height:250px; padding:10px" align="right" ></td>
@@ -87,7 +87,7 @@ include("sidebar.php");
 	
 	<div>
 	<div id="paragraph_head">
-	<h1 align="left" style="color:#FFFFFF">Features:</h1>
+	<h1 align="left" style="color:#FFFFFF"><img src="images/system_images/features_icon.png">Features:</h1>
 	</div>
 	<p align="left" style="font-size:16; font-weight:bold">The Features, Providing by this Website are....
 	</p>
@@ -135,7 +135,7 @@ include("sidebar.php");
 	<br>
 	<div>
 	<div id="paragraph_head">
-	<h1 align="left" style="color:#FFFFFF">About!</h1>
+	<h1 align="left" style="color:#FFFFFF"><img src="images/system_images/developer_icon.png">Contributors!</h1>
 	</div>
 	<td width="100"><img src=images/Najmus_Sadat.jpg style="height:250px; padding:10px" align="right" ></td>
 	<td width="100"><img src=images/Bijan_Paul.jpg style="height:250px; padding:10px" align="right" ></td>

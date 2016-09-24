@@ -23,7 +23,7 @@
     <br>
     <br>
     <div id="paragraph_head">
-        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif;">Academic Aspects</h3>
+        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif;"><img src="images/system_images/academic_icon.png">Academic Aspects</h3>
     </div>
     <ul class="bottom">
         <li><a href="employee_list.php">->>Teachers</a></li>
@@ -38,7 +38,7 @@
 <br>
 <div class="box">
     <div id="paragraph_head">
-        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
+        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif "><img src="images/system_images/club_icon.png">Clubs & Social Works</h3>
     </div>
     <ul class="bottom">
         <li><a href="galary.php">->>Gallery</a></li>
@@ -57,7 +57,7 @@
 <br>
 <div class="box">
     <div id="paragraph_head">
-        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
+        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif "><img src="images/system_images/admin_icon.png">Admin Panel</h3>
     </div>
     <ul>
         <br>
@@ -96,7 +96,7 @@
 <br>
 <div class="box">
     <div id="paragraph_head">
-        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us</h3>
+        <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif "><img src="images/system_images/contact_icon.png">Contact Us</h3>
     </div>
     <p class="bottom">For any query, or any Information contact with us... <br> Student Management Tools,
         University of Asia Pacific

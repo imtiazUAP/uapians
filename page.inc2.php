@@ -6,6 +6,8 @@ class Page
     var $total_records = 1; ///Total Records returned by sql query
     var $records_per_page = 1; ///how many records would be displayed at a time
     var $page_name = ""; ///page name on which the class is called
+    var $_GET = array();
+    var $sm_id = 0;
     var $start = 0;
     var $page = 0;
     var $total_page = 0;

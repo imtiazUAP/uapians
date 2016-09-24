@@ -25,10 +25,17 @@ if (empty($_SESSION['username'])) {
     <div class="realbody" style="min-height:2300px">
     <?php
     include("menu.php");
+    ?>
+        <div id="colOne">
+            <?php
+            include("sidebar.php");
+            ?>
+        </div>
+        <?php
     if (($userdata[admin] == '1')) {
     ?>
         <a href="employee_insert.php?keepThis=true&TB_iframe=true&height=120&width=240&modal=true" title="New Employee" class="thickbox">Create New Employee</a>
-        <table class="hoverTable" width="1100" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
+        <table class="hoverTable" width="820" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
             <tr align="center">
                 <td width="50" height="50" bgcolor="588C73">Employee Name</td>
                 <td width="150" bgcolor="588C73">Employee Designation</td>
@@ -42,7 +49,7 @@ if (empty($_SESSION['username'])) {
             <?php
             if (($userdata[admin] == '4')) {
             ?>
-            <table class="hoverTable" width="1100" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
+            <table class="hoverTable" width="820" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
                 <tr align="center">
                     <td width="50" height="50" bgcolor="#006699">Employee Name</td>
                     <td width="150" bgcolor="#006699">Employee Designation</td>
@@ -55,7 +62,7 @@ if (empty($_SESSION['username'])) {
                 <?php
                 if (($userdata[admin] == '0')) {
                 ?>
-                <table class="hoverTable" width="1100" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
+                <table class="hoverTable" width="820" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
                     <tr align="center">
                         <td width="50" height="50" bgcolor="#006699">Employee Name</td>
                         <td width="150" bgcolor="#006699">Employee Designation</td>
@@ -94,10 +101,10 @@ if (empty($_SESSION['username'])) {
                     ?>
                 </table>
             </div>
-        </div>
-        <div class="footer">
-            <?php include("footer.php");
-            ?>
+            <div class="footer">
+                <?php include("footer.php");
+                ?>
+            </div>
         </div>
     </body>
 </html>

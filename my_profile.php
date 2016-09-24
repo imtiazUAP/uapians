@@ -78,7 +78,7 @@ if (empty($_SESSION['username'])) {
             if (($userdata['SID'] == $SID)) {
             ?>
                 <div align="center" style=" width:920px; height:20px; color: #ffffff; font-size: 16px">
-<a style="background-color: #4285F4; background-size: 80px 60px;" href='student_edit.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=450&width=300&do=edit&modal=true' class='thickbox' title='Edit Student -<?= $Name ?>'>  Edit my Profile </a>
+<a style="background-color: #4285F4; background-size: 80px 60px;" href='student_edit.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=470&width=300&do=edit&modal=true' class='thickbox' title='Edit Student -<?= $Name ?>'>  Edit my Profile </a>
 <a style="background-color: #F1D158;" href='password_edit.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true' class='thickbox' title='Change Password -<?= $Name ?>'>  Change my Password </a>
 <a style="background-color: #55A947"; href='single_mark_list.php?SID=<?= $SID ?>'>-  My Results Vault </a>
 <a style="background-color: #FF8E65;" href='message_list.php?SID=<?= $SID ?>'>-  My Messages  </a>
