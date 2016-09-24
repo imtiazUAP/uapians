@@ -38,29 +38,30 @@ if (empty($_SESSION['username'])) {
                     include("sidebar.php");
                     ?>
                 </div>
-                <form action="message_save.php" method="post">
-                    <div>
-                        <br/>
-                        <input value="<?php echo $userdata['SID']; ?>" name="SID" type="hidden"/>
-                        <br>
-                        <br>
+                <div style="padding-left: 350px">
+                    <form action="message_save.php" method="post">
+                        <div>
+                            <br/>
+                            <input value="<?php echo $userdata['SID']; ?>" name="SID" type="hidden"/>
+                            <br>
+                            <br>
 
-                        <div style="font-weight:bold; color:#FFFFFF;">Subject:</div>
-                        <input type="text" name="Subject"/>
-                        <br>
-                        <br>
+                            <div style="font-weight:bold; color:#FFFFFF;">Subject:</div>
+                            <input type="text" name="Subject"/>
+                            <br>
+                            <br>
 
-                        <div style="font-weight:bold; color:#FFFFFF;">Message:</div>
-                        <textarea name="Message" cols="80" rows="15">
-                            Type your message here...
-                        </textarea><br>
-                    </div>
-                    <br><br>
+                            <div style="font-weight:bold; color:#FFFFFF;">Message:</div>
+                            <textarea placeholder="Type your message here..." name="Message" cols="80" rows="15"></textarea><br>
+                        </div>
+                        <br><br>
 
-                    <div align="right" style="padding-right:165px">
-                        <input type="Submit"/>
-                    </div>
-                </form>
+                        <div align="right" style="padding-right:165px">
+                            <button name="login" type="Submit" class="button button_blue">Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

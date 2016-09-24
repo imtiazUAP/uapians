@@ -49,15 +49,13 @@
                         <br>
                         <br>
                         <div style="font-weight:bold; color:#FFFFFF;">Message:</div>
-                        <textarea name="Message" placeholder="Type your message here..." cols="80"
-                                  rows="15">
-                        </textarea>
+                        <textarea name="Message" placeholder="Type your message here..." cols="80" rows="15"></textarea>
                         <br>
                     </div>
                     <br><br>
 
                     <div align="right" style="padding-right:165px">
-                        <input type="Submit"/>
+                        <button class="button button_green" type="submit"> Send Message </button>
                     </div>
                 </form>
             </div>

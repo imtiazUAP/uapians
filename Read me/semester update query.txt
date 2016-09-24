@@ -9,3 +9,24 @@ UPDATE s_info SET SMID=2 WHERE SMID=1;
 
 
 //run this query from phpmyadmin after every six month when semester is over.
+
+
+Google Fonts & theis class
+For Detail: http://www.awwwards.com/20-best-web-fonts-from-google-web-fonts-and-font-face.html
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine|Open+Sans|Josefin|Slab|Arvo|Lato|Vollkorn|Abril+Fetface|Ubuntu|Droid+Sans|Junction|Fertigo|Audimat|Fontin">
+
+
+Tangerine
+Open+Sans
+Josefin Slab
+Arvo
+Lato
+Vollkorn
+Abril Fatface
+Ubuntu
+PT Sans + PT Serif
+Droid Sans
+Junction
+Fertigo
+Audimat
+Fontin

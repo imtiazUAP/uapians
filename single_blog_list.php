@@ -48,8 +48,6 @@
                         <br><br>
                         <br>
                         <br>
-                        <br>
-                        <br>
                         <div>
                             <?php
                                 $Blog_ID = $_GET["Blog_ID"];
@@ -64,9 +62,8 @@
                                 $SPortrait = mysql_result($results, $i, "SPortrait");
                                 $SMName = mysql_result($results, $i, "SMName");
                             ?>
-                            <div style="padding-bottom:100px; padding-right:50px; color:#FFFFFF">
-                                <img
-                                    style="width:60px;padding:2px;border:2px solid white;margin:0px; font-size:18px"
+                            <div class="blog" style="padding-bottom:100px; padding-right:50px; color:#FFFFFF">
+                                <img style="width:60px;padding:2px;border:2px solid white;margin:0px; border-radius: 35px;"
                                     src="<?php echo $SPortrait; ?>" alt="Smiley face"
                                     width="50" height="60" align="right">
                                 <div style="padding:10px; font-weight:bold">
@@ -77,11 +74,9 @@
                                     <?php echo $SMName;
                                     ?>
                                 </div>
-                                <div
-                                    style="width:500px;padding:10px;margin:0px; font-size:11px"><?php echo $Date; ?></div>
+                                <div style="width:500px;padding:10px;margin:0px; font-size:11px"><?php echo $Date; ?></div>
                                 <div><p style="font-size:14px; font-weight:bold">Article:</p></div>
-                                <div
-                                    style="width:700px;padding:10px;border:1px solid white;margin:0px; font-size:16px">
+                                <div style="background-color:#0F1628; width:700px;padding:10px;border:1px solid white;margin:0px; font-size:16px; border-radius: 10px">
                                     <?php echo $Blog;
                                     ?>
                                 </div>
@@ -108,29 +103,33 @@
                                 }
                                 ?>
                                 <?php
-                                $strquery = "SELECT SName,SPortrait,COMMENT FROM comments INNER JOIN s_info ON comments.SID=s_info.SID WHERE Blog_ID='" . $Blog_ID . "'";
+                                $strquery = "SELECT s_info.SID, SName,SPortrait,COMMENT FROM comments INNER JOIN s_info ON comments.SID=s_info.SID WHERE Blog_ID='" . $Blog_ID . "'";
                                 $results = mysql_query($strquery);
                                 $num = mysql_numrows($results);
                                 $i = 0;
                                 while ($i < $num) {
+                                    $commenterId = mysql_result($results, $i, "SID");
                                     $SName = mysql_result($results, $i, "SName");
                                     $SPortrait = mysql_result($results, $i, "SPortrait");
                                     $Comment = mysql_result($results, $i, "Comment");
                                     ?>
+                                <br>
 
-                                    <div style="padding-bottom:100px; padding-right:50px; color:#FFFFFF">
-                                        <img style="padding:2px;border:2px solid white;margin:0px; font-size:18px"
-                                             src="<?php echo $SPortrait; ?>" alt="Smiley face"
-                                             width="40" height="50">
-                                        <div style="padding:2px; font-weight:bold">
-                                            <?php echo $SName; ?>
-                                        </div>
-                                        <div
-                                            style="padding:2px;border:1px solid white;margin:0px; font-size:12px; width:500px"
-                                        ;>
-                                        <?php echo $Comment; ?>
-                                    </div>
-                                    <br>
+                                    <table border="1px" style="border-radius: 5px;width:600px;">
+                                        <tr>
+                                            <td style="background-color: #50B9E8">
+                                                <figure>
+                                                    <a href='profile_list.php? SID=<?php echo $commenterId ?>'><img src=<?php echo $SPortrait ? $SPortrait : 'images/14101071.jpg'?> style=" height : 25px; border-radius: 15px;"></a>
+                                                    <figcaption style="font-size: 10px;"><?php echo $SName; ?></figcaption>
+                                                </figure>
+                                            </td>
+                                            <td style="background-color: #55AA45">
+                                                <div style="padding:2px; width:500px; border-radius: 10px";>
+                                                <?php echo $Comment; ?>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
                                     <?php
                                     $i++;
                                 }
@@ -139,16 +138,14 @@
                                     <div>
                                         <input value="<?php echo $userdata['SID']; ?>" name="SID" type="hidden"/>
                                         <input value="<?php echo $Blog_ID; ?>" name="Blog_ID" type="hidden"/>
-                                        <div style="font-weight:bold;font-size:20px; color:#FFFFFF;">Comments:
+                                        <br>
+                                        <div style="font-weight:bold;font-size:15px; color:#FFFFFF;">Comments:
                                         </div>
-                                        <textarea name="Comment" rows="4" cols="50" placeholder="Leave your comment here...">
-                                        </textarea>
+                                        <textarea name="Comment" rows="3" cols="50" placeholder="Leave your comment here..."></textarea>
                                         <br>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <div id="detail_blog" float="right">
-                                        <input type="Submit" Value="Comment"/>
+                                    <div>
+                                        <button class="button button_green" type="submit"> Comment </button>
                                     </div>
                                 </form>
                             </div>

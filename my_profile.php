@@ -77,27 +77,13 @@ if (empty($_SESSION['username'])) {
             <?php
             if (($userdata['SID'] == $SID)) {
             ?>
-                <div align="center" style="background-color:#FFFF00; width:700px; height:20px">
-                    <?php
-                    echo " <a href='student_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=450&width=300&do=edit&modal=true'     	class='thickbox' title='Edit Student - " . $Name . "'> Edit my Profile </a> ";
-                    ?>
-                    |
-                    <?php
-                    echo " <a href='password_edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $Name . "'> Change my Password </a> ";
-                    ?>
-                    |
-                    <?php
-                    echo " <a href='single_mark_list.php? SID=" . $SID . "'> My Results Vault </a>"
-                    ?> |
-                    <?php
-                    echo " <a href='message_list.php? SID=" . $SID . "'> My Messages  </a>"
-                    ?>
-                    <?php
-                    echo " <a href='upload_project.php?SID=" . $SID . "'> | Upload Project  </a>"
-                    ?>
-                    <?php
-                    echo " <a href='upload_material.php?SID=" . $SID . "'> | Upload Course Material  </a>"
-                    ?>
+                <div align="center" style=" width:920px; height:20px; color: #ffffff; font-size: 16px">
+<a style="background-color: #4285F4; background-size: 80px 60px;" href='student_edit.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=450&width=300&do=edit&modal=true' class='thickbox' title='Edit Student -<?= $Name ?>'>  Edit my Profile </a>
+<a style="background-color: #F1D158;" href='password_edit.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true' class='thickbox' title='Change Password -<?= $Name ?>'>  Change my Password </a>
+<a style="background-color: #55A947"; href='single_mark_list.php?SID=<?= $SID ?>'>-  My Results Vault </a>
+<a style="background-color: #FF8E65;" href='message_list.php?SID=<?= $SID ?>'>-  My Messages  </a>
+<a style="background-color: #ABDEE1;" href='upload_project.php?SID=<?= $SID ?>'>-  Upload Project  </a>
+<a style="background-color: #FFFFFD;" href='upload_material.php?SID=<?= $SID ?>'>-  Upload Course Material  </a>
                 </div>
             <?php
             }

@@ -27,8 +27,8 @@ $row = mysql_fetch_array($results);
             <div align="right"; style="padding-right:25">
                 <button name="login" type="Submit" class="button button_blue">Update Password
                 </button>
-                <button class="button button_red" onClick="tb_remove()"> Cancel </button>
             </div>
         </form>
+        <button class="button button_red" onClick="tb_remove()"> Cancel </button>
     </body>
 </html>

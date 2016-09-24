@@ -88,8 +88,8 @@ if (empty($_SESSION['username'])) {
                     }
                     ?>
                 </div>
-                <div style="font-weight:bold; font-size:16px; padding-left:10px; color:#0099FF">
-                    <ul>
+                <div style="font-weight:bold; font-size:16px; padding-left:10px; color:#0099FF;">
+                    <ul style="list-style: none;">
                         <li><a href="message_to_friend.php">Send a Message...</a></li>
                     </ul>
                 </div>

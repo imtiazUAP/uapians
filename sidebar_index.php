@@ -63,15 +63,14 @@
     </div>
     <ul class="bottom">
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Teachers</a></li>
+               class="thickbox">->>Teachers</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Students</a></li>
+               class="thickbox">->>Students</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Courses</a></li>
+               class="thickbox">->>Courses</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Results</a></li>
-        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">References</a></li>
+               class="thickbox">->>Results</a></li>
+        <li><a class="blink_me thickbox" href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course">->>Download Course Material</a></li>
     </ul>
 </div>
 <br>
@@ -82,23 +81,21 @@
     </div>
     <ul class="bottom">
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Gallery</a></li>
+               class="thickbox">->>Gallery</a></li>
+        <li><a class="blink_me thickbox" href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course">->>UAP Blood Bank</a></li>
+        <li><a class="blink_me thickbox" href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course">->>Who is from my District</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Blood Bank</a></li>
+               class="thickbox">->>Programming Contest Club</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Who is from my District</a></li>
+               class="thickbox">->>Research and Publication Club</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Programming Contest Club</a></li>
+               class="thickbox">->>Sports Club</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Research and Publication Club</a></li>
+               class="thickbox">->>Software and Hardware Club</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Sports Club</a></li>
+               class="thickbox">->>Cultural and Debating Club</a></li>
         <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Software and Hardware Club</a></li>
-        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Cultural and Debating Club</a></li>
-        <li><a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-               class="thickbox">Web Club</a></li>
+               class="thickbox">->>Web Club</a></li>
     </ul>
 </div>
 <br>
@@ -110,21 +107,21 @@
     <ul>
         <a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
            class="thickbox">
-            <li><img src="images/1234554321.jpg" style="width:238px "/> Nokib Mozumder</li>
-        </a>
-        <p class="bottom">Phone:01670756503
-            E_Mail:nokib016@gmail.com
-        </p>
-        <li><a href="https://www.facebook.com/nokib.mozumder" target="_blank">Find me on facebook</a></li>
-        <br>
-        <a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
-           class="thickbox">
             <li><img src="images/Picture 2963.jpg" style="width:238px"/>MD. Mazharul islam jihan</li>
         </a>
         <p class="bottom">Phone:01752512666
             E_Mail:jihanislam007@gmail.com
         </p>
         <li><a href="https://www.facebook.com/mazaharulislam.jihan" target="_blank">Find me on facebook</a></li>
+        <br>
+        <a href="login_request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+           class="thickbox">
+            <li><img src="images/1234554321.jpg" style="width:238px "/> Nokib Mozumder</li>
+        </a>
+        <p class="bottom">Phone:01670756503
+            E_Mail:nokib016@gmail.com
+        </p>
+        <li><a href="https://www.facebook.com/nokib.mozumder" target="_blank">Find me on facebook</a></li>
     </ul>
 </div>
 <br>

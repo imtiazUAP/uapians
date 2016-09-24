@@ -27,7 +27,6 @@ if (empty($_SESSION['username'])) {
             <?php
             include("logo.php");
             ?>
-            <div id="logo">
                 <div class="realbody" style="height:2000px">
                     <?php
                     include("menu.php");
@@ -91,7 +90,7 @@ if (empty($_SESSION['username'])) {
                                                 <td width="100">
                                                     <a
                                                         href='profile_list.php? SID=<?= $data['SID'] ?>'><img
-                                                            src=<?= $data['SPortrait'] ?> echo
+                                                            src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : '14101071.jpg' ?> echo
                                                             style="height:100px; border-radius:5px;">
                                                     </a>
                                                 </td>

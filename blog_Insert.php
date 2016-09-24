@@ -35,19 +35,14 @@ if (empty($_SESSION['username'])) {
                             <div>
                                 <input value="<?php echo $userdata['SID'];?>" name="SID" type="hidden"/>
                                 <br>
-                                <div style="font-weight:bold; color:#FFFFFF;">Date:</div>
-                                <input type="Date" name="Date"/>
-                                <br>
-                                <br>
-                                <div style="font-weight:bold; color:#FFFFFF;">Article:</div>
-                                <textarea name="Blog" cols="80" rows="15">
-                                Type your Article here...
-                                </textarea><br>
+                                <div style="font-weight:bold; color:#FFFFFF;">Write you blog:</div>
+                                <textarea placeholder="Write your blog here" name="Blog" cols="80" rows="15"></textarea><br>
                             </div>
                             <br>
                             <br>
                             <div align="right" style="padding-right:165px">
-                            <input type="Submit"/>
+                                <button name="login" type="Submit" class="button button_blue">Save & Post
+                                </button>
                             </div>
                         </form>
                         <div>

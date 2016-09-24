@@ -13,17 +13,11 @@
     <body>
         <form id="form1" name="form1" method="get" action="blog_update.php">
             <div>Blog:</div>
-            <textarea name="Blog" type="text" id="Blog" cols="80" rows="15" >
-            <?php echo $row["Blog"]; ?>
-            </textarea>
+            <textarea name="Blog" type="text" id="Blog" cols="80" rows="15" ><?php echo $row["Blog"]; ?></textarea>
             <br>
             <input name="Blog_ID" type="hidden" id="Blog_ID"  value=" <?php echo $row["Blog_ID"]; ?>" />
-            <p>
-            <label>
-            <input type="submit" name="Submit" value="Update" />
-            <a href="#" onClick="tb_remove();">Close</a>
-            </label>
-            </p>
+            <button type="submit" class="button button_green"> Save & Update </button>
+            <button class="button button_red" onClick="tb_remove()"> Cancel </button>
         </form>
     </body>
 </html>

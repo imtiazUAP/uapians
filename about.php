@@ -36,8 +36,6 @@ if (empty($_SESSION['username'])) {
 
 <?php include("logo.php"); ?>
 
-
-<div id="logo">
 <div class="realbody" style="height:2000px">
 
 		<?php include("menu.php"); ?>
@@ -146,15 +144,15 @@ include("sidebar.php");
 	<td width="100"><img src=images/Sharif_Zaman.jpg style="height:250px; padding:10px" align="right" ></td>
 	<p align="left" style="font-size:16; font-weight:bold">এই ওয়েবসাইটটির শুরু থেকে শেষ পর্যন্ত যারা জড়িত...</p>
 	
-	<p align="left">প্রথমেই যার কথা বলতে হয় উনি হচ্ছেন <p style="font-size:20px">Faruk Ahmed</p> Microsoft Developer হিসাবে দীর্ঘদিন কাজ করার পর এখন তিনি কানাডার একটি সফটওয়্যার প্রতিষ্ঠানের Lead Developer হিসাবে কাজ করছেন। ইমতিয়াজ আহমাদ এবং ইরফান তানভীর যখন এই পোর্টালটির কাজ যখন শুরু করে তখন তাদের ওয়েব ডেভেলপমেন্ট সম্পর্কে ধারণা ছিলো সামান্য সেই সামান্য ধারণা থেকে আজকের এই রুপ দেওয়া পর্যন্ত এই মানুষটির অবদান সবথেকে বেশী। তাদের যে কোন সমস্যায় রাত-দিন যে কোন সাহায্য তিনি করেছেন।
+	<p align="left">প্রথমেই যার কথা বলতে হয় উনি হচ্ছেন <span style="font-size:20px">Faruk Ahmed</span> Microsoft Developer হিসাবে দীর্ঘদিন কাজ করার পর এখন তিনি কানাডার একটি সফটওয়্যার প্রতিষ্ঠানের Lead Developer হিসাবে কাজ করছেন। ইমতিয়াজ আহমাদ এবং ইরফান তানভীর যখন এই পোর্টালটির কাজ যখন শুরু করে তখন তাদের ওয়েব ডেভেলপমেন্ট সম্পর্কে ধারণা ছিলো সামান্য সেই সামান্য ধারণা থেকে আজকের এই রুপ দেওয়া পর্যন্ত এই মানুষটির অবদান সবথেকে বেশী। তাদের যে কোন সমস্যায় রাত-দিন যে কোন সাহায্য তিনি করেছেন।
 <br>
-<p style="font-size:20px">Bijon Paul</p>ওই সময় তাদের ডাটাবেজের Course Teacher ছিলেন। পড়ালেখা করেছেন শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় থেকে বর্তমানে তিনি American University of Bangladesh (AIUB) তে শিক্ষকতার দায়িক্ত পালন করছেন তার অবদান অস্বীকার করার মতো নয়। Admin দের ডাটাবেজে হাতেখড়ি উনার কাছেই।
+<span style="font-size:20px">Bijon Paul</span>ওই সময় তাদের ডাটাবেজের Course Teacher ছিলেন। পড়ালেখা করেছেন শাহজালাল বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয় থেকে বর্তমানে তিনি American University of Bangladesh (AIUB) তে শিক্ষকতার দায়িক্ত পালন করছেন তার অবদান অস্বীকার করার মতো নয়। Admin দের ডাটাবেজে হাতেখড়ি উনার কাছেই।
 <br>
-<p style="font-size:20px">Dr. Najmus Sadat</p> পড়ালেখা শেষ করেছেন অস্ট্রেলিয়ার Monash University থেকে উনি বর্তমানে Assistant প্রফেসর হিসাবে দায়িক্তপালন করছেন University of Asia Pacific এ। অ্যালগরিদম সংক্রান্ত সকল জটিলতায় ইমতিয়াজের পাশে ছিলেন উনি সর্বদা...
+<span style="font-size:20px">Dr. Najmus Sadat</span> পড়ালেখা শেষ করেছেন অস্ট্রেলিয়ার Monash University থেকে উনি বর্তমানে Assistant প্রফেসর হিসাবে দায়িক্তপালন করছেন University of Asia Pacific এ। অ্যালগরিদম সংক্রান্ত সকল জটিলতায় ইমতিয়াজের পাশে ছিলেন উনি সর্বদা...
 <br>
-<p style="font-size:20px">Sharif Zaman</p> জুনিয়র ইঞ্জিনিয়ার,Epsilon Consulting Ltd. পড়াশোনা করেছেন CSE তেই University of Development Alternative থেকে তার পাশে বসেই করা হয়েছে ডিজাইনের সব কাজ।
+<span style="font-size:20px">Sharif Zaman</span> জুনিয়র ইঞ্জিনিয়ার,Epsilon Consulting Ltd. পড়াশোনা করেছেন CSE তেই University of Development Alternative থেকে তার পাশে বসেই করা হয়েছে ডিজাইনের সব কাজ।
 <br>
-<p style="font-size:20px">S.M. Saidur Rahman</p> Senior Engineer at Epsilon Consulting Ltd. এই ওয়েবসাইটটির ডোমেইনটি নেওয়া হয়েছে উনার মাধ্যমেই। অত্যান্ত হেল্পফুল এবং জিনিয়াস একজন মানুষ। এখন পর্যন্ত কখন যদি এই ওয়েবসাইটের সার্ভার সংক্রান্ত কোন সমস্যা হয় তাহলে উনি জানা মাত্রই ঠিক করে দেওয়ার জন্যে কাজ করেন। বলা যায় এই ওয়েবসাইটের চুড়ান্ত পরিনতি উনার মাধ্যমেই।</p>
+<span style="font-size:20px">S.M. Saidur Rahman</span> Senior Engineer at Epsilon Consulting Ltd. এই ওয়েবসাইটটির ডোমেইনটি নেওয়া হয়েছে উনার মাধ্যমেই। অত্যান্ত হেল্পফুল এবং জিনিয়াস একজন মানুষ। এখন পর্যন্ত কখন যদি এই ওয়েবসাইটের সার্ভার সংক্রান্ত কোন সমস্যা হয় তাহলে উনি জানা মাত্রই ঠিক করে দেওয়ার জন্যে কাজ করেন। বলা যায় এই ওয়েবসাইটের চুড়ান্ত পরিনতি উনার মাধ্যমেই।</p>
     </div>
 	
 

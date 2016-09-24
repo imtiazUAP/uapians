@@ -103,7 +103,7 @@ if (empty($_SESSION['username'])) {
                                     $Notice_ID = mysql_result($results, $i, "Notice_ID");
                                     $Notice = mysql_result($results, $i, "Notice");
                                 ?>
-                                <p style="padding-left:60px; padding-right:55px; color:#66CC33;font-size:16px; font-weight:bold; "><br><br><br><br><br><?php echo $Notice ; ?><br> <br>Thank You<br>
+                                <p style="padding-left:60px; padding-right:60px; color:#9F7953;font-size:16px; font-weight:bold; "><br><br><br><br><br><?php echo $Notice ; ?><br> <br>Thank You<br>
 
 
                                 <?php
