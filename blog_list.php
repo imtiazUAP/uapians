@@ -86,9 +86,11 @@ if (empty($_SESSION['username'])) {
                         }
                         ?>
                         </table>
+                        <div style="color: #ffffff; background-size: contain; background-color: #000000; margin-right: 30px; font-size: 18px">
                         <?php
                         echo $page->get_page_nav();
                         ?>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -88,7 +88,7 @@ if (empty($_SESSION['username'])) {
                                                     </a>
                                                 </td>
                                                 <td width="100">
-                                                    <a href='profile_list.php? SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : '14101071.jpg' ?> echo style="height:100px; border-radius:45px;">
+                                                    <a href='profile_list.php? SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : 'images/14101071.jpg' ?> echo style="height:100px; border-radius:45px;">
                                                     </a>
                                                 </td>
                                                 <td
@@ -127,9 +127,11 @@ if (empty($_SESSION['username'])) {
                                         }
                                         ?>
                                     </table>
+                                    <div style="color: #ffffff; background-color: #000000; margin-left: 270px; margin-right: 30px; font-size: 18px">
                                     <?php
                                     echo $page->get_page_nav();
                                     ?>
+                                    </div>
                                 </form>
                             </div>
                         </div>
