@@ -2,6 +2,7 @@
 session_start();
 error_reporting(0);
 include("dbconnect.php");
+include("classes/Authentication.php");
 ?>
 <html>
     <head>

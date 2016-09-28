@@ -2,11 +2,15 @@
 session_start();
 error_reporting(0);
 include("dbconnect.php");
+include("classes/Authentication.php");
 include_once("page.inc.php");
+
+$authetication = new Authentication();
+$isLoggedIn = $authetication->isLoggedIn();
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
+if (!$isLoggedIn) {
 ?>
     <script language="JavaScript">
         window.location="index.php";

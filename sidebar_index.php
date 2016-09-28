@@ -37,13 +37,16 @@
         $_SESSION['username'] = $usdata['username'];
         $_SESSION['userid'] = $usdata['userid'];
         session_write_close();
-        if (!empty($_SESSION['username'])) {
+        $authetication = new Authentication();
+        $isLoggedIn = $authetication->isLoggedIn();
+
+        if ($isLoggedIn) {
             ?>
             <script language="JavaScript">
                 window.location = "home.php";
             </script>
         <?php
-        }elseif (empty($_SESSION['username'])){
+        }elseif (!$isLoggedIn){
         ?>
             <script language="JavaScript">
                 window.location = "reset_pass.php?message=wrong_login_id__or_pass";

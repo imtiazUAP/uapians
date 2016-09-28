@@ -40,24 +40,11 @@ if (empty($_SESSION['username'])) {
                         ?>
                     </div>
                     <div style="padding: 10px">
-                        <img src="images/Donate_Blood.jpg" alt="" width="350" height="200" class="image"  align="left"/>
+                        <img src="images/Donate_Blood.jpg" alt="" width="350" height="150" class="image"  align="left"/>
                     </div>
-                <div style="padding-left: 630px">
-                    <h1 style="color:#FFFFFF;">why donate Blood?</h1>
-                    <p align="right" style="text-align:left"> You don’t need a special reason to give blood.
-                        You just need your own reason.
-                        Some of us give blood because we were asked by a friend.
-                        Some know that a family member or a friend might need blood some day.
-                        Some believe it is the right thing we do.
-                        Whatever your reason, the need is constant and your contribution is important for a healthy and reliable blood supply.  And  you’ll feel good knowing you've helped change a life.
-
-
-                        You will receive a mini physical to check your:
-
-                        Pulse
-                        Blood pressure
-                        Body temperature
-                        Hemoglobin</p>
+                <div style="padding-left: 630px; padding-right: 12px">
+                    <h1 style="color:#FFFFFF;">Why donate Blood?</h1>
+                    <p align="right" style="text-align:left"> You don’t need a special reason to give blood. Someone can get a new life for your blood, Someone can get his/her stamina back because of your blood. So donate blood - be healthy - be happy! </p>
                 </div>
 
                 <form method="post">
@@ -87,19 +74,8 @@ if (empty($_SESSION['username'])) {
                                 </button>
                             </td>
                         </tr>
+
                         </table>
-                    </div>
-
-                    <table id="itable" width="820" border="1">
-                        <tr>
-                            <td align="center" bgcolor="#006699">Name</td>
-                            <td align="center" bgcolor="#006699">Phone No</td>
-                            <td align="center" bgcolor="#006699">Semester</td>
-                            <td align="center" bgcolor="#006699">Residence</td>
-                            <td align="center" bgcolor="#006699">Home District</td>
-                            <td align="center" bgcolor="#006699">Blood Group</td>
-                        </tr>
-
                         <?php
                         $strquery = "SELECT
                                           SID,
@@ -125,11 +101,41 @@ if (empty($_SESSION['username'])) {
                                         ON
                                         D.district_id = S.district_id
                                         WHERE
-                                        S.Blood_Group_ID='" . $_POST[Blood_Group_ID] . "'
+                                        S.Blood_Group_ID='" . $_POST['Blood_Group_ID'] . "'
                                         ORDER BY S.SHouse DESC";
                         $results = mysql_query($strquery);
                         $num = mysql_numrows($results);
+                        $Blood_Group_Name = mysql_result($results, $i, "Blood_Group_Name");
 
+                        $query = "SELECT COUNT(SID) AS available_donor FROM s_info WHERE Blood_Group_ID='" . $_POST['Blood_Group_ID'] . "' AND donor_value='1'";
+                        $queryResult = mysql_query($query);
+                        $availableDonor = mysql_result($queryResult, "available_donor");
+
+                        if($_POST['Blood_Group_ID']){ ?>
+                            <div style="padding-right: 12px">
+                            <marquee behavior="scroll" direction="left" style="background-color:#F44336;font-size:14px; height:20;">
+                                <p><?= $num ?>  (<?= $Blood_Group_Name ?>) donors found <?= $availableDonor ?> of them are available to donate today. </p>
+                            </marquee>
+                            </div>
+                        <?php }else{ ?>
+                            <div>
+                            <marquee behavior="scroll" direction="left" style="background-color:#F44336;font-size:14px; height:20;">
+                                <p>Please select a blood group & hit the search button to get the result! </p>
+                            </marquee>
+                            </div>
+                        <?php } ?>
+                    </div>
+                    <table id="itable" width="820" border="1" style="padding-top: 5px">
+                        <tr>
+                            <td align="center" bgcolor="#006699">Name</td>
+                            <td align="center" bgcolor="#006699">Phone No</td>
+                            <td align="center" bgcolor="#006699">Available?</td>
+                            <td align="center" bgcolor="#006699">Semester</td>
+                            <td align="center" bgcolor="#006699">Residence</td>
+                            <td align="center" bgcolor="#006699">Blood Group</td>
+                        </tr>
+
+                        <?php
                         $i = 0;
                         while ($i < $num) {
 
@@ -141,6 +147,7 @@ if (empty($_SESSION['username'])) {
                             $Blood_Group_Name = mysql_result($results, $i, "Blood_Group_Name");
                             $SMName = mysql_result($results, $i, "SMName");
                             $SHouse = mysql_result($results, $i, "SHouse");
+                            $availableToDonate = mysql_result($results, $i, "donor_value");
                             $DistrictName = mysql_result($results, $i, "district_name");
                             ?>
 
@@ -154,14 +161,14 @@ if (empty($_SESSION['username'])) {
                                 <td>
                                     <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SPh_Number ? $SPh_Number : 'Contact with Admin' ?></a>
                                 </td>
+                                <td width="100">
+                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/<?= ($availableToDonate == 1) ? "check_mark.png" : "cross_mark.png" ?> echo style="height:50px;  border-radius: 5px;"></a>
+                                </td>
                                 <td>
                                     <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SMName; ?></a>
                                 </td>
                                 <td>
                                     <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SHouse; ?></a>
-                                </td>
-                                <td>
-                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $DistrictName; ?></a>
                                 </td>
                                 <td width="100">
                                     <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/blood_groups/<?= $Blood_Group_Name.".png" ?> echo style="height:50px;  border-radius: 5px;"></a>
