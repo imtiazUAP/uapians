@@ -6,11 +6,7 @@
     $b = $_SESSION['username'];
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
-    if (empty($_SESSION['username'])) {
 ?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script><?php } else { ?>
     <html>
     <head>
         <?php
@@ -27,10 +23,9 @@
     <?php
     include("menu.php");
     ?>
-    <div id="wowslider-container1" style="height:200px">
-        <?php include("slider1.php");
-        ?>
-    </div>
+    <?php
+    if ($isLoggedIn) {
+    ?>
     <div align="center">
     <div>
         <?php
@@ -44,12 +39,15 @@
     </div>
     <div>
         <p align="center"
-           style="font-size:27px; font-weight:bold; padding-top:25; padding-bottom:25">
+           style="font-size:27px; font-weight:bold; padding-top:25; padding-bottom:25; text-align: center">
             <?php
             echo $SName;
             ?>
         </p>
-        <p align="center" style="font-size:25px">1st Year 1st Semister</p>
+        <?php
+        include("under_development.php");
+        ?>
+        <p align="center" style="font-size:25px; text-align: center">1st Year 1st Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -87,7 +85,7 @@
     <br>
     <br>
     <div>
-        <p align="center" style="font-size:25px">1st Year 2nd Semister</p>
+        <p align="center" style="font-size:25px; text-align: center">1st Year 2nd Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -125,7 +123,7 @@
     <br>
     <br>
     <div>
-        <p align="center" style="font-size:25px">2nd Year 1st Semister</p>
+        <p align="center" style="font-size:25px; text-align: center">2nd Year 1st Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -163,7 +161,7 @@
     <br>
     <br>
     <div>
-        <p align="center" style="font-size:25px">2nd Year 2nd Semister</p>
+        <p align="center" style="font-size:25px; text-align: center">2nd Year 2nd Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -201,7 +199,7 @@
     <br>
     <br>
     <div>
-        <p align="center" style="font-size:25px">3rd Year 1st Semister</p>
+        <p align="center" style="font-size:25px; text-align: center">3rd Year 1st Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -240,7 +238,7 @@
     <br>
 
     <div>
-        <p align="center" style="font-size:25px">3rd Year 2nd Semister</p>
+        <p align="center" style="font-size:25px; text-align: center">3rd Year 2nd Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -279,7 +277,7 @@
     <br>
 
     <div>
-        <p align="center" style="font-size:25px">4th Year 1st Semister</p>
+        <p align="center" style="font-size:25px; text-align: center">4th Year 1st Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -318,7 +316,7 @@
     <br>
 
     <div>
-        <p align="center" style="font-size:25px">4th Year 2nd Semister</p>
+        <p align="center" style="font-size:25px; text-align: center">4th Year 2nd Semister</p>
         <table align="center" width="900" border="1">
             <tr>
                 <td height="50" align="center" style="width:300">Subject Code</td>
@@ -350,6 +348,10 @@
             }
             ?>
         </table>
+        <?php }else {
+            include("permission_error.php");
+        }
+        ?>
     </div>
     <br>
     <br>
@@ -364,5 +366,3 @@
 
     </body>
     </html>
-<?php
-}?>

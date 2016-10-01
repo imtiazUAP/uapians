@@ -7,13 +7,7 @@
     $userdata = mysql_fetch_assoc($userrole);
     //echo $userdata['admin'];
     $SID = $userdata['SID'];
-    if (empty($_SESSION['username'])) {
 ?>
-        <script language="JavaScript" xmlns="http://www.w3.org/1999/html">
-        window.location = "index.php";
-    </script>
-    <?php } else {
-    ?>
     <html>
     <head>
         <?php
@@ -37,9 +31,16 @@
                         include("sidebar.php");
                         ?>
                     </div>
+                    <?php
+                    if ($isLoggedIn) {
+                    ?>
                     <div id="margin_figure">
                         <h1 style="color:White;"> Project Saved! </h1>
                     </div>
+                    <?php }else {
+                        include("permission_error.php");
+                    }
+                    ?>
                 </div>
             </div>
             <div class="footer">
@@ -48,8 +49,6 @@
             </div>
     </body>
     </html>
-<?php
-}?>
 
 
 

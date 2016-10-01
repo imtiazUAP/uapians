@@ -1,4 +1,5 @@
 <?php
+include("classes/Authentication.php");
 $con = mysql_connect("localhost", "root", "");
 if (!$con) {
     die('Could Not Connect:' . mysql_error());
@@ -22,6 +23,9 @@ mysql_close($con)
 </head>
 
 <body>
+<?php
+if ($isLoggedIn && $isAdmin) {
+?>
 <form action="employee_save.php" method="post">
     <table>
         <tr>
@@ -38,6 +42,9 @@ mysql_close($con)
     <input type="Submit"/>
     <a href="#" onClick="tb_remove();">Close</a>
 </form>
-
+<?php }else {
+    include("permission_error.php");
+}
+?>
 </body>
 </html>

@@ -6,13 +6,6 @@ include_once("page.inc.php");
 $b=$_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script>
-<?php }
-else {
 ?>
 
 <html>
@@ -47,7 +40,7 @@ $username=mysql_result($results,$i,"username");
 			
 <form method="post">
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if ($isLoggedIn && $isAdmin) {
 					?>
 <a href="mark_insert.php?keepThis=true&TB_iframe=true&height=600&width=500&modal=true" title="New Marks Entry" class="thickbox">New Marks Entry</a>
 					<?php
@@ -289,6 +282,3 @@ $f9=mysql_result($results,$i,"ECE_102");
         </div>
     </body>
 </html>
-
-<?php
-}?>

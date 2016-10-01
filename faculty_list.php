@@ -5,11 +5,7 @@ include("dbconnect.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
 ?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script><?php } else { ?>
 <html>
     <head>
         <?php
@@ -32,7 +28,7 @@ if (empty($_SESSION['username'])) {
             ?>
         </div>
         <?php
-    if (($userdata[admin] == '1')) {
+    if ($isLoggedIn && $isAdmin) {
     ?>
         <a href="employee_insert.php?keepThis=true&TB_iframe=true&height=120&width=240&modal=true" title="New Employee" class="thickbox">Create New Employee</a>
         <table class="hoverTable" width="820" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
@@ -71,7 +67,7 @@ if (empty($_SESSION['username'])) {
                     </tr>
                     <?php
                     }
-                    $strquery = "SELECT * from e_info order by EID";
+                    $strquery = "SELECT * from e_info WHERE group_id = 4 order by EID";
                     $results = mysql_query($strquery);
                     $num = mysql_numrows($results);
 
@@ -85,10 +81,10 @@ if (empty($_SESSION['username'])) {
                         <tr align="center" onclick="document.location = 'teacher_list.php?EID=<?php echo($EID)?>';">
                             <td height="40"><?php echo $EName; ?></td>
                             <td><?php echo $EDesignation; ?></td>
-                            <td width="100"><img src="<?php echo $Employee_Portrait; ?>" style="height:100px;"></td>
+                            <td width="100"><img src="<?php echo $Employee_Portrait; ?>" style="height:100px; border-radius:45px;"></td>
                             <td><?php echo " <a href='teacher_list.php? EID=" . $EID . "'> Profile </a>" ?></td>
                             <?php
-                            if (($userdata[admin] == '1')) {
+                            if ($isLoggedIn && $isAdmin) {
                                 ?>
                                 <td align="center"><?php echo " <a href='employee_edit.php?EID=" . $EID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - " . $EID . "'> edit </a> "; ?> | <?php echo " <a href='employee_delete.php?EID=" . $EID . "'> delete </a> "; ?></td>
                             <?php
@@ -108,6 +104,3 @@ if (empty($_SESSION['username'])) {
         </div>
     </body>
 </html>
-<?php
-}
-?>

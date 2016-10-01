@@ -1,7 +1,8 @@
 <html>
 <?php
-$connect = mysql_connect("localhost", "root", "");
-$select_db = mysql_select_db("mylab");
+error_reporting(0);
+include("dbconnect.php");
+include("classes/Authentication.php");
 $strquery = "SELECT * from e_info where EID= '" . $_GET["EID"] . "' ";
 $results = mysql_query($strquery);
 $row = mysql_fetch_array($results);
@@ -12,6 +13,9 @@ $row = mysql_fetch_array($results);
         ?>
     </head>
     <body>
+    <?php
+    if ($isLoggedIn && $isAdmin) {
+    ?>
         <form id="form1" name="form1" method="get" action="employee_update.php">
             <table>
                 <tr>
@@ -32,5 +36,9 @@ $row = mysql_fetch_array($results);
                 </label>
             </p>
         </form>
+    <?php }else {
+        include("permission_error.php");
+    }
+    ?>
     </body>
 </html>

@@ -6,12 +6,6 @@ include("dbconnect.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
-    ?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script><?php
-} else {
     ?>
 
 <html>
@@ -30,73 +24,18 @@ if (empty($_SESSION['username'])) {
                     ?>
                         <div id="content">
                             <div id="colOne">
-                                <div class="box">
-                                <br>
-                                <br>
-                                <a href="index.php" style="text-decoration:none;font-size:24px; font-weight:bold"><span>Logout</span></a>
-                                <div>
-                                    <form>
-                                        <input type="text" size="29" placeholder="Search for any page" onKeyUp="showResult(this.value)">
-                                        <div id="livesearch"></div>
-                                    </form>
-                                </div>
-                                <br>
-                                <div id="paragraph_head">
-                                    <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Controls</h3>
-                                </div>
-                                <ul class="bottom">
-                                    <?php
-                                    if (($userdata[admin] == '1')) {
-                                    ?>
-                                        <li><a href='sendmail1.php'>Send Email</a></li>
-                                        <li><a href='administration.php'>Students Signup Confirmation </a></li>
-                                        <li><a href="upload_tutorial.php">Add Video Tutorial</a></li>
-                                        <li><a href="upload_material.php">Add Course Material</a></li>
-                                        <li><a href="upload_project.php">Add Project</a></li>
-                                        <li><a href="news_insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true" title="Add News" class="thickbox">Add News</a></li>
-                                    <?php
-                                    }
-                                    ?>
-                                </ul>
+                                <?php
+                                include("sidebar.php");
+                                ?>
                             </div>
-                        <br>
-                        <br>
-                        <div class="box">
-                        <div id="paragraph_head">
-                            <h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
-                        </div>
-                        <ul class="bottom">
-                            <?php
-                            if (($userdata[admin] == '1')) {
-                            ?>
-                            <li><a href='sendmail1.php'>Send Email</a></li>
-                            <?php
-                            }
-                            ?>
-                            <li><a href="galary.php">Gallery</a></li>
-                            <li><a href="blood_list.php">Blood Bank</a></li>
-                            <li><a href="programing_contest_club.php">Programming Contest Club</a></li>
-                            <li><a href="research_publication_club.php">Research and Publication Club</a></li>
-                            <li><a href="sports_club.php">Sports Club</a></li>
-                            <li><a href="software_hardware_club.php">Software and Hardware Club</a></li>
-                            <li><a href="cultural_club.php">Cultural and Debating Club</a></li>
-                            <li><a href="web_club.php">Web Club</a></li>
-                        </ul>
-                    </div>
-                    <br>
-                    <br>
-
-                    <div class="fb-like-box" data-href="https://www.facebook.com/pages/UAPIANSNet/1452237808341753?ref=hl" data-width="238" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true">
-
-                    </div>
-                </div>
+                            <?php if ($isLoggedIn && $isAdmin){ ?>
                 <div>
                     <div style="padding-top:40">
                         <form>
                             <?php
-                            if (($userdata[admin] == '1')) {
+                            if ($isLoggedIn && $isAdmin) {
                             ?>
-                                <a href="student_insert.php?keepThis=true&TB_iframe=true&height=600&width=350&modal=true" title="New Student" class="thickbox">Create New Student</a>
+                                <a href="student_insert.php?keepThis=true&TB_iframe=true&height=610&width=350&modal=true" title="New Student" class="thickbox">Create New Student</a>
                             <?php
                             }
                                 $strquery = "SELECT S.*, M.SMName FROM sign_up S, sm_info M WHERE S.SMID=M.SMID ORDER BY S.SReg";
@@ -134,7 +73,7 @@ if (empty($_SESSION['username'])) {
                                         <td width="100"><img src=<?= $data['SPortrait'] ?> echo style="height:100px; border-radius:5px;"></td>
                                         <td width="200"><?= $data['SMName'] ?></td>
                                         <?php
-                                        if (($userdata[admin] == '1')) {
+                                        if ($isLoggedIn && $isAdmin) {
                                         ?>
                                         <td width="100"><a href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=250&width=300&do=edit&modal=true' class='thickbox'> Review</a> | <a href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
                                         <?php
@@ -146,12 +85,15 @@ if (empty($_SESSION['username'])) {
                                     ?>
                                 </table>
                                     <?php
-                                    }
                                     echo $page->get_page_nav();
                                     ?>
                         </form>
                     </div>
                 </div>
+                    <?php }else {
+                        include("permission_error.php");
+                    } ?>
+
             </div>
         </div>
         <div class="footer">

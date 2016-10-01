@@ -1,5 +1,6 @@
 <?php
 include("dbconnect.php");
+include("classes/Authentication.php");
 $strquery = "SELECT * from notice_info where Notice_ID= '" . $_GET["Notice_ID"] . "' ";
 $results = mysql_query($strquery);
 $row = mysql_fetch_array($results);
@@ -11,7 +12,9 @@ $row = mysql_fetch_array($results);
         ?>
     </head>
     <body>
-
+    <?php
+    if ($isLoggedIn) {
+    ?>
     <form id="form1" name="form1" method="get" action="notice_update.php">
         <table style="color: #000000">
             <tr>
@@ -27,5 +30,9 @@ $row = mysql_fetch_array($results);
             <button class="button button_red" onClick="tb_remove()"> Cancel </button>
         </div>
     </form>
+    <?php }else {
+        include("permission_error.php");
+    }
+    ?>
     </body>
 </html>

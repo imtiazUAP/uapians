@@ -2,6 +2,10 @@
 session_start();
 error_reporting(0);
 include("dbconnect.php");
+include_once("page.inc.php");
+$b = $_SESSION['username'];
+$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$userdata = mysql_fetch_assoc($userrole);
 ?>
 <html>
 <head>
@@ -10,17 +14,20 @@ include("dbconnect.php");
 <body>
 <div id="grad1">
     <div class="bodydiv" align="center">
-        <?php include("logo_index.php"); ?>
+        <?php include("logo.php"); ?>
         <div class="realbody">
             <?php
-            include("menu_index.php");
+            include("menu.php");
             ?>
             <div id="content">
                 <div id="colOne" align="left">
                     <?php
-                    include("sidebar_index.php");
+                    include("sidebar.php");
                     ?>
                 </div>
+                <?php
+                if (!$isLoggedIn) {
+                ?>
                 <br>
                 <br>
                 <div style="font-size:18px; font-weight:bold; color:#FFFFFF">Sign Up</div>
@@ -131,6 +138,9 @@ include("dbconnect.php");
                         <button type="Submit" class="button button_blue">Create an account</button>
                     </form>
                 </div>
+                <?php }else {
+                    include("permission_error.php");
+                } ?>
             </div>
         </div>
         <div class="footer">

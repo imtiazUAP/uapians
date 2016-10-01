@@ -1,14 +1,11 @@
 <?php
 session_start();
+error_reporting(0);
 $b = $_SESSION['username'];
 include("dbconnect.php");
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
 ?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script><?php } else { ?>
 <html>
     <head>
         <?php
@@ -30,6 +27,7 @@ if (empty($_SESSION['username'])) {
                             include("sidebar.php");
                             ?>
                         </div>
+                       <?php if ($isLoggedIn && $authentication->isOwner($userdata['SID'])){ ?>
                     <div id="margin_figure">
                         <form action="blog_save.php" method="post">
                             <div>
@@ -69,16 +67,16 @@ if (empty($_SESSION['username'])) {
                         <div style="width:700px;padding:10px;border:1px solid white;margin:0px; font-size:16px"><?php echo $Blog ; ?></div>
 
                             <?php
-                            if (($userdata[admin] == '1')) {
+                            if ($isLoggedIn && $isAdmin) {
                                 ?>
-                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
+                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=650&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
                             <?php
                             }
                             ?>
                             <?php
                             if (($userdata['SID'] == $SID)) {
                                 ?>
-                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
+                                <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=650&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?> | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
                             <?php
                             }
                             ?>
@@ -88,7 +86,11 @@ if (empty($_SESSION['username'])) {
                         }
                         ?>
                     </div>
+
                 </div>
+                       <?php }else {
+                           include("permission_error.php");
+                       } ?>
             </div>
         </div>
         <div class="footer">
@@ -97,6 +99,3 @@ if (empty($_SESSION['username'])) {
         </div>
     </body>
 </html>
-<?php
-}
-?>

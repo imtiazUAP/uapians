@@ -1,6 +1,7 @@
 <?php
     session_start();
     include('dbconnect.php');
+include("classes/Authentication.php");
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +16,9 @@
                 </head>
 
     <body style="background-color:#661D79">
+    <?php
+    if ($isLoggedIn) {
+    ?>
 
         <table align="center" style="padding-top:80px">
     <tr>
@@ -98,5 +102,9 @@
             <div class="footer" align="center">
                <?php include('footer.php'); ?>
             </div>
+    <?php }else {
+        include("permission_error.php");
+    }
+    ?>
     </body>
 </html>

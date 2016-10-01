@@ -5,14 +5,7 @@ include("dbconnect.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-//echo $userdata['admin'];
 $SID = $userdata['SID'];
-if (empty($_SESSION['username'])) {
-    ?>
-    <script language="JavaScript" xmlns="http://www.w3.org/1999/html">
-        window.location = "index.php";
-    </script>
-<?php } else {
     ?>
     <html>
     <head>
@@ -37,9 +30,16 @@ if (empty($_SESSION['username'])) {
                         include("sidebar.php");
                         ?>
                     </div>
+                    <?php
+                    if ($isLoggedIn) {
+                        ?>
                     <div id="margin_figure">
-                        <h1 style="color:White;"> Project Saved! </h1>
+                        <h1 style="color:White;"> Tutorial Saved! </h1>
                     </div>
+                    <?php }else {
+                        include("permission_error.php");
+                    }
+                    ?>
                 </div>
             </div>
             <div class="footer">
@@ -48,8 +48,6 @@ if (empty($_SESSION['username'])) {
             </div>
     </body>
     </html>
-<?php
-}?>
 
 
 

@@ -7,10 +7,7 @@
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
     $SID=$userdata['SID'];
-
-    if (empty($_SESSION['username'])) {
 ?>
-    <script language="JavaScript"> window.location="index.php";</script><?php } else { ?>
 
 <html>
     <head>
@@ -27,7 +24,7 @@
                             <?php include("sidebar.php"); ?>
                         </div>
                         <?php
-                            $strquery="SELECT * FROM video_tutorial WHERE video_tutorial_cat_id='" . $_GET["vtid"] . "'";
+                            $strquery="SELECT vt.*, u.username, u.SID FROM video_tutorial vt INNER JOIN userinfo u ON u.SID = vt.uploaded_by WHERE vt.video_tutorial_cat_id='" . $_GET["vtid"] . "'";
                             $results=mysql_query($strquery);
                             $num=mysql_numrows($results);
                             if($num > 0){
@@ -37,12 +34,18 @@
                                 $tutorial_id=mysql_result($results,$i,"tutorial_id");
                                 $video_tutorial_cat_id=mysql_result($results,$i,"video_tutorial_cat_id");
                                 $tutorial_link=mysql_result($results,$i,"tutorial_link");
-                        ?>
-                            <table style="padding:5px; float: left">
+                                $uploaderId=mysql_result($results,$i,"uploaded_by");
+                                $uploaderName=mysql_result($results,$i,"username");
+                                $uploadTime=mysql_result($results,$i,"upload_time");
+                        ?><figure>
+                            <table style="padding:5px; float: left; width: 256px; color: #50B9E8">
                                 <tr style="height:20px">
                                     <td style="border:inset" colspan=2  align="center"><iframe width="256" height="160" src="<?php echo $tutorial_link ; ?>" frameborder="0" allowfullscreen></iframe></td>
                                 </tr>
+                                <tr><td><figcaption>Uploaded by : <a style="color: #55AA45; " href='student_profile.php?SID=<?php echo ($uploaderId == 9999) ? '29' : $uploaderId; ?>' target="_blank"> <?php echo $uploaderName; ?></a> on :<span style="color: #55AA45"> <?= $uploadTime ?></span> </figcaption></td></tr>
                             </table>
+
+                           </figure>
                             <?php $i++; }
                         } else {
                             ?>
@@ -60,8 +63,5 @@
             </div>
     </body>
 </html>
-<?php
-    }
-?>
 
 

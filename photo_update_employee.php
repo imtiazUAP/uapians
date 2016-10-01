@@ -2,7 +2,7 @@
 error_reporting(0);
 include('dbconnect.php');
 include("classes/Authentication.php");
-$strquery = "SELECT SID,SPortrait from s_info where SID= '" . $_GET["SID"] . "' ";
+$strquery = "SELECT SID,Employee_Portrait from e_info where SID= '" . $_GET["SID"] . "' ";
 $results = mysql_query($strquery);
 $row = mysql_fetch_array($results);
 ?>
@@ -21,9 +21,9 @@ $row = mysql_fetch_array($results);
             <table style="padding:30px; color: #000000" >
                 <tr>
                     <td><label style="color: black">Your Old Photo:</label></td>
-                    <td><img src=<?php echo $row['SPortrait'] ?> style="height:100px; border-radius:45px;"></td>
+                    <td><img src=<?php echo $row['Employee_Portrait'] ?> style="height:100px; border-radius:45px;"></td>
                 </tr>
-                <form id="form1" name="form1" method="post" action="photo_update.php" enctype="multipart/form-data">
+                <form id="form1" name="form1" method="post" action="photo_update_employee.php" enctype="multipart/form-data">
                 <tr>
                     <td>
                         <label style="color: black" for="Portrait" class="signup_field" data-icon="u">Select New Photo:</label>
@@ -34,7 +34,7 @@ $row = mysql_fetch_array($results);
                 </tr>
             </table>
             <input name="SID" type="hidden" id="SID" value=" <?php echo $row["SID"]; ?>"/>
-            <input name="SPortrait" type="hidden" id="SID" value="<?php echo $row['SPortrait']; ?>"/>
+            <input name="Employee_Portrait" type="hidden" id="SID" value="<?php echo $row['Employee_Portrait']; ?>"/>
 
             <div align="right"; style="padding-right:15px">
                 <button name="login" type="Submit" class="button button_blue">Update Photo
@@ -65,10 +65,10 @@ $row = mysql_fetch_array($results);
             imagejpeg($tmp_min, "images/" . $newfilename, 80); //copy image in folder//
             $photo_name = 'images/' . $newfilename; // new name with path to save in database
 
-            $strquery = "UPDATE s_info SET SPortrait= '" . $photo_name . "' WHERE SID=". $_REQUEST['SID'] ." ";
+            $strquery = "UPDATE e_info SET Employee_Portrait= '" . $photo_name . "' WHERE SID=". $_REQUEST['SID'] ." ";
             mysql_query($strquery);
 
-            $oldPhoto = $_REQUEST['SPortrait'];
+            $oldPhoto = $_REQUEST['Employee_Portrait'];
             if($oldPhoto){
                 unlink($oldPhoto);
             }

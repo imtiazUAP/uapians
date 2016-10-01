@@ -5,11 +5,7 @@ include("dbconnect.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
 ?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script><?php } else { ?>
 <html>
     <head>
     <?php
@@ -37,7 +33,9 @@ if (empty($_SESSION['username'])) {
                         include("sidebar.php");
                         ?>
                      </div>
-
+                    <?php
+                    if ($isLoggedIn) {
+                    ?>
                     <form action="sendmail2.php" method="post" name="form1" enctype="multipart/form-data">
                         <table width="830" border="2" style="padding:100px;">
                             <tr>
@@ -87,6 +85,10 @@ if (empty($_SESSION['username'])) {
                             </tr>
                         </table>
                     </form>
+                    <?php }else {
+                        include("permission_error.php");
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -97,6 +99,3 @@ if (empty($_SESSION['username'])) {
        </div>
     </body>
 </html>
-<?php
-}
-?>

@@ -6,11 +6,7 @@ include_once("page.inc.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
-    ?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script><?php } else { ?>
+?>
     <!DOCTYPE html>
     <html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -183,7 +179,7 @@ if (empty($_SESSION['username'])) {
                     </div>
                     <div id="margin_figure">
                         <?php
-                        if (($userdata[admin] == '1')) {
+                        if ($isLoggedIn && $isAdmin) {
                             ?>
                             <div>
                                 <a href="gallery_insert.php?keepThis=true&TB_iframe=true&height=100&width=400&modal=true" title="New Student" class="thickbox">Add New Photos</a>
@@ -222,7 +218,7 @@ if (empty($_SESSION['username'])) {
                                 </div>
 
                                 <?php
-                                if (($userdata[admin] == '1')) {
+                                if ($isLoggedIn && $isAdmin) {
                                     ?>
                                     <div>
                                         <?php echo " <a href='gallery_delete.php?Photo_Id=" . $Photo_Id . "'> delete </a> "; ?>
@@ -291,6 +287,3 @@ if (empty($_SESSION['username'])) {
             </div>
     </body>
     </html>
-<?php
-}
-?>

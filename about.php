@@ -1,26 +1,11 @@
 <?php
+error_reporting(0);
  session_start();
-  error_reporting(0);
  include("dbconnect.php");
-
-  ?>
-<?php
 $b=$_SESSION['username'];
-
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-//echo $userdata['admin'];
-
-
-
-
-if (empty($_SESSION['username'])) {
-    ?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script><?php } else { ?>
-
-
+?>
 <html>
 <head>
 <?php
@@ -47,11 +32,9 @@ if (empty($_SESSION['username'])) {
 	<div id="content">
 	<div id="colOne">
 <?php
-include("sidebar.php");
+include_once("sidebar.php");
 ?>
 
-		
-		
 	</div>
 
 	
@@ -168,5 +151,3 @@ include("sidebar.php");
  
 </body>
 </html>
-    <?php
-}?>

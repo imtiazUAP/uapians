@@ -6,14 +6,6 @@ include_once("page.inc.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-
-if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script>
-<?php
-} else {
 ?>
 
 
@@ -154,24 +146,24 @@ if (empty($_SESSION['username'])) {
                             <tr align="center">
                                 <td>
                                     <figure>
-                                        <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=<?= $SPortrait ? $SPortrait : 'images/14101071.jpg' ?> echo style="height : 70px; border-radius: 25px;"></a>
-                                        <figcaption><a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SName; ?></a></figcaption>
+                                        <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=<?= $SPortrait ? $SPortrait : 'images/14101071.jpg' ?> echo style="height : 70px; border-radius: 25px;"></a>
+                                        <figcaption><a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SName; ?></a></figcaption>
                                     </figure>
                                 </td>
                                 <td>
-                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SPh_Number ? $SPh_Number : 'Contact with Admin' ?></a>
+                                    <?php if($isLoggedIn){ echo $SPh_Number ? $SPh_Number : 'Contact with admin'; }else{ echo('Sign In to see'); } ?>
                                 </td>
                                 <td width="100">
-                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/<?= ($availableToDonate == 1) ? "check_mark.png" : "cross_mark.png" ?> echo style="height:50px;  border-radius: 5px;"></a>
+                                    <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/<?= ($availableToDonate == 1) ? "check_mark.png" : "cross_mark.png" ?> echo style="height:50px;  border-radius: 5px;"></a>
                                 </td>
                                 <td>
-                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SMName; ?></a>
+                                    <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SMName; ?></a>
                                 </td>
                                 <td>
-                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SHouse; ?></a>
+                                    <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SHouse; ?></a>
                                 </td>
                                 <td width="100">
-                                    <a href='profile_list.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/blood_groups/<?= $Blood_Group_Name.".png" ?> echo style="height:50px;  border-radius: 5px;"></a>
+                                    <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/blood_groups/<?= $Blood_Group_Name.".png" ?> echo style="height:50px;  border-radius: 5px;"></a>
                                 </td>
                             </tr>
 
@@ -189,7 +181,3 @@ if (empty($_SESSION['username'])) {
             </div>
     </body>
  </html>
-
-            <?php
-                }
-            ?>

@@ -1,6 +1,7 @@
 <html>
 <?php
     include("dbconnect.php");
+    include("classes/Authentication.php");
     $strquery = "SELECT * from reference_info where ref_id= '" . $_GET["ref_id"] . "' ";
     $results = mysql_query ($strquery);
     $row = mysql_fetch_array($results);
@@ -15,7 +16,9 @@
 <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
 </head>
 <body>
-
+<?php
+if ($isLoggedIn) {
+?>
 <form id="form1" name="form1" method="get" action="reference_update.php">
 
 <table>
@@ -55,5 +58,9 @@
 </label>
 </p>
 </form>
-
+<?php }else {
+    include("permission_error.php");
+}
+?>
+</body>
 </html>

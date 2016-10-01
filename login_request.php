@@ -25,7 +25,7 @@
         </br>
 
         <div align="right"; style="padding-right:25">
-            <button class="button button_green" onclick="window.open('index.php','_top')"> Log In </button>
+            <button class="button button_green" onClick="location.href='login_modal.php'"> Log In </button>
             <button class="button button_blue" onclick="window.open('sign_up.php','_top')"> Sign Up </button>
             <button class="button button_red" onClick="tb_remove()"> Cancel </button>
         </div>

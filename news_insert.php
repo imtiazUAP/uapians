@@ -1,3 +1,9 @@
+<?php
+session_start();
+error_reporting(0);
+include("dbconnect.php");
+include("classes/Authentication.php");
+?>
 <html>
 <head>
     <?php
@@ -6,6 +12,9 @@
 </head>
 
 <body>
+<?php
+if ($isLoggedIn) {
+?>
 <form action="news_save.php" method="post">
     <table style="color: #000000">
         <tr>
@@ -24,6 +33,9 @@
         <button class="button button_red" onClick="tb_remove()"> Cancel </button>
     </div>
 </form>
-
+<?php }else {
+    include("permission_error.php");
+}
+?>
 </body>
 </html>

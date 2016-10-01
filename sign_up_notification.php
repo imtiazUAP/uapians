@@ -13,11 +13,11 @@ include("dbconnect.php");
 <div id="grad1">
     <div class="bodydiv" align="center">
         <?php
-        include("logo_index.php");
+        include("logo.php");
         ?>
         <div class="realbody">
             <?php
-            include("menu_index.php");
+            include("menu.php");
             ?>
             <div id="wowslider-container1" style="height:200px">
                 <?php
@@ -27,9 +27,12 @@ include("dbconnect.php");
             <div id="content">
                 <div id="colOne" align="left">
                     <?php
-                    include("sidebar_index.php");
+                    include("sidebar.php");
                     ?>
                 </div>
+                <?php
+                if (!$isLoggedIn) {
+                ?>
                 <div id="margin_figure">
                     <div style="font-size:24px; font-weight:bold; padding:50; color:#FFFFFF">Your Registration is
                         Complete!!! Please wait for Admin Review (maximum 24 hour)
@@ -40,6 +43,10 @@ include("dbconnect.php");
                         ThankYou......
                     </div>
                 </div>
+                <?php }else {
+                    include("permission_error.php");
+                }
+                ?>
             </div>
         </div>
         <div class="footer">

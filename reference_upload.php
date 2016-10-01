@@ -9,12 +9,6 @@
     $userrole2 = mysql_query("select * from e_info where SID='{$SID}'");
     $userdata2 = mysql_fetch_assoc($userrole2);
     $EID = $userdata2['EID'];
-    if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-<?php } else {
 ?>
 <html>
 <head>
@@ -32,6 +26,9 @@
             include("menu.php");
             ?>
             <br><br>
+            <?php
+            if ($isLoggedIn) {
+            ?>
             <form id="form1" name="form1" method="get" action="reference_save.php">
                 <div align="right" style="padding:20px; font-size:22px; font-weight:bold; color:#FFFFFF">Select
                     Course:<br>
@@ -103,6 +100,10 @@
                         </tr>
                     </table>
             </form>
+            <?php }else {
+                include("permission_error.php");
+            }
+            ?>
         </div>
     </div>
 </div>
@@ -113,5 +114,3 @@
 
 </body>
 </html>
-<?php
-}?>

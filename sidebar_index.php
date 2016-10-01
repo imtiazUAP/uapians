@@ -43,7 +43,7 @@
         if ($isLoggedIn) {
             ?>
             <script language="JavaScript">
-                window.location = "home.php";
+                window.location = "index.php";
             </script>
         <?php
         }elseif (!$isLoggedIn){

@@ -1,8 +1,9 @@
 <?php
-    session_start();
-    error_reporting(0);
-    include("dbconnect.php");
-    include_once("page.inc.php");
+session_start();
+error_reporting(0);
+include("dbconnect.php");
+include("classes/Authentication.php");
+include_once("page.inc.php");
 ?>
 <html>
     <head>
@@ -12,6 +13,9 @@
     </head>
 
 <body>
+<?php
+if ($isLoggedIn && $isAdmin) {
+?>
 <form action="mark_save.php" method="post">
 <table>
 <tr>
@@ -281,6 +285,9 @@ while ($row = mysql_fetch_assoc($rs)) {
 <input type="Submit"/>
 <a href="#" onClick="tb_remove();">Close</a>
 </form>
-
+<?php }else {
+    include("permission_error.php");
+}
+?>
 </body>
 </html>

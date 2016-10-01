@@ -1,7 +1,8 @@
 <?php
-    session_start();
-    error_reporting(0);
-    include("dbconnect.php");
+session_start();
+error_reporting(0);
+include("classes/Authentication.php");
+include("dbconnect.php");
 ?>
 <html>
     <?php
@@ -13,6 +14,9 @@
         <?php include("header.php");?>
     </head>
     <body>
+    <?php
+    if ($isLoggedIn) {
+    ?>
         <form id="form1" name="form1" method="get" action="review_update.php">
             <table  style="color: black">
                 <tr>
@@ -134,5 +138,9 @@
                 <button class="button button_red" onClick="tb_remove()"> Cancel </button>
             </div>
         </form>
+    <?php }else {
+        include("permission_error.php");
+    }
+    ?>
     </body>
 </html>

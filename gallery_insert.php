@@ -1,3 +1,7 @@
+<?php
+error_reporting(0);
+include("classes/Authentication.php");
+?>
 <html>
     <head>
         <?php
@@ -5,6 +9,9 @@
         ?>
     </head>
     <body>
+    <?php
+    if($isLoggedIn && $isAdmin) {
+    ?>
         <form action="gallery_save.php" method="post" enctype="multipart/form-data">
             <table>
                 <tr>
@@ -24,5 +31,9 @@
             <input type="Submit"/>
             <a href="#" onClick="tb_remove();">Close</a>
         </form>
+    <?php }else {
+        include("permission_error.php");
+    }
+    ?>
     </body>
 </html>

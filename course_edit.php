@@ -11,6 +11,9 @@ $row = mysql_fetch_array($results);
         ?>
     </head>
     <body>
+    <?php
+    if ($isLoggedIn) {
+    ?>
         <form id="form1" name="form1" method="get" action="course_update.php">
         <table>
             <tr>
@@ -31,5 +34,8 @@ $row = mysql_fetch_array($results);
         </label>
         </p>
         </form>
+    <?php }else {
+        include("permission_error.php");
+    } ?>
     </body>
 </html>

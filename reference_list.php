@@ -5,13 +5,6 @@
     $b = $_SESSION['username'];
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
-    if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-<?php
-} else {
 ?>
 <html>
     <head>
@@ -76,10 +69,15 @@
                                 <td width="200" height="50"><?php echo $CName; ?></td>
                                 <td align="center" width="220" height="50"><?php echo $f10; ?></td>
                                 <td align="center" width="220" height="50"><?php echo $Detail; ?></td>
+                                <?php if($isLoggedIn){ ?>
                                 <td width="150" height="50"><a href="<?php echo $f3; ?>">Click here</a></td>
+                                <?php }else{ ?>
+                                    <td width="150" style="list-style: none" height="50"><a href="login_modal.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
+                                                                       class="thickbox">Sign in for link</a></td>
+                                <?php } ?>
                                 <td width="130" height="50">
                                     <figure>
-                                        <a href='profile_list.php? SID=<?php echo $SID ? $SID : '29' ?>'><img src=<?php echo $SPortrait ? $SPortrait : 'images/14101071.jpg'?> style="height : 50px; border-radius: 25px;"></a>
+                                        <a href='student_profile.php? SID=<?php echo $SID ? $SID : '29' ?>'><img src=<?php echo $SPortrait ? $SPortrait : 'images/14101071.jpg'?> style="height : 50px; border-radius: 25px;"></a>
                                         <figcaption style="font-size: 10px;"><?php echo $uploaded_by ? $uploaded_by : Admin; ?></figcaption>
                                     </figure>
                                     </figure>
@@ -87,7 +85,7 @@
                                 <td width="130" height="50"><?php echo $upload_date ? $upload_date : 'Unknown'; ?></td>
 
                                 <?php
-                                if (($userdata[admin] == '1')) {
+                                if ($isLoggedIn && $isAdmin) {
                                     ?>
                                     <td><?php echo " <a href='reference_edit.php?ref_id=" . $ref_id . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit reference - " . $ref_id . "'> edit </a> "; ?> | <?php echo " <a href='reference_delete.php?ref_id=" . $ref_id . "'> delete </a> "; ?></td>
                                 <?php
@@ -100,7 +98,6 @@
                             ?>
                     </table>
                 </form>
-            </div>
         </div>
         <div class="footer">
             <?php
@@ -109,6 +106,3 @@
         </div>
     </body>
 </html>
-<?php
-}
-?>

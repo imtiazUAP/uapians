@@ -6,11 +6,7 @@ include_once("page.inc2.php");
 $b=$_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
 ?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script><?php } else { ?>
 <html>
     <head>
         <?php
@@ -54,7 +50,7 @@ if (empty($_SESSION['username'])) {
                         while ($data = mysql_fetch_assoc($result)) {
                         ?>
                             <div class="blog" style="padding-bottom:100px; padding-right:50px; color:#FFFFFF">
-                                <a href='profile_list.php? SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : '14101071.jpg' ?> echo style="width:60px;padding:2px;border:2px solid white;margin:0px; font-size:18px;  border-radius: 35px;" alt="Smiley face" width="50" height="60" align="right">
+                                <a href='student_profile.php? SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : '14101071.jpg' ?> echo style="width:60px;padding:2px;border:2px solid white;margin:0px; font-size:18px;  border-radius: 35px;" alt="Smiley face" width="50" height="60" align="right">
                                 </a>
                                 <div style="padding:10px; font-weight:bold"><?php echo $data['SName'] ; ?> </div>
                                 <div style="padding-left:10px"><?php echo $data['SMName'] ; ?></div>
@@ -74,7 +70,7 @@ if (empty($_SESSION['username'])) {
 
 
                                 <?php
-                                if (($userdata[admin] == '1' || $userdata['SID'] == $SID)) {
+                                if (($isLoggedIn && $isAdmin || $userdata['SID'] == $SID)) {
                                     ?>
                                     <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $data['Blog_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $data['Blog_ID'] . "'> Edit This Article </a> "; ?>
                                         | <?php echo " <a href='blog_delete.php?Blog_ID=" . $data['Blog_ID'] . "'> Delete This Article </a> "; ?></div>
@@ -98,6 +94,3 @@ if (empty($_SESSION['username'])) {
         </div>
     </body>
 </html>
-<?php
-}
-?>

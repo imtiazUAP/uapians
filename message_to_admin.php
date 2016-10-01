@@ -6,11 +6,7 @@ include_once("page.inc.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
-    ?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script><?php } else { ?>
+?>
 <html>
 <head>
     <?php
@@ -23,7 +19,7 @@ if (empty($_SESSION['username'])) {
         <?php
         include("logo.php");
         ?>
-        <div class="realbody" style="min-height:2300px">
+        <div class="realbody">
             <?php
             include("menu.php");
             ?>
@@ -39,6 +35,9 @@ if (empty($_SESSION['username'])) {
                     ?>
                 </div>
                 <div style="padding-left: 350px">
+                <?php
+                if ($isLoggedIn) {
+                ?>
                     <form action="message_save.php" method="post">
                         <div>
                             <br/>
@@ -61,17 +60,17 @@ if (empty($_SESSION['username'])) {
                             </button>
                         </div>
                     </form>
-                </div>
-            </div>
-        </div>
+
+<?php }else {
+    include("permission_error.php");
+}
+?>
     </div>
 </div>
+        </div>
 <div class="footer">
     <?php include("footer.php");
     ?>
 </div>
 </body>
 </html>
-<?php
-}
-?>

@@ -1,5 +1,7 @@
 <?php
 include('dbconnect.php');
+error_reporting(0);
+include("classes/Authentication.php");
 $strquery = "SELECT SID,userid,username,password from userinfo where SID= '" . $_GET["SID"] . "' ";
 $results = mysql_query($strquery);
 $row = mysql_fetch_array($results);
@@ -11,6 +13,9 @@ $row = mysql_fetch_array($results);
         ?>
     </head>
     <body>
+    <?php
+    if ($isLoggedIn) {
+    ?>
         <form id="form1" name="form1" method="get" action="password_update.php">
             <table style="padding:30px">
                 <tr>
@@ -30,5 +35,9 @@ $row = mysql_fetch_array($results);
             </div>
         </form>
         <button class="button button_red" onClick="tb_remove()"> Cancel </button>
+    <?php }else {
+        include("permission_error.php");
+    }
+    ?>
     </body>
 </html>

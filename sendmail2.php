@@ -1,16 +1,11 @@
 <?php
 session_start();
+error_reporting(0);
 include('dbconnect.php');
+
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-<?php
-} else {
 ?>
 <html>
     <head>
@@ -24,7 +19,7 @@ if (empty($_SESSION['username'])) {
                 <?php
                 include("logo.php");
                 ?>
-                <div class="realbody" style="min-height:2000px">
+                <div class="realbody">
                     <?php
                     include("menu.php");
                     ?>
@@ -34,7 +29,9 @@ if (empty($_SESSION['username'])) {
                             include("sidebar.php");
                             ?>
                         </div>
-
+                        <?php
+                        if ($isLoggedIn) {
+                        ?>
                         <?php
                         if ($_POST[send_mail_option_id] == '1') {
                             $query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='1' ");
@@ -118,15 +115,17 @@ if (empty($_SESSION['username'])) {
                         }
                         ?>
                     </div>
+                <?php }else {
+                    include("permission_error.php");
+                }
+                ?>
                 </div>
-            </div>
         <div class="footer">
             <?php
             include("footer.php");
             ?>
         </div>
+            </div>
+        </div>
     </body>
 </html>
-<?php
-}
-?>

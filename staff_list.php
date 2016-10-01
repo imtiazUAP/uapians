@@ -5,12 +5,6 @@
     $b = $_SESSION['username'];
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
-    if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-<?php } else {
 ?>
 <html>
 <head>
@@ -36,7 +30,7 @@
             </div>
             <form>
                 <?php
-                if (($userdata[admin] == '1')) {
+                if ($isLoggedIn && $isAdmin) {
                 ?>
                 <a href="employee_insert.php?keepThis=true&TB_iframe=true&height=120&width=240&modal=true"
                    title="New Employee" class="thickbox">Create New Employee
@@ -85,7 +79,7 @@
                             }
                             ?>
                             <?php
-                                $strquery = "SELECT * from e_info order by EID";
+                                $strquery = "SELECT * from e_info WHERE group_id = 5 order by EID";
                                 $results = mysql_query($strquery);
                                 $num = mysql_numrows($results);
 
@@ -103,14 +97,14 @@
                                     <?php
                                         echo $Employee_Portrait;
                                     ?>"
-                                     style="height:100px;"></td>
+                                     style="height:100px; border-radius:45px;"></td>
                                     <td>
                                         <?php
                                         echo " <a href='teacher_list.php? EID=" . $EID . "'> Profile </a>"
                                         ?>
                                     </td>
                                     <?php
-                                    if (($userdata[admin] == '1')) {
+                                    if ($isLoggedIn && $isAdmin) {
                                     ?>
                                         <td align="center"><?php echo " <a href='employee_edit.php?EID=" . $EID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - " . $EID . "'> edit </a> "; ?>
                                             |
@@ -136,5 +130,3 @@
 
 </body>
 </html>
-<?php
-}?>

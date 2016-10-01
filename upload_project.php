@@ -30,6 +30,9 @@
                     include("sidebar.php");
                     ?>
                 </div>
+                <?php
+                if ($isLoggedIn) {
+                ?>
                 <div id="margin_figure">
                     <div align="center">
                         <form action="upload_project_save.php" method="post"
@@ -145,14 +148,14 @@
                         </form>
                     </div>
                 </div>
+                        <?php }else {
+                            include("permission_error.php");
+                        }
+                        ?>
             </div>
-            <div class="footer">
                 <div class="footer">
                     <?php include("footer.php");
                     ?>
-                </div>
             </div>
     </body>
     </html>
-<?php
-?>

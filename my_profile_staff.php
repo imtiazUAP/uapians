@@ -6,13 +6,6 @@
     $b = $_SESSION['username'];
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
-    if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-<?php
-    } else {
 ?>
     <html>
     <head>
@@ -26,7 +19,7 @@
             <?php
             include("logo.php");
             ?>
-            <div class="realbody" style="min-height:2300px">
+            <div class="realbody">
                 <?php
                     include("menu.php");
                     $strquery = "SELECT * from e_info INNER JOIN userinfo ON e_info.SID=userinfo.SID  WHERE username='{$b}'";
@@ -43,7 +36,9 @@
                 ?>
 
 
-
+                <?php
+                if ($isLoggedIn && $isStaff) {
+                ?>
                 <div id="margin_figure_profile">
                     <div align="center" style="padding-top:30px">
                         <img style="width:150px;padding:10px;border:5px solid white;margin:0px; font-size:18px"
@@ -81,8 +76,11 @@
                     <div style="padding-bottom:75px">
                         <p style="width:900px;padding:10px;border:2px solid white;margin:0px; font-size:14px"><?php echo $Employee_Role; ?></P>
                     </div>
-                </div>
-            </div>
+
+        <?php }else {
+            include("permission_error.php");
+        }
+        ?>
         </div>
         <div class="footer">
             <?php include("footer.php");
@@ -90,5 +88,3 @@
         </div>
     </body>
     </html>
-<?php
-}?>

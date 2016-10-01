@@ -1,3 +1,9 @@
+<?php
+session_start();
+error_reporting(0);
+include("dbconnect.php");
+include("classes/Authentication.php");
+?>
 <html>
     <head>
         <?php
@@ -5,6 +11,9 @@
         ?>
     </head>
     <body>
+    <?php
+    if ($isLoggedIn) {
+        ?>
         <form action="course_save.php" method="post">
             <table>
                 <tr>
@@ -21,5 +30,8 @@
         <input type="Submit"/>
         <a href="#" onClick="tb_remove();">Close</a>
         </form>
+        <?php }else {
+            include("permission_error.php");
+        } ?>
     </body>
 </html>

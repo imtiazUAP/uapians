@@ -30,6 +30,9 @@
                     include("sidebar.php");
                     ?>
                 </div>
+                <?php
+                if ($isLoggedIn) {
+                ?>
                 <div id="margin_figure">
                     <?php if(!$_POST["SID"]) {?>
                     <div align="center">
@@ -140,6 +143,10 @@
                     }
                     ?>
                 </div>
+                <?php }else {
+                    include("permission_error.php");
+                }
+                ?>
             </div>
             <div class="footer">
                 <div class="footer">
@@ -149,5 +156,3 @@
             </div>
     </body>
     </html>
-<?php
-?>

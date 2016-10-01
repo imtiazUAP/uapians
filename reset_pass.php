@@ -16,15 +16,15 @@ if (!$con) {
 <body>
 <div id="grad1">
     <div class="bodydiv" align="center">
-        <?php include("logo_index.php"); ?>
+        <?php include("logo.php"); ?>
         <div class="realbody">
             <?php
-            include("menu_index.php");
+            include("menu.php");
             ?>
             <div id="content">
                 <div id="colOne" align="left">
                     <?php
-                    include("sidebar_index.php");
+                    include("sidebar.php");
                     ?>
                 </div>
                 <br>

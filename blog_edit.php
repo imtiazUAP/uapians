@@ -11,6 +11,9 @@
         ?>
     </head>
     <body>
+    <?php
+    if ($isLoggedIn) {
+    ?>
         <form id="form1" name="form1" method="get" action="blog_update.php">
             <div>Blog:</div>
             <textarea name="Blog" type="text" id="Blog" cols="80" rows="15" ><?php echo $row["Blog"]; ?></textarea>
@@ -19,5 +22,8 @@
             <button type="submit" class="button button_green"> Save & Update </button>
             <button class="button button_red" onClick="tb_remove()"> Cancel </button>
         </form>
+    <?php }else {
+        include("permission_error.php");
+    } ?>
     </body>
 </html>

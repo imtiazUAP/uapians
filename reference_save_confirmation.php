@@ -6,12 +6,6 @@
         $userrole = mysql_query("select * from userinfo where username='{$b}'");
         $userdata = mysql_fetch_assoc($userrole);
         $SID = $userdata['SID'];
-        if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-<?php } else {
 ?>
 <html>
 <head>
@@ -29,6 +23,9 @@
             <?php
             include("menu.php");
             ?>
+            <?php
+            if ($isLoggedIn) {
+            ?>
             <div id="content">
                 <div id="colOne">
                     <?php
@@ -38,6 +35,10 @@
                 <div id="margin_figure">
                 </div>
             </div>
+            <?php }else {
+                include("permission_error.php");
+            }
+            ?>
         </div>
         <div class="footer">
             <?php include("footer.php");
@@ -45,6 +46,3 @@
         </div>
 </body>
 </html>
-<?php
-}
-?>

@@ -6,14 +6,7 @@ include_once("page.inc.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
-    ?>
-    <script
-        language="JavaScript">window.location = "index.php";
-    </script>
-<?php
-} else {
-    ?>
+?>
 
     <html>
     <head>
@@ -41,7 +34,7 @@ if (empty($_SESSION['username'])) {
                             <div style="padding-top:40">
                                 <form>
                                     <div align="center">
-                                        <?php if (($userdata[admin] == '1')) { ?>
+                                        <?php if ($isLoggedIn && $isAdmin) { ?>
                                             <a href="student_insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true"
                                                title="New Student" class="thickbox">Create New Student
                                             </a>
@@ -56,7 +49,7 @@ if (empty($_SESSION['username'])) {
                                             <td width="100px"> Portrait</td>
                                             <td > Semester</td>
                                             <?php
-                                            if (($userdata[admin] == '1')) {
+                                            if ($isLoggedIn && $isAdmin) {
                                                 ?>
                                                 <td
                                                     bgcolor="#006699"> Results
@@ -79,16 +72,16 @@ if (empty($_SESSION['username'])) {
                                         $result = @mysql_query($page->get_limit_query($sql));
                                         while ($data = mysql_fetch_assoc($result)) {
                                             ?>
-                                            <tr align="center" class="tablerow"  onclick="document.location = 'profile_list.php?SID=<?= $data['SID'] ?>';">
+                                            <tr align="center" class="tablerow"  onclick="document.location = 'student_profile.php?SID=<?= $data['SID'] ?>';">
                                                 <td width="120"><?= $data['SReg'] ?>
                                                 </td>
                                                 <td width="200">
                                                     <a
-                                                        href='profile_list.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?>
+                                                        href='student_profile.php?SID=<?= $data['SID'] ?>'><?= $data['SName'] ?>
                                                     </a>
                                                 </td>
                                                 <td width="100">
-                                                    <a href='profile_list.php? SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : 'images/14101071.jpg' ?> echo style="height:100px; border-radius:45px;">
+                                                    <a href='student_profile.php?SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : 'images/14101071.jpg' ?> echo style="height:100px; border-radius:45px;">
                                                     </a>
                                                 </td>
                                                 <td
@@ -96,11 +89,11 @@ if (empty($_SESSION['username'])) {
                                                     <?= $data['SMName'] ?>
                                                 </td>
                                                 <?php
-                                                if (($userdata[admin] == '1')) {
+                                                if ($isLoggedIn && $isAdmin) {
                                                     ?>
                                                     <td>
                                                         <a
-                                                            href='single_mark_list.php? SID=<?=
+                                                            href='single_mark_list.php?SID=<?=
                                                             $data['SID']
                                                             ?>'>
                                                             Results
@@ -144,6 +137,3 @@ if (empty($_SESSION['username'])) {
                 </div>
     </body>
     </html>
-<?php
-}
-?>

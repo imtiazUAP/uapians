@@ -1,31 +1,30 @@
 <?php include("dbconnect.php"); ?>
 <?php
-$allowedExts = array("gif", "jpeg", "jpg", "png");
-$temp = explode(".", $_FILES["file"]["name"]);
-$extension = end($temp);
-if ((($_FILES["file"]["type"] == "image/gif")
-        || ($_FILES["file"]["type"] == "image/jpeg")
-        || ($_FILES["file"]["type"] == "image/jpg")
-        || ($_FILES["file"]["type"] == "image/pjpeg")
-        || ($_FILES["file"]["type"] == "image/x-png")
-        || ($_FILES["file"]["type"] == "image/png"))
-    && in_array($extension, $allowedExts)
-) {
-    if ($_FILES["file"]["error"] > 0) {
-        echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
-    } else {
 
-        if (file_exists("images/" . $_FILES["file"]["name"])) {
-            echo $_FILES["file"]["name"] . " already exists please rename your photo ";
-        } else {
-            move_uploaded_file($_FILES["file"]["tmp_name"],
-                "images/" . $_FILES["file"]["name"]);
-            $a = 'images/' . $_FILES["file"]["name"];
-            mysql_query($sql = "INSERT INTO project (language_id,project_name,platform_id,project_cat_id,SID,project_link,source_code_link,project_screenshot)VALUES ('" . $_REQUEST['language_id'] . "','" . $_REQUEST['project_name'] . "','" . $_REQUEST['platform_id'] . "','" . $_REQUEST['project_cat_id'] . "','" . $_REQUEST['SID'] . "','" . $_REQUEST['project_link'] . "','" . $_REQUEST['source_code_link'] . "','$a')");
-        }
-    }
-} else {
-    echo "Project Upload Failed.... <br>Please Fill all the field Correctly";
+$post_photo = $_FILES['file']['name'];
+$post_photo_tmp = $_FILES['file']['tmp_name'];
+$ext = pathinfo($post_photo, PATHINFO_EXTENSION); // getting image extension
+if ($ext == 'png' || $ext == 'PNG' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG' || $ext == 'gif' || $ext == 'GIF') {
+if ($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG') {
+    $src = imagecreatefromjpeg($post_photo_tmp);
+}
+if ($ext == 'png' || $ext == 'PNG') {
+    $src = imagecreatefrompng($post_photo_tmp);
+}
+if ($ext == 'gif' || $ext == 'GIF') {
+    $src = imagecreatefromgif($post_photo_tmp);
+}
+list($width_min, $height_min) = getimagesize($post_photo_tmp);
+$newwidth_min = 350;
+$newheight_min = ($height_min / $width_min) * $newwidth_min;
+$tmp_min = imagecreatetruecolor($newwidth_min, $newheight_min);
+imagecopyresampled($tmp_min, $src, 0, 0, 0, 0, $newwidth_min, $newheight_min, $width_min, $height_min);
+$newfilename = round(microtime(true)) . '.' . $ext;
+imagejpeg($tmp_min, "images/" . $newfilename, 80); //copy image in folder//
+$photo_name = 'images/' . $newfilename; // new name with path to save in database
+
+$strquery = "INSERT INTO project (language_id,project_name,platform_id,project_cat_id,SID,project_link,source_code_link,project_screenshot)VALUES ('" . $_REQUEST['language_id'] . "','" . $_REQUEST['project_name'] . "','" . $_REQUEST['platform_id'] . "','" . $_REQUEST['project_cat_id'] . "','" . $_REQUEST['SID'] . "','" . $_REQUEST['project_link'] . "','" . $_REQUEST['source_code_link'] . "','$photo_name')";
+mysql_query($strquery);
 }
 header('location: https://localhost/uapians/upload_project_confirmation.php ');
-?> 
+?>

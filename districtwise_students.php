@@ -6,14 +6,6 @@ include_once("page.inc.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-
-if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location="index.php";
-    </script>
-<?php
-} else {
 ?>
 <html>
     <head>
@@ -88,8 +80,8 @@ if (empty($_SESSION['username'])) {
                                     ?>
                                     <tr align="center" class="tablerow">
                                         <td width="120"><?= $data['SReg'] ?></td>
-                                        <td width="200"><a href='profile_list.php? SID=<?= $data['SID'] ?> ' target="_blank"><?= $data['SName'] ?></a> </td>
-                                        <td width="100"><a href='profile_list.php? SID=<?= $data['SID'] ?>' target="_blank"><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
+                                        <td width="200"><a href='student_profile.php?SID=<?= $data['SID'] ?> ' target="_blank"><?= $data['SName'] ?></a> </td>
+                                        <td width="100"><a href='student_profile.php?SID=<?= $data['SID'] ?>' target="_blank"><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
                                         <td width="200"><?= $data['SMName'] ?></td>
                                         <td width="200"><?= $data['district_name'] ?></td>
                                     </tr>
@@ -111,6 +103,3 @@ if (empty($_SESSION['username'])) {
         </div>
     </body>
 </html>
-<?php
-}
-?>

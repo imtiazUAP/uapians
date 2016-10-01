@@ -1,3 +1,8 @@
+<?php
+error_reporting(0);
+include('dbconnect.php');
+include("classes/Authentication.php");
+?>
 <html>
     <head>
         <?php
@@ -5,8 +10,10 @@
         ?>
     </head>
     <body>
+    <?php
+    if ($isLoggedIn) {
+    ?>
         <?php
-        include('dbconnect.php');
         $newpassword = $_GET['new_password'];
         $strquery = "UPDATE userinfo SET password='" . md5($newpassword) . "' where SID='" . $_GET['SID'] . "' ";
         $results = mysql_query($strquery);
@@ -21,5 +28,9 @@
             </button>
             <button class="button button_red" onClick="tb_remove()"> Close </button>
         </div>
+    <?php }else {
+        include("permission_error.php");
+    }
+    ?>
     </body>
 </html>

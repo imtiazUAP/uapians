@@ -1,4 +1,5 @@
 <?php
+include("classes/Authentication.php");
 include_once('Mail.php');
 include_once('Mail_Mime/mime.php');
 $max_allowed_file_size = 100;
@@ -92,6 +93,10 @@ function IsInjected($str)
 </head>
 <body>
 <?php
+if ($isLoggedIn && $isAdmin) {
+    ?>
+
+<?php
 if (!empty($errors)) {
     echo nl2br($errors);
 }
@@ -130,5 +135,10 @@ if (!empty($errors)) {
             >How to attach file to email in PHP</a> article page.
     </small>
 </noscript>
+
+<?php }else {
+    include("permission_error.php");
+}
+?>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 include('dbconnect.php');
+include("classes/Authentication.php");
 error_reporting(0);
 ?>
 <html>
@@ -7,6 +8,9 @@ error_reporting(0);
     <?php include("header.php"); ?>
 </head>
 <body>
+<?php
+if ($isLoggedIn) {
+?>
 <?php
     $a = mysql_query($sql = "INSERT INTO s_info(SID, SPortrait, SName, SReg, district_id, SE_Mail, SMID, Blood_Group_ID, donor_value) VALUES('" . $_REQUEST['SID'] . "', '" . $_REQUEST['SPortrait'] . "', '" . $_REQUEST['SName'] . "', '" . $_REQUEST['SReg'] . "', '" . $_REQUEST['district_id'] . "', '" . $_REQUEST['SE_Mail'] . "', '" . $_REQUEST['SMID'] . "', '" . $_REQUEST['Blood_Group_ID'] . "', '" . $_REQUEST['donor_value'] . "')");
     $password = $_REQUEST['password'];
@@ -24,5 +28,9 @@ error_reporting(0);
     <label style="color: #000000"> <?php echo "This Profile is activated!  Message Sent!!! Thank you"; ?></label>
     <button class="button button_red" onClick="tb_remove()"> Cancel </button>
 </div>
+<?php }else {
+    include("permission_error.php");
+}
+?>
 </body>
 </html>

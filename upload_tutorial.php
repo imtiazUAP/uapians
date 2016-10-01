@@ -24,7 +24,21 @@
                 <?php
                 include("menu.php");
                 ?>
+                <div id="colOne">
+                    <?php
+                    include("sidebar.php");
+                    ?>
+                </div>
+                <?php
+                if ($isLoggedIn) {
+                ?>
                 <div id="margin_figure">
+                    <?php if($_GET['success']){ ?>
+                    <div align="center" style="color: #ffffff; padding-top: 10px">
+                        <label style="color: #ffffff; font-size:18px;">Yea! <span style="color:#ffffff">Video tutorial added </span>
+                            <span style="color:red">wanna add more???</span>
+                    </div>
+<?php } ?>
                     <div align="center">
                         <form action="upload_tutorial_save.php" method="post"
                               enctype="multipart/form-data">
@@ -34,7 +48,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                            <div style="font-weight:bold; color:#FFFFFF;">Select your language:</div>
+                                            <div style="font-weight:bold; color:#FFFFFF;">Select language:</div>
                                         </td>
                                         <td>
                                             <select name="video_tutorial_cat_id" id="video_tutorial_cat_id" selected="">
@@ -66,6 +80,7 @@
                                             </td>
                                     </p>
                                     </tr></table>
+                                <input name="SID" type="hidden" id="SID" value="<?php echo $_SESSION['SID'];?>"/>
                                 </p>
                                 <br>
                                 <br>
@@ -80,6 +95,10 @@
                         </form>
                     </div>
                 </div>
+                <?php }else {
+                    include("permission_error.php");
+                }
+                ?>
             </div>
             <div class="footer">
                 <div class="footer">
@@ -89,5 +108,3 @@
             </div>
     </body>
     </html>
-<?php
-?>

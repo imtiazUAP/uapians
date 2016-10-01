@@ -6,12 +6,6 @@
     $b = $_SESSION['username'];
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
-    if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-    <?php } else {
     ?>
 <html>
 <head>
@@ -43,7 +37,7 @@
                     <div style="padding-top:40">
                         <form>
                             <?php
-                            if (($userdata[admin] == '1')) {
+                            if ($isLoggedIn && $isAdmin) {
                             ?>
                                 <a href="student_insert.php?keepThis=true&TB_iframe=true&height=600&width=350&modal=true"
                                    title="New Student" class="thickbox">Create New Student</a>
@@ -51,7 +45,7 @@
                             }
                             ?>
                             <?php
-                            if (($userdata[admin] == '1')) {
+                            if ($isLoggedIn && $isAdmin) {
                                 ?>
 
                                 <a href="Sign_Up_List.php">On Waiting Student</a>
@@ -66,7 +60,7 @@
                                     <td bgcolor="588C73" width="200"> Semester</td>
 
                                     <?php
-                                    if (($userdata[admin] == '1')) {
+                                    if ($isLoggedIn && $isAdmin) {
                                         ?>
                                         <td bgcolor="#006699"> Results</td>
                                         <td bgcolor="#006699" width="100"> Admin|Panel</td>
@@ -93,16 +87,16 @@
                                     $result = @mysql_query($page->get_limit_query($sql));
                                     while ($data = mysql_fetch_assoc($result)) {
                                 ?>
-                                    <tr align="center" class="tablerow" onclick="document.location = 'profile_list.php?SID=<?= $data['SID'] ?>';">
+                                    <tr align="center" class="tablerow" onclick="document.location = 'student_profile.php?SID=<?= $data['SID'] ?>';">
                                         <td width="120"><?= $data['SReg'] ?></td>
-                                        <td width="200"><a href='profile_list.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?></a>
+                                        <td width="200"><a href='student_profile.php? SID=<?= $data['SID'] ?>'><?= $data['SName'] ?></a>
                                         </td>
-                                        <td width="100"><a href='profile_list.php? SID=<?= $data['SID'] ?>'><img
-                                                    src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a>
+                                        <td width="100"><a href='student_profile.php? SID=<?= $data['SID'] ?>'><img
+                                                    src=<?= $data['SPortrait'] ?> echo style="height:100px; border-radius:45px;"></a>
                                         </td>
                                         <td width="200"><?= $data['SMName'] ?></td>
                                         <?php
-                                        if (($userdata[admin] == '1')) {
+                                        if ($isLoggedIn && $isAdmin) {
                                             ?>
                                             <td><a href='single_mark_list.php? SID=<?= $data['SID'] ?>'>
                                                     Results </a></td>
@@ -135,5 +129,3 @@
         </div>
 </body>
 </html>
-<?php
-}?>

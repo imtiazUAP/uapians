@@ -6,13 +6,6 @@
     $b = $_SESSION['username'];
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
-    if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-    <?php
-    } else {
     ?>
 <html>
 <head>
@@ -44,7 +37,16 @@
                     <div id="colOne">
                     </div>
                     <div id="margin_figure">
+                        <?php
+                        if ($isLoggedIn) {
+                        ?>
                         <div id="new_blog_button"><a href="blog_insert.php"> আপনি একটি ব্লগ লিখুন</a></div>
+                        <?php
+                        }else{
+                        ?>
+                            <div id="new_blog_button"><a href="login_modal.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course" class="thickbox">ব্লগ লিখতে সাইন ইন করুন</a>
+                            </div
+                            <?php } ?>
                         <br><br>
                         <br>
                         <br>
@@ -81,10 +83,10 @@
                                     ?>
                                 </div>
                                 <?php
-                                if (($userdata[admin] == '1')) {
+                                if ($isLoggedIn && $isAdmin) {
                                     ?>
                                     <div
-                                        align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
+                                        align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=650&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
                                         | <?php echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>
                                 <?php
                                 }
@@ -93,7 +95,7 @@
                                 if (($userdata['SID'] == $SID)) {
                                     ?>
                                     <div
-                                        align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
+                                        align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=650&do=edit&modal=true' class='thickbox' title='Edit Course - " . $Blog_ID . "'> Edit This Article </a> "; ?>
                                         |
                                         <?php
                                         echo " <a href='blog_delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> ";
@@ -119,7 +121,7 @@
                                         <tr>
                                             <td style="background-color: #50B9E8">
                                                 <figure>
-                                                    <a href='profile_list.php? SID=<?php echo $commenterId ?>'><img src=<?php echo $SPortrait ? $SPortrait : 'images/14101071.jpg'?> style=" height : 25px; border-radius: 15px;"></a>
+                                                    <a href='student_profile.php? SID=<?php echo $commenterId ?>'><img src=<?php echo $SPortrait ? $SPortrait : 'images/14101071.jpg'?> style=" height : 25px; border-radius: 15px;"></a>
                                                     <figcaption style="font-size: 10px;"><?php echo $SName; ?></figcaption>
                                                 </figure>
                                             </td>
@@ -134,6 +136,9 @@
                                     $i++;
                                 }
                                 ?>
+                            <?php
+                            if ($isLoggedIn) {
+                            ?>
                                 <form action="comment_save.php" method="post">
                                     <div>
                                         <input value="<?php echo $userdata['SID']; ?>" name="SID" type="hidden"/>
@@ -148,6 +153,10 @@
                                         <button class="button button_green" type="submit"> Comment </button>
                                     </div>
                                 </form>
+                            <?php } else{?>
+                                <div style="float: left" id="new_blog_button"><a href="login_modal.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course" class="thickbox">কমেন্ট করতে সাইন ইন করুন</a>
+                                </div
+                            <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -161,5 +170,3 @@
     </div>
 </body>
 </html>
-<?php
-}?>

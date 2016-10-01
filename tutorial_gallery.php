@@ -5,12 +5,6 @@
     $b = $_SESSION['username'];
     $userrole = mysql_query("select * from userinfo where username='{$b}'");
     $userdata = mysql_fetch_assoc($userrole);
-    if (empty($_SESSION['username'])) {
-?>
-    <script language="JavaScript">
-        window.location = "index.php";
-    </script>
-<?php } else {
 ?>
     <html>
     <head>
@@ -214,5 +208,3 @@
     </div>
     </body>
     </html>
-<?php
-}?>

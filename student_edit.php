@@ -1,6 +1,8 @@
 <html xmlns="http://www.w3.org/1999/html">
 <?php
     include('dbconnect.php');
+    error_reporting(0);
+    include("classes/Authentication.php");
     $strquery = "SELECT * from s_info where SID= '" . $_GET["SID"] . "' ";
     $results = mysql_query($strquery);
     $row = mysql_fetch_array($results);
@@ -11,7 +13,9 @@
     ?>
 </head>
 <body>
-
+<?php
+if ($isLoggedIn) {
+?>
 <form id="form1" name="form1" method="get" action="student_update.php">
     <table>
         <tr>
@@ -163,4 +167,9 @@
     <button class="button button_red" onClick="tb_remove();">Close</button>
     </div>
 </form>
+<?php }else {
+    include("permission_error.php");
+}
+?>
+</body>
 </html>
