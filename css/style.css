@@ -516,5 +516,11 @@ div.desc {
     font-family: 'Exo', sans-serif;
 }
 
+body, form,table,tbody, tr. td. label{
+    color: #000000;
+}
 
+.modal_label {
+    color: #000000;
+}
 

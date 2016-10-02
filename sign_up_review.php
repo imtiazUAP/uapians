@@ -1,8 +1,8 @@
 <?php
-session_start();
 error_reporting(0);
-include("classes/Authentication.php");
+session_start();
 include("dbconnect.php");
+include("classes/Authentication.php");
 ?>
 <html>
     <?php
@@ -15,7 +15,7 @@ include("dbconnect.php");
     </head>
     <body>
     <?php
-    if ($isLoggedIn) {
+    if ($isLoggedIn && $isAdmin) {
     ?>
         <form id="form1" name="form1" method="get" action="review_update.php">
             <table  style="color: black">
@@ -123,9 +123,7 @@ include("dbconnect.php");
                     </td>
                 </tr>
                 <tr>
-                    <td> <input type="hidden" name="password" id="SPortrait" value="
-                    <?php echo $row["password"];
-                        ?>" />
+                    <td> <input type="hidden" name="password" id="SPortrait" value="<?php echo $row["password"];?>" />
                     </td>
                 </tr>
                 <tr>

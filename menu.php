@@ -35,14 +35,14 @@ $Employee_Portrait = mysql_result($resultsEmployee, $i, "Employee_Portrait");
         if ($isFaculty && $isLoggedIn) {
             ?>
             <li>
-                <a href='my_profile_teacher.php'><span><img style="display:inline; width:13px; height:12px; border:1px solid white;" src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a>
+                <a href='my_profile_teacher.php?SID=<?= $_SESSION['SID']; ?>'><span><img style="display:inline; width:13px; height:12px; border:1px solid white;" src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a>
             </li>
         <?php
         }
         if ($isStaff && $isLoggedIn) {
             ?>
             <li>
-                <a href='my_profile_staff.php'><span><img class="img-responsive img-circle margin" style="display:inline; width:20px; height:20px; border:1px solid white; vertical-align:middle" src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a>
+                <a href='my_profile_staff.php?SID=<?= $_SESSION['SID']; ?>'><span><img class="img-responsive img-circle margin" style="display:inline; width:20px; height:20px; border:1px solid white; vertical-align:middle" src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a>
             </li>
         <?php
         }

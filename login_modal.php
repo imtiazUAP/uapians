@@ -14,7 +14,7 @@
     </head>
 
     <body>
-    <div style="background-color: #03071C;">
+    <div style="background-color: #03071C; padding-left: 50px; padding-right: 50px">
     <br>
     <p style="font-weight:bold; font-size:18px">Sign In
     </p>
@@ -63,13 +63,12 @@
             Sign In failed. May your password or email is incorrect! Try again or reset your password
         <?php } ?>
 
-
     <?php
     }
     ?>
 
-        <div align="right"; style="padding-right:25">
-            <button class="button button_green" onClick="tb_remove()"> Close </button>
+        <div align="right";>
+            <button class="button button_red" onClick="tb_remove()"> Close </button>
         </div>
     </div>
     </body>

@@ -2,10 +2,10 @@
 session_start();
 error_reporting(0);
 include("dbconnect.php");
-include_once("page.inc.php");
 $b = $_SESSION['username'];
 $userrole = mysql_query("select * from userinfo where username='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
+$SID = $_GET["SID"];
 ?>
     <html>
     <head>
@@ -24,10 +24,8 @@ $userdata = mysql_fetch_assoc($userrole);
                 include("menu.php");
                 ?>
 
-
-<?php if($isLoggedIn && $isFaculty) { ?>
                 <?php
-                $strquery = "SELECT * from e_info INNER JOIN userinfo ON e_info.SID=userinfo.SID  WHERE username='{$b}'";
+                $strquery = "SELECT * from e_info INNER JOIN userinfo ON e_info.SID=userinfo.SID  WHERE e_info.SID='" . $_GET["SID"] . "'";
                 $results = mysql_query($strquery);
                 $num = mysql_numrows($results);
                 $SID = mysql_result($results, $i, "SID");
@@ -40,7 +38,7 @@ $userdata = mysql_fetch_assoc($userrole);
                 $Employee_Role = mysql_result($results, $i, "Employee_Role");
                 $Employee_Portrait = mysql_result($results, $i, "Employee_Portrait");
                 ?>
-                <?php if ($isLoggedIn && ($isFaculty && $authentication->isOwner($userdata['SID'])) || $isAdmin) { ?>
+                <?php if ($isLoggedIn && ($isFaculty && $authentication->isOwner($_GET["SID"])) || $isAdmin) { ?>
                 <div align="center" style=" width:1100px; height:20px; color: #ffffff; font-size: 16px">
                 <a style="background-color: #4285F4; background-size: 80px 60px;"
                    href='my_profile_teacher_edit.php?SID=<?= $SID ?>'>Edit My Profile </a>
@@ -95,10 +93,6 @@ $userdata = mysql_fetch_assoc($userrole);
                     <div style="padding-bottom:75px">
                         <p style="width:900px;padding:10px;border:2px solid white;margin:0px; font-size:14px"><?php echo $Employee_Role; ?></P>
                     </div>
-                    <?php }else {
-                        include("permission_error.php");
-                    }
-                    ?>
         </div>
                 </div>
             <div class="footer">

@@ -32,7 +32,7 @@
                 <?php
                 if ($isLoggedIn && $isAdmin) {
                 ?>
-                <a href="employee_insert.php?keepThis=true&TB_iframe=true&height=120&width=240&modal=true"
+                <a href="employee_insert.php?keepThis=true&TB_iframe=true&height=230&width=400&modal=true"
                    title="New Employee" class="thickbox">Create New Employee
                 </a>
                 <table
@@ -86,11 +86,12 @@
                                 $i = 0;
                                 while ($i < $num) {
                                     $EID = mysql_result($results, $i, "EID");
+                                    $SID = mysql_result($results, $i, "SID");
                                     $EName = mysql_result($results, $i, "EName");
                                     $EDesignation = mysql_result($results, $i, "EDesignation");
                                     $Employee_Portrait = mysql_result($results, $i, "Employee_Portrait");
                             ?>
-                                <tr align="center"  onclick="document.location = 'teacher_list.php?EID=<?php echo($EID)?>';">
+                                <tr align="center"  onclick="document.location = 'my_profile_teacher.php?SID=<?php echo($SID)?>';">
                                     <td height="40"><?php echo $EName; ?></td>
                                     <td><?php echo $EDesignation; ?></td>
                                     <td width="100"><img src="
@@ -100,16 +101,16 @@
                                      style="height:100px; border-radius:45px;"></td>
                                     <td>
                                         <?php
-                                        echo " <a href='teacher_list.php? EID=" . $EID . "'> Profile </a>"
+                                        echo " <a href='my_profile_teacher.php?SID=" . $SID . "'> Profile </a>"
                                         ?>
                                     </td>
                                     <?php
                                     if ($isLoggedIn && $isAdmin) {
                                     ?>
-                                        <td align="center"><?php echo " <a href='employee_edit.php?EID=" . $EID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - " . $EID . "'> edit </a> "; ?>
+                                        <td align="center"><?php echo " <a href='employee_edit.php?EID=" . $EID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - " . $EID . "'> Edit </a> "; ?>
                                             |
                                             <?php
-                                            echo " <a href='employee_delete.php?EID=" . $EID . "'> delete </a> ";
+                                            echo " <a href='employee_delete.php?SID=" . $SID . "'> Delete </a> ";
                                             ?>
                                         </td>
                                     <?php

@@ -64,7 +64,7 @@ class Authentication {
 
     function isStaff()
     {
-        $userrole = mysql_query("select userid as user_id, username as user_name, admin as group_id, SID as student_id, Reg as reg_no, SE_Mail as student_email, date as joining_date from userinfo where username='{$_SESSION['username']}'");
+        $userrole = mysql_query("select userid as user_id, username as user_name, admin as group_id, SID as student_id, Reg as reg_no, SE_Mail as student_email, date as joining_date from userinfo where SID='{$_SESSION['SID']}'");
         $userdata = mysql_fetch_assoc($userrole);
         $userName = $userdata['user_name'];
         $groupId = $userdata['group_id'];
@@ -78,7 +78,7 @@ class Authentication {
 
     function isGeneralStudent()
     {
-        $userrole = mysql_query("select userid as user_id, username as user_name, admin as group_id, SID as student_id, Reg as reg_no, SE_Mail as student_email, date as joining_date from userinfo where username='{$_SESSION['username']}'");
+        $userrole = mysql_query("select userid as user_id, username as user_name, admin as group_id, SID as student_id, Reg as reg_no, SE_Mail as student_email, date as joining_date from userinfo where SID='{$_SESSION['SID']}'");
         $userdata = mysql_fetch_assoc($userrole);
         $userName = $userdata['user_name'];
         $groupId = $userdata['group_id'];
@@ -120,7 +120,7 @@ class Authentication {
 
     function isFaculty()
     {
-        $userrole = mysql_query("select userid as user_id, username as user_name, admin as group_id, SID as student_id, Reg as reg_no, SE_Mail as student_email, date as joining_date from userinfo where username='{$_SESSION['username']}'");
+        $userrole = mysql_query("select userid as user_id, username as user_name, admin as group_id, SID as student_id, Reg as reg_no, SE_Mail as student_email, date as joining_date from userinfo where SID='{$_SESSION['SID']}'");
         $userdata = mysql_fetch_assoc($userrole);
         $userName = $userdata['user_name'];
         $groupId = $userdata['group_id'];

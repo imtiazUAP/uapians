@@ -106,7 +106,7 @@ $userdata = mysql_fetch_assoc($userrole);
                             <p>
                                 <tr>
                                     <td><label for="email" class="signup_field" data-icon="u">Your E Mail:</label></td>
-                                    <td><input id="lastnamesignup" name="email" required="required" type="text"
+                                    <td><input id="lastnamesignup" name="email" required="required" type="email"
                                                placeholder="example@yahoo.com"/></td>
                                 </tr>
                             </p>
@@ -120,22 +120,21 @@ $userdata = mysql_fetch_assoc($userrole);
                             </p>
                             <p>
                                 <tr>
-                                    <td><label for="Portrait" class="signup_field" data-icon="u">User Name:</label></td>
+                                    <td><label for="Portrait" class="signup_field" data-icon="u">Your Nick Name:</label></td>
                                     <td><input id="file" name="username" required="required" type="text"
-                                               placeholder="your desired username"/></td>
+                                               placeholder="আপনার ডাক নাম"/></td>
                                 </tr>
                             </p>
                             <p>
                                 <tr>
                                     <td><label for="Portrait" class="signup_field" data-icon="u">Password:</label></td>
-                                    <td><input id="file" name="password" required="required" type="password"
-                                               placeholder="your desired password"/></td>
+                                    <td><input id="file" name="password" required="required" type="password" placeholder="your desired password"/></td>
                                 </tr>
                             </p>
                         </table>
                         <br>
                         <br>
-                        <button type="Submit" class="button button_blue">Create an account</button>
+                        <button type="Submit" class="button button_blue">Create my account</button>
                     </form>
                 </div>
                 <?php }else {

@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 session_start();
 include("classes/Authentication.php");
 include('dbconnect.php');
@@ -61,6 +62,7 @@ $userdata = mysql_fetch_assoc($userrole);
                     $i = 0;
                     while ($i < $num) {
                         $EID = mysql_result($results, $i, "EID");
+                        $SID = mysql_result($results, $i, "SID");
                         $EName = mysql_result($results, $i, "EName");
                         $EDesignation = mysql_result($results, $i, "EDesignation");
                         $Employee_Portrait = mysql_result($results, $i, "Employee_Portrait");
@@ -74,8 +76,8 @@ $userdata = mysql_fetch_assoc($userrole);
                             <?php
                             if ($isLoggedIn && $isAdmin) {
                                 ?>
-                                <td align="center"><?php echo " <a href='employee_edit.php?EID=" . $EID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - " . $EID . "'> edit </a> "; ?>
-                                    | <?php echo " <a href='employee_delete.php?EID=" . $EID . "'> delete </a> "; ?></td>
+                                <td align="center"><?php echo " <a href='employee_edit.php?SID=" . $EID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - " . $EID . "'> Edit </a> "; ?>
+                                    | <?php echo " <a href='employee_delete.php?SID=" . $SID . "'> Delete </a> "; ?></td>
                             <?php
                             }
                             ?>

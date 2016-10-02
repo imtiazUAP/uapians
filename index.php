@@ -37,10 +37,14 @@ $userdata = mysql_fetch_assoc($userrole);
                         <div id="margin_figure">
                             <div>
                                 <div id="paragraph_head">
-                                    <h1 align="left" style="color:#FFFFFF;"><img src="images/system_images/welcome_icon_two.png">Welcome!</h1>
+                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/mission_icon.png">Welcome Champ...</h1>
                                 </div>
-                                <p align="left" style="font-size:16; font-weight:bold">Uapians.Net একটি ওয়েবসাইট.... আমাদের জন্যে আমাদের বানানো</p>
-                                <p align="left" style="font-size:14">Uapians.Net একটি ওয়েবসাইট যার মুল উদ্দেশ্যই হলো ইউনিভার্সিটি পর্যায়ে  যে সকল complexity আছে তা কিছুটা হলেও দূর করা , এবং বিষয়গুলো সহজভাবে সবার কাছে উপস্থাপন করা... এই ওয়েবসাইটের সব ধরনের কর্মকাণ্ড University of Asia Pacific এর ছাত্রছাত্রীদের দ্বারা পরিচালিত হয়ে থাকে। Authority পর্যায়ের কেউ এটার সাথে এখন পর্যন্ত জড়িত নয়। এখানে ইউনিভার্সিটির সব স্টুডেন্টের প্রোফাইল থাকবে এবং সেখানে ওই স্টুডেন্টের যাবতীয় তথ্য থাকবে যাতে করে একে-অন্যকে আরো ভালোভাবে জানতে পারে-চিনতে পারে। এখান থেকে সবাই সব সেমিস্টারের যাবতীয় হ্যান্ডনোট/Slide/PDF/EBook/Question sample ডাউনলোড করে নিতে পারবে। এখানে শিক্ষকরা সরাসরি নোট/slide/reference আপলোড করে দিতে পারবে। এবং পরবর্তী সেমিস্টারে নতুন স্টুডেন্টরা এসেই সব কিছু গোছানো পেয়ে যাবে তাতে করে যে সকল স্টুডেন্ট ক্লাসে উপস্থিত থাকে ঠিক ই কিন্তু মন থাকে আকাশে-বাতাসে তাদের কিছুটা হলেও উপকার হবে বলে আশা করি... এখানে একজন অন্যজনকে মেসেজ দিতে পারবে গ্রুপ মেসেজ করতে পারবে তাতে করে শিক্ষক-ছাত্রছাত্রী-বন্ধুবান্ধবের মধ্যের ব্রিজ কানেকশানটা আরো একটু ভালো হবে আশা করি। এখানকার সব কিছুই হবে Academic এবং Professional লেভেল এর জন্যে । এই প্রজেক্টের মাধ্যমে কারো যদি এতটুকু উপকার হয় তাহলে আমাদের প্রচেস্টা সফল হবে। ভালো কথা এখানে একটা ব্লগ করা হয়েছে যদিও খুব একটা ভালো হয়নি এখনো তবে আমরা চেষ্টা করে যাচ্ছি । এই ব্লগে ছাত্রছাত্রীরা তাদের Academic বিষয় নিয়ে আলোচনা করবে/ Article লিখবে বলে আমরা আশা করি।। </p>
+                                <p align="left" style="font-size:16; font-weight:bold">UAPIANS.NET মুলত ইউনিভার্সিটি স্টুডেন্টদের মিলনমেলা...</p>
+                                <p align="left" style="font-size:14">
+                                    কম্পিউটার সায়েন্সে পড়ুয়া কতিপয় তরুনের উদ্যোগে আত্মপ্রকাশ করা UAPIANS.NET মুলত ইউনিভার্সিটি স্টুডেন্টদের মিলনমেলা। প্রাথমিকভাবে শুধুমাত্র University of Asia Pacific এর কম্পিউটার বিজ্ঞান প্রকৌশল বিভাগের জন্য উন্মুক্ত, তবে ধীরে ধীরে অন্যান্য ডিপার্টমেন্ট এবং সারা বাংলাদেশের সকল বিশ্ববিদ্যালয়ের মাঝে ছড়িয়ে দেয়ার পরিকল্পনা চলছে।
+                                    সম্পূর্নই আনঅফিসিয়াল এ এপ্লিকেশনটি বিশ্ববিদ্যালয় পর্যায়ের স্টুডেন্টদের মধ্যে পারষ্পরিক মেলবন্ধনের ক্ষেত্রে এক অনবদ্য ভূমিকা রাখবে বলে আশা করা যায়। ছাত্রছাত্রীদের নিজেরদের মধ্যে পারষ্পরিক যোগাযোগ, অটোমেটেড ডিজিটালাইজড রেজাল্টশীট প্রস্তুতকরুন, নোটস আদান প্রদান এবং সর্বোপরি বিভিন্ন বিষয়ে পারষ্পরিক সহযোগীতা এবং বিভিন্ন প্ল্যাটফরমের উপর নিজেদের ভেতরে আলোচনার সুযোগ থাকছে। সেই সাথে আছে ব্লাড ব্যাঙ্ক এবং এক অসম্ভব হেল্পফুল একটি স্বেচ্ছাসেবক টিম আপনার সহযোগীতার জন্য যারা সর্বাত্মক চেষ্টা করে যাবে যে কোন প্রয়োজনে।
+                                    আপনি যদি একজন UAPian হয়ে থাকেন তবে দেরী না করে এখনই রেজিস্ট্রেশন করে ফেলুন এবং চলে আসুন আমাদের পরিবারে।
+                                    It’s time to be united, time to shout out together…</p>
                             </div>
                             <br>
                             <br>
@@ -118,25 +122,88 @@ $userdata = mysql_fetch_assoc($userrole);
                             <br>
                             <div>
                                 <div id="paragraph_head">
-                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/mission_icon.png">Mission...</h1>
+                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/academic_icon.png">Leates Notes...</h1>
                                 </div>
-                                <p align="left" style="font-size:16; font-weight:bold">UAPIANS.NET মুলত ইউনিভার্সিটি স্টুডেন্টদের মিলনমেলা...</p>
-                                <p align="left" style="font-size:14">
-                                কম্পিউটার সায়েন্সে পড়ুয়া কতিপয় তরুনের উদ্যোগে আত্মপ্রকাশ করা UAPIANS.NET মুলত ইউনিভার্সিটি স্টুডেন্টদের মিলনমেলা। প্রাথমিকভাবে শুধুমাত্র University of Asia Pacific এর কম্পিউটার বিজ্ঞান প্রকৌশল বিভাগের জন্য উন্মুক্ত, তবে ধীরে ধীরে অন্যান্য ডিপার্টমেন্ট এবং সারা বাংলাদেশের সকল বিশ্ববিদ্যালয়ের মাঝে ছড়িয়ে দেয়ার পরিকল্পনা চলছে।
-                                সম্পূর্নই আনঅফিসিয়াল এ এপ্লিকেশনটি বিশ্ববিদ্যালয় পর্যায়ের স্টুডেন্টদের মধ্যে পারষ্পরিক মেলবন্ধনের ক্ষেত্রে এক অনবদ্য ভূমিকা রাখবে বলে আশা করা যায়। ছাত্রছাত্রীদের নিজেরদের মধ্যে পারষ্পরিক যোগাযোগ, অটোমেটেড ডিজিটালাইজড রেজাল্টশীট প্রস্তুতকরুন, নোটস আদান প্রদান এবং সর্বোপরি বিভিন্ন বিষয়ে পারষ্পরিক সহযোগীতা এবং বিভিন্ন প্ল্যাটফরমের উপর নিজেদের ভেতরে আলোচনার সুযোগ থাকছে। সেই সাথে আছে ব্লাড ব্যাঙ্ক এবং এক অসম্ভব হেল্পফুল একটি স্বেচ্ছাসেবক টিম আপনার সহযোগীতার জন্য যারা সর্বাত্মক চেষ্টা করে যাবে যে কোন প্রয়োজনে।
-                                আপনি যদি একজন UAPian হয়ে থাকেন তবে দেরী না করে এখনই রেজিস্ট্রেশন করে ফেলুন এবং চলে আসুন আমাদের পরিবারে।
-                                It’s time to be united, time to shout out together…</p>
+                                <p align="left" style="font-size:16; font-weight:bold">আরো - আরো Notes ডাউনলোড করতে সাইন ইন করুন...</p>
+                                <marquee behavior="scroll" direction="up"  style="vertical-align:middle;text-align:center; cursor:pointer;color:#0099FF; font-size:18px; height:300"  onmouseover="this.stop();" onMouseOut="this.start();" >
+                                    <?php
+                                    $strquery = "SELECT ref_id, CCode, Reference_Link, EName, Detail, SMName_Short, uploaded_by, SName, upload_date FROM reference_info
+                                    INNER JOIN c_info
+                                    ON reference_info.CID=c_info.CID
+                                    LEFT JOIN e_info
+                                    ON reference_info.EID=e_info.EID
+                                    LEFT JOIN s_info
+                                    ON s_info.SID=reference_info.uploaded_by
+                                    LEFT JOIN sm_info
+                                    ON reference_info.SMID=sm_info.SMID
+                                    ORDER BY reference_info.ref_id DESC LIMIT 10";
+                                    $results = mysql_query($strquery);
+                                    $num = mysql_numrows($results);
+
+                                    $i = 0;
+                                     while ($i < 10) {
+                                        $ref_id = mysql_result($results, $i, "ref_id");
+                                        $CCode = mysql_result($results, $i, "CCode");
+                                        $f10 = mysql_result($results, $i, "EName");
+                                        $SID = mysql_result($results, $i, "uploaded_by");
+                                        $uploaded_by = mysql_result($results, $i, "SName");
+                                        $SMName = mysql_result($results, $i, "SMName_Short");
+                                        $upload_date = mysql_result($results, $i, "upload_date");
+                                        $Detail = mysql_result($results, $i, "Detail");
+                                         $DetailstringCut = substr($Detail, 0, 35);
+                                        $f3 = mysql_result($results, $i, "Reference_Link");
+                                        ?>
+                                        <a href='<?php echo $f3; ?>' target="_blank" style="text-decoration:none; color:#FFFFFF"><span style="color: #50B9E8"><?php echo $CCode; ?></span>- <span style="color: #F5DF7C"><?php echo $DetailstringCut; ?>...</span> for <span style="color: #F44336">semester: <?php echo $SMName; ?></span> given by: <span style="color: #54A944"><?php echo $uploaded_by ? $uploaded_by : 'admin' ; ?></span></a>
+                                        <br> <br>
+                                        <?php
+                                        $i++;
+                                     }
+                                        ?>
+                                    <div style="background-color:#54A944; color: #ffffff; font-size: 14px; border-radius: 5px; padding: 5px; float: right; width: 20%;"  id="new_blog_button"><a href="course_list.php"> Find Out More Notes >></a></div>
+                                </marquee>
                             </div>
                             <br>
                             <br>
                             <br>
                             <div>
                                 <div id="paragraph_head">
-                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/about_icon.png">About!</h1>
+                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/about_icon.png">Trending Tutorials</h1>
                                 </div>
-                                <p align="left" style="font-size:16; font-weight:bold">Fall 2013 তে হয় আমাদের পথচলার শুরু...</p>
-                                <p align="left" style="font-size:14">এই প্রজেক্টের কাজ আমরা শুরু করি Fall 2013 সেমিস্টারে আমাদের CSE 300 এবং CSE 322 এর আন্ডারে দেশের অবস্থা খারাপ থাকায় ইউনিভার্সিটি বন্ধ হয়ে গেলো এবং সেটা হলো আমাদের কাজ করার জন্যে একটা সুবর্ণ সুযোগ দীর্ঘ ৭ মাস সময় পেলাম একটা সেমিস্টারে এবং তার মধ্যে আমারা কাজ শেখা থেকে শুরু করে বর্তমান অবস্থা পর্যন্ত নিয়ে আসি। আমরা মনে করি আমাদের এই প্রজেক্ট দেখে পরবর্তী স্টুডেন্টরাও এরকম কিছু করার জন্যে উদ্বুদ্ধ হবে । কোর্স আমাদের Course Teachers ছিলেন Dr. Najmus Sadat.... Bijan Paul স্যার উনারা আমাদের প্রত্যেকটা Step এ হেল্প করেছেন আমরা উনাদের কাছে কৃতজ্ঞ। এবং পরবর্তীদের সময়েও উনারা এই রকম ই হেল্পফুল থাকবেন বলে মনে করি যা কিনা আমাদের ডিপার্টমেন্টের স্টুডেন্টদের জন্যে আশীর্বাদ স্বরূপ ।। </p>
+                                <?php
+                                $strquery="SELECT vt.*, u.username, u.SID, vtc.video_tutorial_cat_name FROM video_tutorial vt INNER JOIN userinfo u ON u.SID = vt.uploaded_by INNER JOIN video_tutorial_category vtc ON vtc.video_tutorial_cat_id = vt.video_tutorial_cat_id order by vt.tutorial_id DESC LIMIT 6";
+                                $results=mysql_query($strquery);
+                                $num=mysql_numrows($results);
+                                if($num > 0){
+                                    $i=0;
+                                    while ($i< $num)
+                                    {
+                                        $tutorial_id=mysql_result($results,$i,"tutorial_id");
+                                        $video_tutorial_cat_id=mysql_result($results,$i,"video_tutorial_cat_id");
+                                        $video_tutorial_cat_name=mysql_result($results,$i,"video_tutorial_cat_name");
+                                        $tutorial_link=mysql_result($results,$i,"tutorial_link");
+                                        $uploaderId=mysql_result($results,$i,"uploaded_by");
+                                        $uploaderName=mysql_result($results,$i,"username");
+                                        $uploadTime=mysql_result($results,$i,"upload_time");
+                                        ?><figure>
+                                        <table style="padding:5px; float: left; width: 248px; color: #50B9E8">
+                                            <tr style="height:20px">
+                                                <td style="border:inset" colspan=2  align="center"><iframe width="248" height="160" src="<?php echo $tutorial_link ; ?>" frameborder="0" allowfullscreen></iframe></td>
+                                            </tr>
+                                            <tr><td><figcaption>Uploaded by : <a style="color: #55AA45; " href='student_profile.php?SID=<?php echo ($uploaderId == 9999) ? '29' : $uploaderId; ?>' target="_blank"> <?php echo $uploaderName; ?></a> for <span style="color: #F44336"><?= $video_tutorial_cat_name ?></span>  on :<span style="color: #55AA45"> <?= $uploadTime ?></span></figcaption></td></tr>
+                                        </table>
+
+                                        </figure>
+                                        <?php $i++; }
+                                } else {
+                                    ?>
+                                    <div style="font-weight: bold;">
+                                        </br></br></br></br><p style="text-align:center">No video tutorials are added for this category yet. Stay connected, it will be added...</p>
+                                    </div>
+                                <?php
+                                }
+                                ?>
                             </div>
+                            <div style="background-color:#54A944; color: #ffffff; font-size: 14px; border-radius: 5px; height: 20px; padding: 5px; float: right; width: 20%;"  id="new_blog_button"><a href="tutorial_gallery.php"> Find Out More Videos >></a></div>
                         </div>
                     </div>
                 </div>

@@ -124,6 +124,8 @@ if(!$isLoggedIn){ ?>
         <li><a href="student_list.php">->>Students</a></li>
         <!--<li><a href="mark_list.php">->>Results</a></li>-->
         <li><a class="blink_me" href="course_list.php">->>Download Course Material</a></li>
+        <li><a class="blink_me" href="tutorial_gallery.php">->>Find Programming Tutorials</a></li>
+        <li><a class="blink_me" href="project_gallery.php">->>Find Complete Projects</a></li>
         <?php if($isLoggedIn && $isGeneralStudent || $isFaculty){ ?>
             <li><a href='upload_material.php?SID=<?= $SID ?>'>->>Upload Materials</a></li>
             <li><a href='upload_tutorial.php?SID=<?= $SID ?>'>->>Upload Tutorials</a></li>

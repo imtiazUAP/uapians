@@ -33,11 +33,6 @@ $userdata = mysql_fetch_assoc($userrole);
                     <div style="padding-top:40">
                         <form>
                             <?php
-                            if ($isLoggedIn && $isAdmin) {
-                            ?>
-                                <a href="student_insert.php?keepThis=true&TB_iframe=true&height=610&width=350&modal=true" title="New Student" class="thickbox">Create New Student</a>
-                            <?php
-                            }
                                 $strquery = "SELECT S.*, M.SMName FROM sign_up S, sm_info M WHERE S.SMID=M.SMID ORDER BY S.SReg";
                                 $results = mysql_query($strquery);
                                 $num = mysql_numrows($results);
@@ -75,7 +70,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                         <?php
                                         if ($isLoggedIn && $isAdmin) {
                                         ?>
-                                        <td width="100"><a href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=250&width=300&do=edit&modal=true' class='thickbox'> Review</a> | <a href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
+                                        <td width="100"><a style="color: #000000" href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=250&width=300&do=edit&modal=true' class='button button_green'> Review</a> <a class='button button_red' style="color: #000000" href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
                                         <?php
                                         }
                                         ?>

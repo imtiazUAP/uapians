@@ -47,9 +47,9 @@ if (!$con) {
                     </br>
                     <div align="center">
                         <label style="color: white; font-size:14px;">Account not found with this <span
-                                style="color: #ff0000">Email address.</span>. Please... <a style="color: #ff0000"
+                                style="color: #ff0000">Email address.</span>. Please... <a class="blink_me" style="color: #55A942; font-size: 19px"
                                                                                            href="sign_up.php">Sign
-                                Up</a> to continue... </br> or <a style="color: #ff0000" href="reset_pass.php">click
+                                Up</a> to continue... </br> or <a class="blink_me" style="color: #50B9E8; font-size: 19px" href="reset_pass.php">click
                                 here</a> to try with a different Email address</label>
                     </div>
                 <?php
@@ -59,7 +59,7 @@ if (!$con) {
                     </br>
                     <div align="center">
                         <label style="color: white; font-size:14px;">Opps!! <span style="color: #ff0000">wrong login info</span>
-                            provided. Please try again or if you forgot your password... </br> <a style="color: #50B9E8"
+                            provided. Please try again or if you forgot your password... </br> <a class="blink_me" style="color: #50B9E8"
                                                                                                   href="reset_pass.php">click
                                 here to reset your password</a></label>
                     </div>
