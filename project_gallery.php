@@ -41,17 +41,14 @@ $userdata = mysql_fetch_assoc($userrole);
                     </div>
                     <div>
                         <hr>
-                        <h1> Project Gallery </h1>
-                        <br>
+                        <h1 style="color: #ffffff"> Project Gallery </h1>
                         <hr>
-                        <br>
                         <p> Here we will provide you with exe file , apk or sometimes with the source code so that it will come
                             helpful for you from the previous project of the seniors . </p>
                         <br>
-                        <p> There is also some project ideas by wihch you can work with
+                        <p> There is also some project ideas by wihch you can work with. Contact with admins to join uapians dev team.
                     </div>
                     <hr>
-                    <br>
 
                     <div id="margin_figure">
                         <table>
