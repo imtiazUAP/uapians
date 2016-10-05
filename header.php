@@ -9,6 +9,7 @@
 <script type="text/javascript" src="js/thickbox.js"></script>
 <link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen"/>
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
 <!-- GOOGLE WEB Fonts END HERE -->
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine|Open+Sans|Josefin|Slab|Arvo|Lato|Vollkorn|Abril+Fetface|Ubuntu|Droid+Sans|Junction|Fertigo|Audimat|Fontin|Yatra+One|Exo&effect=fire-animation|neon|vintage|3d-float|3d">
 <!-- GOOGLE WEB Fonts END HERE -->

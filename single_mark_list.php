@@ -30,7 +30,7 @@
     <div>
         <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SName FROM s_info WHERE SID='" . $_GET["SID"] . "'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -56,7 +56,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='1st Year 1st Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -94,7 +94,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='1st Year 2nd Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -132,7 +132,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='2nd Year 1st Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -170,7 +170,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='2nd Year 2nd Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -208,7 +208,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='3rd Year 1st Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -247,7 +247,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='3rd Year 2nd Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -286,7 +286,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='4th Year 1st Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);
@@ -325,7 +325,7 @@
             </tr>
             <?php
             $connect = mysql_connect("localhost", "root", "");
-            $select_db = mysql_select_db("mylab");
+            $select_db = mysql_select_db("uapians");
             $strquery = "SELECT SMName,SName,CCode, CName,Mark FROM c_info INNER JOIN m_info ON m_info.CID=c_info.CID INNER JOIN s_info ON s_info.SID=m_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE m_info.SID='" . $_GET["SID"] . "' AND SMName='4th Year 2nd Semister'";
             $results = mysql_query($strquery);
             $num = mysql_numrows($results);

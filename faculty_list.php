@@ -79,11 +79,11 @@ $userdata = mysql_fetch_assoc($userrole);
                         $EDesignation = mysql_result($results, $i, "EDesignation");
                         $Employee_Portrait = mysql_result($results, $i, "Employee_Portrait");
                         ?>
-                        <tr align="center" onclick="document.location = 'my_profile_teacher.php?SID=<?php echo($SID)?>';">
+                        <tr align="center" onclick="document.location = 'employee_profile.php?SID=<?php echo($SID)?>';">
                             <td height="40"><?php echo $EName; ?></td>
                             <td><?php echo $EDesignation; ?></td>
                             <td width="100"><img src="<?php echo $Employee_Portrait; ?>" style="height:100px; border-radius:45px;"></td>
-                            <td><?php echo " <a href='my_profile_teacher.php?SID=" . $SID . "'> Profile </a>" ?></td>
+                            <td><?php echo " <a href='employee_profile.php?SID=" . $SID . "'> Profile </a>" ?></td>
                             <?php
                             if ($isLoggedIn && $isAdmin) {
                                 ?>

@@ -65,7 +65,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         <tr align="center">
                             <td height="40"><?php echo $CCode ; ?></td>
                             <td><?php echo $CName ; ?></td>
-                            <td ><?php echo " <a href='reference_list.php? CCode=".$CCode."'>Reference Source</a>"?></td>
+                            <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                             <td><?php echo $SMName ; ?></td>
                                 <?php
                                 if ($isLoggedIn && $isAdmin) {
@@ -101,7 +101,7 @@ $userdata = mysql_fetch_assoc($userrole);
                     <tr align="center">
                         <td height="40"><?php echo $CCode; ?></td>
                         <td><?php echo $CName; ?></td>
-                        <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                        <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                         <td><?php echo $SMName; ?></td>
                         <?php
                         if ($isLoggedIn && $isAdmin) {
@@ -138,7 +138,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if ($isLoggedIn && $isAdmin) {
@@ -174,7 +174,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if ($isLoggedIn && $isAdmin) {
@@ -210,7 +210,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if ($isLoggedIn && $isAdmin) {
@@ -247,7 +247,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if ($isLoggedIn && $isAdmin) {
@@ -283,7 +283,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if ($isLoggedIn && $isAdmin) {
@@ -320,7 +320,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         <tr align="center">
                             <td height="40"><?php echo $CCode; ?></td>
                             <td><?php echo $CName; ?></td>
-                            <td><?php echo " <a href='reference_list.php? CCode=" . $CCode . "'>Reference Source</a>" ?></td>
+                            <td> <a class="blink_me" href='reference_list.php?CID=<?=$CID?>'>Reference Source</a></td>
                             <td><?php echo $SMName; ?></td>
                             <?php
                             if ($isLoggedIn && $isAdmin) {

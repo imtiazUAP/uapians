@@ -23,7 +23,7 @@ if ($isLoggedIn && $isAdmin) {
 <td><select name="EID" id="EID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT EID,EName FROM e_info ORDER BY EID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -43,7 +43,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="CID" id="CID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT CID,CCode FROM c_info ORDER BY CID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -60,7 +60,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="XID" id="XID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT XID,X_Type FROM x_info ORDER BY XID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -80,7 +80,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SEMID" id="SEMID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SEMID,SEMName FROM sem_info ORDER BY SEMID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -102,7 +102,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID1" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -121,7 +121,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID2" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -139,7 +139,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID3" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -157,7 +157,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID4" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -175,7 +175,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID5" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -193,7 +193,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID6" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -211,7 +211,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID7" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -229,7 +229,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID8" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -247,7 +247,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID9" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');
@@ -265,7 +265,7 @@ while ($row = mysql_fetch_assoc($rs)) {
 <td><select name="SID10" id="SID">
 <?php
 $connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+$select_db=mysql_select_db("uapians");
 
 $query="SELECT DISTINCT SID,SReg FROM s_info ORDER BY SID";
 $rs = mysql_query($query) or die ('Error submitting');

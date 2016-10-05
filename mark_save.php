@@ -5,7 +5,7 @@ if(!$con)
 {
 	die('Could Not Connect:'.mysql_error());
 	}
-mysql_select_db("mylab",$con);
+mysql_select_db("uapians",$con);
 $sql="Insert into m_info(SID,EID,CID,XID,Date,Mark,SEMID,Year)
 values
 ('$_POST[SID1]','$_POST[EID]','$_POST[CID]','$_POST[XID]','$_POST[Date]','$_POST[Mark1]','$_POST[SEMID]','$_POST[Year]'),
@@ -22,6 +22,6 @@ if(!mysql_query($sql,$con))
 {
 	die('Error:'.mysql_error());
 }
-header ('location: https://localhost/mylab/mark_insert.php ');
+header ('location: https://localhost/uapians/mark_insert.php ');
 mysql_close($con)
 ?>

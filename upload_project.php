@@ -41,7 +41,7 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <div style="color:#FFFFFF;">Project Language:</div>
+                                        <div style="color:#FFFFFF;">Project Technology:</div>
                                     </td>
                                     <td>
                                         <select name="language_id" id="language_id" selected="">

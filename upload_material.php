@@ -68,7 +68,7 @@
                                     <td>
                                         <select name="EID" id="EID" selected="">
                                             <?php
-                                                $query = "SELECT DISTINCT EID, EName FROM e_info";
+                                                $query = "SELECT DISTINCT EID, EName FROM e_info WHERE group_id = 4";
                                                 $rs = mysql_query($query) or die ('Error submitting');
                                                 while ($rows = mysql_fetch_assoc($rs)) {
                                                     if ($row["EID"] == $rows["EID"]) {

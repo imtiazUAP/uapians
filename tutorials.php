@@ -24,7 +24,7 @@
                             <?php include("sidebar.php"); ?>
                         </div>
                         <?php
-                            $strquery="SELECT vt.*, u.username, u.SID FROM video_tutorial vt INNER JOIN userinfo u ON u.SID = vt.uploaded_by WHERE vt.video_tutorial_cat_id='" . $_GET["vtid"] . "'";
+                            $strquery="SELECT vt.*, u.username, u.SID, u.admin, vtc.video_tutorial_cat_name FROM video_tutorial vt INNER JOIN userinfo u ON u.SID = vt.uploaded_by INNER JOIN video_tutorial_category vtc ON vtc.video_tutorial_cat_id = vt.video_tutorial_cat_id WHERE vt.video_tutorial_cat_id='" . $_GET["vtid"] . "'";
                             $results=mysql_query($strquery);
                             $num=mysql_numrows($results);
                             if($num > 0){
@@ -33,16 +33,18 @@
                             {
                                 $tutorial_id=mysql_result($results,$i,"tutorial_id");
                                 $video_tutorial_cat_id=mysql_result($results,$i,"video_tutorial_cat_id");
+                                $video_tutorial_cat_name=mysql_result($results,$i,"video_tutorial_cat_name");
                                 $tutorial_link=mysql_result($results,$i,"tutorial_link");
                                 $uploaderId=mysql_result($results,$i,"uploaded_by");
                                 $uploaderName=mysql_result($results,$i,"username");
+                                $userGroup=mysql_result($results,$i,"admin");
                                 $uploadTime=mysql_result($results,$i,"upload_time");
                         ?><figure>
                             <table style="padding:5px; float: left; width: 256px; color: #50B9E8">
                                 <tr style="height:20px">
                                     <td style="border:inset" colspan=2  align="center"><iframe width="256" height="160" src="<?php echo $tutorial_link ; ?>" frameborder="0" allowfullscreen></iframe></td>
                                 </tr>
-                                <tr><td><figcaption>Uploaded by : <a style="color: #55AA45; " href='student_profile.php?SID=<?php echo ($uploaderId == 9999) ? '29' : $uploaderId; ?>' target="_blank"> <?php echo $uploaderName; ?></a> on :<span style="color: #55AA45"> <?= $uploadTime ?></span> </figcaption></td></tr>
+                                <tr><td><figcaption>Uploaded by : <a style="color: #55AA45; " href='<?php if($userGroup==4 || $userGroup==5){ ?>employee_profile.php<?php }else {?>student_profile.php<?php } ?>?SID=<?php echo ($uploaderId == 9999) ? '29' : $uploaderId; ?>' target="_blank"> <?php echo $uploaderName; ?></a> for <span style="color: #F44336"><?= $video_tutorial_cat_name ?></span> on :<span style="color: #55AA45"> <?= $uploadTime ?></span><?php if($isLoggedIn && $isAdmin){ ?><span style="padding-left: 5px"><a href="tutorials_delete.php?tutorial_id=<?= $tutorial_id; ?>&&vtid=<?= $_GET["vtid"]; ?>">Delete</a></span><?php } ?> </figcaption></td></tr>
                             </table>
 
                            </figure>

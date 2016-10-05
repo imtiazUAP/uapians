@@ -3,7 +3,7 @@
      //error_reporting(0);
      include("dbconnect.php");
      $connect=mysql_connect("localhost","root","");
-     $select_db=mysql_select_db("mylab");
+     $select_db=mysql_select_db("uapians");
 ?>
 
 <html>

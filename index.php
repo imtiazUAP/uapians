@@ -122,7 +122,7 @@ $userdata = mysql_fetch_assoc($userrole);
                             <br>
                             <div>
                                 <div id="paragraph_head">
-                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/academic_icon.png">Leates Notes...</h1>
+                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/academic_icon.png">Lates Notes...</h1>
                                 </div>
                                 <p align="left" style="font-size:16; font-weight:bold">আরো - আরো Notes ডাউনলোড করতে সাইন ইন করুন...</p>
                                 <marquee behavior="scroll" direction="up"  style="vertical-align:middle;text-align:center; cursor:pointer;color:#0099FF; font-size:18px; height:300"  onmouseover="this.stop();" onMouseOut="this.start();" >
@@ -170,7 +170,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                     <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/about_icon.png">Trending Tutorials</h1>
                                 </div>
                                 <?php
-                                $strquery="SELECT vt.*, u.username, u.SID, vtc.video_tutorial_cat_name FROM video_tutorial vt INNER JOIN userinfo u ON u.SID = vt.uploaded_by INNER JOIN video_tutorial_category vtc ON vtc.video_tutorial_cat_id = vt.video_tutorial_cat_id order by vt.tutorial_id DESC LIMIT 6";
+                                $strquery="SELECT vt.*, u.username, u.SID, u.admin, vtc.video_tutorial_cat_name FROM video_tutorial vt INNER JOIN userinfo u ON u.SID = vt.uploaded_by INNER JOIN video_tutorial_category vtc ON vtc.video_tutorial_cat_id = vt.video_tutorial_cat_id order by vt.tutorial_id DESC LIMIT 6";
                                 $results=mysql_query($strquery);
                                 $num=mysql_numrows($results);
                                 if($num > 0){
@@ -183,13 +183,14 @@ $userdata = mysql_fetch_assoc($userrole);
                                         $tutorial_link=mysql_result($results,$i,"tutorial_link");
                                         $uploaderId=mysql_result($results,$i,"uploaded_by");
                                         $uploaderName=mysql_result($results,$i,"username");
+                                        $userGroup=mysql_result($results,$i,"admin");
                                         $uploadTime=mysql_result($results,$i,"upload_time");
                                         ?><figure>
                                         <table style="padding:5px; float: left; width: 248px; color: #50B9E8">
                                             <tr style="height:20px">
                                                 <td style="border:inset" colspan=2  align="center"><iframe width="248" height="160" src="<?php echo $tutorial_link ; ?>" frameborder="0" allowfullscreen></iframe></td>
                                             </tr>
-                                            <tr><td><figcaption>Uploaded by : <a style="color: #55AA45; " href='student_profile.php?SID=<?php echo ($uploaderId == 9999) ? '29' : $uploaderId; ?>' target="_blank"> <?php echo $uploaderName; ?></a> for <span style="color: #F44336"><?= $video_tutorial_cat_name ?></span>  on :<span style="color: #55AA45"> <?= $uploadTime ?></span></figcaption></td></tr>
+                                            <tr><td><figcaption>Uploaded by : <a style="color: #55AA45; " href='<?php if($userGroup==4 || $userGroup==5){ ?>employee_profile.php<?php }else {?>student_profile.php<?php } ?>?SID=<?php echo ($uploaderId == 9999) ? '29' : $uploaderId; ?>' target="_blank"> <?php echo $uploaderName; ?></a> for <span style="color: #F44336"><?= $video_tutorial_cat_name ?></span>  on :<span style="color: #55AA45"> <?= $uploadTime ?></span></figcaption></td></tr>
                                         </table>
 
                                         </figure>

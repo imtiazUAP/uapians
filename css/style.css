@@ -117,7 +117,6 @@ body {
 
 .footer {
     text-align: center;
-    font-size: 18px;
     background-color: #F44336;
     width: 1100px;
     margin-left: auto;
@@ -127,12 +126,16 @@ body {
 }
 
 .FooterText {
+    font-family: 'Tangerine', serif;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .FooterText a {
+    font-family: 'Exo', serif;
     text-decoration: none;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
@@ -524,3 +527,23 @@ body, form,table,tbody, tr. td. label{
     color: #000000;
 }
 
+.profile_link_div {
+    max-width:1100px;
+    height:40px;
+    color: #ffffff;
+    font-size: 16px;
+    border: 1px solid #000000;
+}
+
+.profile_link {
+    color: #000000;
+    background-color: #4285F4;
+    background-size: 80px 60px;
+}
+
+.profile_link:hover {
+    background-color: blueviolet;
+    font-size: 16px;
+    color: #000000;
+    animation: blinker 1s linear infinite;
+}

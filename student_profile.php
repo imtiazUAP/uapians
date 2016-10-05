@@ -52,25 +52,25 @@ $userdata = mysql_fetch_assoc($userrole);
                 ?>
                     <?php if($isAdmin || ($isLoggedIn && $authentication->isOwner($SID))){ ?>
                 <div class="profileuserinterface">
-                    <div align="center" style=" width:1100px; height:20px; color: #ffffff; font-size: 16px">
-                        <a style="background-color: #4285F4; background-size: 80px 60px;"
+                    <div align="center" class="profile_link_div">
+                        <a style="background-color: #4285F4;"
                            href='student_edit.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=470&width=300&do=edit&modal=true'
-                           class='thickbox' title='Edit Student -<?= $Name ?>'>-Edit Profile </a>
+                           class='thickbox profile_link' title='Edit Student -<?= $Name ?>'>-Edit Profile </a>
                         <a style="background-color: #F1D158;"
                            href='password_edit.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=200&width=400&do=edit&modal=true'
-                           class='thickbox' title='Change Password -<?= $Name ?>'> -Change Password </a>
-                        <a style="background-color: #55A947"; href='single_mark_list.php?SID=<?= $SID ?>'>- My Results
+                           class='thickbox profile_link' title='Change Password -<?= $Name ?>'> -Change Password </a>
+                        <a class="profile_link" style="background-color: #55A947"; href='single_mark_list.php?SID=<?= $SID ?>'>- My Results
                         Vault </a>
-                        <a style="background-color: #FF8E65;" href='message_list.php?SID=<?= $SID ?>'>-My Messages </a>
-                        <a style="background-color: #ABDEE1;" href='upload_project.php?SID=<?= $SID ?>'>-Upload
+                        <a class="profile_link" style="background-color: #FF8E65;" href='message_list.php?SID=<?= $SID ?>'>-My Messages </a>
+                        <a class="profile_link" style="background-color: #ABDEE1;" href='upload_project.php?SID=<?= $SID ?>'>-Upload
                             Projects </a>
-                        <a style="background-color: #FFFFFD;" href='upload_material.php?SID=<?= $SID ?>'>-Upload Course
+                        <a class="profile_link" style="background-color: #2E313A;" href='upload_material.php?SID=<?= $SID ?>'>-Upload Course
                             Materials </a>
-                        <a style="background-color: #FFFFFD;" href='upload_tutorial.php?SID=<?= $SID ?>'>-Upload Video
+                        <a class="profile_link" style="background-color: #FFFFFD;" href='upload_tutorial.php?SID=<?= $SID ?>'>-Upload Video
                             Tutorials </a>
-                        <a style="background-color: #FF8E65;"
+                        <a  style="background-color: #FF8E65;"
                            href='photo_update.php?SID=<?= $SID ?>&keepThis=true&TB_iframe=true&height=260&width=450&do=edit&modal=true'
-                           class='thickbox' title='Change Profile Photo -<?= $Name ?>'> -Change Profile Photo </a>
+                           class='thickbox profile_link' title='Change Profile Photo -<?= $Name ?>'> -Change Profile Photo </a>
                     </div>
                 </div>
                     <?php }

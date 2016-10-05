@@ -56,24 +56,84 @@ $userdata = mysql_fetch_assoc($userrole);
                     <div id="margin_figure">
                         <table>
                             <tr>
-                                <td><a href="projects.php?language_id=1"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=2"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=3"><img border="0" alt="W3Schools" src="images/java.jpg" width="265" height="160"></a></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '1'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=1"><img border="0" alt="W3Schools" src="images/c.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '2'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=2"><img border="0" alt="W3Schools" src="images/c++.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '3'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=3"><img border="0" alt="W3Schools" src="images/java.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
                             </tr>
                                 <tr>
-                                <td><a href="projects.php?language_id=4"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=5"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=6"><img border="0" alt="W3Schools" src="images/assembly.jpg" width="265" height="160"></a></td>
+                                    <?php
+                                    $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '4'");
+                                    $userdata = mysql_fetch_assoc($data);
+                                    $totalProject = $userdata['total_project'];
+                                    ?>
+                                <td><figure><a href="projects.php?language_id=4"><img border="0" alt="W3Schools" src="images/android.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                    <?php
+                                    $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '5'");
+                                    $userdata = mysql_fetch_assoc($data);
+                                    $totalProject = $userdata['total_project'];
+                                    ?>
+                                <td><figure><a href="projects.php?language_id=5"><img border="0" alt="W3Schools" src="images/csharp.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                    <?php
+                                    $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '6'");
+                                    $userdata = mysql_fetch_assoc($data);
+                                    $totalProject = $userdata['total_project'];
+                                    ?>
+                                <td><figure><a href="projects.php?language_id=6"><img border="0" alt="W3Schools" src="images/assembly.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
                             </tr>
                             <tr>
-                                <td><a href="projects.php?language_id=7"><img border="0" alt="W3Schools" src="images/webapps.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=8"><img border="0" alt="W3Schools" src="images/python.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=9"><img border="0" alt="W3Schools" src="images/database.jpg" width="265" height="160"></a></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '7'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=7"><img border="0" alt="W3Schools" src="images/webapps.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '8'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=8"><img border="0" alt="W3Schools" src="images/python.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '9'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=9"><img border="0" alt="W3Schools" src="images/database.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
                             </tr>
                             <tr>
-                                <td> <a href="projects.php?language_id=10"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=11"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a></td>
-                                <td><a href="projects.php?language_id=12"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '10'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=10"><img border="0" alt="W3Schools" src="images/php.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '11'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=11"><img border="0" alt="W3Schools" src="images/graphics.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
+                                <?php
+                                $data = mysql_query("SELECT COUNT(project_id) AS total_project FROM project WHERE project.language_id = '12'");
+                                $userdata = mysql_fetch_assoc($data);
+                                $totalProject = $userdata['total_project'];
+                                ?>
+                                <td><figure><a href="projects.php?language_id=12"><img border="0" alt="W3Schools" src="images/wordpress.jpg" width="265" height="160"></a><figcaption>Total project on it :<?php echo $totalProject; ?> </figcaption></figure></td>
                             </tr>
                         </table>
                     </div>
