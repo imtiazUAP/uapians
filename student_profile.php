@@ -22,16 +22,29 @@ $userdata = mysql_fetch_assoc($userrole);
             <div class="realbody" style="min-height:2300px">
                 <?php
                 include("menu.php");
-                $strquery = "SELECT *,SMName,Blood_Group_Name,username,district_name FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID
-            INNER JOIN blood_group_info ON s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID
-            INNER JOIN userinfo ON s_info.SID=userinfo.SID
-            INNER JOIN districts ON s_info.district_id=districts.district_id
-            WHERE userinfo.SID = '" . $_GET["SID"] . "'";
+                $strquery = "SELECT *,s_info.SMID,SMName,Blood_Group_Name,username,district_name, Batch_Name
+                FROM s_info
+                LEFT OUTER JOIN sm_info
+                ON s_info.SMID=sm_info.SMID
+                LEFT OUTER JOIN blood_group_info
+                ON s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID
+                LEFT OUTER JOIN userinfo
+                ON s_info.SID=userinfo.SID
+                LEFT OUTER JOIN districts
+                ON s_info.district_id=districts.district_id
+                LEFT OUTER JOIN batch_info
+                ON batch_info.Batch_ID=s_info.Batch_ID
+                WHERE userinfo.SID = '" . $_GET["SID"] . "'";
                 $results = mysql_query($strquery);
                 $num = mysql_numrows($results);
                 $SID = mysql_result($results, $i, "SID");
                 $Portrait = mysql_result($results, $i, "SPortrait");
+                $semesterId = mysql_result($results, $i, "SMID");
                 $Semester = mysql_result($results, $i, "SMName");
+                $Batch = mysql_result($results, $i, "Batch_Name");
+                if($semesterId > 8){
+                    $Semester = $Batch;
+                }
                 $Name = mysql_result($results, $i, "SName");
                 $Reg = mysql_result($results, $i, "SReg");
                 $Date_of_Birth = mysql_result($results, $i, "SB_of_Date");

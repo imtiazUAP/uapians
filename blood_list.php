@@ -81,17 +81,22 @@ $userdata = mysql_fetch_assoc($userrole);
                                           S.Blood_Group_ID,
                                           S.SPh_Number,
                                           SM.SMName,
+                                          S.SMID,
+                                          bi.Batch_Name,
                                           D.district_name
                                         FROM s_info S
-                                        INNER JOIN blood_group_info B
+                                        LEFT OUTER JOIN blood_group_info B
                                         ON
                                         S.Blood_Group_ID = B.Blood_Group_ID
-                                        INNER JOIN sm_info SM
+                                        LEFT OUTER JOIN sm_info SM
                                         ON
                                         S.SMID = SM.SMID
-                                        INNER JOIN districts D
+                                        LEFT OUTER JOIN districts D
                                         ON
                                         D.district_id = S.district_id
+                                        LEFT OUTER JOIN batch_info bi
+                                        ON
+                                        bi.Batch_ID = S.Batch_ID
                                         WHERE
                                         S.Blood_Group_ID='" . $_POST['Blood_Group_ID'] . "'
                                         ORDER BY S.SHouse DESC";
@@ -137,7 +142,9 @@ $userdata = mysql_fetch_assoc($userrole);
                             $SPortrait = mysql_result($results, $i, "SPortrait");
                             $SPh_Number = mysql_result($results, $i, "SPh_Number");
                             $Blood_Group_Name = mysql_result($results, $i, "Blood_Group_Name");
+                            $semesterId = mysql_result($results, $i, "SMID");
                             $SMName = mysql_result($results, $i, "SMName");
+                            $batchName = mysql_result($results, $i, "Batch_Name");
                             $SHouse = mysql_result($results, $i, "SHouse");
                             $availableToDonate = mysql_result($results, $i, "donor_value");
                             $DistrictName = mysql_result($results, $i, "district_name");
@@ -157,7 +164,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                     <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"'><img src=images/system_images/<?= ($availableToDonate == 1) ? "check_mark.png" : "cross_mark.png" ?> echo style="height:50px;  border-radius: 5px;"></a>
                                 </td>
                                 <td>
-                                    <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SMName; ?></a>
+                                    <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo ($semesterId > 8) ? $batchName : $SMName; ?></a>
                                 </td>
                                 <td>
                                     <a href='student_profile.php?SID=<?php echo($SID) ?>' target="_blank"> <?php echo $SHouse; ?></a>

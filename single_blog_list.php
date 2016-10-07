@@ -53,7 +53,26 @@
                         <div>
                             <?php
                                 $Blog_ID = $_GET["Blog_ID"];
-                                $strquery = "SELECT DISTINCT blog.blog, blog.SID, blog.Date, Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.SID=s_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID where Blog_ID='" . $Blog_ID . "'";
+                                $strquery = "SELECT DISTINCT
+                                              blog.blog,
+                                              blog.SID,
+                                              blog.Date,
+                                              Blog_ID,
+                                              SName,
+                                              SReg,
+                                              SPortrait,
+                                              SMName,
+                                              s_info.SMID,
+                                            batch_info.Batch_ID,
+                                            batch_info.Batch_Name
+                                            FROM blog
+                                              LEFT OUTER JOIN s_info
+                                                ON blog.SID = s_info.SID
+                                              LEFT OUTER JOIN sm_info
+                                                ON s_info.SMID = sm_info.SMID
+                                              LEFT OUTER JOIN batch_info
+                                                ON batch_info.Batch_ID = s_info.Batch_ID
+                                            WHERE Blog_ID = '" . $Blog_ID . "'";
                                 $results = mysql_query($strquery);
                                 $num = mysql_numrows($results);
                                 $Blog = mysql_result($results, $i, "Blog");
@@ -62,7 +81,9 @@
                                 //$Blog_ID=mysql_result($results,$i,"Blog_ID");
                                 $SName = mysql_result($results, $i, "SName");
                                 $SPortrait = mysql_result($results, $i, "SPortrait");
+                                $semesterId = mysql_result($results, $i, "SMID");
                                 $SMName = mysql_result($results, $i, "SMName");
+                                $batchName = mysql_result($results, $i, "Batch_Name");
                             ?>
                             <div class="blog" style="padding-bottom:100px; padding-right:50px; color:#FFFFFF">
                                 <img style="width:60px;padding:2px;border:2px solid white;margin:0px; border-radius: 35px;"
@@ -73,7 +94,7 @@
                                     ?>
                                 </div>
                                 <div style="padding-left:10px">
-                                    <?php echo $SMName;
+                                    <?php echo ($semesterId>8) ? $batchName : $SMName;
                                     ?>
                                 </div>
                                 <div style="width:500px;padding:10px;margin:0px; font-size:11px"><?php echo $Date; ?></div>

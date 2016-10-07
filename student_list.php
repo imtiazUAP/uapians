@@ -69,7 +69,17 @@
                                     ?>
                                 </tr>
                                 <?php
-                                    $strquery = "SELECT S.*, M.SMName FROM s_info S, sm_info M WHERE S.SMID=M.SMID ORDER BY S.SReg DESC";
+                                    $strquery = "SELECT
+                                                  S.*,
+                                                  M.SMName,
+                                                  M.SMID,
+                                                  bi.Batch_Name
+                                                FROM s_info S
+                                                LEFT OUTER JOIN sm_info M
+                                                ON M.SMID = S.SMID
+                                                LEFT OUTER JOIN batch_info bi
+                                                  ON bi.Batch_ID = S.Batch_ID
+                                                ORDER BY S.SReg DESC";
                                     $results = mysql_query($strquery);
                                     $num = mysql_numrows($results);
                                     $SID = mysql_result($results, $i, "SID");
@@ -77,7 +87,17 @@
                                     $f3 = mysql_result($results, $i, "SReg");
                                     $f12 = mysql_result($results, $i, "SPortrait");
                                     $SMName = mysql_result($results, $i, "SMName");
-                                    $sql = "SELECT S.*, M.SMName FROM s_info S, sm_info M WHERE S.SMID=M.SMID ORDER BY S.SReg DESC";
+                                    $sql = "SELECT
+                                                  S.*,
+                                                  M.SMName,
+                                                  M.SMID,
+                                                  bi.Batch_Name
+                                                FROM s_info S
+                                                LEFT OUTER JOIN sm_info M
+                                                ON M.SMID = S.SMID
+                                                LEFT OUTER JOIN batch_info bi
+                                                  ON bi.Batch_ID = S.Batch_ID
+                                                ORDER BY S.SReg DESC";
                                     $result = @mysql_query($sql);
                                     $total_records = @mysql_num_rows($result);
                                     $record_per_page = 13;
@@ -94,7 +114,7 @@
                                         <td width="100"><a href='student_profile.php? SID=<?= $data['SID'] ?>'><img
                                                     src=<?= $data['SPortrait'] ?> echo style="height:100px; border-radius:45px;"></a>
                                         </td>
-                                        <td width="200"><?= $data['SMName'] ?></td>
+                                        <td width="200"><?php echo ($data['SMID'] > 8) ? $data['Batch_Name'] : $data['SMName']; ?></td>
                                         <?php
                                         if ($isLoggedIn && $isAdmin) {
                                             ?>

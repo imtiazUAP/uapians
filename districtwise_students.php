@@ -68,7 +68,25 @@ $userdata = mysql_fetch_assoc($userrole);
                                 </tr>
 
                                 <?php
-                                $sql = "SELECT SID,SName,SReg,SPortrait,SMName,district_name FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID INNER JOIN districts ON s_info.district_id=districts.district_id WHERE s_info.district_id='$_POST[district_id]' order by SReg";
+                                $sql = "SELECT
+                                              SID,
+                                              SName,
+                                              SReg,
+                                              SPortrait,
+                                              SMName,
+                                              s_info.SMID,
+                                              district_name,
+                                              s_info.Batch_ID,
+                                              batch_info.Batch_Name
+                                            FROM s_info
+                                              LEFT OUTER JOIN sm_info
+                                                ON s_info.SMID = sm_info.SMID
+                                              LEFT OUTER  JOIN districts
+                                                ON s_info.district_id = districts.district_id
+                                              LEFT OUTER  JOIN batch_info
+                                                ON batch_info.Batch_ID = s_info.Batch_ID
+                                            WHERE s_info.district_id = '$_POST[district_id]'
+                                            ORDER BY SReg";
                                 $result = @mysql_query($sql);
                                 $total_records = @mysql_num_rows($result);
                                 $record_per_page = 13;
@@ -82,7 +100,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                         <td width="120"><?= $data['SReg'] ?></td>
                                         <td width="200"><a href='student_profile.php?SID=<?= $data['SID'] ?> ' target="_blank"><?= $data['SName'] ?></a> </td>
                                         <td width="100"><a href='student_profile.php?SID=<?= $data['SID'] ?>' target="_blank"><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
-                                        <td width="200"><?= $data['SMName'] ?></td>
+                                        <td width="200"><?php echo ($data['SMID'] > 8) ? $data['Batch_Name'] : $data['SMName'] ?></td>
                                         <td width="200"><?= $data['district_name'] ?></td>
                                     </tr>
                                 <?php

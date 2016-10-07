@@ -30,7 +30,26 @@ $userdata = mysql_fetch_assoc($userrole);
                         ?>
                     </div>
                     <?php
-                    $sql = "SELECT DISTINCT blog.blog, blog.SID, blog.Date, Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.SID=s_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID ORDER BY Blog_ID desc";
+                    $sql = "SELECT DISTINCT
+                      blog.blog,
+                      blog.SID,
+                      blog.Date,
+                      Blog_ID,
+                      SName,
+                      SReg,
+                      SPortrait,
+                      SMName,
+                      sm_info.SMID,
+                    batch_info.Batch_ID,
+                    batch_info.Batch_Name
+                    FROM blog
+                      LEFT OUTER JOIN s_info
+                        ON blog.SID = s_info.SID
+                      LEFT OUTER JOIN sm_info
+                        ON s_info.SMID = sm_info.SMID
+                      LEFT OUTER JOIN batch_info
+                        ON batch_info.Batch_ID = s_info.Batch_ID
+                    ORDER BY Blog_ID DESC";
                     $result = @mysql_query($sql);
                     $total_records = @mysql_num_rows($result);
                     $record_per_page = 5;
@@ -58,7 +77,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                 <a href='student_profile.php? SID=<?= $data['SID'] ?>'><img src=<?php echo $data['SPortrait'] ? $data['SPortrait'] : '14101071.jpg' ?> echo style="width:60px;padding:2px;border:2px solid white;margin:0px; font-size:18px;  border-radius: 35px;" alt="Smiley face" width="50" height="60" align="right">
                                 </a>
                                 <div style="padding:10px; font-weight:bold"><?php echo $data['SName'] ; ?> </div>
-                                <div style="padding-left:10px"><?php echo $data['SMName'] ; ?></div>
+                                <div style="padding-left:10px"><?php echo ($data['SMID']>8) ? $data['Batch_Name'] : $data['SMName']; ; ?></div>
                                 <div style="width:500px;padding:10px;margin:0px; font-size:11px"><?php echo $data['Date'] ?></div>
                                 <div><p style="font-size:14px; font-weight:bold">Article:</p></div>
 

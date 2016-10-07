@@ -62,7 +62,22 @@ $userdata = mysql_fetch_assoc($userrole);
                                             ?>
                                         </tr>
                                         <?php
-                                        $sql = "SELECT SID,SName,SReg,SPortrait,SMName FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID='" . $_GET["SMID"] . "' order by SReg";
+                                        $sql = "SELECT
+  SID,
+  s_info.SMID,
+  Batch_Name,
+  SName,
+  SReg,
+  SPortrait,
+  s_info.SMID,
+  SMName
+FROM s_info
+  LEFT OUTER JOIN sm_info
+    ON s_info.SMID = sm_info.SMID
+  LEFT OUTER JOIN batch_info
+    ON batch_info.Batch_ID = s_info.Batch_ID
+WHERE s_info.SMID = '". $_GET["SMID"] ."'
+ORDER BY SReg";
                                         $result = @mysql_query($sql);
                                         $total_records = @mysql_num_rows($result);
                                         $record_per_page = 13;
@@ -86,7 +101,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                                 </td>
                                                 <td
                                                     width="200">
-                                                    <?= $data['SMName'] ?>
+                                                    <?php echo ($data['SMID'] > 8) ? $data['Batch_Name'] : $data['SMName']; ?>
                                                 </td>
                                                 <?php
                                                 if ($isLoggedIn && $isAdmin) {
