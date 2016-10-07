@@ -79,6 +79,28 @@ include("classes/Authentication.php");
                     </td>
                 </tr>
                 <tr>
+                    <td>UAP CSE Batch:</td>
+                    <td>
+                        <select name="Batch_ID" id="Batch_ID" selected="">
+                            <?php
+                            $query="SELECT DISTINCT Batch_ID,Batch_Name FROM batch_info";
+                            $rs = mysql_query($query) or die ('Error submitting');
+                            //var_dump($rows["Batch_ID"]); exit;
+                            while ($rows = mysql_fetch_assoc($rs)) {
+                                if ($row["Batch_ID"] == $rows["Batch_ID"])
+                                {
+                                    $selected = 'selected="selected"';
+                                }
+                                else
+                                {
+                                    $selected = '';
+                                }
+                                print("<option value=\"" . $rows["Batch_ID"] . "\" ".$selected."  >" . $rows["Batch_Name"] . "</option>");
+                            }
+                            ?>
+                    </td>
+                </tr>
+                <tr>
                     <td>Blood Group</td>
                     <td>
                         <select name="Blood_Group_ID" id="Blood_Group_ID" selected="">

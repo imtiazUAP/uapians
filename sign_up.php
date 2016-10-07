@@ -68,6 +68,18 @@ $userdata = mysql_fetch_assoc($userrole);
                                 </td>
                             </tr>
                             <tr>
+                                <td>UAP CSE Batch:</td>
+                                <td><select name="Batch_ID" id="Batch_ID">
+                                        <?php
+                                        $query = "SELECT DISTINCT Batch_ID,Batch_Name FROM batch_info ORDER BY Batch_ID DESC";
+                                        $rs = mysql_query($query) or die ('Error submitting');
+                                        while ($row = mysql_fetch_assoc($rs)) {
+                                            print("<option value=\"" . $row["Batch_ID"] . "\">" . $row["Batch_Name"] . "</option>");
+                                        }
+                                        ?>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>Blood Group:</td>
                                 <td><select name="Blood_Group_ID" id="Blood_Group_ID">
                                         <?php
@@ -194,7 +206,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         $lastUserId = mysql_result($lastUserIdResult, "userid");
                         $nextUserId = $lastUserId + 1;
                         */
-                        mysql_query($sql = "INSERT INTO sign_up (SID,SPortrait,SName,SReg,district_id,SHouse,SE_Mail,SMID,Blood_Group_ID,donor_value,username,password)VALUES ('','$photo_name','" . $_REQUEST['name'] . "','" . $_REQUEST['reg'] . "','" . $_REQUEST['district_id'] . "','" . $_REQUEST['residence'] . "','" . $_REQUEST['email'] . "','" . $_REQUEST['SMID'] . "','" . $_REQUEST['Blood_Group_ID'] . "','" . $_REQUEST['donor_value'] . "','" . $_REQUEST['username'] . "','" . $_REQUEST['password'] . "')");
+                        mysql_query($sql = "INSERT INTO sign_up (SID,SPortrait,SName,SReg,district_id,SHouse,SE_Mail,SMID,Batch_ID,Blood_Group_ID,donor_value,username,password)VALUES ('','$photo_name','" . $_REQUEST['name'] . "','" . $_REQUEST['reg'] . "','" . $_REQUEST['district_id'] . "','" . $_REQUEST['residence'] . "','" . $_REQUEST['email'] . "','" . $_REQUEST['SMID'] . "','" . $_REQUEST['Batch_ID'] . "','" . $_REQUEST['Blood_Group_ID'] . "','" . $_REQUEST['donor_value'] . "','" . $_REQUEST['username'] . "','" . $_REQUEST['password'] . "')");
                         mysql_close($con);
                         ?>
                         </br>

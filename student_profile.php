@@ -22,9 +22,10 @@ $userdata = mysql_fetch_assoc($userrole);
             <div class="realbody" style="min-height:2300px">
                 <?php
                 include("menu.php");
-                $strquery = "SELECT *,SMName,Blood_Group_Name,username FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID
+                $strquery = "SELECT *,SMName,Blood_Group_Name,username,district_name FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID
             INNER JOIN blood_group_info ON s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID
             INNER JOIN userinfo ON s_info.SID=userinfo.SID
+            INNER JOIN districts ON s_info.district_id=districts.district_id
             WHERE userinfo.SID = '" . $_GET["SID"] . "'";
                 $results = mysql_query($strquery);
                 $num = mysql_numrows($results);
@@ -41,7 +42,7 @@ $userdata = mysql_fetch_assoc($userrole);
                 $Interested_In = mysql_result($results, $i, "Interested_In");
                 $Working_At = mysql_result($results, $i, "Working_At");
                 $House = mysql_result($results, $i, "SHouse");
-                $Home_City = mysql_result($results, $i, "SHome_City");
+                $Home_City = mysql_result($results, $i, "district_name");
                 $Phone_Number = mysql_result($results, $i, "SPh_Number");
                 $SE_Mail = mysql_result($results, $i, "SE_Mail");
                 $FB_Link = mysql_result($results, $i, "FB_Link");
