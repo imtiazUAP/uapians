@@ -32,7 +32,7 @@ $userdata = mysql_fetch_assoc($userrole);
                         ?>
                     </div>
                     <div style="padding: 10px">
-                        <img src="images/Donate_Blood.jpg" alt="" width="350" height="150" class="image"  align="left"/>
+                        <img src="images/system_images/Donate_Blood.jpg" alt="" width="350" height="150" class="image"  align="left"/>
                     </div>
                 <div style="padding-left: 630px; padding-right: 12px">
                     <h1 style="color:#FFFFFF;">Why donate Blood?</h1>

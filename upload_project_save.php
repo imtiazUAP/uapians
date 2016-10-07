@@ -6,12 +6,15 @@ $post_photo_tmp = $_FILES['file']['tmp_name'];
 $ext = pathinfo($post_photo, PATHINFO_EXTENSION); // getting image extension
 if ($ext == 'png' || $ext == 'PNG' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG' || $ext == 'gif' || $ext == 'GIF') {
 if ($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG') {
+    ini_set('memory_limit', '-1'); //It will take unlimited memory usage of server
     $src = imagecreatefromjpeg($post_photo_tmp);
 }
 if ($ext == 'png' || $ext == 'PNG') {
+    ini_set('memory_limit', '-1'); //It will take unlimited memory usage of server
     $src = imagecreatefrompng($post_photo_tmp);
 }
 if ($ext == 'gif' || $ext == 'GIF') {
+    ini_set('memory_limit', '-1'); //It will take unlimited memory usage of server
     $src = imagecreatefromgif($post_photo_tmp);
 }
 list($width_min, $height_min) = getimagesize($post_photo_tmp);

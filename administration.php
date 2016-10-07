@@ -70,7 +70,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                         <?php
                                         if ($isLoggedIn && $isAdmin) {
                                         ?>
-                                        <td width="100"><a style="color: #000000" href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=250&width=300&do=edit&modal=true' class='button button_green'> Review</a> <a class='button button_red' style="color: #000000" href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
+                                        <td width="100"><a style="color: #000000" href='sign_up_review.php?SReg=<?= $data['SReg'] ?>&keepThis=true&TB_iframe=true&height=300&width=300&do=edit&modal=true' class='thickbox button button_green'> Review</a> <a class='button button_red' style="color: #000000" href='sign_up_review_delete.php?SReg=<?= $data['SReg'] ?>'> delete </a></td>
                                         <?php
                                         }
                                         ?>

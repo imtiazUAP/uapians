@@ -48,28 +48,6 @@ error_reporting(0);
                             <br>
                             <br>
                             <br>
-                            <div id="wowslider-container1" style="height:267">
-                                <div class="ws_images">
-                                    <ul>
-                                        <li><img src="cultural_club/data1/images/1176353_10201824031220250_299244289_n.jpg" alt="FareWell Organised by CSe Cultural CLub" title="FareWell Organised by CSe Cultural CLub" id="wows1_0"/></li>
-                                        <li><img src="cultural_club/data1/images/12177_4319308698703_1275228451_n.jpg" alt=""Pitha Utshob" Organised by CSE Cultural Club" title=""Pitha Utshob" Organised by CSE Cultural Club" id="wows1_1"/></li>
-                                        <li><img src="cultural_club/data1/images/971296_594950683868503_1156440747_n.jpg" alt="" title="" id="wows1_2"/></li>
-                                    </ul>
-                                </div>
-                                <div class="ws_bullets"><div>
-                                <a href="#" title="FareWell Organised by CSe Cultural CLub"><img src="cultural_club/data1/tooltips/1176353_10201824031220250_299244289_n.jpg" alt="FareWell Organised by CSe Cultural CLub"/>1</a>
-                                <a href="#" title=""Pitha Utshob" Organised by CSE Cultural Club"><img src="cultural_club/data1/tooltips/12177_4319308698703_1275228451_n.jpg" alt=""Pitha Utshob" Organised by CSE Cultural Club"/>2</a>
-                                <a href="#" title=""><img src="cultural_club/data1/tooltips/971296_594950683868503_1156440747_n.jpg" alt=""/>3</a>
-                            </div>
-                        </div>
-                        <span class="wsl"><a href="http://wowslider.com">HTML Picture Slideshow</a> by WOWSlider.com v4.9</span>
-                        <div class="ws_shadow"></div>
-                    </div>
-                    <script type="text/javascript" src="cultural_club/engine1/wowslider.js"></script>
-                    <script type="text/javascript" src="cultural_club/engine1/script.js"></script>
-                    <br>
-                    <br>
-                    <br>
                     <div>
                         <div id="paragraph_head">
                             <h1 align="left" style="color:#FFFFFF">Events Organised by CSE Cultural Club (Activities):</h1>

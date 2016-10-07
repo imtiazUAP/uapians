@@ -49,6 +49,10 @@ include("classes/Authentication.php");
                     </td>
                 </tr>
                 <tr>
+                    <td> Residence: </td>
+                    <td><input name="SHouse" type="text" id="SHouse" value="<?php echo $row["SHouse"]; ?>" /></td>
+                </tr>
+                <tr>
                     <td>Email:</td>
                     <td> <input name="SE_Mail" type="text" id="SE_Mail" value="<?php echo $row["SE_Mail"]; ?>" /> </td>
                 </tr>
@@ -117,7 +121,7 @@ include("classes/Authentication.php");
                 </tr>
                 <tr>
                     <td>User Name:</td>
-                    <td> <input type"text" name="username" id="SPortrait" value="<?php
+                    <td> <input type=text" name="username" id="SPortrait" value="<?php
                         echo $row["username"];
                         ?>" />
                     </td>
@@ -133,9 +137,9 @@ include("classes/Authentication.php");
             </table>
             <div align="right"; style="padding-right:25">
                 <button type="submit" class="button button_green"> Approve </button>
-                <button class="button button_red" onClick="tb_remove()"> Cancel </button>
             </div>
         </form>
+        <button class="button button_red" onClick="tb_remove()"> Cancel </button>
     <?php }else {
         include("permission_error.php");
     }

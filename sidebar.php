@@ -163,7 +163,7 @@ if(!$isLoggedIn){ ?>
     <ul>
         <br>
         <a href="student_profile.php?SID=239">
-            <li><img src="images/Picture 2963.jpg" style="width:238px "/>MD. Mazharul islam jihan</li>
+            <li><img src="images/system_images/jihan.jpg" style="width:238px "/>MD. Mazharul islam jihan</li>
         </a>
         <p class="bottom">Phone:+8801752512666
             E_Mail:jihanislam007@gmail.com</p>
@@ -179,7 +179,7 @@ if(!$isLoggedIn){ ?>
         }
         ?>
         <a href="student_profile.php?SID=461">
-            <li><img src="images/1234554321.jpg" style="width:238px "/> Nokib Mozumder</li>
+            <li><img src="images/system_images/1234554321.jpg" style="width:238px "/> Nokib Mozumder</li>
         </a>
         <p class="bottom">Phone:01670756503
             E_Mail:nokib016@gmail.com

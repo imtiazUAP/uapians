@@ -12,7 +12,7 @@ include("classes/Authentication.php");
 if ($isLoggedIn) {
 ?>
 <?php
-    $a = mysql_query($sql = "INSERT INTO s_info(SID, SPortrait, SName, SReg, district_id, SE_Mail, SMID, Blood_Group_ID, donor_value) VALUES('" . $_REQUEST['SID'] . "', '" . $_REQUEST['SPortrait'] . "', '" . $_REQUEST['SName'] . "', '" . $_REQUEST['SReg'] . "', '" . $_REQUEST['district_id'] . "', '" . $_REQUEST['SE_Mail'] . "', '" . $_REQUEST['SMID'] . "', '" . $_REQUEST['Blood_Group_ID'] . "', '" . $_REQUEST['donor_value'] . "')");
+    $a = mysql_query($sql = "INSERT INTO s_info(SID, SPortrait, SName, SReg, SHouse, district_id, SE_Mail, SMID, Blood_Group_ID, donor_value) VALUES('" . $_REQUEST['SID'] . "', '" . $_REQUEST['SPortrait'] . "', '" . $_REQUEST['SName'] . "', '" . $_REQUEST['SReg'] . "', '" . $_REQUEST['SHouse'] . "', '" . $_REQUEST['district_id'] . "', '" . $_REQUEST['SE_Mail'] . "', '" . $_REQUEST['SMID'] . "', '" . $_REQUEST['Blood_Group_ID'] . "', '" . $_REQUEST['donor_value'] . "')");
     $password = $_REQUEST['password'];
     $b =mysql_query($sql = "INSERT INTO userinfo (username,password,Reg,SID,SE_Mail) VALUES ('" . $_REQUEST['username'] . "','".md5($password)."','" . $_REQUEST['SReg'] . "','" . $_REQUEST['SID'] . "','" . $_REQUEST['SE_Mail'] . "')");
     if($a && $b){

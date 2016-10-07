@@ -26,8 +26,8 @@ $userdata = mysql_fetch_assoc($userrole);
                     ?>
                 </div>
                 <?php
-                if (!$isLoggedIn) {
-                ?>
+                if(!$_POST['email'])
+                { ?>
                 <br>
                 <br>
                 <div style="font-size:18px; font-weight:bold; color:#FFFFFF">Sign Up</div>
@@ -38,21 +38,21 @@ $userdata = mysql_fetch_assoc($userrole);
                 <br>
                 <br>
                 <div align="center">
-                    <form action="sign_up_save.php" method="post" enctype="multipart/form-data">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <table align="center">
                             <p>
                                 <tr>
                                     <td><label for="name" class="signup_field" data-icon="u">Your Registration: </label>
                                     </td>
                                     <td><input id="lastnamesignup" name="reg" required="required" type="text"
-                                               placeholder="11201099"/></td>
+                                               placeholder="ভার্সিটি আইডি নং"/></td>
                                 </tr>
                             </p>
                             <p>
                                 <tr>
                                     <td><label for="name" class="signup_field" data-icon="u">Your Name: </label></td>
                                     <td><input id="lastnamesignup" name="name" required="required" type="text"
-                                               placeholder="Example Uddin"/></td>
+                                               placeholder="আপনার পুর্ন নাম"/></td>
                                 </tr>
                             </p>
                             <tr>
@@ -103,11 +103,15 @@ $userdata = mysql_fetch_assoc($userrole);
                                         ?>
                                 </td>
                             </tr>
+                                <tr>
+                                    <td><label for="Portrait" class="signup_field" data-icon="u">Current Residence:</label></td>
+                                    <td><input id="file" name="residence" required="required" type="text" placeholder="ঢাকায় যেখানে থাকেন"/></td>
+                                </tr>
                             <p>
                                 <tr>
                                     <td><label for="email" class="signup_field" data-icon="u">Your E Mail:</label></td>
                                     <td><input id="lastnamesignup" name="email" required="required" type="email"
-                                               placeholder="example@yahoo.com"/></td>
+                                               placeholder="আপনার ই-মেইল"/></td>
                                 </tr>
                             </p>
                             <p>
@@ -122,13 +126,13 @@ $userdata = mysql_fetch_assoc($userrole);
                                 <tr>
                                     <td><label for="Portrait" class="signup_field" data-icon="u">Your Nick Name:</label></td>
                                     <td><input id="file" name="username" required="required" type="text"
-                                               placeholder="আপনার ডাক নাম"/></td>
+                                               placeholder="ডাক নাম"/></td>
                                 </tr>
                             </p>
                             <p>
                                 <tr>
                                     <td><label for="Portrait" class="signup_field" data-icon="u">Password:</label></td>
-                                    <td><input id="file" name="password" required="required" type="password" placeholder="your desired password"/></td>
+                                    <td><input id="file" name="password" required="required" type="password" placeholder="পাসওয়ার্ড"/></td>
                                 </tr>
                             </p>
                         </table>
@@ -136,10 +140,80 @@ $userdata = mysql_fetch_assoc($userrole);
                         <br>
                         <button type="Submit" class="button button_blue">Create my account</button>
                     </form>
+                    <?php
+                    }elseif($_POST['email']) {
+
+                    $email = $_POST['email'];
+                    $query = "SELECT userid, username, SID FROM userinfo WHERE SE_Mail='" . $email . "'";
+                    $result = mysql_query($query);
+                    $Results = mysql_fetch_array($result);
+
+                    if (count($Results['userid']) >= 1) {
+                        $query1 = "SELECT SPortrait FROM s_info WHERE SID='" . $Results['SID'] . "'";
+                        $result1 = mysql_query($query1);
+                        $Results1 = mysql_fetch_array($result1);
+                        $studentPortrait = $Results1['SPortrait'];
+                        ?>
+                        <div align="center" style="padding-top:30px"><a href="student_profile.php?SID=<?= $Results['SID']; ?>">
+                            <img style="width:150px;padding:10px;border:1px solid white;margin:0px; border-radius: 15px;"
+                                 src="<?php echo $studentPortrait; ?>"/> </a>
+                        </div>
+                        </br>
+                        <div align="center">
+                            <label style="color: white; font-size:14px;">Opps!! <span style="color: #F4D85D;"><?php echo $Results['username']; ?></span> <span style="color: #ff0000">there is already an account created with this email</span>
+                                Please reset your password here...<span class="blink_me"><a style="color: #53AA45" href="reset_pass.php" >Reset Password</a></span> </br> <a class="blink_me" style="color: #50B9E8"
+                                                                                                                                     href="student_profile.php?SID=<?= $Results['SID'] ?>">Click here to find your profile</a></label>
+                        </div>
+                    <?php }else{
+                    $post_photo = $_FILES['file']['name'];
+                    $post_photo_tmp = $_FILES['file']['tmp_name'];
+                    $ext = pathinfo($post_photo, PATHINFO_EXTENSION); // getting image extension
+                    if ($ext == 'png' || $ext == 'PNG' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG' || $ext == 'gif' || $ext == 'GIF') {
+                        if ($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG') {
+                            ini_set('memory_limit', '-1'); //It will take unlimited memory usage of server
+                            $src = imagecreatefromjpeg($post_photo_tmp);
+                        }
+                        if ($ext == 'png' || $ext == 'PNG') {
+                            ini_set('memory_limit', '-1'); //It will take unlimited memory usage of server
+                            $src = imagecreatefrompng($post_photo_tmp);
+                        }
+                        if ($ext == 'gif' || $ext == 'GIF') {
+                            ini_set('memory_limit', '-1'); //It will take unlimited memory usage of server
+                            $src = imagecreatefromgif($post_photo_tmp);
+                        }
+                        list($width_min, $height_min) = getimagesize($post_photo_tmp);
+                        $newwidth_min = 350;
+                        $newheight_min = ($height_min / $width_min) * $newwidth_min;
+                        $tmp_min = imagecreatetruecolor($newwidth_min, $newheight_min);
+                        imagecopyresampled($tmp_min, $src, 0, 0, 0, 0, $newwidth_min, $newheight_min, $width_min, $height_min);
+                        $newfilename = round(microtime(true)) . '.' . $ext;
+                        imagejpeg($tmp_min, "images/" . $newfilename, 80); //copy image in folder//
+                        $photo_name = 'images/' . $newfilename; // new name with path to save in database
+                        /*
+                         $lastUserIdResult = mysql_query($sql = "SELECT userid FROM userinfo ORDER BY userid DESC LIMIT 1");
+                        $lastUserId = mysql_result($lastUserIdResult, "userid");
+                        $nextUserId = $lastUserId + 1;
+                        */
+                        mysql_query($sql = "INSERT INTO sign_up (SID,SPortrait,SName,SReg,district_id,SHouse,SE_Mail,SMID,Blood_Group_ID,donor_value,username,password)VALUES ('','$photo_name','" . $_REQUEST['name'] . "','" . $_REQUEST['reg'] . "','" . $_REQUEST['district_id'] . "','" . $_REQUEST['residence'] . "','" . $_REQUEST['email'] . "','" . $_REQUEST['SMID'] . "','" . $_REQUEST['Blood_Group_ID'] . "','" . $_REQUEST['donor_value'] . "','" . $_REQUEST['username'] . "','" . $_REQUEST['password'] . "')");
+                        mysql_close($con);
+                        ?>
+                        </br>
+                        </br>
+                        <div align="center">
+                            <label style="color: #55AA45; font-size:16px;">Contrgratulations!! you signed up successfully <span style="color: #ff0000">Now admin will review your provided information & approve your account,</span>
+                                 <span style="color: #ffffff">a confirmation email will be sent to your email within 24 hour then you can log in.. Thank you!</span></br> <a target="_blank" class="blink_me" style="color: #50B9E8"
+                                                                                                                                     href="https://www.facebook.com/nokib.mozumder">You can send a message to admin for immidiately accept your account here...</a></label>
+                        </div>
+                    <?php } else { ?>
+                        </br>
+                        </br>
+                        <div align="center">
+                            <label style="color: white; font-size:14px;">Sorry!! <span style="color: #ff0000">Account can not be created.</span>
+                                Try again with filling up the sign up form correctly or contact with admin</br> <a class="blink_me" style="color: #50B9E8"
+                                                                                                                                     href="student_profile.php?SID=461">Click here to contact with admin</a></label>
+                        </div>
+                   <?php } }} ?>
                 </div>
-                <?php }else {
-                    include("permission_error.php");
-                } ?>
             </div>
         </div>
         <div class="footer">
