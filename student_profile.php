@@ -19,7 +19,7 @@ $userdata = mysql_fetch_assoc($userrole);
             <?php
             include("logo.php");
             ?>
-            <div class="realbody" style="min-height:2300px">
+            <div class="realbody">
                 <?php
                 include("menu.php");
                 $strquery = "SELECT *,s_info.SMID,SMName,Blood_Group_Name,username,district_name, Batch_Name

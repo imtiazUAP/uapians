@@ -19,7 +19,7 @@
         <?php
         include("logo.php");
         ?>
-        <div class="realbody" style="min-height:2300px">
+        <div class="realbody">
             <?php
             include("menu.php");
             ?>

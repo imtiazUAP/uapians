@@ -167,7 +167,7 @@ $userdata = mysql_fetch_assoc($userrole);
             <?php
             include("logo.php");
             ?>
-            <div class="realbody" style="min-height:1950px">
+            <div class="realbody">
                 <?php
                 include("menu.php");
                 ?>

@@ -18,7 +18,7 @@ $userdata = mysql_fetch_assoc($userrole);
       <div id="grad1">
         <div class="bodydiv">
             <?php include("logo.php"); ?>
-            <div class="realbody" style="min-height:2300px">
+            <div class="realbody">
                 <?php include("menu.php"); ?>
                 <div id="content">
                 <div id="colOne">

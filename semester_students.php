@@ -63,24 +63,24 @@ $userdata = mysql_fetch_assoc($userrole);
                                         </tr>
                                         <?php
                                         $sql = "SELECT
-  SID,
-  s_info.SMID,
-  Batch_Name,
-  SName,
-  SReg,
-  SPortrait,
-  s_info.SMID,
-  SMName
-FROM s_info
-  LEFT OUTER JOIN sm_info
-    ON s_info.SMID = sm_info.SMID
-  LEFT OUTER JOIN batch_info
-    ON batch_info.Batch_ID = s_info.Batch_ID
-WHERE s_info.SMID = '". $_GET["SMID"] ."'
-ORDER BY SReg";
+                                          SID,
+                                          s_info.SMID,
+                                          Batch_Name,
+                                          SName,
+                                          SReg,
+                                          SPortrait,
+                                          s_info.SMID,
+                                          SMName
+                                        FROM s_info
+                                          LEFT OUTER JOIN sm_info
+                                            ON s_info.SMID = sm_info.SMID
+                                          LEFT OUTER JOIN batch_info
+                                            ON batch_info.Batch_ID = s_info.Batch_ID
+                                        WHERE s_info.SMID = '". $_GET["SMID"] ."'
+                                        ORDER BY SReg";
                                         $result = @mysql_query($sql);
                                         $total_records = @mysql_num_rows($result);
-                                        $record_per_page = 13;
+                                        $record_per_page = 20;
                                         $scroll = 4;
                                         $page = new Page(); ///creating new instance of Class Page
                                         $page->set_page_data($_SERVER['PHP_SELF'], $_GET["SMID"], $total_records, $record_per_page, $scroll, true, true, true);

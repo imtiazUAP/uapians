@@ -19,7 +19,7 @@ $userdata = mysql_fetch_assoc($userrole);
                 <?php
                 include("logo.php");
                 ?>
-                <div class="realbody" style="min-height:2300px">
+                <div class="realbody">
                 <?php
                 include("menu.php");
                 ?>
@@ -99,7 +99,7 @@ $userdata = mysql_fetch_assoc($userrole);
                                     <tr align="center" class="tablerow">
                                         <td width="120"><?= $data['SReg'] ?></td>
                                         <td width="200"><a href='student_profile.php?SID=<?= $data['SID'] ?> ' target="_blank"><?= $data['SName'] ?></a> </td>
-                                        <td width="100"><a href='student_profile.php?SID=<?= $data['SID'] ?>' target="_blank"><img src=<?= $data['SPortrait'] ?> echo style="height:100px;"></a></td>
+                                        <td width="100"><a href='student_profile.php?SID=<?= $data['SID'] ?>' target="_blank"><img src=<?= $data['SPortrait'] ?> echo style="height:100px; border-radius: 15px"></a></td>
                                         <td width="200"><?php echo ($data['SMID'] > 8) ? $data['Batch_Name'] : $data['SMName'] ?></td>
                                         <td width="200"><?= $data['district_name'] ?></td>
                                     </tr>
