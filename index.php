@@ -12,6 +12,16 @@ $userdata = mysql_fetch_assoc($userrole);
     <?php
     include("header.php");
     ?>
+        <style>
+            img {
+                opacity: 1.0;
+                filter: alpha(opacity=40); /* For IE8 and earlier */
+            }
+            img:hover {
+                opacity: 0.8;
+                filter: alpha(opacity=100); /* For IE8 and earlier */
+            }
+        </style>
     </head>
     <body>
         <div id="grad1">
@@ -167,42 +177,117 @@ $userdata = mysql_fetch_assoc($userrole);
                             <br>
                             <div>
                                 <div id="paragraph_head">
-                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/about_icon.png">Trending Tutorials</h1>
+                                    <h1 align="left" style="color:#FFFFFF"><img src="images/system_images/about_icon.png">Programming Tutorials</h1>
                                 </div>
-                                <?php
-                                $strquery="SELECT vt.*, u.username, u.SID, u.admin, vtc.video_tutorial_cat_name FROM video_tutorial vt INNER JOIN userinfo u ON u.SID = vt.uploaded_by INNER JOIN video_tutorial_category vtc ON vtc.video_tutorial_cat_id = vt.video_tutorial_cat_id order by vt.tutorial_id DESC LIMIT 6";
-                                $results=mysql_query($strquery);
-                                $num=mysql_numrows($results);
-                                if($num > 0){
-                                    $i=0;
-                                    while ($i< $num)
-                                    {
-                                        $tutorial_id=mysql_result($results,$i,"tutorial_id");
-                                        $video_tutorial_cat_id=mysql_result($results,$i,"video_tutorial_cat_id");
-                                        $video_tutorial_cat_name=mysql_result($results,$i,"video_tutorial_cat_name");
-                                        $tutorial_link=mysql_result($results,$i,"tutorial_link");
-                                        $uploaderId=mysql_result($results,$i,"uploaded_by");
-                                        $uploaderName=mysql_result($results,$i,"username");
-                                        $userGroup=mysql_result($results,$i,"admin");
-                                        $uploadTime=mysql_result($results,$i,"upload_time");
-                                        ?><figure>
-                                        <table style="padding:5px; float: left; width: 248px; color: #50B9E8">
-                                            <tr style="height:20px">
-                                                <td style="border:inset" colspan=2  align="center"><iframe width="248" height="160" src="<?php echo $tutorial_link ; ?>" frameborder="0" allowfullscreen></iframe></td>
-                                            </tr>
-                                            <tr><td><figcaption>Uploaded by : <a style="color: #55AA45; " href='<?php if($userGroup==4 || $userGroup==5){ ?>employee_profile.php<?php }else {?>student_profile.php<?php } ?>?SID=<?php echo ($uploaderId == 9999) ? '29' : $uploaderId; ?>' target="_blank"> <?php echo $uploaderName; ?></a> for <span style="color: #F44336"><?= $video_tutorial_cat_name ?></span>  on :<span style="color: #55AA45"> <?= $uploadTime ?></span></figcaption></td></tr>
-                                        </table>
-
-                                        </figure>
-                                        <?php $i++; }
-                                } else {
-                                    ?>
-                                    <div style="font-weight: bold;">
-                                        </br></br></br></br><p style="text-align:center">No video tutorials are added for this category yet. Stay connected, it will be added...</p>
-                                    </div>
-                                <?php
-                                }
-                                ?>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '1'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=1"><img border="0" alt="W3Schools" src="images/system_images/tutorial_thumbnails/html.png" width="265" height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '2'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=2"><img border="0" alt="W3Schools" src="images/system_images/tutorial_thumbnails/html5.png" width="265" height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '3'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=3"><img border="0" alt="W3Schools" src="images/system_images/tutorial_thumbnails/css.png" width="265" height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '4'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=4"><img border="0" alt="W3Schools" src="images/system_images/tutorial_thumbnails/php.png" width="265"  height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '5'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=5"><img border="0" alt="W3Schools"src="images/system_images/tutorial_thumbnails/js.png" width="265" height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '6'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=6"><img border="0" alt="W3Schools" src="images/system_images/tutorial_thumbnails/jq.png" width="265" height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '7'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=7"><img border="0" alt="W3Schools" src="images/system_images/tutorial_thumbnails/word.png" width="265" height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '23'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=23"><img border="0" alt="W3Schools"
+                                                                                     src="images/system_images/tutorial_thumbnails/java.png" width="265"
+                                                                                     height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                        <td>
+                                            <?php
+                                            $data = mysql_query("SELECT COUNT(tutorial_id) AS total_tutorial FROM video_tutorial WHERE video_tutorial_cat_id = '9'");
+                                            $userdata = mysql_fetch_assoc($data);
+                                            $totalTutorial = $userdata['total_tutorial'];
+                                            ?>
+                                            <figure>
+                                                <a href="tutorials.php?vtid=9"><img border="0" alt="W3Schools" src="images/system_images/tutorial_thumbnails/twitter.png" width="265" height="160">
+                                                </a>
+                                                <figcaption>Total tutorial on it :<?php echo $totalTutorial; ?> </figcaption></figure>
+                                        </td>
+                                    </tr>
+                                    </table>
                             </div>
                             <div style="background-color:#54A944; color: #ffffff; font-size: 14px; border-radius: 5px; height: 20px; padding: 5px; float: right; width: 20%;"  id="new_blog_button"><a href="tutorial_gallery.php"> Find Out More Videos >></a></div>
                         </div>

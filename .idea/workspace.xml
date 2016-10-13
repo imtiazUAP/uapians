@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4bc0e71-326c-4dce-bb81-b7ad83eacc53" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_edit.php" afterPath="$PROJECT_DIR$/blog_edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_insert.php" afterPath="$PROJECT_DIR$/blog_insert.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog_list.php" afterPath="$PROJECT_DIR$/blog_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log_out.php" afterPath="$PROJECT_DIR$/log_out.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/student_delete.php" afterPath="$PROJECT_DIR$/student_delete.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MOVED" beforePath="$PROJECT_DIR$/blog_insert.php" afterPath="$PROJECT_DIR$/blog_insert.php" />
     </list>
@@ -33,83 +31,106 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="22" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="9435">
+            <state line="514" column="17" selection-start="11575" selection-end="11582" vertical-scroll-proportion="-7.48" vertical-offset="8551" max-vertical-offset="9435">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="semester_students.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/semester_students.php">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="54" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2703">
+            <state line="56" column="68" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.43430656" vertical-offset="714" max-vertical-offset="5219">
               <folding>
-                <marker date="1475954806537" expanded="true" signature="152:196" placeholder="select * fro..userinfo..." />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#marquee#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#1;n#marquee#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1476393033927" expanded="true" signature="152:196" placeholder="select * fro..userinfo..." />
+                <marker date="1476393033927" expanded="true" signature="4300:4323" placeholder="SELECT * FRO..news_info..." />
+                <marker date="1476393033927" expanded="true" signature="6482:6507" placeholder="SELECT * FRO..notice_info..." />
+                <marker date="1476393033927" expanded="true" signature="8675:9375" placeholder="SELECT ref_i..reference_info..." />
+                <marker date="1476393033927" expanded="true" signature="12164:12261" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="13124:13221" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="14085:14182" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="15127:15224" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="16087:16184" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="17044:17141" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="18085:18182" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="19045:19143" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1476393033927" expanded="true" signature="20177:20274" placeholder="SELECT COUNT..video_tutorial..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog_list.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog_list.php">
+      <file leaf-file-name="student_delete.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/student_delete.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="18" selection-start="6584" selection-end="6584" vertical-scroll-proportion="0.0" vertical-offset="1611" max-vertical-offset="2159">
+            <state line="11" column="9" selection-start="407" selection-end="407" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tutorial_gallery.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tutorial_gallery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="317" selection-end="618" vertical-scroll-proportion="-2.745098" vertical-offset="81" max-vertical-offset="6868">
               <folding>
-                <marker date="1475955681523" expanded="true" signature="151:195" placeholder="select * fro..userinfo..." />
-                <marker date="1475955681523" expanded="true" signature="834:1597" placeholder="SELECT DISTI..blog..." />
+                <marker date="1475948044393" expanded="true" signature="142:186" placeholder="select * fro..userinfo..." />
+                <marker date="1475948044393" expanded="true" signature="1324:1421" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="2184:2281" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="3049:3146" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="3979:4076" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="4843:4940" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="5704:5801" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="6633:6730" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="7497:7594" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="8360:8457" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="9294:9392" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="10160:10258" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="11027:11125" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="11961:12059" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="12826:12924" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="13694:13792" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="14626:14724" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="15492:15590" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="16515:16613" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="17605:17703" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="18629:18727" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="19649:19747" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="20737:20835" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="21762:21860" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="22785:22883" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="23873:23971" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="24895:24993" placeholder="SELECT COUNT..video_tutorial..." />
+                <marker date="1475948044393" expanded="true" signature="25919:26017" placeholder="SELECT COUNT..video_tutorial..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="blog_insert.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog_insert.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="32" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="1054">
-              <folding>
-                <marker date="1475955785648" expanded="true" signature="106:309" placeholder="SELECT DISTI..blog..." />
-                <marker date="1475955785648" expanded="true" signature="122:166" placeholder="select * fro..userinfo..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log_out.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="log_out.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log_out.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2" selection-start="8" selection-end="8" vertical-scroll-proportion="0.030303031" vertical-offset="0" max-vertical-offset="561">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="blog_edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="23" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student_edit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/student_edit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="103" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="3060">
-              <folding>
-                <marker date="1475280668916" expanded="true" signature="1316:1393" placeholder="SELECT DISTI..districts..." />
-                <marker date="1475280668916" expanded="true" signature="2960:3014" placeholder="SELECT DISTI..sm_info..." />
-                <marker date="1475280668916" expanded="true" signature="3821:3914" placeholder="SELECT DISTI..blood_group_info..." />
-                <marker date="1475280668916" expanded="true" signature="4756:4840" placeholder="SELECT DISTI..blood_donor_yes_no..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+            <state line="4" column="18" selection-start="105" selection-end="105" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="306">
               <folding />
             </state>
           </provider>
@@ -128,8 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/photo_update_employee.php" />
-        <option value="$PROJECT_DIR$/sign_up_save.php" />
         <option value="$PROJECT_DIR$/upload_project_save.php" />
         <option value="$PROJECT_DIR$/sidebar.php" />
         <option value="$PROJECT_DIR$/cultural_club.php" />
@@ -179,6 +198,8 @@
         <option value="$PROJECT_DIR$/blog_list.php" />
         <option value="$PROJECT_DIR$/blog_insert.php" />
         <option value="$PROJECT_DIR$/log_out.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/student_delete.php" />
       </list>
     </option>
   </component>
@@ -423,19 +444,24 @@
       <created>1475955047366</created>
       <updated>1475955047366</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="abcd">
+      <created>1476392400353</created>
+      <updated>1476392400353</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6182708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17824773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17824773" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -445,7 +471,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49756098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6182708" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -497,7 +522,8 @@
     <MESSAGE value="-Batch info should provide when sign up&#10;-Home city was not showing in profile, its fixed" />
     <MESSAGE value="Show Batch Name when someone is ex student" />
     <MESSAGE value="Video thumbnails added&#10;About page look changed, added contributors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Video thumbnails added&#10;About page look changed, added contributors" />
+    <MESSAGE value="abcd" />
+    <option name="LAST_COMMIT_MESSAGE" value="abcd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -505,11 +531,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sign_up_review.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="24" selection-start="3553" selection-end="3553" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="2975" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/thickbox.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2907" />
@@ -535,19 +556,9 @@
         <state line="98" column="34" selection-start="3755" selection-end="3755" vertical-scroll-proportion="-1.3846154" vertical-offset="1630" max-vertical-offset="3009" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="58" selection-start="654" selection-end="654" vertical-scroll-proportion="-9.769231" vertical-offset="171" max-vertical-offset="3774" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="14" selection-start="68" selection-end="68" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="3757" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tutorial_gallery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="33" selection-start="792" selection-end="792" vertical-scroll-proportion="-4.6973686" vertical-offset="153" max-vertical-offset="6936" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog_list_test.php">
@@ -720,17 +731,23 @@
         <state line="21" column="33" selection-start="467" selection-end="467" vertical-scroll-proportion="0.1545293" vertical-offset="270" max-vertical-offset="3638" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/blog_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="22" selection-start="922" selection-end="922" vertical-scroll-proportion="0.0" vertical-offset="84" max-vertical-offset="9435">
-          <folding />
+        <state line="118" column="18" selection-start="6584" selection-end="6584" vertical-scroll-proportion="0.0" vertical-offset="1611" max-vertical-offset="2159">
+          <folding>
+            <marker date="1475955681523" expanded="true" signature="-1:-1" placeholder="select * fro..userinfo..." />
+            <marker date="1475955681523" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..blog..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
+    <entry file="file://$PROJECT_DIR$/blog_insert.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
-          <folding />
+        <state line="39" column="32" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="1054">
+          <folding>
+            <marker date="1475955785648" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..blog..." />
+            <marker date="1475955785648" expanded="true" signature="-1:-1" placeholder="select * fro..userinfo..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -738,19 +755,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="54" selection-start="3267" selection-end="3267" vertical-scroll-proportion="0.0" vertical-offset="1207" max-vertical-offset="2703">
           <folding>
-            <marker date="1475954806537" expanded="true" signature="152:196" placeholder="select * fro..userinfo..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/student_edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="103" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="3060">
-          <folding>
-            <marker date="1475280668916" expanded="true" signature="1316:1393" placeholder="SELECT DISTI..districts..." />
-            <marker date="1475280668916" expanded="true" signature="2960:3014" placeholder="SELECT DISTI..sm_info..." />
-            <marker date="1475280668916" expanded="true" signature="3821:3914" placeholder="SELECT DISTI..blood_group_info..." />
-            <marker date="1475280668916" expanded="true" signature="4756:4840" placeholder="SELECT DISTI..blood_donor_yes_no..." />
+            <marker date="1475954806537" expanded="true" signature="-1:-1" placeholder="select * fro..userinfo..." />
           </folding>
         </state>
       </provider>
@@ -762,30 +767,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_list.php">
+    <entry file="file://$PROJECT_DIR$/student_edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="118" column="18" selection-start="6584" selection-end="6584" vertical-scroll-proportion="0.0" vertical-offset="1611" max-vertical-offset="2159">
+        <state line="4" column="0" selection-start="103" selection-end="145" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="3060">
           <folding>
-            <marker date="1475955681523" expanded="true" signature="151:195" placeholder="select * fro..userinfo..." />
-            <marker date="1475955681523" expanded="true" signature="834:1597" placeholder="SELECT DISTI..blog..." />
+            <marker date="1475280668916" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..districts..." />
+            <marker date="1475280668916" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..sm_info..." />
+            <marker date="1475280668916" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..blood_group_info..." />
+            <marker date="1475280668916" expanded="true" signature="-1:-1" placeholder="SELECT DISTI..blood_donor_yes_no..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog_insert.php">
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="32" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.0" vertical-offset="491" max-vertical-offset="1054">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="514" column="17" selection-start="11575" selection-end="11582" vertical-scroll-proportion="-7.48" vertical-offset="8551" max-vertical-offset="9435">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tutorial_gallery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="317" selection-end="618" vertical-scroll-proportion="-2.745098" vertical-offset="81" max-vertical-offset="6868">
           <folding>
-            <marker date="1475955785648" expanded="true" signature="106:309" placeholder="SELECT DISTI..blog..." />
-            <marker date="1475955785648" expanded="true" signature="122:166" placeholder="select * fro..userinfo..." />
+            <marker date="1475948044393" expanded="true" signature="142:186" placeholder="select * fro..userinfo..." />
+            <marker date="1475948044393" expanded="true" signature="1324:1421" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="2184:2281" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="3049:3146" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="3979:4076" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="4843:4940" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="5704:5801" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="6633:6730" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="7497:7594" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="8360:8457" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="9294:9392" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="10160:10258" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="11027:11125" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="11961:12059" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="12826:12924" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="13694:13792" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="14626:14724" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="15492:15590" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="16515:16613" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="17605:17703" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="18629:18727" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="19649:19747" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="20737:20835" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="21762:21860" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="22785:22883" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="23873:23971" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="24895:24993" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1475948044393" expanded="true" signature="25919:26017" placeholder="SELECT COUNT..video_tutorial..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log_out.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2" selection-start="8" selection-end="8" vertical-scroll-proportion="0.030303031" vertical-offset="0" max-vertical-offset="561">
+        <state line="4" column="18" selection-start="105" selection-end="105" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="306">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/student_delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="9" selection-start="407" selection-end="407" vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="68" selection-start="2989" selection-end="2989" vertical-scroll-proportion="0.43430656" vertical-offset="714" max-vertical-offset="5219">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#marquee#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#marquee#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#a#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#marquee#0;n#div#4;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#5;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1476393033927" expanded="true" signature="152:196" placeholder="select * fro..userinfo..." />
+            <marker date="1476393033927" expanded="true" signature="4300:4323" placeholder="SELECT * FRO..news_info..." />
+            <marker date="1476393033927" expanded="true" signature="6482:6507" placeholder="SELECT * FRO..notice_info..." />
+            <marker date="1476393033927" expanded="true" signature="8675:9375" placeholder="SELECT ref_i..reference_info..." />
+            <marker date="1476393033927" expanded="true" signature="12164:12261" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="13124:13221" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="14085:14182" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="15127:15224" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="16087:16184" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="17044:17141" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="18085:18182" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="19045:19143" placeholder="SELECT COUNT..video_tutorial..." />
+            <marker date="1476393033927" expanded="true" signature="20177:20274" placeholder="SELECT COUNT..video_tutorial..." />
+          </folding>
         </state>
       </provider>
     </entry>
