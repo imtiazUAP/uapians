@@ -1,6 +1,8 @@
 <html>
     <?php
+    error_reporting(0);
     include("dbconnect.php");
+    include("classes/Authentication.php");
     $strquery = "SELECT Blog_ID,Blog from blog where Blog_ID= '" . $_GET["Blog_ID"] . "' ";
     $results = mysql_query ($strquery);
     $row = mysql_fetch_array($results);

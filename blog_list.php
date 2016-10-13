@@ -94,7 +94,7 @@ $userdata = mysql_fetch_assoc($userrole);
 
 
                                 <?php
-                                if (($isLoggedIn && $isAdmin || $userdata['SID'] == $SID)) {
+                                if (($isLoggedIn && $isAdmin) || ($data['SID'] == $_SESSION['SID'])) {
                                     ?>
                                     <div align="right"><?php echo " <a href='blog_edit.php?Blog_ID=" . $data['Blog_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=650&do=edit&modal=true' class='thickbox' title='Edit Course - " . $data['Blog_ID'] . "'> Edit This Article </a> "; ?>
                                         | <?php echo " <a href='blog_delete.php?Blog_ID=" . $data['Blog_ID'] . "'> Delete This Article </a> "; ?></div>
