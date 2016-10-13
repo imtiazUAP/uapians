@@ -1,9 +1,11 @@
 <title>A Stack of Uapians</title>
-<link rel="shortcut icon" href="images/tiittleimage.ico"/>
+<link rel="shortcut icon" href="images/system_images/tiittleimage.ico"/>
 
-<meta name="title" content="Uapians.Net"/>
-<meta name="description" content="An Exclusive Website only for Uapians..."/>
-<link rel="image_src" href="http://www.uapians.net/images/tittleimage.png"/>
+<meta name="title" content="Uapians.Net.. A stack of uap students"/>
+<meta name="description" content="Share & collects notes... Find programming tutorials... Find friends & many more.... Solve all your varsity problems at one place"/>
+<meta name="keywords" content="UAP, uap, uapians, University of asia pacific, CSE, LAW, CIVIL, Department of CSE, Pharmacy, Architect, EEE, Dhaka, Bangladesh, Imtiaz Ahmed, Imtiaz, Students, Notes, Programming, Programming tutorials, Blood Bank, Faculty">
+<meta name="author" content="Imtiaz Ahmed & Team">
+<link rel="image_src" href="http://www.uapians.net/images/system_images/tittleimage.png"/>
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/thickbox.js"></script>

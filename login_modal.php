@@ -12,7 +12,7 @@
     </head>
 
     <body>
-    <div style="background-color: #03071C; padding-left: 50px; padding-right: 50px">
+    <div style="background-color: #55A947; padding-left: 50px; padding-right: 50px">
     <br>
     <p style="font-weight:bold; font-size:18px">Sign In
     </p>

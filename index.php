@@ -13,11 +13,11 @@ $userdata = mysql_fetch_assoc($userrole);
     include("header.php");
     ?>
         <style>
-            img {
+            figure {
                 opacity: 1.0;
                 filter: alpha(opacity=40); /* For IE8 and earlier */
             }
-            img:hover {
+            figure:hover {
                 opacity: 0.8;
                 filter: alpha(opacity=100); /* For IE8 and earlier */
             }
