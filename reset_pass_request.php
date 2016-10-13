@@ -1,12 +1,8 @@
 <?php
-$con = mysql_connect("localhost", "root", "");
-if (!$con) {
-    die('Could Not Connect:' . mysql_error());
-}
-mysql_select_db("uapians_mylab", $con);
+include("dbconnect.php");
 $email = $_POST['email'];
 $query = "SELECT userid FROM userinfo where SE_Mail='" . $email . "'";
-$result = mysql_query($query, $con);
+$result = mysql_query($query);
 $Results = mysql_fetch_array($result);
 $id = $Results[userid];
 if (count($id) >= 1) {
@@ -22,11 +18,10 @@ if (count($id) >= 1) {
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
     $query = "update userinfo set recovery='" . $encrypt . "' where userid='" . $Results['userid'] . "'";
-    mysql_query($query, $con);
+    mysql_query($query);
     mail($to, $subject, $body, $headers);
     header('location:reset_pass.php?message=confirmation_mail');
 } else {
     header('location:reset_pass.php?message=account_not_found');
 }
-mysql_close($con)
 ?>

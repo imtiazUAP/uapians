@@ -2,10 +2,6 @@
 session_start();
 error_reporting(0);
 include("dbconnect.php");
-$con = mysql_connect("localhost", "root", "");
-if (!$con) {
-    die('Could Not Connect:' . mysql_error());
-}
 ?>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
@@ -72,7 +68,7 @@ if (!$con) {
                 {
                 $encrypt = $_GET['encrypt'];
                 $query = "SELECT userid FROM userinfo where recovery='" . $encrypt . "'";
-                $result = mysql_query($query, $con);
+                $result = mysql_query($query);
                 $Results = mysql_fetch_array($result);
                 if (count($Results[userid]) >= 1) {
                 ?>
@@ -112,13 +108,13 @@ if (!$con) {
                     $encrypt = $_POST['action'];
                     $password = $_POST['password'];
                     $query = "SELECT userid FROM userinfo where recovery = '" . $encrypt . "'";
-                    $result = mysql_query($query, $con);
+                    $result = mysql_query($query);
                     $Results = mysql_fetch_array($result);
                     if (count($Results[userid]) >= 1) {
                         $randomNumber = date("Y-m-d H:i:s");
                         $newEncrypt = md5($randomNumber * 209 * 19 + $Results['userid']);
                         $query = "update userinfo set password='" . md5($password) . "', recovery='" . $newEncrypt . "' where userid='" . $Results['userid'] . "'";
-                        mysql_query($query, $con);
+                        mysql_query($query);
                         ?>
                         </br>
                         </br>

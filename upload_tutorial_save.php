@@ -7,7 +7,6 @@ $isYoutubeEmbedLink = $utility->isYoutubeEmbedLink($_REQUEST['tutorial_link']);
 if($isYoutubeEmbedLink){
  mysql_query($sql = "INSERT INTO video_tutorial (video_tutorial_cat_id,tutorial_link, uploaded_by)VALUES ('" . $_REQUEST['video_tutorial_cat_id'] . "','" . $_REQUEST['tutorial_link'] . "','" . $_REQUEST['SID'] . "')");
     header('location: upload_tutorial.php?success="yes"');
-    mysql_close($con);
 }else{ ?>
     <html>
     <head>

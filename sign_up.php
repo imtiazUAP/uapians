@@ -207,7 +207,6 @@ $userdata = mysql_fetch_assoc($userrole);
                         $nextUserId = $lastUserId + 1;
                         */
                         mysql_query($sql = "INSERT INTO sign_up (SID,SPortrait,SName,SReg,district_id,SHouse,SE_Mail,SMID,Batch_ID,Blood_Group_ID,donor_value,username,password)VALUES ('','$photo_name','" . $_REQUEST['name'] . "','" . $_REQUEST['reg'] . "','" . $_REQUEST['district_id'] . "','" . $_REQUEST['residence'] . "','" . $_REQUEST['email'] . "','" . $_REQUEST['SMID'] . "','" . $_REQUEST['Batch_ID'] . "','" . $_REQUEST['Blood_Group_ID'] . "','" . $_REQUEST['donor_value'] . "','" . $_REQUEST['username'] . "','" . $_REQUEST['password'] . "')");
-                        mysql_close($con);
                         ?>
                         </br>
                         </br>

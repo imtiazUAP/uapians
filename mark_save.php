@@ -1,11 +1,6 @@
 
 <?php
-$con=mysql_connect("localhost","root","");
-if(!$con)
-{
-	die('Could Not Connect:'.mysql_error());
-	}
-mysql_select_db("uapians",$con);
+include("dbconnect.php");
 $sql="Insert into m_info(SID,EID,CID,XID,Date,Mark,SEMID,Year)
 values
 ('$_POST[SID1]','$_POST[EID]','$_POST[CID]','$_POST[XID]','$_POST[Date]','$_POST[Mark1]','$_POST[SEMID]','$_POST[Year]'),
@@ -18,10 +13,9 @@ values
 ('$_POST[SID8]','$_POST[EID]','$_POST[CID]','$_POST[XID]','$_POST[Date]','$_POST[Mark8]','$_POST[SEMID]','$_POST[Year]'),
 ('$_POST[SID9]','$_POST[EID]','$_POST[CID]','$_POST[XID]','$_POST[Date]','$_POST[Mark9]','$_POST[SEMID]','$_POST[Year]'),
 ('$_POST[SID10]','$_POST[EID]','$_POST[CID]','$_POST[XID]','$_POST[Date]','$_POST[Mark10]','$_POST[SEMID]','$_POST[Year]')";
-if(!mysql_query($sql,$con))
+if(!mysql_query($sql))
 {
 	die('Error:'.mysql_error());
 }
 header ('location: https://localhost/uapians/mark_insert.php ');
-mysql_close($con)
 ?>
