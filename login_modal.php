@@ -50,6 +50,7 @@
         $usdata = mysql_fetch_assoc($usresult);
         $_SESSION['username'] = $usdata['username'];
         $_SESSION['userid'] = $usdata['userid'];
+        $_SESSION['SID'] = $usdata['SID'];
         session_write_close();
         ?>
 

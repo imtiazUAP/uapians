@@ -99,7 +99,7 @@
                                 </div>
                                 <div style="width:500px;padding:10px;margin:0px; font-size:11px"><?php echo $Date; ?></div>
                                 <div><p style="font-size:14px; font-weight:bold">Article:</p></div>
-                                <div style="background-color:#0F1628; width:700px;padding:10px;border:1px solid white;margin:0px; font-size:16px; border-radius: 10px">
+                                <div style="background-color:#0F5B31; width:700px;padding:10px;border:1px solid white;margin:0px; font-size:16px; border-radius: 10px">
                                     <?php echo $Blog;
                                     ?>
                                 </div>
