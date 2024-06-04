@@ -183,7 +183,7 @@ $username=mysql_result($results,$i,"username");
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 														<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 			
 			
@@ -205,7 +205,7 @@ $username=mysql_result($results,$i,"username");
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 								<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 					<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
@@ -255,7 +255,7 @@ $username=mysql_result($results,$i,"username");
 <form>
 <div align="center">
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true" title="New Student" class="thickbox">Create New Student</a>
@@ -271,7 +271,7 @@ $username=mysql_result($results,$i,"username");
 		<td bgcolor="588C73" > Semester </td>
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 		<td bgcolor="#006699" > Results </td>
 		<td bgcolor="#006699" width="100"> Admin|Panel </td>
@@ -308,7 +308,7 @@ $username=mysql_result($results,$i,"username");
 
 	
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 	<td ><?php echo " <a href='Single_Mark_List.php? SID=".$SID."'> Results </a>"?></td>
 	<td width="100">

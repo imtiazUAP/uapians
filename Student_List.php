@@ -139,7 +139,7 @@ if (empty($_SESSION['username'])) {
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 														<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 			
 			
@@ -161,7 +161,7 @@ if (empty($_SESSION['username'])) {
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 								<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 					<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
@@ -212,7 +212,7 @@ if (empty($_SESSION['username'])) {
 <div style="padding-top:40">
 <form>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=600&width=350&modal=true" title="New Student" class="thickbox">Create New Student</a>
@@ -223,7 +223,7 @@ if (empty($_SESSION['username'])) {
 	 				
 	 				
 	 				<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <a href="Sign_Up_List.php">On Waiting Student</a>
@@ -241,7 +241,7 @@ if (empty($_SESSION['username'])) {
 		
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 		<td bgcolor="#006699" > Results </td>
 		<td bgcolor="#006699" width="100"> Admin|Panel </td>
@@ -285,7 +285,7 @@ if (empty($_SESSION['username'])) {
                                                
 
  <?php
-                                                if (($userdata[admin] == '1')) {
+                                                if (($userdata['admin'] == '1')) {
                                                     ?>
                                                 <td > <a href='Single_Mark_List.php? SID=<?= $data['SID'] ?>'> Results </a></td>
                                                

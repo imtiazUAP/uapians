@@ -202,7 +202,7 @@ $username=mysql_result($results,$i,"username");
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 														<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 			
 			
@@ -224,7 +224,7 @@ $username=mysql_result($results,$i,"username");
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 								<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 					<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
@@ -327,7 +327,7 @@ $SMName=mysql_result($results,$i,"SMName");
 
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <div align="right"><?php echo " <a href='Blog_Edit.php?Blog_ID=" . $Blog_ID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$Blog_ID."'> Edit This Article </a> "; ?> | <?php echo " <a href='Blog_Delete.php?Blog_ID=" . $Blog_ID . "'> Delete This Article </a> "; ?></div>

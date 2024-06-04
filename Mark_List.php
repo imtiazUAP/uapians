@@ -79,7 +79,7 @@ $username=mysql_result($results,$i,"username");
 			
 <form method="post">
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 <a href="Mark_Insert.php?keepThis=true&TB_iframe=true&height=600&width=500&modal=true" title="New Marks Entry" class="thickbox">New Marks Entry</a>
 					<?php

@@ -140,7 +140,7 @@ $username=mysql_result($results,$i,"username");
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 														<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 			
 			
@@ -162,7 +162,7 @@ $username=mysql_result($results,$i,"username");
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 								<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 					<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
@@ -204,7 +204,7 @@ $username=mysql_result($results,$i,"username");
 
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 <div>
 <a href="Gallery_Insert.php?keepThis=true&TB_iframe=true&height=100&width=400&modal=true" title="New Student" class="thickbox">Add New Photos</a>
@@ -238,7 +238,7 @@ $Photo_Caption=mysql_result($results,$i,"Photo_Caption");
   <div class="desc" style="color:#FFFFFF"><?php echo $Photo_Caption ; ?></div>
 </div>
                                                 <?php
-                                                if (($userdata[admin] == '1')) {
+                                                if (($userdata['admin'] == '1')) {
                                                     ?>
 													<div>
                                                     <?php echo " <a href='Gallery_Delete.php?Photo_Id=" . $Photo_Id . "'> delete </a> "; ?>

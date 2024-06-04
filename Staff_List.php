@@ -54,7 +54,7 @@ if (empty($_SESSION['username'])) {
 <form>
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 <a href="Employee_Insert.php?keepThis=true&TB_iframe=true&height=120&width=240&modal=true" title="New Employee" class="thickbox">Create New Employee</a>
 
@@ -74,7 +74,7 @@ if (empty($_SESSION['username'])) {
 					
 					
 	<?php 
-					if (($userdata[admin] == '4')) {
+					if (($userdata['admin'] == '4')) {
 					?>				
 <table class="hoverTable" width="1100" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;" >
 <tr align="center">
@@ -109,7 +109,7 @@ $Employee_Portrait=mysql_result($results,$i,"Employee_Portrait");
 <td ><?php echo " <a href='Teacher_Profile_List.php? EID=".$EID."'> Profile </a>"?></td>
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 <td align="center"><?php echo " <a href='Employee_Edit.php?EID=" . $EID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - ".$EID."'> edit </a> "; ?> | <?php echo " <a href='Employee_Delete.php?EID=" . $EID . "'> delete </a> "; ?></td>
 					<?php

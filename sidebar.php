@@ -7,7 +7,7 @@
 		<br>
 
 						<?php 
-					if (($userdata[admin] == '3')) {
+					if (($userdata['admin'] == '3')) {
 					?>
 					<br>
 <a href='php_sendmail_upload1.php'>Send Email</a>
@@ -78,7 +78,7 @@
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 														<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 			
 			
@@ -100,7 +100,7 @@
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 								<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 					<li><a href="Message_List_for_Admin.php"> My Messages</a></li>

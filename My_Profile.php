@@ -160,7 +160,7 @@ s_info.SID=userinfo.SID
 	<div class="profileuserinterface">
 
 		<?php 
-		if (($userdata[admin] == '1')) {
+		if (($userdata['admin'] == '1')) {
 		?>
 <div align="center" style="background-color:#FFFF00; width:500px; height:20px">
 		<?php echo " <a href='Student_Edit.php?SID=" . $SID . "&keepThis=true&TB_iframe=true&height=500&width=300&do=edit&modal=true'     	class='thickbox' title='Edit Student - ".$Name."'> Edit my Profile  </a> "; ?>  |

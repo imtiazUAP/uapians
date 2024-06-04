@@ -101,7 +101,7 @@ ON reference_info.SMID=sm_info.SMID WHERE CCode='" . $_GET["CCode"] . "'";
 		
 		
 							<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='reference_edit.php?ref_id=" . $ref_id . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit reference - ".$ref_id."'> edit </a> "; ?> | <?php echo " <a href='reference_delete.php?ref_id=" . $ref_id . "'> delete </a> "; ?></td>

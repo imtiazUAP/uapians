@@ -121,7 +121,7 @@ $SReg=mysql_result($results,$i,"SReg");
 
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td> <?php echo " <a href='Message_Delete.php?Message_Id=" . $Message_Id. "'> delete </a> "; ?></td>

@@ -180,7 +180,7 @@ xmlhttp.send();
 			</div>
 <ul class="bottom">
 						<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 					
 <li><a href='php_sendmail_upload1.php'>Send Email</a></li>
@@ -198,7 +198,7 @@ xmlhttp.send();
 			</div>
 			<ul class="bottom">
 						<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 					
 <li><a href='php_sendmail_upload1.php'>Send Email</a></li>
@@ -231,7 +231,7 @@ xmlhttp.send();
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 														<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 			
 			
@@ -253,7 +253,7 @@ xmlhttp.send();
 			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 			
 								<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 					<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
@@ -294,7 +294,7 @@ xmlhttp.send();
 <div style="padding-top:40">
 <form>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=600&width=350&modal=true" title="New Student" class="thickbox">Create New Student</a>
@@ -356,7 +356,7 @@ xmlhttp.send();
 
  <?php
 
-                                                if (($userdata[admin] == '1')) {
+                                                if (($userdata['admin'] == '1')) {
                                                     ?>
                                                 
 

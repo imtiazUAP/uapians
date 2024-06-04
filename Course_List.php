@@ -112,7 +112,7 @@ xmlhttp.send();
 <form>
 
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 <a href="Course_Insert.php?keepThis=true&TB_iframe=true&height=150&width=200&modal=true" title="New Course" class="thickbox">Create New Course</a>
 					<?php
@@ -155,7 +155,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
@@ -200,7 +200,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
@@ -243,7 +243,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
@@ -287,7 +287,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
@@ -331,7 +331,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
@@ -375,7 +375,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
@@ -419,7 +419,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
@@ -463,7 +463,7 @@ $SMName=mysql_result($results,$i,"SMName");
 <td ><?php echo " <a href='Reference_List.php? CCode=".$CCode."'>Reference Source</a>"?></td>
 <td><?php echo $SMName ; ?></td>
 					<?php 
-					if (($userdata[admin] == '1')) {
+					if (($userdata['admin'] == '1')) {
 					?>
 
 <td><?php echo " <a href='Course_Edit.php?CID=" . $CID . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - ".$CID."'> edit </a> "; ?> | <?php echo " <a href='Course_Delete.php?CID=" . $CID . "'> delete </a> "; ?></td>
