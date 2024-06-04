@@ -1,6 +1,6 @@
 <?php
 session_start();
-error_reporting(0);
+error_reporting(1);
 include_once("page.inc2.php");
 include("dbconnect.php");
 ?>

@@ -1,4 +1,4 @@
-	
+
 		<div class="box" align="left">
 		<br>
 					
@@ -17,12 +17,24 @@
 
 		        <?php
         if (isset($_REQUEST['login']) && !empty($_REQUEST['loginname'])) {
-            $usname = $_REQUEST['loginname'];
-            $uspass = $_REQUEST['password'];
-            $qry = "select * from userinfo where SE_Mail='" . ($usname) . "' && password='" . md5($uspass) . "' ";
-
-            $usresult = mysql_query($qry);
-            $usdata = mysql_fetch_assoc($usresult);
+			$usname = $_REQUEST['loginname'];
+			$uspass = $_REQUEST['password'];
+			$dbconnect = new dbClass();
+			$connection = $dbconnect->getConnection();
+			
+			$qry = "SELECT * FROM sign_up WHERE username=? AND password=?";
+			$stmt = $connection->prepare($qry);
+			if ($stmt) {
+				// TODO: Md5
+				// $stmt->bind_param("ss", $usname, md5($uspass));
+				$stmt->bind_param("ss", $usname, $uspass);
+				$stmt->execute();
+				$result = $stmt->get_result();
+				$usdata = $result->fetch_assoc();
+				$stmt->close();
+			} else {
+				die("Prepare failed: " . $connection->error);
+			}
 			//session_regenerate_id();
             $_SESSION['username'] = $usdata['username'];
 			$_SESSION['userid'] = $usdata['userid'];

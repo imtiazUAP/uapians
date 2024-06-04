@@ -1,8 +1,6 @@
 <?php
 session_start();
-error_reporting(0);
-$connect=mysql_connect("localhost","root","");
-$select_db=mysql_select_db("mylab");
+error_reporting(1);
 ?>
 
 <html>
