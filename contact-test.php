@@ -6,7 +6,7 @@ include ('dbconnect.php'); ?>
 
 <head>
   <title>Email Test</title>
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen">
   <style>
     P {
       text-align: center

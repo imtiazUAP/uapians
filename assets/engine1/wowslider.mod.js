@@ -1,7 +1,7 @@
 /* wowslider modifications
  * add:
- * -   <link rel="stylesheet" type="text/css" href="engine1/style.mod.css" />
- * -   <script type="text/javascript" src="engine1/wowslider.mod.js"></script> (after "wowslider.js", before "script.js")
+ * -   <link rel="stylesheet" type="text/css" href="assets/engine1/style.mod.css" />
+ * -   <script type="text/javascript" src="assets/engine1/wowslider.mod.js"></script> (after "wowslider.js", before "script.js")
  *
  * wowslider-contaner, css-classes:
  * -   "playpause" : adds play/pause controll in slider

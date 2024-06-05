@@ -2,16 +2,16 @@
 
 <head>
 	<title>Home | Student Management Tool</title>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/thickbox.js"></script>
-	<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/thickbox.js"></script>
+	<link rel="stylesheet" href="assets/css/thickbox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Slider, WOW Slider, HTML5 Slideshow Maker, Picture Slideshow HTML" />
 	<meta name="description"
 		content="Slider created with WOW Slider, a free wizard program that helps you easily generate beautiful web slideshow" />
-	<link rel="stylesheet" type="text/css" href="Cultural_Club/engine1/style.css" />
-	<script type="text/javascript" src="Cultural_Club/engine1/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/Cultural_Club/engine1/style.css" />
+	<script type="text/javascript" src="assets/Cultural_Club/engine1/jquery.js"></script>
 	<script>
 		function showResult(str) {
 			if (str.length == 0) {
@@ -255,26 +255,26 @@
 							<div id="wowslider-container1" style="height:267">
 								<div class="ws_images">
 									<ul>
-										<li><img src="Cultural_Club/data1/images/1176353_10201824031220250_299244289_n.jpg"
+										<li><img src="assets/Cultural_Club/data1/images/1176353_10201824031220250_299244289_n.jpg"
 												alt="FareWell Organised by CSe Cultural CLub"
 												title="FareWell Organised by CSe Cultural CLub" id="wows1_0" /></li>
-										<li><img src="Cultural_Club/data1/images/12177_4319308698703_1275228451_n.jpg"
+										<li><img src="assets/Cultural_Club/data1/images/12177_4319308698703_1275228451_n.jpg"
 												alt="" Pitha Utshob" Organised by CSE Cultural Club" title="" Pitha
 												Utshob" Organised by CSE Cultural Club" id="wows1_1" /></li>
-										<li><img src="Cultural_Club/data1/images/971296_594950683868503_1156440747_n.jpg"
+										<li><img src="assets/Cultural_Club/data1/images/971296_594950683868503_1156440747_n.jpg"
 												alt="" title="" id="wows1_2" /></li>
 									</ul>
 								</div>
 								<div class="ws_bullets">
 									<div>
 										<a href="#" title="FareWell Organised by CSe Cultural CLub"><img
-												src="Cultural_Club/data1/tooltips/1176353_10201824031220250_299244289_n.jpg"
+												src="assets/Cultural_Club/data1/tooltips/1176353_10201824031220250_299244289_n.jpg"
 												alt="FareWell Organised by CSe Cultural CLub" />1</a>
 										<a href="#" title="" Pitha Utshob" Organised by CSE Cultural Club"><img
-												src="Cultural_Club/data1/tooltips/12177_4319308698703_1275228451_n.jpg"
+												src="assets/Cultural_Club/data1/tooltips/12177_4319308698703_1275228451_n.jpg"
 												alt="" Pitha Utshob" Organised by CSE Cultural Club" />2</a>
 										<a href="#" title=""><img
-												src="Cultural_Club/data1/tooltips/971296_594950683868503_1156440747_n.jpg"
+												src="assets/Cultural_Club/data1/tooltips/971296_594950683868503_1156440747_n.jpg"
 												alt="" />3</a>
 									</div>
 								</div>
@@ -282,8 +282,8 @@
 									WOWSlider.com v4.9</span>
 								<div class="ws_shadow"></div>
 							</div>
-							<script type="text/javascript" src="Cultural_Club/engine1/wowslider.js"></script>
-							<script type="text/javascript" src="Cultural_Club/engine1/script.js"></script>
+							<script type="text/javascript" src="assets/Cultural_Club/engine1/wowslider.js"></script>
+							<script type="text/javascript" src="assets/Cultural_Club/engine1/script.js"></script>
 							<br>
 							<br>
 							<br>

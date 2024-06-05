@@ -93,7 +93,6 @@ function IsInjected($str)
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <head>
 	<title>File upload form</title>
 	<!-- define some style elements-->
@@ -108,7 +107,6 @@ function IsInjected($str)
 	<!-- a helper script for vaidating the form-->
 	<script language="JavaScript" src="scripts/gen_validatorv31.js" type="text/javascript"></script>
 </head>
-
 <body>
 	<?php
 	if (!empty($errors)) {
@@ -149,5 +147,4 @@ function IsInjected($str)
 				email in PHP</a> article page.</small>
 	</noscript>
 </body>
-
 </html>

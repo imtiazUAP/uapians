@@ -19,13 +19,13 @@ if (empty($_SESSION['username'])) {
 		<meta name="title" content="Uapians.Net" />
 		<meta name="description" content="An Exclusive Website only for Uapians..." />
 		<link rel="image_src" href="http://www.uapians.net/images/tittleimage.png" />
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/thickbox.js"></script>
-		<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/thickbox.js"></script>
+		<link rel="stylesheet" href="assets/css/thickbox.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen">
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-		<script type="text/javascript" src="engine1/jquery.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/engine1/style.css" />
+		<script type="text/javascript" src="assets/engine1/jquery.js"></script>
 	</head>
 
 	<body>

@@ -18,11 +18,11 @@ if (empty($_SESSION['username'])) {
 	<meta name="title" content="Uapians.Net" />
 <meta name="description" content="An Exclusive Website only for Uapians..." />
 <link rel="image_src" href="http://www.uapians.net/images/tittleimage.png" />
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/thickbox.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/thickbox.js"></script>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="assets/css/thickbox.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen">
 </head>
 <body>
 	<div id="grad1">

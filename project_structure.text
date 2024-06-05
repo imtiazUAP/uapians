@@ -1,0 +1,254 @@
+- .gitignore
+- .idea
+  - encodings.xml
+  - misc.xml
+  - modules.xml
+  - scopes
+    - scope_settings.xml
+  - uapians.iml
+  - vcs.xml
+  - workspace.xml
+- About.php
+- About_for_index.php
+- Admin_Control.php
+- Admin_Jihan.php
+- Admin_Nokib.php
+- Admin_Sayem.php
+- Admin_Taqi.php
+- auto_search.php
+- Blog_Delete.php
+- Blog_Edit.php
+- Blog_Insert.php
+- Blog_List.php
+- Blog_Save.php
+- Blog_Update.php
+- Blood_List.php
+- Blood_List_All.php
+- Comment_Save.php
+- contact-test.php
+- Course_Delete.php
+- Course_Edit.php
+- Course_Insert.php
+- Course_List.php
+- Course_Save.php
+- Course_Update.php
+- css
+  - Profile_List.css
+  - Slider.css
+  - style.css
+  - style_new.css
+  - thickbox.css
+- Cultural_Club
+  - data1
+    - images
+      - 1176353_10201824031220250_299244289_n.jpg
+      - 12177_4319308698703_1275228451_n.jpg
+      - 20140228_154735.jpg
+      - 20140228_155057.jpg
+      - 971296_594950683868503_1156440747_n.jpg
+      - img_1894.jpg
+      - img_2109.jpg
+      - img_2141.jpg
+      - img_2161.jpg
+    - tooltips
+      - 1176353_10201824031220250_299244289_n.jpg
+      - 12177_4319308698703_1275228451_n.jpg
+      - 20140228_154735.jpg
+      - 20140228_155057.jpg
+      - 971296_594950683868503_1156440747_n.jpg
+      - img_1894.jpg
+      - img_2109.jpg
+      - img_2141.jpg
+      - img_2161.jpg
+  - engine1
+    - arrows.png
+    - bullet.png
+    - fullscreen.png
+    - jquery.js
+    - pause.png
+    - play.png
+    - script.js
+    - shadow.png
+    - style.css
+    - style.mod.css
+    - triangle.png
+    - wowslider.js
+    - wowslider.mod.js
+  - iframe_index.html
+  - index.html
+- Cultural_Debating_Club.php
+- custom_fonts
+  - AlexBrush-Regular.ttf
+  - AllerDisplay.ttf
+  - Aller_Bd.ttf
+  - Aller_BdIt.ttf
+  - Aller_It.ttf
+- data1
+  - images
+    - slide0.jpg
+    - slide1.jpg
+    - slide2.jpg
+    - slide3.jpg
+  - tooltips
+    - slide0.jpg
+    - slide1.jpg
+    - slide2.jpg
+    - slide3.jpg
+- database
+  - uapians.sql
+- db.php
+- dbconnect.php
+- db_connect.php
+- default.css
+- Designation_Insert.php
+- Designation_Save.php
+- Districtwise_StudentList.php
+- Employee_Delete.php
+- Employee_Edit.php
+- Employee_Insert.php
+- Employee_List.php
+- Employee_Save.php
+- Employee_Update.php
+- engine1
+  - arrows.png
+  - bullet.png
+  - fullscreen.png
+  - jquery.js
+  - pause.png
+  - play.png
+  - script.js
+  - style.css
+  - style.mod.css
+  - triangle.png
+  - wowslider.js
+  - wowslider.mod.js
+- error_log
+- ExStudents1.php
+- Facebook.html
+- Faculty_List.php
+- fb.html
+- footer.php
+- galary.php
+- Gallery_Delete.php
+- Gallery_Insert.php
+- Gallery_Save.php
+- header.php
+- Home.php
+- images
+  - All the necessary images
+- image_insert.php
+- image_list.php
+- image_save.php
+- index.php
+- index_06_04_2014.html
+- jquery-1.8.0.min.js
+- js
+  - jquery.js
+  - Slider.js
+  - thickbox-compressed.js
+  - thickbox.js
+- links.xml
+- livesearch.php
+- Login_Request.php
+- logo.php
+- logo_for_index.php
+- Log_Out.php
+- mail.php
+- Main.php
+- Mark_Insert.php
+- Mark_List.php
+- Mark_Save.php
+- menu.php
+- menu_for_index.php
+- Message_Delete.php
+- Message_List_for_Admin.php
+- Message_List_personal.php
+- Message_Save.php
+- Message_Save_to_your_friend.php
+- Message_Sent_Notification.php
+- My_Profile.php
+- My_Profile_Staff.php
+- My_Profile_Teacher.php
+- My_profile_Teacher_Edit.php
+- my_profile_teacher_update.php
+- News_Delete.php
+- News_Edit.php
+- News_Insert.php
+- News_Save.php
+- News_Update.php
+- nokib2.css
+- Notice_Edit.php
+- Notice_Update.php
+- null.php
+- page.inc.php
+- page.inc2.php
+- Password_Edit.php
+- Password_Update.php
+- pear-installer.php
+- php_sendmail_upload1.php
+- php_sendmail_upload2.php
+- plasma.apk
+- Profile_List.php
+- Programing_Contest_Club.php
+- projects.php
+- Project_Gallery.php
+- Read me
+  - semester update query.txt
+- README.md
+- reference_delete.php
+- reference_edit.php
+- Reference_List.php
+- Reference_List_All.php
+- Reference_Save.php
+- Reference_Save_Confirmation.php
+- Reference_Update.php
+- Reference_Upload.php
+- Research_Publication_Club.php
+- reset_pass.php
+- reset_pass_request.php
+- Review_Update.php
+- RFC822.php
+- search.php
+- semester_students.php
+- Semister_Insert.php
+- Semister_Save.php
+- send-email-form.php
+- send_message_to_admin.php
+- send_message_to_your_friend.php
+- sidebar.php
+- sidebar_for_index.php
+- sign_up.php
+- sign_up_notification.php
+- Sign_Up_Review.php
+- Sign_Up_Review_Delete.php
+- sign_up_save.php
+- Single_Blog_List.php
+- Single_Mark_List.php
+- slider1.php
+- Software_Hardware_Club.php
+- Sports_Club.php
+- Staff_List.php
+- Student_Delete.php
+- Student_Edit.php
+- Student_Edit_10_05_2014.php
+- Student_Insert.php
+- Student_insert1.php
+- Student_List.php
+- Student_Save.php
+- Student_Update.php
+- Student_Update_10_05_2014.php
+- style.css
+- style_new.css
+- table.css
+- Teacher_Profile_List.php
+- test.php.txt
+- Upload_Project.php
+- Upload_Project_Save.php
+- Upload_Project_Save_Confirmation.php
+- upload_video_tutorial.php
+- upload_video_tutorial_save.php
+- upload_video_tutorial_save_confirmation.php
+- Video.php
+- video_tutorial.php
+- Video_Tutorial_Gallery.php
+- Web_Club.php

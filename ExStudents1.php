@@ -13,16 +13,16 @@ if (empty($_SESSION['username'])) {
 			< html >
 			<head>
 				<title>Home | Student Management Tool</title>
-				<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/thickbox.js"></script>
-	<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+				<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<script type="text/javascript" src="assets/js/thickbox.js"></script>
+	<link rel="stylesheet" href="assets/css/thickbox.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen">
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Slider, WOW Slider, HTML5 Slideshow Maker, Picture Slideshow HTML" />
 	<meta name="description"
 		content="Slider created with WOW Slider, a free wizard program that helps you easily generate beautiful web slideshow" />
-	<link rel="stylesheet" type="text/css" href="Cultural_Club/engine1/style.css" />
-	<script type="text/javascript" src="Cultural_Club/engine1/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/Cultural_Club/engine1/style.css" />
+	<script type="text/javascript" src="assets/Cultural_Club/engine1/jquery.js"></script>
 	<script>
 					function showResult(str)
 					{

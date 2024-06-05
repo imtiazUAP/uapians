@@ -10,10 +10,10 @@ if (empty($_SESSION['username'])) {
 	<title>Mark | Student Management Tool</title>
 
 	<head>
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/thickbox.js"></script>
-		<link rel="stylesheet" href="css/thickbox.css" type="text/css" media="screen" />
-		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
+		<script type="text/javascript" src="assets/js/thickbox.js"></script>
+		<link rel="stylesheet" href="assets/css/thickbox.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="screen">
 	</head>
 
 	<body>
