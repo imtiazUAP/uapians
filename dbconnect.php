@@ -6,9 +6,9 @@ class dbClass
     {
         $this->mysqlConnect('localhost', 'root', '', 'uapians_mylab');
     }
-    private function mysqlConnect($host, $username, $password, $name)
+    private function mysqlConnect($host, $userName, $password, $name)
     {
-        $this->connection = new mysqli($host, $username, $password, $name);
+        $this->connection = new mysqli($host, $userName, $password, $name);
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         }

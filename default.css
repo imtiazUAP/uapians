@@ -1,25 +1,15 @@
-
-
 #colOne {
 	float: left;
 	width: 238px;
 	padding-left: 20px;
 	padding-right: 20px;
-
-
 }
 
-
 #colOne ul {
-
 	list-style: none;
 }
 
 #colOne li {
 	padding: 5px 0;
-
 	border-bottom: 1px solid #EFEFEF
 }
-
-
-

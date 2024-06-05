@@ -9,9 +9,9 @@
    $stmt->bind_param("s", $b);
    $stmt->execute();
    $result = $stmt->get_result();
-   $usdata = $result->fetch_assoc();
-   $SPortrait = $usdata['SPortrait'];
-   $username = $usdata['username'];
+   $userData = $result->fetch_assoc();
+   $SPortrait = $userData['SPortrait'];
+   $userName = $userData['username'];
    $stmt->close();
 
    // For employees
@@ -21,7 +21,7 @@
    $results = $stmt->get_result();
    $employeeData = $results->fetch_assoc();
    $Employee_Portrait = $employeeData['Employee_Portrait'];
-   $username = $employeeData['username'];
+   $userName = $employeeData['username'];
 ?>
 <div id='cssmenu_new'>
    <ul>

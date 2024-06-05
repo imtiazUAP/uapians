@@ -1,4 +1,5 @@
 <html>
+
 <head>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/thickbox.js"></script>
@@ -6,22 +7,21 @@
 </head>
 
 <body>
-<form action="Course_Save.php" method="post">
-<table>
-<tr>
-<td>CCode:</td>
-<td><input type="text" name="CCode"/></td>
-</tr>
-<tr>
-<td>CName:</td>
-<td><input type"text" name="CName"/></td>
-</tr>
-</table>
-<br><br>
-
-<input type="Submit"/>
-<a href="#" onClick="tb_remove();">Close</a>
-</form>
-
+	<form action="Course_Save.php" method="post">
+		<table>
+			<tr>
+				<td>CCode:</td>
+				<td><input type="text" name="CCode" /></td>
+			</tr>
+			<tr>
+				<td>CName:</td>
+				<td><input type"text" name="CName" /></td>
+			</tr>
+		</table>
+		<br><br>
+		<input type="Submit" />
+		<a href="#" onClick="tb_remove();">Close</a>
+	</form>
 </body>
+
 </html>

@@ -58,7 +58,8 @@ include ("dbconnect.php");
                                             $results = $stmt->get_result();
                                             foreach ($results as $result) { ?>
                                                 <option value="<?php echo $result["SMID"] ?>">
-                                                    <?php echo $result["SMName"] ?></option>
+                                                    <?php echo $result["SMName"] ?>
+                                                </option>
                                                 <?php
                                             }
                                             ?>
@@ -73,7 +74,8 @@ include ("dbconnect.php");
                                             $bloodGroupResults = $bloodGroupStmt->get_result();
                                             foreach ($bloodGroupResults as $result) { ?>
                                                 <option value="<?php echo $result["Blood_Group_ID"] ?>">
-                                                    <?php echo $result["Blood_Group_Name"] ?></option>
+                                                    <?php echo $result["Blood_Group_Name"] ?>
+                                                </option>
                                                 <?php
                                             }
                                             ?>
@@ -88,7 +90,8 @@ include ("dbconnect.php");
                                             $bloodDonorResults = $bloodDonorStmt->get_result();
                                             foreach ($bloodDonorResults as $result) { ?>
                                                 <option value="<?php echo $result["donor_value"] ?>">
-                                                    <?php echo $result["Blood_Donor"] ?></option>
+                                                    <?php echo $result["Blood_Donor"] ?>
+                                                </option>
                                                 <?php
                                             }
                                             ?>
@@ -103,7 +106,8 @@ include ("dbconnect.php");
                                             $districtResults = $districtStmt->get_result();
                                             foreach ($districtResults as $result) { ?>
                                                 <option value="<?php echo $result["district_id"] ?>">
-                                                    <?php echo $result["district_name"] ?></option>
+                                                    <?php echo $result["district_name"] ?>
+                                                </option>
                                                 <?php
                                             }
                                             ?>

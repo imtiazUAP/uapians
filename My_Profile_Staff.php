@@ -33,40 +33,40 @@ if (empty($_SESSION['username'])) {
 	<script>
 					function showResult(str)
 					{
-	if (str.length==0)
+		if (str.length==0)
 					{
 						document.getElementById("livesearch").innerHTML = "";
 					document.getElementById("livesearch").style.border="0px";
 					return;
-	  }
+		  }
 					if (window.XMLHttpRequest)
 					{// code for IE7+, Firefox, Chrome, Opera, Safari
 						xmlhttp = new XMLHttpRequest();
-	  }
+		  }
 					else
 					{// code for IE6, IE5
 						xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-	  }
+		  }
 					xmlhttp.onreadystatechange=function()
 					{
-	  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		  if (xmlhttp.readyState==4 && xmlhttp.status==200)
 					{
 						document.getElementById("livesearch").innerHTML = xmlhttp.responseText;
 					document.getElementById("livesearch").style.border="1px solid #A5ACB2";
-		}
-	  }
+			}
+		  }
 					xmlhttp.open("GET","livesearch.php?q="+str,true);
 					xmlhttp.send();
-	}
+		}
 	</script>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
+		  var js, fjs = d.getElementsByTagName(s)[0];
 					if (d.getElementById(id)) return;
 					js = d.createElement(s); js.id = id;
 					js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
 					fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
+		}(document, 'script', 'facebook-jssdk'));</script>
 	</head>
 
 	<body>
@@ -96,30 +96,37 @@ if (empty($_SESSION['username'])) {
 								src="<?php echo $Employee_Portrait; ?>" />
 						</div>
 						<p align="center" style="font:Arial, Helvetica, sans-serif; font-size:40px; color:#FFFFFF">
-							<?php echo $Employee_Name; ?></P>
+							<?php echo $Employee_Name; ?>
+						</P>
 						<p align="center" style="padding-top:1px; color:#FFFFFF; font-size:18px">
-							<?php echo $Employee_Designation; ?></P>
+							<?php echo $Employee_Designation; ?>
+						</P>
 						<p align="center" style="padding-top:10px; color:#FFFFFF; font-size:16px">
-							<?php echo $Employee_Contact; ?></P>
+							<?php echo $Employee_Contact; ?>
+						</P>
 						<p style="padding-top:10px; color:#FFFFFF; font-size:18px">Speech for the Students:<br></p>
 						<div>
 							<p style="width:900px;padding:10px;border:2px solid white;margin:0px; font-size:14px">
-								<?php echo $Employee_Speech; ?></P>
+								<?php echo $Employee_Speech; ?>
+							</P>
 						</div>.
 						<p style="padding-top:10px; color:#FFFFFF; font-size:18px">Academic Qualification:<br></p>
 						<div>
 							<p style="width:900px;padding:10px;border:2px solid white;margin:0px; font-size:14px">
-								<?php echo $Employee_Qualification; ?></P>
+								<?php echo $Employee_Qualification; ?>
+							</P>
 						</div>
 						<p style="padding-top:10px; color:#FFFFFF; font-size:18px">Teaching Experience:<br></p>
 						<div>
 							<p style="width:900px;padding:10px;border:2px solid white;margin:0px; font-size:14px">
-								<?php echo $Employee_Experience; ?></P>
+								<?php echo $Employee_Experience; ?>
+							</P>
 						</div>.
 						<p style="padding-top:10px; color:#FFFFFF; font-size:18px">Playing Role in UAP:<br></p>
 						<div style="padding-bottom:75px">
 							<p style="width:900px;padding:10px;border:2px solid white;margin:0px; font-size:14px">
-								<?php echo $Employee_Role; ?></P>
+								<?php echo $Employee_Role; ?>
+							</P>
 						</div>.
 					</div>
 				</div>
