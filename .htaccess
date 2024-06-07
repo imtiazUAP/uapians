@@ -1,0 +1,9 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Rewrite rule example: redirect all requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ home.php?/$1 [L]
+
+# Add any other specific directives here
