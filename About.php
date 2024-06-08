@@ -2,12 +2,7 @@
 session_start();
 error_reporting(1);
 include ("dbconnect.php");
-?>
-<?php
-$b = $_SESSION['username'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
-$userdata = mysql_fetch_assoc($userrole);
-//echo $userdata['admin'];
+
 if (empty($_SESSION['username'])) {
 	?>
 	<script language="JavaScript">
