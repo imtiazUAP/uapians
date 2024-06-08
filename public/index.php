@@ -1,16 +1,23 @@
 <?php
 define('BASE_DIR', realpath(__DIR__ . '/../'));
+require_once BASE_DIR . '/app/controllers/HomeController.php';
 require_once BASE_DIR . '/app/controllers/StudentController.php';
 // ... require other controllers as needed
 
-$uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-$uri = trim($uri, '/');
+// DEBUG:
+echo "Requested URI: " . $_SERVER['REQUEST_URI'] . "<br>";
+
+// Remove the base URL and the last slash from the request URI
+$uri = rtrim(str_replace('/uapians/', '', $_SERVER['REQUEST_URI']), '/');
+
+// DEBUG:
+echo "Switching URI: " . $uri . "<br>";
 
 // Define routes
 $routes = [
-    'uapians/' => ['controller' => 'StudentController', 'action' => 'list'],
-    'uapians/student/list' => ['controller' => 'StudentController', 'action' => 'list'],
-    'uapians/student/insert' => ['controller' => 'StudentController', 'action' => 'insert'],
+    '' => ['controller' => 'HomeController', 'action' => 'list'],
+    'student/list' => ['controller' => 'StudentController', 'action' => 'list'],
+    'student/insert' => ['controller' => 'StudentController', 'action' => 'insert'],
     // Add other routes here
 ];
 
