@@ -18,13 +18,21 @@
 - Admin_Taqi.php
 - app
   - controllers
+    - HomeController.php
     - StudentController.php
   - helpers
     - dbConnect.php
   - models
     - Student.php
   - views
+    - home
+      - home.php
     - partials
+      - header.php
+      - logo.php
+      - menu.php
+      - sidebar.php
+      - slider1.php
     - student
       - list.php
 - assets
@@ -1003,7 +1011,6 @@
 - Programing_Contest_Club.php
 - projects.php
 - Project_Gallery.php
-- project_structure.text
 - public
   - .htaccess
   - index.php

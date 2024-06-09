@@ -29,7 +29,7 @@ if (empty($_SESSION['username'])) {
 	<html>
 	<head>
 		<?php
-		include ("header.php");
+		include (__DIR__."/../partials/header.php");
 		?>
 	</head>
 	<body>

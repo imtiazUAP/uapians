@@ -65,8 +65,8 @@
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
 	</div>
 	<ul>
-		<a href="Admin_Nokib.php">
-			<li><img src="images/1234554321.jpg" style="height:100" /> Nokib Mozumder</li>
+		<a href="/../admin/Admin_Nokib.php">
+			<li><img src="<?= BASE_URL ?>/app/assets/images/1234554321.jpg" style="height:100" /> Nokib Mozumder</li>
 		</a>
 		<p class="bottom">Nokib Mozumder, University of Asia Pacific
 			Phone:01670756503
@@ -82,12 +82,11 @@
 		?>
 		<br>
 		<a href="Admin_Jihan.php">
-			<li><img src="images/Picture 2963.jpg" style="height:100" />MD. Mazharul islam jihan</li>
+			<li><img src="<?= BASE_URL ?>/app/assets/images/Picture 2963.jpg" style="height:100" />MD. Mazharul islam jihan</li>
 		</a>
 		<p class="bottom">Jihan, University of Asia Pacific
 			Phone:+8801752512666
-			E_Mail:jihanislam007@gmail.com
-			Website:https://www.facebook.com/mazaharulislam.jihan </p>
+			E_Mail:jihanislam007@gmail.com</p>
 		<li><a href="send_message_to_admin.php">Send him a Message</a></li>
 		<?php
 		if (($userdata['admin'] == '1')) {

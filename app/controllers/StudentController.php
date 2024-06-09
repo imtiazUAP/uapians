@@ -10,8 +10,13 @@ class StudentController {
     }
 
     public function list() {
-        $students = Student::getAll();
-        include '../views/student/list.php';
+        // $students = Student::getAll();
+        include __DIR__ . '/../views/student/semester_students.php';
+    }
+
+    public function profile() {
+        // $students = Student::getAll();
+        include __DIR__ . '/../views/student/profile.php';
     }
 
     // Other CRUD methods

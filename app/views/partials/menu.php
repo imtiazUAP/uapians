@@ -58,27 +58,27 @@
          <?php
       }
       ?>
-      <li><a href='Home.php'><span>Home</span></a></li>
+      <li><a href="<?= BASE_URL ?>"><span>Home</span></a></li>
       <li class='active has-sub'><a href='#'><span>Students</span></a>
          <ul>
-            <li class='has-sub'><a href='semester_students.php?SMID=1'><span>1st year 1st Semester</span></a>
+            <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=1'><span>1st year 1st Semester</span></a>
             </li>
-            <li class='has-sub'><a href='semester_students.php?SMID=2'><span>1st year 2nd Semester</span></a>
+            <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=2'><span>1st year 2nd Semester</span></a>
             </li>
-            <li class='has-sub'><a href='semester_students.php?SMID=3'><span>2nd year 1st Semester</span></a>
+            <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=3'><span>2nd year 1st Semester</span></a>
             </li>
-            <li class='has-sub'><a href='semester_students.php?SMID=4'><span>2nd year 2nd Semester</span></a>
+            <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=4'><span>2nd year 2nd Semester</span></a>
             </li>
-            <li class='has-sub'><a href='semester_students.php?SMID=5'><span>3rd year 1st Semester</span></a>
+            <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=5'><span>3rd year 1st Semester</span></a>
             </li>
-            <li class='has-sub'><a href='semester_students.php?SMID=6'><span>3rd year 2nd Semester</span></a>
+            <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=6'><span>3rd year 2nd Semester</span></a>
             </li>
-            <li class='has-sub'><a href='semester_students.php?SMID=7'><span>4th year 1st Semester</span></a>
+            <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=7'><span>4th year 1st Semester</span></a>
             </li>
       </li>
-      <li class='has-sub'><a href='semester_students.php?SMID=8'><span>4th year 2nd Semester</span></a>
+      <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=8'><span>4th year 2nd Semester</span></a>
       </li>
-      <li class='has-sub'><a href='semester_students.php?SMID=9'><span>Ex Students of CSE</span></a>
+      <li class='has-sub'><a href='<?= BASE_URL ?>/student/list?SMID=9'><span>Ex Students of CSE</span></a>
       </li>
    </ul>
    </li>
