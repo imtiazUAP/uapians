@@ -21,7 +21,7 @@ body {
 }
 
 .realbody {
-  background-color: 483668;
+  background-color: #483668;
   background-image: url(../images/back10.png);
   width: 1100px;
   min-height: 2160px;
@@ -137,7 +137,6 @@ p {
 }
 
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-@charset 'UTF-8';
 
 /* Base Styles */
 #cssmenu ul,
@@ -302,8 +301,7 @@ div.desc {
 
 /* Define the default color for all the table rows */
 .hoverTable tr {
-  background:
-    text-decoration:none;
+    text-decoration: none;
 }
 
 /* Define the hover highlight color for the table row */
@@ -486,3 +484,58 @@ div.desc {
   background-color: #f44336;
   color: white;
 }
+
+/* Modal CSS START */
+
+.modal_body {
+  background-color: #2E313A;
+  padding: 50px;
+}
+
+.modal_button_bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space above the buttons */
+}
+
+.modal_button_bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modal_button_bar button[type="submit"] {
+  background-color: #28a745; /* Green color for submit button */
+}
+
+.modal_button_bar button[type="submit"]:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.modal_button_bar button[type="button"] {
+  background-color: #dc3545; /* Red color for close button */
+}
+
+.modal_button_bar button[type="button"]:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.modal_button_bar button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .modal_button_bar button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Modal CSS END */

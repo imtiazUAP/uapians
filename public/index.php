@@ -27,6 +27,8 @@ $routes = [
     '' => ['controller' => 'HomeController', 'action' => 'list'],
     'student/list' => ['controller' => 'StudentController', 'action' => 'list'],
     'student/profile' => ['controller' => 'StudentController', 'action' => 'profile'],
+    'student/edit' => ['controller' => 'StudentController', 'action' => 'edit'],
+    'student/update' => ['controller' => 'StudentController', 'action' => 'update'],
     'student/insert' => ['controller' => 'StudentController', 'action' => 'insert'],
     // Add other routes here
 ];
