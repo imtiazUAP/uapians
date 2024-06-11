@@ -120,7 +120,7 @@ if (empty($_SESSION['username'])) {
 						<?php include ("menu.php"); ?>
 						<div id="content_wrapper">
 							<div id="sidebar">
-								<div class="box">
+								<div class="sidebar_box">
 									<br>
 									<br>
 									<a href="index.php"
@@ -138,7 +138,7 @@ if (empty($_SESSION['username'])) {
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin
 											Controls</h3>
 									</div>
-									<ul class="bottom">
+									<ul class="sidebar_links">
 										<?php
 										if (($userdata['admin'] == '1')) {
 											?>
@@ -151,13 +151,13 @@ if (empty($_SESSION['username'])) {
 								</div>
 								<br>
 								<br>
-								<div class="box">
+								<div class="sidebar_box">
 									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs &
 											Social Works</h3>
 									</div>
-									<ul class="bottom">
+									<ul class="sidebar_links">
 										<?php
 										if (($userdata['admin'] == '1')) {
 											?>
@@ -178,7 +178,7 @@ if (empty($_SESSION['username'])) {
 								</div>
 								<br>
 								<br>
-								<div class="box">
+								<div class="sidebar_box">
 									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel
@@ -222,7 +222,7 @@ if (empty($_SESSION['username'])) {
 								</div>
 								<br>
 								<br>
-								<div class="box">
+								<div class="sidebar_box">
 									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us

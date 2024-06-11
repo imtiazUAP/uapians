@@ -55,7 +55,7 @@ if (empty($_SESSION['username'])) {
 						<?php include ("menu.php"); ?>
 						<div id="content_wrapper">
 							<div id="sidebar">
-								<div class="box">
+								<div class="sidebar_box">
 									<br>
 									<br>
 									<a href="index.php"
@@ -73,7 +73,7 @@ if (empty($_SESSION['username'])) {
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic
 											Aspects</h3>
 									</div>
-									<ul class="bottom">
+									<ul class="sidebar_links">
 										<li><a href="semester_students.php?SMID=1">1st Year 1st Semester</a></li>
 										<li><a href="semester_students.php?SMID=2">1st Year 2nd Semester</a></li>
 										<li><a href="semester_students.php?SMID=3">2nd Year 1st Semester</a></li>
@@ -87,13 +87,13 @@ if (empty($_SESSION['username'])) {
 								</div>
 								<br>
 								<br>
-								<div class="box">
+								<div class="sidebar_box">
 									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs &
 											Social Works</h3>
 									</div>.
-									<ul class="bottom">
+									<ul class="sidebar_links">
 										<li><a href="galary.php">Gallery</a></li>
 										<li><a href="Blood_List_All.php">Blood Bank</a></li>
 										<li><a href="Programing_Contest_Club.php">Programming Contest Club</a></li>
@@ -106,7 +106,7 @@ if (empty($_SESSION['username'])) {
 								</div>
 								<br>
 								<br>
-								<div class="box">
+								<div class="sidebar_box">
 									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel
@@ -149,7 +149,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<br>
-								<div class="box">
+								<div class="sidebar_box">
 									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us

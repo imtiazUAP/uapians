@@ -83,7 +83,7 @@ xmlhttp.send();
 <?php include("menu.php"); ?>
 	<div id="content_wrapper">
 	<div id="sidebar">
-		<div class="box">
+		<div class="sidebar_box">
 		<br>
 		<br>
 		<div style="text-decoration:none;font-size:24px; color:#FFFFFF; font-weight:bold"><span>You are Logged in as  <?php print $_SESSION['username']?></span></div>
@@ -103,7 +103,7 @@ xmlhttp.send();
 		<div id="section_head">
 			<h3  align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif; padding:5px 5px; ">Academic Aspects</h3>
 		</div>
-			<ul class="bottom">
+			<ul class="sidebar_links">
 				<li><a href="Employee_List.php">Teachers</a></li>
 				<li><a href="Student_List.php">Students</a></li>
 				<li><a href="Course_List.php">Courses</a></li>
@@ -113,11 +113,11 @@ xmlhttp.send();
 		</div>
 		<br>
 		<br>
-	<div class="box">
+	<div class="sidebar_box">
 		<div id="section_head">
 			<h3  align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
 		</div>.
-			<ul class="bottom">
+			<ul class="sidebar_links">
 				<li><a href="galary.php">Gallery</a></li>
 				<li><a href="Blood_List_All.php">Blood Bank</a></li>
 				<li><a href="Programing_Contest_Club.php">Programming Contest Club</a></li>
@@ -130,7 +130,7 @@ xmlhttp.send();
 	</div>
 		<br>
 		<br>
-	<div class="box">
+	<div class="sidebar_box">
 		<div id="section_head">
 			<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
 		</div>
@@ -166,7 +166,7 @@ xmlhttp.send();
 	</div>
 		<br>
 		<br>
-	<div class="box">
+	<div class="sidebar_box">
 		<div id="section_head">
 			<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us</h3>
 		</div>

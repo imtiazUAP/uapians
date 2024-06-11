@@ -1,4 +1,4 @@
-<div class="box">
+<div class="sidebar_box">
 	<br>
 	<br>
 	<div style="text-decoration:none;font-size:18px; color:#FFFFFF; font-weight:bold">You are Logged in as <span
@@ -32,7 +32,7 @@
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif;">Academic Aspects</h3>
 	</div>
-	<ul class="bottom">
+	<ul class="sidebar_links">
 		<li><a href="Employee_List.php">Teachers</a></li>
 		<li><a href="Student_List.php">Students</a></li>
 		<li><a href="Course_List.php">Courses</a></li>
@@ -42,11 +42,11 @@
 </div>
 <br>
 <br>
-<div class="box">
+<div class="sidebar_box">
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
 	</div>.
-	<ul class="bottom">
+	<ul class="sidebar_links">
 		<li><a href="galary.php">Gallery</a></li>
 		<li><a href="Blood_List_All.php">Blood Bank</a></li>
 		<li><a href="Districtwise_StudentList.php">Who is from my District</a></li>
@@ -60,7 +60,7 @@
 </div>
 <br>
 <br>
-<div class="box">
+<div class="sidebar_box">
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
 	</div>
@@ -100,7 +100,7 @@
 </div>
 <br>
 <br>
-<div class="box">
+<div class="sidebar_box">
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us</h3>
 	</div>

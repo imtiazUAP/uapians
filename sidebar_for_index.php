@@ -64,7 +64,7 @@
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic Aspects</h3>
 	</div>
-	<ul class="bottom">
+	<ul class="sidebar_links">
 		<li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
 				class="thickbox">Teachers</a></li>
 		<li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
@@ -79,11 +79,11 @@
 </div>
 <br>
 <br>
-<div class="box">
+<div class="sidebar_box">
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
 	</div>.
-	<ul class="bottom">
+	<ul class="sidebar_links">
 		<li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
 				class="thickbox">Gallery</a></li>
 		<li><a href="Login_Request.php?keepThis=true&TB_iframe=true&height=220&width=600&modal=true" title="New Course"
@@ -106,7 +106,7 @@
 </div>
 <br>
 <br>
-<div class="box">
+<div class="sidebar_box">
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
 	</div>
@@ -132,7 +132,7 @@
 </div>
 <br>
 <br>
-<div class="box">
+<div class="sidebar_box">
 	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us</h3>
 	</div>

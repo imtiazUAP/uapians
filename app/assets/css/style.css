@@ -143,6 +143,11 @@ p {
   padding-right: 10px;
 }
 
+.sidebar_box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 #sidebar ul {
   list-style: none;
 }
@@ -150,6 +155,47 @@ p {
 #sidebar li {
   padding: 5px 0;
   border-bottom: 1px solid #EFEFEF
+}
+
+.sidebar_links li a {
+  text-decoration: none;
+}
+
+.sidebar_login_info {
+  text-decoration:none;
+  font-size:16px;
+  color:#FFFFFF;
+  font-weight:bold;
+  padding: 10px;
+}
+
+.sidebar_login_info span {
+  font-style: italic;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.sidebar_section_head {
+  color:#FFFFFF;
+  font:Georgia, 'Times New Roman', Times, serif;
+  background-color: #55AA45;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.sidebar_admin_photo a li img {
+  height: 100px;
+}
+
+.sidebar_send_message ul li a {
+  font-weight:bold;
+  font-size:16px;
+  text-decoration: none;
+  padding: 10px;
 }
 
 div.img {
