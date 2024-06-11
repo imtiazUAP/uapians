@@ -22,19 +22,19 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
 				<div id="logo">
-					<div class="content_wrapper" style="height:2000px">
+					<div class="body" style="height:2000px">
 						<?php include ("menu.php"); ?>
-						<div id="content">
-							<div id="colOne">
+						<div id="content_wrapper">
+							<div id="sidebar">
 								<?php
 								include ("sidebar.php");
 								?>
 							</div>
-							<div id="margin_figure">
+							<div id="content">
 								<div>
 									<div>
 										<div id="section_head">

@@ -46,15 +46,15 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">UAPians.Net </a></h1>
 					<p>A Stack of Uap Students ...UNOFFICIAL...</p>
-					<div class="content_wrapper">
+					<div class="body">
 						<?php include ("menu.php"); ?>
-						<div id="content">
-							<div id="colOne">
+						<div id="content_wrapper">
+							<div id="sidebar">
 								<div class="box">
 									<br>
 									<br>

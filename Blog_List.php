@@ -74,15 +74,15 @@ xmlhttp.send();
 }(document, 'script', 'facebook-jssdk'));</script>
 </head>
 <body>
-<div id="background_canvas">
+<div id="canvas">
 <div class="body_wrapper">
 <div id="logo" align="left">
 	<h1><a href="Home.php">UAPians.Net  </a></h1>
 	<p>A Stack of Uap Students    ...UNOFFICIAL...</p>
-<div class="content_wrapper" style="min-height:2100px">
+<div class="body" style="min-height:2100px">
 <?php include("menu.php"); ?>
-	<div id="content">
-	<div id="colOne">
+	<div id="content_wrapper">
+	<div id="sidebar">
 		<div class="box">
 		<br>
 		<br>
@@ -184,7 +184,7 @@ xmlhttp.send();
 		<br>
 <div class="fb-like-box" data-href="https://www.facebook.com/pages/UAPIANSNet/1452237808341753?ref=hl" data-width="238" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
 	</div>
-<div id="margin_figure">
+<div id="content">
 					<div  id="new_blog_button"><a href="Blog_Insert.php"> আপনি একটি ব্লগ লিখুন</a></div>
 <br>
 <br>

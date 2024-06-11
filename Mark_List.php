@@ -22,13 +22,13 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">Student Management Tool </a></h1>
 					<p>A Software for Managing CSE Department</p>
 				</div>
-				<div class="content_wrapper" style="min-height:600px">
+				<div class="body" style="min-height:600px">
 					<?php
 					//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");

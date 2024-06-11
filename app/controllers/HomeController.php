@@ -5,11 +5,6 @@ require_once BASE_DIR . '/app/models/Home.php';
 require_once __DIR__ . '/../config/config.php';
 
 class HomeController {
-    // public function insert() {
-    //     // Handle the insertion logic
-    //     include '../views/student/insert.php';
-    // }
-
     public function list() {
         // TODO
         $isAdmin = true;
@@ -30,8 +25,8 @@ class HomeController {
                 $about = $homePageContent['content'];
             }
         }
-        include __DIR__ . '/../views/home/home.php';
+        $content = BASE_DIR . '/app/views/home/home.php';
+        include BASE_DIR . '/app/views/layouts/layout.php';
     }
 
-    // Other CRUD methods
 }

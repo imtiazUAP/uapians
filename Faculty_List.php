@@ -23,10 +23,10 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
-				<div class="content_wrapper" style="min-height:2300px">
+				<div class="body" style="min-height:2300px">
 					<?php include ("menu.php"); ?>
 					<form>
 						<?php

@@ -80,13 +80,13 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">UAPians.Net </a></h1>
 					<p>A Stack of Uap Students ...UNOFFICIAL...</p>
 				</div>
-				<div class="content_wrapperforprofile">
+				<div class="bodyforprofile">
 					<?php
 					include "menu.php"
 						?>
@@ -156,7 +156,7 @@ s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID INNER JOIN districts ON s_
 							<li><a href="send_message_to_your_friend.php">Send a Message...</a></li>
 						</ul>
 					</div>
-					<div id="margin_figure_profile">
+					<div id="content">
 						<br>
 						<div class="profilepicturebox">
 							<img src="<?php echo $Portrait; ?>" alt="Profile Picture" width="200">

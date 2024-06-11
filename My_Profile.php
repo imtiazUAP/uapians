@@ -72,9 +72,9 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
-				<div class="content_wrapperforprofile">
+				<div class="bodyforprofile">
 					<?php
 					include "menu.php"
 						?>
@@ -149,7 +149,7 @@ s_info.SID=userinfo.SID
 									Message...</a></li>
 						</ul>
 					</div>
-					<div id="margin_figure_profile">
+					<div id="content">
 						<br>
 						<div class="profilepicturebox">
 							<img src="<?php echo $Portrait; ?>" alt="Profile Picture" style="float:right;" width="200">

@@ -105,5 +105,5 @@
    <li class='last'><a href='About.php'><span>About</span></a></li>
    </ul>
 </div>
-<div id='cssmenu' align="center" style="vertical-align:middle">
+<div id='header_banner'>
 </div>

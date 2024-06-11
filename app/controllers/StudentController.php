@@ -15,12 +15,16 @@ class StudentController {
         $isAdmin = true;
         $semesterId = $queryParams['SMID'];
         $studentsList = Student::getPaginatedStudentsBySemesterId($semesterId);
-        include __DIR__ . '/../views/student/list.php';
+
+        $content = __DIR__ . '/../views/student/list.php';
+        include __DIR__ . '/../views/layouts/layout.php';
     }
 
     public function profile($queryParams) {
         $studentInfo = Student::getStudentByStudentId($queryParams['SID']);
-        include __DIR__ . '/../views/student/profile.php';
+
+        $content = __DIR__ . '/../views/student/profile.php';
+        include __DIR__ . '/../views/layouts/layout.php';
     }
 
     public function edit($queryParams) {
@@ -67,6 +71,4 @@ class StudentController {
             exit();
         }
     }
-
-    // Other CRUD methods
 }

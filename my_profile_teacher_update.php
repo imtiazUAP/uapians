@@ -24,18 +24,18 @@ if (empty($_SESSION['username'])) {
     </head>
 
     <body>
-        <div id="background_canvas">
+        <div id="canvas">
             <div class="body_wrapper">
                 <?php include ("logo.php"); ?>
-                <div class="content_wrapper" style="min-height:2300px">
+                <div class="body" style="min-height:2300px">
                     <?php include ("menu.php"); ?>
-                    <div id="content">
-                        <div id="colOne">
+                    <div id="content_wrapper">
+                        <div id="sidebar">
                             <?php
                             include ("sidebar.php");
                             ?>
                         </div>
-                        <div id="margin_figure">
+                        <div id="content">
                             <?php
                             $strquery = "UPDATE e_info SET EName= '" . $_GET['ename'] . "', EDesignation= '" . $_GET['edesignation'] . "',Employee_Contact= '" . $_GET['employee_Contact'] . "',Employee_Speech= '" . $_GET['employee_Speech'] . "',Employee_Qualification= '" . $_GET['employee_Qualification'] . "',Employee_Experience= '" . $_GET['employee_Experience'] . "',Employee_Role= '" . $_GET['employee_Role'] . "',employee_email= '" . $_GET['employee_Email'] . "' where SID='{$SID}' ";
                             $results = mysql_query($strquery);

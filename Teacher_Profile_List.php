@@ -24,10 +24,10 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
-				<div class="content_wrapper" style="min-height:2300px">
+				<div class="body" style="min-height:2300px">
 					<?php include ("menu.php"); ?>
 					<?php
 					$strquery = "SELECT * from e_info WHERE EID='" . $_GET["EID"] . "'";
@@ -42,7 +42,7 @@ if (empty($_SESSION['username'])) {
 					$Employee_Role = mysql_result($results, $i, "Employee_Role");
 					$Employee_Portrait = mysql_result($results, $i, "Employee_Portrait");
 					?>
-					<div id="margin_figure_profile">
+					<div id="content">
 						<div align="center" style="padding-top:30px">
 							<img style="width:150px;padding:10px;border:5px solid white;margin:0px; font-size:18px"
 								src="<?php echo $Employee_Portrait; ?>" />

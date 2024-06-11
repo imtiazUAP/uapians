@@ -17,13 +17,13 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">UAPians.Net </a></h1>
 					<p>A Stack of Uap Students ...UNOFFICIAL...</p>
 				</div>
-				<div class="content_wrapper">
+				<div class="body">
 					<?php
 					//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");

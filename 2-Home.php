@@ -33,22 +33,22 @@ if (empty($_SESSION['username'])) {
 		?>
 	</head>
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
-				<div class="content_wrapper" style="min-height:2300px">
+				<div class="body" style="min-height:2300px">
 					<?php include ("menu.php"); ?>
 					<div id="wowslider-container1" style="height:200px">
 						<?php include ("slider1.php");
 						?>
 					</div>
-					<div id="content">
-						<div id="colOne">
+					<div id="content_wrapper">
+						<div id="sidebar">
 							<?php
 							include ("sidebar.php");
 							?>
 						</div>
-						<div id="margin_figure">
+						<div id="content">
 							<div>
 								<div id="section_head">
 									<h1 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">

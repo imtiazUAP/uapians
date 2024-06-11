@@ -6,7 +6,7 @@
 </head>
 
 <body>
-	<div id="background_canvas">
+	<div id="canvas">
 		<div class="body_wrapper">
 			<div id="logo">
 				<h1><a href="Main.php">Student Management Tool </a></h1>

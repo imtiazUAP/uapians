@@ -19,12 +19,12 @@ $SID = $userdata['SID'];
 </head>
 
 <body>
-    <div id="background_canvas">
+    <div id="canvas">
         <div class="body_wrapper">
             <?php include ("logo.php"); ?>
-            <div class="content_wrapper" style="min-height:2300px">
+            <div class="body" style="min-height:2300px">
                 <?php include ("menu.php"); ?>
-                <div id="margin_figure">
+                <div id="content">
                     <div align="center">
                         <form action="Upload_Project_Save.php" method="post" enctype="multipart/form-data">
                             <div>

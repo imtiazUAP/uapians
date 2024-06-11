@@ -68,9 +68,9 @@ if (empty($_SESSION['username'])) {
   </head>
 
   <body>
-    <div id="background_canvas">
+    <div id="canvas">
       <div class="body_wrapper">
-        <div class="content_wrapper" style="min-height:1200px">
+        <div class="body" style="min-height:1200px">
           <?php include ("menu.php"); ?>
           <div>
             <img src="images/Donate_Blood.jpg" alt="" width="350" height="200" class="image" align="left" />

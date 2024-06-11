@@ -60,13 +60,13 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">Student Management Tool </a></h1>
 					<p>A Software for Managing CSE Department</p>
 				</div>
-				<div class="content_wrapper">
+				<div class="body">
 					<?php include ("menu.php");
 					$strquery = "SELECT *,SMName,Blood_Group_Name FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID 
 INNER JOIN
@@ -95,7 +95,7 @@ s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID WHERE SID='450'";
 					$Blog = mysql_result($results, $i, "Blog");
 					$Noted_Activity = mysql_result($results, $i, "Noted_Activity");
 					?>
-					<div id="margin_figure_profile">
+					<div id="content">
 						<div class="profilepicturebox"> <img src="<?php echo $Portrait; ?>" alt="Profile Picture"
 								width="200"></div>
 						<p style="font:Arial, Helvetica, sans-serif; font-size:54px; color:#FFFFFF"><?php echo $Name; ?>

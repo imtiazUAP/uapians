@@ -1,15 +1,15 @@
-#colOne {
+#sidebar {
 	float: left;
 	width: 238px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
 
-#colOne ul {
+#sidebar ul {
 	list-style: none;
 }
 
-#colOne li {
+#sidebar li {
 	padding: 5px 0;
 	border-bottom: 1px solid #EFEFEF
 }

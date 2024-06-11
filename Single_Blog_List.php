@@ -54,12 +54,12 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">UAPians.Net </a></h1>
 					<p>A Stack of Uap Students ...UNOFFICIAL...</p>
-					<div class="content_wrapper" style="min-height:2100px">
+					<div class="body" style="min-height:2100px">
 						<?php
 						//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
@@ -83,8 +83,8 @@ if (empty($_SESSION['username'])) {
 								<li><a href='About.php'><span>About</span></a></li>
 							</ul>
 						</div>
-						<div id="content">
-							<div id="colOne">
+						<div id="content_wrapper">
+							<div id="sidebar">
 								<div class="box">
 									<br>
 									<br>
@@ -227,7 +227,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 							</div>
-							<div id="margin_figure">
+							<div id="content">
 								<div id="new_blog_button"><a href="Blog_Insert.php"> আপনি একটি ব্লগ লিখুন</a></div>
 								<br>
 								<br>

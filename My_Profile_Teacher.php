@@ -20,11 +20,11 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="background_canvas">
+		<div id="canvas">
 			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
 				<div id="logo">
-					<div class="content_wrapper" style="height:2000px">
+					<div class="body" style="height:2000px">
 						<?php include ("menu.php"); ?>
 						<?php
 						$strquery = "SELECT * from e_info INNER JOIN
@@ -55,7 +55,7 @@ e_info.SID=userinfo.SID
 							<?php
 						}
 						?>
-						<div id="margin_figure_profile">
+						<div id="content">
 							<div align="center" style="padding-top:30px">
 								<img style="width:150px;padding:10px;border:5px solid white;margin:0px; font-size:18px"
 									src="<?php echo $Employee_Portrait; ?>" />

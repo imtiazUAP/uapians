@@ -13,22 +13,22 @@ include ("dbconnect.php");
 </head>
 
 <body>
-	<div id="background_canvas">
+	<div id="canvas">
 		<div class="body_wrapper" align="center">
 			<?php include ("logo_for_index.php"); ?>
-			<div class="content_wrapper">
+			<div class="body">
 				<?php include ("menu_for_index.php"); ?>
 				<div id="wowslider-container1" style="height:200px">
 					<?php include ("slider1.php");
 					?>
 				</div>
-				<div id="content">
-					<div id="colOne" align="left">
+				<div id="content_wrapper">
+					<div id="sidebar" align="left">
 						<?php
 						include ("sidebar_for_index.php");
 						?>
 					</div>
-					<div id="margin_figure" align="left">
+					<div id="content" align="left">
 						<div>
 							<div id="section_head">
 								<h1 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
