@@ -155,7 +155,7 @@ class Page {
         $html = "";
         if (!$this->is_first_page() && $this->show_first_last) {
             if (empty($this->jsHandler))
-                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&action=blog&page=' . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
+                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&page=' . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
             else
                 $html = ' <a href="javascript:void(0);" onclick="' . $this->jsHandler . '(\'' . $this->page_name . '\',\'page=0' . $this->qry_str . '\')" ' . $link_para . '>' . $user_link . '</a> ';
         }
@@ -181,7 +181,7 @@ class Page {
 
         if (!$this->is_last_page() && $this->show_first_last) {
             if (empty($this->jsHandler))
-                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&action=blog&page=' . ($this->total_page - 1) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
+                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&page=' . ($this->total_page - 1) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
             else
                 $html = ' <a href="javascript:void(0);" onclick="' . $this->jsHandler . '(\'' . $this->page_name . '\',\'page=' . ($this->total_page - 1) . $this->qry_str . '\')" ' . $link_para . '>' . $user_link . '</a> ';
         }
@@ -206,7 +206,7 @@ class Page {
         $html = "";
         if (!$this->is_last_page() && $this->show_prev_next) {
             if (empty($this->jsHandler))
-                $html = ' <a href="' . $this->page_name .'?SMID='.$this->sm_id. '&action=blog&page=' . ($this->page + 1) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
+                $html = ' <a href="' . $this->page_name .'?SMID='.$this->sm_id. '&page=' . ($this->page + 1) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
             else
                 $html = ' <a href="javascript:void(0);" onclick="' . $this->jsHandler . '(\'' . $this->page_name . '\',\'page=' . ($this->page + 1) . $this->qry_str . '\')" ' . $link_para . '>' . $user_link . '</a> ';
         }
@@ -231,7 +231,7 @@ class Page {
         $html = "";
         if (!$this->is_first_page() && $this->show_prev_next) {
             if (empty($this->jsHandler))
-                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&action=blog&page=' . ($this->page - 1) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
+                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&page=' . ($this->page - 1) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
             else
                 $html = ' <a href="javascript:void(0);" onclick="' . $this->jsHandler . '(\'' . $this->page_name . '\',\'page=' . ($this->page - 1) . $this->qry_str . '\')" ' . $link_para . '>' . $user_link . '</a> ';
         }
@@ -254,7 +254,7 @@ class Page {
         $html = "";
         if ($this->page > $this->scroll_page && $this->show_scroll_prev_next) {
             if (empty($this->jsHandler))
-                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&action=blog&page=' . ($this->page - $this->scroll_page) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
+                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&page=' . ($this->page - $this->scroll_page) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
             else
                 $html = ' <a href="javascript:void(0);" onclick="' . $this->jsHandler . '(\'' . $this->page_name . '\',\'page=' . ($this->page - $this->scroll_page) . $this->qry_str . '\')" ' . $link_para . '>' . $user_link . '</a> ';
         }
@@ -279,7 +279,7 @@ class Page {
         $html = "";
         if ($this->total_page > $this->page + $this->scroll_page && $this->show_scroll_prev_next) {
             if (empty($this->jsHandler))
-                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&action=blog&page=' . ($this->page + $this->scroll_page) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
+                $html = ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&page=' . ($this->page + $this->scroll_page) . $this->qry_str . '" ' . $link_para . '>' . $user_link . '</a> ';
             else
                 $html = ' <a href="javascript:void(0);" onclick="' . $this->jsHandler . '(\'' . $this->page_name . '\',\'page=' . ($this->page + $this->scroll_page) . $this->qry_str . '\')" ' . $link_para . '>' . $user_link . '</a> ';
         }
@@ -314,7 +314,7 @@ class Page {
                 $html .= ( $i + 1);
             else {
                 if (empty($this->jsHandler))
-                    $html .= ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&action=blog&page=' . $i . $this->qry_str . '" ' . $link_para . '>' . ($i + 1) . '</a> ';
+                    $html .= ' <a href="' . $this->page_name . '?SMID='.$this->sm_id. '&page=' . $i . $this->qry_str . '" ' . $link_para . '>' . ($i + 1) . '</a> ';
                 else
                     $html .= ' <a href="javascript:void(0);" onclick="' . $this->jsHandler . '(\'' . $this->page_name . '\',\'page=' . $i . $this->qry_str . '\')" ' . $link_para . '>' . ($i + 1) . '</a> ';
             }

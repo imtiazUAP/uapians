@@ -5,13 +5,16 @@ require_once BASE_DIR . '/app/models/Student.php';
 require_once __DIR__ . '/../config/config.php';
 
 class StudentController {
-    public function insert() {
+    public function add() {
         // Handle the insertion logic
-        include '../views/student/insert.php';
+        include '../views/student/add.php';
     }
 
-    public function list() {
-        // $students = Student::getAll();
+    public function list($queryParams) {
+        // TODO
+        $isAdmin = true;
+        $semesterId = $queryParams['SMID'];
+        $studentsData = Student::getPaginatedStudentsBySemesterId($semesterId);
         include __DIR__ . '/../views/student/list.php';
     }
 
@@ -22,9 +25,9 @@ class StudentController {
 
     public function edit($queryParams) {
         $studentInfo = Student::getStudentByStudentId($queryParams['SID']);
-        $districts = Student::getAllDistricts($queryParams['SID']);
-        $semesters = Student::getAllSemesters($queryParams['SID']);
-        $bloodGroups = Student::getAllBloodGroups($queryParams['SID']);
+        $districts = Student::getAllDistricts();
+        $semesters = Student::getAllSemesters();
+        $bloodGroups = Student::getAllBloodGroups();
         include __DIR__ . '/../views/student/edit.php';
     }
 

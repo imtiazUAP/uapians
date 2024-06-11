@@ -1,4 +1,5 @@
 <?php
+include_once (__DIR__ . "/../helpers/page.inc.php");
 
 class Student {
     public static function getAll() {
@@ -28,6 +29,69 @@ class Student {
         }
 
         return $studentData;
+    }
+
+    public static function getStudentsCountBySemesterId($semesterId) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $qry = "SELECT COUNT(SID) as total_students FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID=? order by SReg";
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            $stmt->bind_param("s", $semesterId);
+            $stmt->execute();
+            $student = $stmt->get_result();
+            $stmt->close();
+            $studentData = $student->fetch_assoc();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+        return $studentData['total_students'];
+    }
+
+    // TODO: No uyse of this function yet
+    // public static function getStudentsBySemesterId($semesterId) {
+    //     $dbconnect = new dbClass();
+    //     $connection = $dbconnect->getConnection();
+    //     $qry = "SELECT SID,SName,SReg,SPortrait,SMName FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID=? order by SReg";
+    //     $stmt = $connection->prepare($qry);
+    //     if ($stmt) {
+    //         $stmt->bind_param("s", $semesterId);
+    //         $stmt->execute();
+    //         $students = $stmt->get_result();
+    //         $stmt->close();
+    //     } else {
+    //         die("Query failed: " . $connection->error);
+    //     }
+
+    //     return $students;
+    // }
+
+    
+    public static function getPaginatedStudentsBySemesterId($semesterId) {
+        $totalStudents = self::getStudentsCountBySemesterId($semesterId);
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $qry = "SELECT SID,SName,SReg,SPortrait,SMName FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID='" . $semesterId . "' order by SReg";
+        $recordPerPage = 10;
+        $pagination = new Page();
+        $pagination->set_page_data(BASE_URL.'/student/list', $semesterId, $totalStudents, $recordPerPage, 0, true, true, true);
+        $paginationQuery = $pagination->get_limit_query($qry);
+        $paginationStmt = $connection->prepare($paginationQuery);
+        if ($paginationStmt) {
+            $paginationStmt->execute();
+            $paginationResult = $paginationStmt->get_result();
+            $paginationStmt->close();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+        $paginationData = [
+            'pagination_nav' => $pagination->get_page_nav('', true),
+            'students' => $paginationResult
+        ];
+
+        return $paginationData;
     }
 
     public static function getAllDistricts()
