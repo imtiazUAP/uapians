@@ -11,11 +11,11 @@ if (empty($_SESSION['username'])) { ?>
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<?php include (__DIR__ . "/../partials/logo.php"); ?>
 				<div id="logo">
-					<div class="realbody" style="height:2000px">
+					<div class="content_wrapper" style="height:2000px">
 						<?php include (__DIR__ . "/../partials/menu.php"); ?>
 						<div id="content">
 							<div id="colOne">
@@ -42,7 +42,7 @@ if (empty($_SESSION['username'])) { ?>
 												<?php } ?>
 											</tr>
 											<?php
-											$students = $studentsData['students'];
+											$students = $studentsList['students'];
 											foreach ($students as $student) { ?>
 												<tr align="center" class="tablerow">
 													<td width="120"><?= $student['SReg'] ?></td>
@@ -76,7 +76,7 @@ if (empty($_SESSION['username'])) { ?>
 											} ?>
 										</table>
 										<div style="text-align: center">
-											<?= $studentsData['pagination_nav']; ?>
+											<?= $studentsList['pagination_nav']; ?>
 										</div>
 									</form>
 								</div>

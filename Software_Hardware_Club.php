@@ -46,8 +46,8 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">UAPians.Net </a></h1>
 					<p>A Stack of Uap Students ...UNOFFICIAL...</p>
@@ -93,7 +93,7 @@ if (empty($_SESSION['username'])) {
 							</SCRIPT>
 							times.
 					</div>
-					<div class="realbody">
+					<div class="content_wrapper">
 						<?php
 						//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
@@ -132,7 +132,7 @@ if (empty($_SESSION['username'])) {
 										</form>
 									</div>
 									<br>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic
 											Aspects</h3>
@@ -146,7 +146,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs &
 											Social Works</h3>
@@ -163,7 +163,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel
 										</h3>
@@ -207,7 +207,7 @@ if (empty($_SESSION['username'])) {
 							</div>
 							<div id="margin_figure">
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Software
 											and Hardware Club</h1>
@@ -238,7 +238,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ; text-decoration:blink">
 											UAP Software & Hardware Club initiated several programs to achieve its goal.
@@ -256,7 +256,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left" style="color:#FFFFFF">Activities</h1>
 									</div>
 									<p align="left" style="font-size:16; font-weight:bold"> Software & Hardware Fair on CSE
@@ -279,7 +279,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left" style="color:#FFFFFF">Forthcoming Activities:</h1>
 									</div>
 									<p align="left" style="font-size:16; font-weight:bold">

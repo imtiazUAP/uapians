@@ -31,7 +31,7 @@ if (empty($_SESSION['username'])) {
 		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="assets/css/style_new.css">
+		<link rel="stylesheet" href="assets/css/main_menu_style.css">
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 		<script src="script.js"></script>
 		<script>
@@ -68,13 +68,13 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">Uapians.Net </a></h1>
 					<p>A Stack of Uap Students ...UNOFFICIAL...</p>
 				</div>
-				<div class="realbody">
+				<div class="content_wrapper">
 					<?php include ("menu.php"); ?>
 					<form>
 						<?php
@@ -85,7 +85,7 @@ if (empty($_SESSION['username'])) {
 							<?php
 						}
 						?>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif;">1st year
 								1st semester</h1>
 						</div>
@@ -127,7 +127,7 @@ if (empty($_SESSION['username'])) {
 							}
 							?>
 						</table>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">1st year
 								2nd semester</h1>
 						</div>
@@ -163,7 +163,7 @@ if (empty($_SESSION['username'])) {
 							}
 							?>
 						</table>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">2nd year
 								1st semester</h1>
 						</div>
@@ -199,7 +199,7 @@ if (empty($_SESSION['username'])) {
 							}
 							?>
 						</table>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">2nd year
 								2nd semester</h1>
 						</div>
@@ -235,7 +235,7 @@ if (empty($_SESSION['username'])) {
 							}
 							?>
 						</table>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">3rd year
 								1st semester</h1>
 						</div>
@@ -271,7 +271,7 @@ if (empty($_SESSION['username'])) {
 							}
 							?>
 						</table>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">3rd year
 								2nd semester</h1>
 						</div>
@@ -307,7 +307,7 @@ if (empty($_SESSION['username'])) {
 							}
 							?>
 						</table>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">4th year
 								1st semester</h1>
 						</div>
@@ -343,7 +343,7 @@ if (empty($_SESSION['username'])) {
 							}
 							?>
 						</table>
-						<div id="paragraph_head" style="padding-left:40px;padding-right:40px;">
+						<div id="section_head" style="padding-left:40px;padding-right:40px;">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">4th year
 								2nd semester</h1>
 						</div>

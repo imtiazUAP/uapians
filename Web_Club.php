@@ -46,8 +46,8 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">Student Management Tool </a></h1>
 					<p>A Software for Managing CSE Department ...UNOFFICIAL...</p>
@@ -93,7 +93,7 @@ if (empty($_SESSION['username'])) {
 							</SCRIPT>
 							times.
 					</div>
-					<div class="realbody">
+					<div class="content_wrapper">
 						<?php
 						//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
@@ -132,7 +132,7 @@ if (empty($_SESSION['username'])) {
 										</form>
 									</div>
 									<br>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic
 											Aspects</h3>
@@ -146,7 +146,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs &
 											Social Works</h3>
@@ -163,7 +163,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel
 										</h3>
@@ -205,7 +205,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us
 										</h3>
@@ -223,7 +223,7 @@ if (empty($_SESSION['username'])) {
 							</div>
 							<div id="margin_figure">
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Welcome!
 										</h1>
@@ -249,7 +249,7 @@ if (empty($_SESSION['username'])) {
 									</p>
 								</div>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ; text-decoration:blink">
 											News Feed............</h1>
@@ -316,7 +316,7 @@ if (empty($_SESSION['username'])) {
 												Excellence in Executive Communication</span></a><br> <br>
 									</marquee>
 								</div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
 										Notice!</h1>
 								</div>
@@ -329,7 +329,7 @@ if (empty($_SESSION['username'])) {
 									</p>
 								</div>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left" style="color:#FFFFFF">Mission...</h1>
 									</div>
 									<p align="left" style="font-size:16; font-weight:bold"> Student Management Tool is just
@@ -363,7 +363,7 @@ if (empty($_SESSION['username'])) {
 									</p>
 								</div>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left" style="color:#FFFFFF">About!</h1>
 									</div>
 									<p align="left" style="font-size:16; font-weight:bold">

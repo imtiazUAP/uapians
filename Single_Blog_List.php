@@ -54,12 +54,12 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">UAPians.Net </a></h1>
 					<p>A Stack of Uap Students ...UNOFFICIAL...</p>
-					<div class="realbody" style="min-height:2100px">
+					<div class="content_wrapper" style="min-height:2100px">
 						<?php
 						//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
@@ -110,7 +110,7 @@ if (empty($_SESSION['username'])) {
 										</ul>
 									</div>
 									<br>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif; padding:5px 5px; ">
 											Academic Aspects</h3>
@@ -126,7 +126,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs &
 											Social Works</h3>
@@ -145,7 +145,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel
 										</h3>
@@ -189,7 +189,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us
 										</h3>
@@ -207,7 +207,7 @@ if (empty($_SESSION['username'])) {
 								</div>
 								<br>
 								<br>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
 										Find Us on</h3>
 								</div>

@@ -14,7 +14,7 @@ class StudentController {
         // TODO
         $isAdmin = true;
         $semesterId = $queryParams['SMID'];
-        $studentsData = Student::getPaginatedStudentsBySemesterId($semesterId);
+        $studentsList = Student::getPaginatedStudentsBySemesterId($semesterId);
         include __DIR__ . '/../views/student/list.php';
     }
 
@@ -62,7 +62,7 @@ class StudentController {
             if ($success) {
                 header('Location: '.BASE_URL.'/student/edit?SID=' . $data['SID'] . '&message=Profile+Updated+Successfully');
             } else {
-                header('Location: '.BASE_URL.'/student/edit?SID=' . $data['SID'] . '&message=Update+Failed');
+                header('Location: '.BASE_URL.'/student/edit?SID=' . $data['SID'] . '&message=Profile+Update+Failed');
             }
             exit();
         }

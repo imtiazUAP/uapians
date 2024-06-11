@@ -22,9 +22,9 @@ if (empty($_SESSION['username'])) {
     </head>
 
     <body>
-        <div id="grad1">
-            <div class="bodydiv">
-                <div class="realbody" style="min-height:2300px">
+        <div id="background_canvas">
+            <div class="body_wrapper">
+                <div class="content_wrapper" style="min-height:2300px">
                     <?php include ("menu.php"); ?>
                     <form>
                         <?php

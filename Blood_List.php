@@ -31,7 +31,7 @@ if (empty($_SESSION['username'])) {
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/style_new.css">
+    <link rel="stylesheet" href="assets/css/main_menu_style.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="script.js"></script>
     <script>
@@ -68,9 +68,9 @@ if (empty($_SESSION['username'])) {
   </head>
 
   <body>
-    <div id="grad1">
-      <div class="bodydiv">
-        <div class="realbody" style="min-height:1200px">
+    <div id="background_canvas">
+      <div class="body_wrapper">
+        <div class="content_wrapper" style="min-height:1200px">
           <?php include ("menu.php"); ?>
           <div>
             <img src="images/Donate_Blood.jpg" alt="" width="350" height="200" class="image" align="left" />

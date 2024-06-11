@@ -24,10 +24,10 @@ if (empty($_SESSION['username'])) {
     </head>
 
     <body>
-        <div id="grad1">
-            <div class="bodydiv">
+        <div id="background_canvas">
+            <div class="body_wrapper">
                 <?php include ("logo.php"); ?>
-                <div class="realbody" style="min-height:2300px">
+                <div class="content_wrapper" style="min-height:2300px">
                     <?php include ("menu.php"); ?>
                     <div id="wowslider-container1" style="height:200px">
                         <?php include ("slider1.php");

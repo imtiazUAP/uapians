@@ -20,11 +20,11 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
 				<div id="logo">
-					<div class="realbody" style="height:2000px">
+					<div class="content_wrapper" style="height:2000px">
 						<?php include ("menu.php"); ?>
 						<?php
 						$strquery = "SELECT * from e_info INNER JOIN

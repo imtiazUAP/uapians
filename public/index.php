@@ -2,10 +2,6 @@
 define('BASE_DIR', realpath(__DIR__ . '/../'));
 require_once BASE_DIR . '/app/controllers/HomeController.php';
 require_once BASE_DIR . '/app/controllers/StudentController.php';
-// ... require other controllers as needed
-
-// DEBUG:
-// echo "Requested URI: " . $_SERVER['REQUEST_URI'] . "<br>";
 
 // Parse the URL to separate the path and query string
 $urlParts = parse_url($_SERVER['REQUEST_URI']);
@@ -17,10 +13,6 @@ $uri = rtrim(str_replace('/uapians/', '', $path), '/');
 // Parse the query string if present
 $queryString = isset($urlParts['query']) ? $urlParts['query'] : '';
 parse_str($queryString, $queryParams);
-
-// DEBUG:
-// echo "Switching URI: " . $uri . "<br>";
-// echo "Query Params: " . print_r($queryParams, true) . "<br>";
 
 // Define routes
 $routes = [

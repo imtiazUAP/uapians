@@ -32,7 +32,7 @@ if (empty($_SESSION['username'])) {
 	 <meta charset='utf-8'>
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="assets/css/style_new.css">
+   <link rel="stylesheet" href="assets/css/main_menu_style.css">
    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
    <script src="script.js"></script>
 <script>
@@ -74,12 +74,12 @@ xmlhttp.send();
 }(document, 'script', 'facebook-jssdk'));</script>
 </head>
 <body>
-<div id="grad1">
-<div class="bodydiv">
+<div id="background_canvas">
+<div class="body_wrapper">
 <div id="logo" align="left">
 	<h1><a href="Home.php">UAPians.Net  </a></h1>
 	<p>A Stack of Uap Students    ...UNOFFICIAL...</p>
-<div class="realbody" style="min-height:2100px">
+<div class="content_wrapper" style="min-height:2100px">
 <?php include("menu.php"); ?>
 	<div id="content">
 	<div id="colOne">
@@ -100,7 +100,7 @@ xmlhttp.send();
 					<br>
 					<div style="font-weight:bold; font-size:16px"><ul><li><a href="send_message_to_your_friend.php">Send a Message...</a></li></ul></div>
 			<br>		
-		<div id="paragraph_head">
+		<div id="section_head">
 			<h3  align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif; padding:5px 5px; ">Academic Aspects</h3>
 		</div>
 			<ul class="bottom">
@@ -114,7 +114,7 @@ xmlhttp.send();
 		<br>
 		<br>
 	<div class="box">
-		<div id="paragraph_head">
+		<div id="section_head">
 			<h3  align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
 		</div>.
 			<ul class="bottom">
@@ -131,7 +131,7 @@ xmlhttp.send();
 		<br>
 		<br>
 	<div class="box">
-		<div id="paragraph_head">
+		<div id="section_head">
 			<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
 		</div>
 				<ul>
@@ -167,7 +167,7 @@ xmlhttp.send();
 		<br>
 		<br>
 	<div class="box">
-		<div id="paragraph_head">
+		<div id="section_head">
 			<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us</h3>
 		</div>
 			<p class="bottom">For any query, or any Information contact with us... <br> Student Management Tools,

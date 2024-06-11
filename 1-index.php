@@ -13,10 +13,10 @@ include ("dbconnect.php");
 </head>
 
 <body>
-	<div id="grad1">
-		<div class="bodydiv" align="center">
+	<div id="background_canvas">
+		<div class="body_wrapper" align="center">
 			<?php include ("logo_for_index.php"); ?>
-			<div class="realbody">
+			<div class="content_wrapper">
 				<?php include ("menu_for_index.php"); ?>
 				<div id="wowslider-container1" style="height:200px">
 					<?php include ("slider1.php");
@@ -30,7 +30,7 @@ include ("dbconnect.php");
 					</div>
 					<div id="margin_figure" align="left">
 						<div>
-							<div id="paragraph_head">
+							<div id="section_head">
 								<h1 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
 									Welcome!</h1>
 							</div>
@@ -58,7 +58,7 @@ include ("dbconnect.php");
 						<br>
 						<br>
 						<div align="center">
-							<div id="paragraph_head">
+							<div id="section_head">
 								<h1 align="left"
 									style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ; text-decoration:blink">
 									News Feed............</h1>
@@ -82,7 +82,7 @@ include ("dbconnect.php");
 								?>
 							</marquee>
 						</div>
-						<div id="paragraph_head">
+						<div id="section_head">
 							<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
 								Notice!</h1>
 						</div>
@@ -102,7 +102,7 @@ include ("dbconnect.php");
 							</p>
 						</div>
 						<div>
-							<div id="paragraph_head">
+							<div id="section_head">
 								<h1 align="left" style="color:#FFFFFF">Mission...</h1>
 							</div>
 							<p align="left" style="font-size:16; font-weight:bold">UAPIANS.NET মুলত ইউনিভার্সিটি
@@ -128,7 +128,7 @@ include ("dbconnect.php");
 						<br>
 						<br>
 						<div>
-							<div id="paragraph_head">
+							<div id="section_head">
 								<h1 align="left" style="color:#FFFFFF">About!</h1>
 							</div>
 							<p align="left" style="font-size:16; font-weight:bold">

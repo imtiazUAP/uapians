@@ -61,7 +61,7 @@
 	<a href="sign_up.php" style="font-size:18px; font-weight:bold; text-decoration:none">Sign up</a>
 	<br>
 	<br>
-	<div id="paragraph_head">
+	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic Aspects</h3>
 	</div>
 	<ul class="bottom">
@@ -80,7 +80,7 @@
 <br>
 <br>
 <div class="box">
-	<div id="paragraph_head">
+	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs & Social Works</h3>
 	</div>.
 	<ul class="bottom">
@@ -107,7 +107,7 @@
 <br>
 <br>
 <div class="box">
-	<div id="paragraph_head">
+	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel</h3>
 	</div>
 	<ul>
@@ -133,7 +133,7 @@
 <br>
 <br>
 <div class="box">
-	<div id="paragraph_head">
+	<div id="section_head">
 		<h3 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us</h3>
 	</div>
 	<p class="bottom">For any query, or any Information contact with us... <br> Student Management Tools,

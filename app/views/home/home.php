@@ -1,199 +1,120 @@
 <?php
 session_start();
-error_reporting(1);
-include ("dbconnect.php");
-include_once ("page.inc.php");
-?>
-<?php
-$b = $_SESSION['username'];
-//$c=$_SESSION['userid'];
-$userdata = [];
-$dbconnect = new dbClass();
-$connection = $dbconnect->getConnection();
-$qry = "select * from sign_up where username=?";
-$stmt = $connection->prepare($qry);
-if ($stmt) {
-	$stmt->bind_param("s", $b);
-	$stmt->execute();
-	$result = $stmt->get_result();
-	$userdata = $result->fetch_assoc();
-	$stmt->close();
-} else {
-	die("Prepare failed: " . $connection->error);
-}
 if (empty($_SESSION['username'])) {
-	?>
+?>
 	<script language="JavaScript">
 		window.location = "index.php";
 	</script><?php } else { ?>
 	<html>
 	<head>
-		<?php
-		include (__DIR__."/../partials/header.php");
-		?>
+		<?php include (__DIR__ . "/../partials/header.php"); ?>
 	</head>
+
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
-				<?php include (__DIR__."/../partials/logo.php"); ?>
-				<div class="realbody" style="min-height:2300px">
-					<?php include (__DIR__."/../partials/menu.php"); ?>
-					<div id="wowslider-container1" style="height:200px">
-						<?php include (__DIR__."/../partials/slider1.php");
-						?>
+		<div id="background_canvas">
+			<div class="body_wrapper">
+				<?php include (__DIR__ . "/../partials/logo.php"); ?>
+				<div class="content_wrapper">
+					<?php include (__DIR__ . "/../partials/menu.php"); ?>
+					<!-- Section:: Slider -->
+					<div id="wowslider-container1">
+						<?php include (__DIR__ . "/../partials/slider1.php"); ?>
 					</div>
 					<div id="content">
+						<!-- Section:: Sidebar -->
 						<div id="colOne">
-							<?php
-							include (__DIR__."/../partials/sidebar.php");
-							?>
+							<?php include (__DIR__ . "/../partials/sidebar.php"); ?>
 						</div>
 						<div id="margin_figure">
-							<div>
-								<div id="paragraph_head">
-									<h1 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
-										Welcome!</h1>
+							<!-- Section:: Welcome -->
+							<div class="section">
+								<div id="section_head">
+									<h1>
+										Welcome!
+									</h1>
 								</div>
-								<p align="left" style="font-size:16; font-weight:bold">Uapians.Net একটি ওয়েবসাইট.... আমাদের
-									জন্যে আমাদের বানানো</p>
-								<p align="left" style="font-size:14">Uapians.Net একটি ওয়েবসাইট যার মুল উদ্দেশ্যই হলো
-									ইউনিভার্সিটি পর্যায়ে যে সকল complexity আছে তা কিছুটা হলেও দূর করা , এবং বিষয়গুলো সহজভাবে
-									সবার কাছে উপস্থাপন করা... এই ওয়েবসাইটের সব ধরনের কর্মকাণ্ড University of Asia Pacific এর
-									ছাত্রছাত্রীদের দ্বারা পরিচালিত হয়ে থাকে। Authority পর্যায়ের কেউ এটার সাথে এখন পর্যন্ত
-									জড়িত নয়। এখানে ইউনিভার্সিটির সব স্টুডেন্টের প্রোফাইল থাকবে এবং সেখানে ওই স্টুডেন্টের
-									যাবতীয় তথ্য থাকবে যাতে করে একে-অন্যকে আরো ভালোভাবে জানতে পারে-চিনতে পারে। এখান থেকে সবাই
-									সব সেমিস্টারের যাবতীয় হ্যান্ডনোট/Slide/PDF/EBook/Question sample ডাউনলোড করে নিতে পারবে।
-									এখানে শিক্ষকরা সরাসরি নোট/slide/reference আপলোড করে দিতে পারবে। এবং পরবর্তী সেমিস্টারে
-									নতুন স্টুডেন্টরা এসেই সব কিছু গোছানো পেয়ে যাবে তাতে করে যে সকল স্টুডেন্ট ক্লাসে উপস্থিত
-									থাকে ঠিক ই কিন্তু মন থাকে আকাশে-বাতাসে তাদের কিছুটা হলেও উপকার হবে বলে আশা করি... এখানে
-									একজন অন্যজনকে মেসেজ দিতে পারবে গ্রুপ মেসেজ করতে পারবে তাতে করে
-									শিক্ষক-ছাত্রছাত্রী-বন্ধুবান্ধবের মধ্যের ব্রিজ কানেকশানটা আরো একটু ভালো হবে আশা করি।
-									এখানকার সব কিছুই হবে Academic এবং Professional লেভেল এর জন্যে । এই প্রজেক্টের মাধ্যমে
-									কারো যদি এতটুকু উপকার হয় তাহলে আমাদের প্রচেস্টা সফল হবে। ভালো কথা এখানে একটা ব্লগ করা
-									হয়েছে যদিও খুব একটা ভালো হয়নি এখনো তবে আমরা চেষ্টা করে যাচ্ছি । এই ব্লগে ছাত্রছাত্রীরা
-									তাদের Academic বিষয় নিয়ে আলোচনা করবে/ Article লিখবে বলে আমরা আশা করি।। </p>
+								<p id="section_title"><?= $introTitle ?></p>
+								<p id="section_content"><?= $intro ?>
 							</div>
-							<br>
-							<br>
-							<br>
-							<div align="center">
-								<div id="paragraph_head">
-									<h1 align="left"
-										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ; text-decoration:blink">
-										News Feed............</h1>
+
+							<!-- Section:: News -->
+							<div class="section">
+								<div id="section_head">
+									<h1>
+										News Feed............
+									</h1>
 								</div>
-								<marquee behavior="scroll" direction="up"
-									style="vertical-align:middle;text-align:center; cursor:pointer;color:#0099FF; font-size:18px; height:300"
-									onmouseover="this.stop();" onMouseOut="this.start();">
+								<marquee behavior="scroll" direction="up" onmouseover="this.stop();" onMouseOut="this.start();">
 									<?php
-									if (($userdata['admin'] == '1')) {
-										?>
-										<br>
-										<a href="News_Insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true"
-											title="New Course" class="thickbox">Add New News</a>
-										<br>
+									if ($isAdmin) { ?>
+										<div class="news_new">
+											<a href="News_Insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true"
+												title="New Course" class="thickbox">Add New News</a>
+										</div>
 										<?php
 									}
-									?>
-									<?php
-										$stmt = $connection->prepare("SELECT * FROM news_info");
-										$stmt->execute();
-										$results = $stmt->get_result();
-										foreach ($results as $result) {
-											?>
-											<a href='<?php echo $result['News_Link']; ?>' target="_blank"
-												style="text-decoration:none; color:#FFFFFF"><span><?php echo $result['News_Hints']; ?></span></a><br>
-											<br>
-											<?php
-											if (($userdata['admin'] == '1')) {
-											?>
-											<td><?php echo " <a href='News_Edit.php?News_ID=" . $result['News_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $result['News_ID'] . "'> edit </a> "; ?>
-												| <?php echo " <a href='News_Delete.php?News_ID=" . $result['News_ID'] . "'> delete </a> "; ?>
-											</td><br>
-											<?php
-										}
-									}
-									?>
+									foreach ($newsResults as $news) { ?>
+										<div class="news_hint">
+											<a href='<?php echo $news['News_Link']; ?>' target="_blank"><span><?php echo $news['News_Hints']; ?></span></a>
+										</div>
+										<?php if ($isAdmin) { ?>
+											<div class="news_actions">
+												<?php echo " <a href='News_Edit.php?News_ID=" . $news['News_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $news['News_ID'] . "'> edit </a> "; ?>
+												|
+												<?php echo " <a href='News_Delete.php?News_ID=" . $news['News_ID'] . "'> delete </a> "; ?>
+											</div>
+										<?php }
+									} ?>
 								</marquee>
 							</div>
-							<br>
-							<br>
-							<div id="paragraph_head">
-								<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
-									Notice!</h1>
-							</div>
-							<div id="notice_board">
-							<?php
-							$noticeStmt = $connection->prepare("SELECT * FROM notice_info");
-							$noticeStmt->execute();
-							$noticeResults = $noticeStmt->get_result();
-							foreach ($noticeResults as $notice) {
-							?>
-							<p style="padding-left:60px; padding-right:55px; color:#66CC33;font-size:16px; font-weight:bold; ">
-								<br><br><br><br><br><?php echo $notice['Notice']; ?><br> <br>Thank You<br>
-										<?php
-										if (($userdata['admin'] == '1')) {
-											?>
-											<td><?php echo " <a href='Notice_Edit.php?Notice_ID=" . $notice['Notice_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $notice['Notice_ID'] . "'> Update Notice </a> "; ?>
-											</td><br>
-											<?php
-										}
+
+							<!-- Section:: Notice -->
+							<div class="section">
+								<div id="section_head">
+									<h1>Notice!</h1>
+								</div>
+								<div id="notice_board">
+									<?php
+									foreach ($noticeResults as $notice) {
 										?>
-								</p>
-								<?php } ?>
-							</div>
-							<br>
-							<br>
-							<div>
-								<div id="paragraph_head">
-									<h1 align="left" style="color:#FFFFFF">Mission...</h1>
+										<Div class="notice_content">
+											<p>
+												<?php echo $notice['Notice']; ?><br><br> Thank You
+												<?php if ($isAdmin) { ?>
+													<?php echo " <a href='Notice_Edit.php?Notice_ID=" . $notice['Notice_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $notice['Notice_ID'] . "'> Update Notice </a> "; ?>
+												<?php } ?>
+											</p>
+										</Div>
+									<?php } ?>
 								</div>
-								<p align="left" style="font-size:16; font-weight:bold">UAPIANS.NET মুলত ইউনিভার্সিটি
-									স্টুডেন্টদের মিলনমেলা...
-								</p>
-								<p align="left" style="font-size:14">
-									কম্পিউটার সায়েন্সে পড়ুয়া কতিপয় তরুনের উদ্যোগে আত্মপ্রকাশ করা UAPIANS.NET মুলত
-									ইউনিভার্সিটি স্টুডেন্টদের মিলনমেলা। প্রাথমিকভাবে শুধুমাত্র University of Asia Pacific এর
-									কম্পিউটার বিজ্ঞান প্রকৌশল বিভাগের জন্য উন্মুক্ত, তবে ধীরে ধীরে অন্যান্য ডিপার্টমেন্ট এবং
-									সারা বাংলাদেশের সকল বিশ্ববিদ্যালয়ের মাঝে ছড়িয়ে দেয়ার পরিকল্পনা চলছে।
-									সম্পূর্নই আনঅফিসিয়াল এ এপ্লিকেশনটি বিশ্ববিদ্যালয় পর্যায়ের স্টুডেন্টদের মধ্যে পারষ্পরিক
-									মেলবন্ধনের ক্ষেত্রে এক অনবদ্য ভূমিকা রাখবে বলে আশা করা যায়। ছাত্রছাত্রীদের নিজেরদের
-									মধ্যে পারষ্পরিক যোগাযোগ, অটোমেটেড ডিজিটালাইজড রেজাল্টশীট প্রস্তুতকরুন, নোটস আদান প্রদান
-									এবং সর্বোপরি বিভিন্ন বিষয়ে পারষ্পরিক সহযোগীতা এবং বিভিন্ন প্ল্যাটফরমের উপর নিজেদের ভেতরে
-									আলোচনার সুযোগ থাকছে। সেই সাথে আছে ব্লাড ব্যাঙ্ক এবং এক অসম্ভব হেল্পফুল একটি স্বেচ্ছাসেবক
-									টিম আপনার সহযোগীতার জন্য যারা সর্বাত্মক চেষ্টা করে যাবে যে কোন প্রয়োজনে।
-									আপনি যদি একজন UAPian হয়ে থাকেন তবে দেরী না করে এখনই রেজিস্ট্রেশন করে ফেলুন এবং চলে আসুন
-									আমাদের পরিবারে।
-									It’s time to be united, time to shout out together…
-								</p>
 							</div>
-							<br>
-							<br>
-							<br>
-							<div>
-								<div id="paragraph_head">
-									<h1 align="left" style="color:#FFFFFF">About!</h1>
+
+							<!-- Section:: Mission -->
+							<div class="section">
+								<div id="section_head">
+									<h1>Mission...</h1>
 								</div>
-								<p align="left" style="font-size:16; font-weight:bold">
-									Fall 2013 তে হয় আমাদের পথচলার শুরু...</p>
-								<p align="left" style="font-size:14">এই প্রজেক্টের কাজ আমরা শুরু করি Fall 2013 সেমিস্টারে
-									আমাদের CSE 300 এবং CSE 322 এর আন্ডারে দেশের অবস্থা খারাপ থাকায় ইউনিভার্সিটি বন্ধ হয়ে
-									গেলো এবং সেটা হলো আমাদের কাজ করার জন্যে একটা সুবর্ণ সুযোগ দীর্ঘ ৭ মাস সময় পেলাম একটা
-									সেমিস্টারে এবং তার মধ্যে আমারা কাজ শেখা থেকে শুরু করে বর্তমান অবস্থা পর্যন্ত নিয়ে আসি।
-									আমরা মনে করি আমাদের এই প্রজেক্ট দেখে পরবর্তী স্টুডেন্টরাও এরকম কিছু করার জন্যে উদ্বুদ্ধ
-									হবে । কোর্স আমাদের Course Teachers ছিলেন Dr. Najmus Sadat.... Bijan Paul স্যার উনারা
-									আমাদের প্রত্যেকটা Step এ হেল্প করেছেন আমরা উনাদের কাছে কৃতজ্ঞ। এবং পরবর্তীদের সময়েও
-									উনারা এই রকম ই হেল্পফুল থাকবেন বলে মনে করি যা কিনা আমাদের ডিপার্টমেন্টের স্টুডেন্টদের
-									জন্যে আশীর্বাদ স্বরূপ ।। </p>
+								<p id="section_title"><?= $missionTitle ?></p>
+								<p id="section_content"><?= $mission ?></p>
+							</div>
+
+							<!-- Section:: About -->
+							<div class="section">
+								<div id="section_head">
+									<h1>About!</h1>
+								</div>
+								<p id="section_title"><?= $aboutTitle ?></p>
+								<p id="section_content"><?= $about ?></p>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="footer">
-					<?php include ("footer.php");
+					<?php include (__DIR__ . "/../partials/footer.php");
 					?>
 				</div>
 	</body>
+
 	</html>
 	<?php
 } ?>

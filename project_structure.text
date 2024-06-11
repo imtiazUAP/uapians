@@ -40,7 +40,7 @@
     - Profile_List.css
     - Slider.css
     - style.css
-    - style_new.css
+    - main_menu_style.css
     - thickbox.css
   - Cultural_Club
     - data1
@@ -1060,7 +1060,7 @@
 - Student_Update.php
 - Student_Update_10_05_2014.php
 - style.css
-- style_new.css
+- main_menu_style.css
 - table.css
 - Teacher_Profile_List.php
 - Upload_Project.php

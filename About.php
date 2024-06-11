@@ -22,11 +22,11 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
 				<div id="logo">
-					<div class="realbody" style="height:2000px">
+					<div class="content_wrapper" style="height:2000px">
 						<?php include ("menu.php"); ?>
 						<div id="content">
 							<div id="colOne">
@@ -37,7 +37,7 @@ if (empty($_SESSION['username'])) {
 							<div id="margin_figure">
 								<div>
 									<div>
-										<div id="paragraph_head">
+										<div id="section_head">
 											<h1 align="left"
 												style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">About
 												Us</h1>
@@ -70,7 +70,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left" style="color:#FFFFFF">Features:</h1>
 									</div>
 									<p align="left" style="font-size:16; font-weight:bold">The Features, Providing by this
@@ -122,7 +122,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h1 align="left" style="color:#FFFFFF">About!</h1>
 									</div>
 									<td width="100"><img src=images/Najmus_Sadat.jpg style="height:250px; padding:10px"

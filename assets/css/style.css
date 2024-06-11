@@ -3,7 +3,7 @@
   src: url(custom_fonts/AlexBrush-Regular.ttf);
 }
 
-.bodydiv {
+.body_wrapper {
   font-family: verdana;
   font-size: 13px;
   color: #000000;
@@ -20,7 +20,7 @@ body {
   text-align: justify;
 }
 
-.realbody {
+.content_wrapper {
   background-color: 483668;
   background-image: url(../../images/back10.png);
   width: 1100px;
@@ -31,14 +31,14 @@ body {
   margin-right: auto;
 }
 
-.realbody a,
+.content_wrapper a,
 p {
   color: #FFFFFF;
   font-family: verdana;
   text-align: justify;
 }
 
-#grad1 {
+#background_canvas {
   height: auto;
   width: auto;
   background-color: #2E313A;
@@ -56,7 +56,7 @@ p {
   padding-right: 20px;
 }
 
-#paragraph_head {
+#section_head {
   font-family: AlexBrush-Regular;
   color: E19847;
   background-color: #55AA45;
@@ -67,7 +67,7 @@ p {
   border-radius: 5px;
 }
 
-#paragraph_head h3 {
+#section_head h3 {
   font-family: AlexBrush-Regular;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -75,19 +75,15 @@ p {
   padding-right: 10px;
 }
 
-#paragraph_head:hover h3 {
+#section_head:hover h3 {
   padding: 7px;
 }
 
-#paragraph_head h1 {
+#section_head h1 {
   padding-top: 1px;
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 10px;
-}
-
-.searchbox {
-  size: 39;
 }
 
 #notice_board {
@@ -342,7 +338,7 @@ div.desc {
   width: auto;
 }
 
-.realbodyforprofile {
+.content_wrapperforprofile {
   background-image: url(../../images/back5.png);
   background-color: #2763A5;
   width: 1100px;

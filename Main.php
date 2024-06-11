@@ -6,8 +6,8 @@
 </head>
 
 <body>
-	<div id="grad1">
-		<div class="bodydiv">
+	<div id="background_canvas">
+		<div class="body_wrapper">
 			<div id="logo">
 				<h1><a href="Main.php">Student Management Tool </a></h1>
 				<p>A Software for Managing CSE Department</p>

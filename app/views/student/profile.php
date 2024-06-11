@@ -15,10 +15,10 @@ if (empty($_SESSION['username'])) {
 		</head>
 
 		<body>
-			<div id="grad1">
-				<div class="bodydiv">
+			<div id="background_canvas">
+				<div class="body_wrapper">
 				<?php include (__DIR__ . "/../partials/logo.php"); ?>
-					<div class="realbodyforprofile">
+					<div class="content_wrapperforprofile">
 					<?php include (__DIR__ . "/../partials/menu.php"); ?>
 						<div class="profileuserinterface">
 							<?php

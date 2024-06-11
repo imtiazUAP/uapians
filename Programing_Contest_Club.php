@@ -38,8 +38,8 @@
 </head>
 
 <body>
-	<div id="grad1">
-		<div class="bodydiv">
+	<div id="background_canvas">
+		<div class="body_wrapper">
 			<div id="logo" align="left">
 				<h1><a href="Home.php">UAPians.Net </a></h1>
 				<p>A Stack of Uap Students ...UNOFFICIAL...</p>
@@ -85,7 +85,7 @@
 						</SCRIPT>
 						times.
 				</div>
-				<div class="realbody">
+				<div class="content_wrapper">
 					<?php
 					//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
@@ -124,7 +124,7 @@
 									</form>
 								</div>
 								<br>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h3 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic
 										Aspects</h3>
@@ -138,7 +138,7 @@
 								</ul>
 							</div>
 							<div class="box">
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h3 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs &
 										Social Works</h3>
@@ -155,7 +155,7 @@
 								</ul>
 							</div>
 							<div class="box">
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h3 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel
 									</h3>
@@ -199,7 +199,7 @@
 							<br>
 							<br>
 							<div class="box">
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h3 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us
 									</h3>
@@ -218,7 +218,7 @@
 						</div>
 						<div id="margin_figure">
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Programming
 										Contest Club</h1>
@@ -240,7 +240,7 @@
 							<br>
 							<br>
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ; text-decoration:blink">
 										News Feed............</h1>
@@ -310,7 +310,7 @@
 							<br>
 							<br>
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left" style="color:#FFFFFF">Activities: </h1>
 								</div>
 								<p align="left" style="font-size:16; font-weight:bold">To achieve the goal, the club
@@ -330,7 +330,7 @@
 							<br>
 							<br>
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left" style="color:#FFFFFF">About!</h1>
 								</div>
 								<p align="left" style="font-size:16; font-weight:bold"> </p>

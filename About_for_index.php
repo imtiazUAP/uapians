@@ -13,10 +13,10 @@ include ("dbconnect.php");
 </head>
 
 <body>
-	<div id="grad1">
-		<div class="bodydiv" align="center">
+	<div id="background_canvas">
+		<div class="body_wrapper" align="center">
 			<?php include ("logo_for_index.php"); ?>
-			<div class="realbody">
+			<div class="content_wrapper">
 				<?php include ("menu_for_index.php");
 				?>
 				<div id="wowslider-container1" style="height:200px">
@@ -32,7 +32,7 @@ include ("dbconnect.php");
 					<div id="margin_figure">
 						<div>
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">About Us
 									</h1>
@@ -64,7 +64,7 @@ include ("dbconnect.php");
 						<br>
 						<br>
 						<div>
-							<div id="paragraph_head">
+							<div id="section_head">
 								<h1 align="left" style="color:#FFFFFF">Features:</h1>
 							</div>
 							<p align="left" style="font-size:16; font-weight:bold">The Features, Providing by this
@@ -116,7 +116,7 @@ include ("dbconnect.php");
 						<br>
 						<br>
 						<div>
-							<div id="paragraph_head">
+							<div id="section_head">
 								<h1 align="left" style="color:#FFFFFF">About!</h1>
 							</div>
 							<td width="100"><img src=images/Faruk_Ahmed.jpg style="height:250px; padding:10px"

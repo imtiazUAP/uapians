@@ -14,10 +14,10 @@ if (!$con) {
 </head>
 
 <body>
-    <div id="grad1">
-        <div class="bodydiv" align="center">
+    <div id="background_canvas">
+        <div class="body_wrapper" align="center">
             <?php include ("logo_for_index.php"); ?>
-            <div class="realbody">
+            <div class="content_wrapper">
                 <?php include ("menu_for_index.php"); ?>
                 <div id="content">
                     <div id="colOne" align="left">

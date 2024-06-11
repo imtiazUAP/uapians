@@ -25,12 +25,12 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">Student Management Tool </a></h1>
 					<p>A Software for Managing CSE Department ...UNOFFICIAL...</p>
-					<div class="realbody" style="min-height:1800px">
+					<div class="content_wrapper" style="min-height:1800px">
 						<?php
 						//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
@@ -69,7 +69,7 @@ if (empty($_SESSION['username'])) {
 										</form>
 									</div>
 									<br>
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Academic
 											Aspects</h3>
@@ -83,7 +83,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Clubs &
 											Social Works</h3>
@@ -100,7 +100,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Admin Panel
 										</h3>
@@ -142,7 +142,7 @@ if (empty($_SESSION['username'])) {
 									</ul>
 								</div>
 								<div class="box">
-									<div id="paragraph_head">
+									<div id="section_head">
 										<h3 align="left"
 											style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">Contact Us
 										</h3>

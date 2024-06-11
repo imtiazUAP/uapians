@@ -33,10 +33,10 @@ if (empty($_SESSION['username'])) {
 		?>
 	</head>
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<?php include ("logo.php"); ?>
-				<div class="realbody" style="min-height:2300px">
+				<div class="content_wrapper" style="min-height:2300px">
 					<?php include ("menu.php"); ?>
 					<div id="wowslider-container1" style="height:200px">
 						<?php include ("slider1.php");
@@ -50,7 +50,7 @@ if (empty($_SESSION['username'])) {
 						</div>
 						<div id="margin_figure">
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
 										Welcome!</h1>
 								</div>
@@ -77,7 +77,7 @@ if (empty($_SESSION['username'])) {
 							<br>
 							<br>
 							<div align="center">
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left"
 										style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ; text-decoration:blink">
 										News Feed............</h1>
@@ -118,7 +118,7 @@ if (empty($_SESSION['username'])) {
 							</div>
 							<br>
 							<br>
-							<div id="paragraph_head">
+							<div id="section_head">
 								<h1 align="center" style="color:#FFFFFF;font:Georgia, 'Times New Roman', Times, serif ">
 									Notice!</h1>
 							</div>
@@ -145,7 +145,7 @@ if (empty($_SESSION['username'])) {
 							<br>
 							<br>
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left" style="color:#FFFFFF">Mission...</h1>
 								</div>
 								<p align="left" style="font-size:16; font-weight:bold">UAPIANS.NET মুলত ইউনিভার্সিটি
@@ -171,7 +171,7 @@ if (empty($_SESSION['username'])) {
 							<br>
 							<br>
 							<div>
-								<div id="paragraph_head">
+								<div id="section_head">
 									<h1 align="left" style="color:#FFFFFF">About!</h1>
 								</div>
 								<p align="left" style="font-size:16; font-weight:bold">

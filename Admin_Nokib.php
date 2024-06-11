@@ -32,7 +32,7 @@ if (empty($_SESSION['username'])) {
 		<meta charset='utf-8'>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="assets/css/style_new.css">
+		<link rel="stylesheet" href="assets/css/main_menu_style.css">
 		<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 		<script src="script.js"></script>
 		<script>
@@ -69,13 +69,13 @@ if (empty($_SESSION['username'])) {
 	</head>
 
 	<body>
-		<div id="grad1">
-			<div class="bodydiv">
+		<div id="background_canvas">
+			<div class="body_wrapper">
 				<div id="logo" align="left">
 					<h1><a href="Home.php">Student Management Tool </a></h1>
 					<p>A Software for Managing CSE Department</p>
 				</div>
-				<div class="realbody">
+				<div class="content_wrapper">
 					<?php include ("menu.php");
 					$strquery = "SELECT *,SMName,Blood_Group_Name FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID 
 INNER JOIN
