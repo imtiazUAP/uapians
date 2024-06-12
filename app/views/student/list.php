@@ -1,7 +1,7 @@
 <div style="padding-top:40">
 	<form>
 		<div align="center">
-			<?php if ($isAdmin) { ?>
+			<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 				<a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true"
 					title="New Student" class="thickbox">Create New Student</a>
 			<?php } ?>
@@ -12,7 +12,7 @@
 				<td bgcolor="588C73" width="200">Name of Student</td>
 				<td bgcolor="588C73" width="100px"> Portrait </td>
 				<td bgcolor="588C73"> Semester </td>
-				<?php if ($isAdmin) { ?>
+				<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 					<td bgcolor="#006699"> Results </td>
 					<td bgcolor="#006699" width="100"> Admin|Panel </td>
 				<?php } ?>
@@ -33,7 +33,7 @@
 						</a>
 					</td>
 					<td width="200"><?= $student['SMName'] ?></td>
-					<?php if ($isAdmin) { ?>
+					<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 						<td> <a href='Single_Mark_List.php? SID=<?= $student['SID'] ?>'> Results
 							</a>
 						</td>

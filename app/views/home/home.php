@@ -18,7 +18,7 @@
 	</div>
 	<marquee behavior="scroll" direction="up" onmouseover="this.stop();" onMouseOut="this.start();">
 		<?php
-		if ($isAdmin) { ?>
+		if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 			<div class="news_new">
 				<a href="News_Insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true" title="New Course"
 					class="thickbox">Add New News</a>
@@ -30,7 +30,7 @@
 				<a href='<?php echo $news['News_Link']; ?>'
 					target="_blank"><span><?php echo $news['News_Hints']; ?></span></a>
 			</div>
-			<?php if ($isAdmin) { ?>
+			<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 				<div class="news_actions">
 					<?php echo " <a href='News_Edit.php?News_ID=" . $news['News_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $news['News_ID'] . "'> edit </a> "; ?>
 					|
@@ -53,7 +53,7 @@
 			<Div class="notice_content">
 				<p>
 					<?php echo $notice['Notice']; ?><br><br> Thank You
-					<?php if ($isAdmin) { ?>
+					<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 						<?php echo " <a href='Notice_Edit.php?Notice_ID=" . $notice['Notice_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $notice['Notice_ID'] . "'> Update Notice </a> "; ?>
 					<?php } ?>
 				</p>

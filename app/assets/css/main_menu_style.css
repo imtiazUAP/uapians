@@ -160,3 +160,11 @@
 #cssmenu_new > ul > li.has-sub > a:hover:before {
   border-top: 5px solid #ffffff;
 }
+
+.menu_my_profile_icon {
+  display:inline;
+  width:20px;
+  height:20px;
+  border:1px solid white;
+  vertical-align:middle;
+}

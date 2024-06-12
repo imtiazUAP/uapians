@@ -1,5 +1,6 @@
 <?php
 define('BASE_DIR', realpath(__DIR__ . '/../'));
+require_once BASE_DIR . '/app/controllers/AuthController.php';
 require_once BASE_DIR . '/app/controllers/HomeController.php';
 require_once BASE_DIR . '/app/controllers/StudentController.php';
 
@@ -17,6 +18,7 @@ parse_str($queryString, $queryParams);
 // Define routes
 $routes = [
     '' => ['controller' => 'HomeController', 'action' => 'list'],
+    'logout' => ['controller' => 'AuthController', 'action' => 'logOut'],
     'student/list' => ['controller' => 'StudentController', 'action' => 'list'],
     'student/profile' => ['controller' => 'StudentController', 'action' => 'profile'],
     'student/edit' => ['controller' => 'StudentController', 'action' => 'edit'],

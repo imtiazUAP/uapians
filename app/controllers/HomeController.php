@@ -2,12 +2,21 @@
 
 require_once BASE_DIR . '/app/helpers/dbConnect.php';
 require_once BASE_DIR . '/app/models/Home.php';
+require_once BASE_DIR . '/app/models/User.php';
 require_once __DIR__ . '/../config/config.php';
 
 class HomeController {
+    public function __construct() {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+    }
+
     public function list() {
-        // TODO
-        $isAdmin = true;
+        $userInfo = [];
+        if (!empty($_SESSION['user_id'])) {
+            $userInfo = User::getUserByUserId($_SESSION['user_id']);
+        }
         $noticeResults = Home::getAllNotice();
         $newsResults = Home::getAllNews();
         $homePageContents = Home::getHomePageContents();

@@ -11,8 +11,6 @@ class StudentController {
     }
 
     public function list($queryParams) {
-        // TODO
-        $isAdmin = true;
         $semesterId = $queryParams['SMID'];
         $studentsList = Student::getPaginatedStudentsBySemesterId($semesterId);
 

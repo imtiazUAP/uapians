@@ -1,63 +1,20 @@
-<?php
-   error_reporting(1);
-   $b = $_SESSION['username'];
-?>
-<?php
-   $dbconnect = new dbClass();
-   $connection = $dbconnect->getConnection();
-   $stmt = $connection->prepare("SELECT s_info.SPortrait, username FROM s_info INNER JOIN sign_up ON s_info.SID=sign_up.SID WHERE username=?");
-   $stmt->bind_param("s", $b);
-   $stmt->execute();
-   $result = $stmt->get_result();
-   $userData = $result->fetch_assoc();
-   $SPortrait = $userData['SPortrait'];
-   $userName = $userData['username'];
-   $stmt->close();
-
-   // For employees
-   $stmt = $connection->prepare("SELECT Employee_Portrait,username FROM e_info INNER JOIN sign_up ON e_info.SID=sign_up.SID WHERE username=?");
-   $stmt->bind_param("s", $b);
-   $stmt->execute();
-   $results = $stmt->get_result();
-   $employeeData = $results->fetch_assoc();
-   $Employee_Portrait = $employeeData['Employee_Portrait'];
-   $userName = $employeeData['username'];
-?>
 <div id='cssmenu_new'>
    <ul>
-      <?php
-      if ($userdata['admin'] == '0') {
-         ?>
-         <li><a href='My_Profile.php'><span><img style="display:inline; width:13px; height:13px; border:1px solid white;"
-                     src="<?php echo $SPortrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
-         <?php
-      }
-      ?>
-      <?php
-      if ($userdata['admin'] == '1') {
-         ?>
+      <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 5) { ?>
+         <li><a href='My_Profile.php'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
+                     src="<?php echo $userInfo['SPortrait'] ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+      <?php } ?>
+      <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
          <li><a href='Admin_Control.php'><span>Administration</span></a></li>
-         <?php
-      }
-      ?>
-      <?php
-      if ($userdata['admin'] == '4') {
-         ?>
-         <li><a href='My_Profile_Teacher.php'><span><img class="img-responsive img-circle margin"
-                     style="display:inline; width:20px; height:20px; border:1px solid white;"
-                     src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
-         <?php
-      }
-      ?>
-      <?php
-      if ($userdata['admin'] == '5') {
-         ?>
-         <li><a href='My_Profile_Staff.php'><span><img class="img-responsive img-circle margin"
-                     style="display:inline; width:20px; height:20px; border:1px solid white; vertical-align:middle"
-                     src="<?php echo $Employee_Portrait; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
-         <?php
-      }
-      ?>
+      <?php } ?>
+      <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 2) { ?>
+         <li><a href='My_Profile_Teacher.php'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
+                     src="<?php echo $userInfo['Employee_Portrait']; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+      <?php } ?>
+      <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 3) { ?>
+         <li><a href='My_Profile_Staff.php'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
+                     src="<?php echo $userInfo['Employee_Portrait']; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+      <?php } ?>
       <li><a href="<?= BASE_URL ?>"><span>Home</span></a></li>
       <li class='active has-sub'><a href='#'><span>Students</span></a>
          <ul>
