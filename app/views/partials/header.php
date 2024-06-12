@@ -1,24 +1,21 @@
 <?php
-require_once __DIR__ . '/../../config/config.php';
-// Define the base path
-$basePath = dirname(__DIR__, 3); // Go up three levels from app/views/partials
-$baseUrl = "http://localhost/uapians/app"; // Base URL of your site, adjust accordingly
+require_once BASE_DIR . '/app/config/config.php';
 
 // Construct paths to assets
-$jqueryJsPath = $baseUrl . "/assets/js/jquery.js";
-$thickboxJsPath = $baseUrl . "/assets/js/thickbox.js";
-$thickboxCssPath = $baseUrl . "/assets/css/thickbox.css";
-$styleCssPath = $baseUrl . "/assets/css/style.css";
-$styleNewCssPath = $baseUrl . "/assets/css/main_menu_style.css";
-$engine1StyleCssPath = $baseUrl . "/assets/engine1/style.css";
-$engine1JqueryJsPath = $baseUrl . "/assets/engine1/jquery.js";
-$scriptJsPath = $baseUrl . "/assets/js/script.js";
+$jqueryJsPath = BASE_URL . "/app/assets/js/jquery.js";
+$thickboxJsPath = BASE_URL . "/app/assets/js/thickbox.js";
+$thickboxCssPath = BASE_URL . "/app/assets/css/thickbox.css";
+$styleCssPath = BASE_URL . "/app/assets/css/style.css";
+$styleNewCssPath = BASE_URL . "/app/assets/css/main_menu_style.css";
+$engine1StyleCssPath = BASE_URL . "/app/assets/engine1/style.css";
+$engine1JqueryJsPath = BASE_URL . "/app/assets/engine1/jquery.js";
+$scriptJsPath = BASE_URL . "/app/assets/js/script.js";
 
 ?>
 
 <title>A Stack of Uapians</title>
-<link rel="shortcut icon" href="<?= $baseUrl ?>/assets/images/tiittleimage.ico" />
-<link rel="image_src" href="<?= $baseUrl ?>/assets/images/tittleimage.png" />
+<link rel="shortcut icon" href="<?= BASE_URL ?>/app/assets/images/tiittleimage.ico" />
+<link rel="image_src" href="<?= BASE_URL ?>/app/assets/images/tittleimage.png" />
 <meta name="title" content="Uapians.Net" />
 <meta name="description" content="An Exclusive Website only for Uapians..." />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -36,8 +33,8 @@ $scriptJsPath = $baseUrl . "/assets/js/script.js";
 <script type="text/javascript" src="<?= $thickboxJsPath ?>"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 <script src="<?= $scriptJsPath ?>"></script>
-<script type="text/javascript" src="<?= $baseUrl ?>/assets/engine1/wowslider.js"></script>
-<script type="text/javascript" src="<?= $baseUrl ?>/assets/engine1/script.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/app/assets/engine1/wowslider.js"></script>
+<script type="text/javascript" src="<?= BASE_URL ?>/app/assets/engine1/script.js"></script>
 <script type="text/javascript" src="<?= $engine1JqueryJsPath ?>"></script>
 <script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];

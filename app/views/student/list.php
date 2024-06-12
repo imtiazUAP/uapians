@@ -23,24 +23,24 @@
 				<tr align="center" class="tablerow">
 					<td width="120"><?= $student['SReg'] ?></td>
 					<td width="200">
-						<a href=<?= BASE_URL . '/student/profile?SID=' . $student['SID'] ?>>
+						<a href=<?= BASE_URL . '/student/profile?SID=' . $student['user_id'] ?>>
 							<?= $student['SName'] ?>
 						</a>
 					</td>
 					<td width="100">
-						<a href=<?= BASE_URL . '/student/profile?SID=' . $student['SID'] ?>>
+						<a href=<?= BASE_URL . '/student/profile?SID=' . $student['user_id'] ?>>
 							<img src=<?= BASE_URL . '/app/assets/' . $student['SPortrait'] ?> echo style="height:100px;">
 						</a>
 					</td>
 					<td width="200"><?= $student['SMName'] ?></td>
 					<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
-						<td> <a href='Single_Mark_List.php? SID=<?= $student['SID'] ?>'> Results
+						<td> <a href='Single_Mark_List.php? SID=<?= $student['user_id'] ?>'> Results
 							</a>
 						</td>
 						<td width="100">
 							<a href=<?= BASE_URL . "/app/views/student/Student_Edit.php?SID=" . $student['SID'] ?>&keepThis=true&TB_iframe=true&height=300&width=350&do=edit&modal=true" class="thickbox">
 								edit
-							</a> | <a href='Student_Delete.php?SID=<?= $student['SID'] ?>'> delete
+							</a> | <a href='Student_Delete.php?SID=<?= $student['user_id'] ?>'> delete
 							</a>
 						</td>
 					<?php } ?>

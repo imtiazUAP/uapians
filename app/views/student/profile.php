@@ -1,16 +1,17 @@
 <div class="bodyforprofile">
 	<div class="profileuserinterface">
 		<?php
-		// if (($userdata['admin'] == '1' || $userdata['SID'] == $studentInfo["SID"])) {
-		if (1) { ?>
+		// if (($userdata['admin'] == '1' || $userdata['SID'] == $studentInfo["user_id"])) {
+		if ($userInfo['group_id'] == 1 || $userInfo['user_id'] == $studentInfo['user_id']) { ?>
 			<div align="center" style="background-color:#FFFF00; width:500px; height:20px">
 
-				<a href="<?= BASE_URL . '/student/edit?SID=' . $studentInfo['SID'] . '&keepThis=true&TB_iframe=true&height=543&width=400&do=edit&modal=true' ?>"
+				<a href="<?= BASE_URL . '/student/edit?SID=' . $studentInfo["user_id"] . '&keepThis=true&TB_iframe=true&height=543&width=400&do=edit&modal=true' ?>"
 					class='thickbox' title='Edit Student - " . $studentInfo["SName"] . "'> Edit my Profile </a>
 				|
-				<?php echo " <a href='Password_Edit.php?SID=" . $studentInfo["SID"] . "&keepThis=true&TB_iframe=true&height=200&width=300&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $studentInfo["SName"] . "'> Change my Password </a> "; ?>
-				| <?php echo " <a href='Single_Mark_List.php? SID=" . $studentInfo["SID"] . "'> My  Results Vault </a> " ?>
-				| <?php echo " <a href='Message_List_personal.php? SID=" . $studentInfo["SID"] . "'> My Messages </a>" ?>
+				<?php echo " <a href='Password_Edit.php?SID=" . $studentInfo['user_id'] . "&keepThis=true&TB_iframe=true&height=200&width=300&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $studentInfo["SName"] . "'> Change my Password </a> "; ?>
+				| <?php echo " <a href='Single_Mark_List.php? SID=" . $studentInfo["user_id"] . "'> My  Results Vault </a> " ?>
+				| <?php echo " <a href='Message_List_personal.php? SID=" . $studentInfo["user_id"] . "'> My Messages </a>" ?>
+				| <?php echo " <a href='Upload_Project.php?SID=" . $studentInfo["user_id"] . "'> | upload project  </a>" ?>
 			</div>
 		<?php } ?>
 	</div>

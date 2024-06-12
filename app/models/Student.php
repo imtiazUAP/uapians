@@ -1,5 +1,5 @@
 <?php
-include_once (__DIR__ . "/../helpers/page.inc.php");
+include_once (BASE_DIR . "/app/helpers/page.inc.php");
 
 class Student {
     public static function getAll() {
@@ -16,7 +16,7 @@ class Student {
 						INNER JOIN
 						blood_group_info
 						ON
-						s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID INNER JOIN districts ON s_info.district_id=districts.district_id WHERE SID=?";
+						s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID INNER JOIN districts ON s_info.district_id=districts.district_id WHERE user_id=?";
         $stmt = $connection->prepare($qry);
         if ($stmt) {
             $stmt->bind_param("s", $studentId);
@@ -72,7 +72,7 @@ class Student {
         $totalStudents = self::getStudentsCountBySemesterId($semesterId);
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        $qry = "SELECT SID,SName,SReg,SPortrait,SMName FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID='" . $semesterId . "' order by SReg";
+        $qry = "SELECT user_id, SID, SName, SReg, SPortrait, SMName FROM s_info INNER JOIN sm_info ON s_info.SMID = sm_info.SMID WHERE s_info.SMID = '" . $semesterId . "' order by SReg";
         $recordPerPage = 10;
         $pagination = new Page();
         $pagination->set_page_data(BASE_URL.'/student/list', $semesterId, $totalStudents, $recordPerPage, 0, true, true, true);

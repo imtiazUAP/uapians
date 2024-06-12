@@ -1,19 +1,19 @@
 <div id='cssmenu_new'>
    <ul>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 5) { ?>
-         <li><a href='My_Profile.php'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
-                     src="<?php echo $userInfo['SPortrait'] ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+         <li><a href='<?= BASE_URL ?>/student/profile?SID=<?= $userInfo['user_id'] ?>'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
+                     src="<?php echo BASE_URL.'/app/assets/'.$userInfo['SPortrait'] ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
       <?php } ?>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
          <li><a href='Admin_Control.php'><span>Administration</span></a></li>
       <?php } ?>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 2) { ?>
          <li><a href='My_Profile_Teacher.php'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
-                     src="<?php echo $userInfo['Employee_Portrait']; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+                     src="<?php echo BASE_URL.'/app/assets/'.$userInfo['Employee_Portrait']; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
       <?php } ?>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 3) { ?>
          <li><a href='My_Profile_Staff.php'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
-                     src="<?php echo $userInfo['Employee_Portrait']; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
+                     src="<?php echo BASE_URL.'/app/assets/'.$userInfo['Employee_Portrait']; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
       <?php } ?>
       <li><a href="<?= BASE_URL ?>"><span>Home</span></a></li>
       <li class='active has-sub'><a href='#'><span>Students</span></a>

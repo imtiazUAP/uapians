@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../config/config.php';
+require_once BASE_DIR . '/app/config/config.php';
 class AuthController
 {
     public function logOut()

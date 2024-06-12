@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <?php include (__DIR__ . "/../partials/header.php"); ?>
+    <?php include (BASE_DIR . "/app/views/partials/header.php"); ?>
 </head>
 
 <body>

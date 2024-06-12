@@ -6,18 +6,18 @@ class User {
     {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        $qry = "SELECT u.*, s.*, e.*, SMName, Blood_Group_Name, district_name
+        $qry = "SELECT s.*, e.*, u.*, SMName, Blood_Group_Name, district_name
             FROM
                 user u
-                    LEFT JOIN
+                    LEFT OUTER JOIN
                 s_info s ON s.user_id = u.user_id
-                    LEFT JOIN
+                    LEFT OUTER JOIN
                 e_info e ON e.user_id = u.user_id
-                    LEFT JOIN
+                    LEFT OUTER JOIN
                 sm_info ON s.SMID = sm_info.SMID
-                    LEFT JOIN
+                    LEFT OUTER JOIN
                 blood_group_info ON s.Blood_Group_ID = blood_group_info.Blood_Group_ID
-                    LEFT JOIN
+                    LEFT OUTER JOIN
                 districts ON s.district_id = districts.district_id
             WHERE
                 u.user_id = ?";

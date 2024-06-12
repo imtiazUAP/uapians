@@ -1,39 +1,50 @@
 <?php
 
+require_once BASE_DIR . '/app/controllers/BaseController.php';
 require_once BASE_DIR . '/app/helpers/dbConnect.php';
 require_once BASE_DIR . '/app/models/Student.php';
-require_once __DIR__ . '/../config/config.php';
+require_once BASE_DIR . '/app/config/config.php';
 
-class StudentController {
-    public function add() {
-        // Handle the insertion logic
-        include '../views/student/add.php';
-    }
-
-    public function list($queryParams) {
+class StudentController extends BaseController
+{
+    public function list($queryParams)
+    {
         $semesterId = $queryParams['SMID'];
         $studentsList = Student::getPaginatedStudentsBySemesterId($semesterId);
 
-        $content = __DIR__ . '/../views/student/list.php';
-        include __DIR__ . '/../views/layouts/layout.php';
+        $data = compact('semesterId', 'studentsList');
+        $this->render(
+            'student/list.php',
+            $data
+        );
     }
 
-    public function profile($queryParams) {
+    public function profile($queryParams)
+    {
         $studentInfo = Student::getStudentByStudentId($queryParams['SID']);
 
-        $content = __DIR__ . '/../views/student/profile.php';
-        include __DIR__ . '/../views/layouts/layout.php';
+        $this->render(
+            'student/profile.php',
+            compact('studentInfo')
+        );
     }
 
-    public function edit($queryParams) {
+    public function edit($queryParams)
+    {
         $studentInfo = Student::getStudentByStudentId($queryParams['SID']);
         $districts = Student::getAllDistricts();
         $semesters = Student::getAllSemesters();
         $bloodGroups = Student::getAllBloodGroups();
-        include __DIR__ . '/../views/student/edit.php';
+
+        $this->render(
+            'student/edit.php',
+            compact('studentInfo', 'districts', 'semesters', 'bloodGroups'),
+            false
+        );
     }
 
-    public function update() {
+    public function update()
+    {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data = [
                 'SID' => $_POST['SID'],
@@ -60,11 +71,11 @@ class StudentController {
             ];
 
             $success = Student::updateStudent($data);
-            
+
             if ($success) {
-                header('Location: '.BASE_URL.'/student/edit?SID=' . $data['SID'] . '&message=Profile+Updated+Successfully');
+                header('Location: ' . BASE_URL . '/student/edit?SID=' . $data['SID'] . '&message=Profile+Updated+Successfully');
             } else {
-                header('Location: '.BASE_URL.'/student/edit?SID=' . $data['SID'] . '&message=Profile+Update+Failed');
+                header('Location: ' . BASE_URL . '/student/edit?SID=' . $data['SID'] . '&message=Profile+Update+Failed');
             }
             exit();
         }
