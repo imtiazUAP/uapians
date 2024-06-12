@@ -2,11 +2,11 @@
 session_start();
 error_reporting(1);
 include ("dbconnect.php");
-$b = $_SESSION['username'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$b = $_SESSION['email'];
+$userrole = mysql_query("select * from userinfo where email='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
 $SID = $userdata['SID'];
-if (empty($_SESSION['username'])) { ?>
+if (empty($_SESSION['email'])) { ?>
     <script language="JavaScript"> window.location = "index.php"; </script><?php } else { ?>
     <html>
 

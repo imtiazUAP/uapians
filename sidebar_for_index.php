@@ -19,16 +19,16 @@
 	<button name="sign_up" onclick="window.open('sign_up.php','_top')" class="button button_blue">Sign Up</button>
 	<?php
 	if (isset($_REQUEST['login']) && !empty($_REQUEST['loginname'])) {
-		$userName = $_REQUEST['loginname'];
+		$email = $_REQUEST['loginname'];
 		$userPassword = $_REQUEST['password'];
 		$dbconnect = new dbClass();
 		$connection = $dbconnect->getConnection();
-		$qry = "SELECT * FROM sign_up WHERE username=? AND password=?";
+		$qry = "SELECT * FROM sign_up WHERE email=? AND password=?";
 		$stmt = $connection->prepare($qry);
 		if ($stmt) {
 			// TODO: Md5
-			// $stmt->bind_param("ss", $userName, md5($userPassword));
-			$stmt->bind_param("ss", $userName, $userPassword);
+			// $stmt->bind_param("ss", $email, md5($userPassword));
+			$stmt->bind_param("ss", $email, $userPassword);
 			$stmt->execute();
 			$result = $stmt->get_result();
 			$userData = $result->fetch_assoc();
@@ -37,18 +37,18 @@
 			die("Prepare failed: " . $connection->error);
 		}
 		//session_regenerate_id();
-		$_SESSION['username'] = $userData['username'];
+		$_SESSION['email'] = $userData['email'];
 		$_SESSION['userid'] = $userData['userid'];
 		session_write_close();
-		//			$a=$_SESSION['username'];
+		//			$a=$_SESSION['email'];
 		//		print $a;
-		if (!empty($_SESSION['username'])) {
+		if (!empty($_SESSION['email'])) {
 			?>
 			<script language="JavaScript">
 				window.location = "Home.php";
 			</script>
 			<?php
-		} elseif (empty($_SESSION['username'])) {
+		} elseif (empty($_SESSION['email'])) {
 			?>
 			<script language="JavaScript">
 				window.location = "reset_pass.php?message=wrong_login_id__or_pass";

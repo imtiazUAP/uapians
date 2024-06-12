@@ -5,12 +5,12 @@ include('dbconnect.php');
 include_once("page.inc2.php");
 ?>
 <?php
-$b=$_SESSION['username'];
+$b=$_SESSION['email'];
 //$c=$_SESSION['userid'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$userrole = mysql_query("select * from userinfo where email='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
 //echo $userdata['admin'];
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['email'])) {
     ?>
     <script language="JavaScript">
         window.location="index.php";
@@ -86,7 +86,7 @@ xmlhttp.send();
 		<div class="sidebar_box">
 		<br>
 		<br>
-		<div style="text-decoration:none;font-size:24px; color:#FFFFFF; font-weight:bold"><span>You are Logged in as  <?php print $_SESSION['username']?></span></div>
+		<div style="text-decoration:none;font-size:24px; color:#FFFFFF; font-weight:bold"><span>You are Logged in as  <?php print $_SESSION['email']?></span></div>
 		<br>
 		<a href="Log_out.php" style="text-decoration:none;font-size:24px; font-weight:bold"><span>Log out</span></a>
 		<br>

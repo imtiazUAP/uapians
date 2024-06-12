@@ -22,7 +22,7 @@ if ($ext == 'png' || $ext == 'PNG' || $ext == 'jpg' || $ext == 'jpeg' || $ext ==
     $newfilename = round(microtime(true)) . '.' . $ext; // creating a new file name as 2 photo can not be with same name
     imagejpeg($tmp_min, "images/" . $newfilename, 80); //copy image in folder//
     $photo_name = 'images/' . $newfilename; // new name with path to save in database
-    mysql_query($sql = "INSERT INTO sign_up (SID,SPortrait,SName,SReg,district_id,SE_Mail,SMID,Blood_Group_ID,donor_value,username,password)VALUES ('','$photo_name','" . $_REQUEST['name'] . "','" . $_REQUEST['reg'] . "','" . $_REQUEST['district_id'] . "','" . $_REQUEST['email'] . "','" . $_REQUEST['SMID'] . "','" . $_REQUEST['Blood_Group_ID'] . "','" . $_REQUEST['donor_value'] . "','" . $_REQUEST['username'] . "','" . $_REQUEST['password'] . "')");
+    mysql_query($sql = "INSERT INTO sign_up (SID,SPortrait,SName,SReg,district_id,email,SMID,Blood_Group_ID,donor_value,email,password)VALUES ('','$photo_name','" . $_REQUEST['name'] . "','" . $_REQUEST['reg'] . "','" . $_REQUEST['district_id'] . "','" . $_REQUEST['email'] . "','" . $_REQUEST['SMID'] . "','" . $_REQUEST['Blood_Group_ID'] . "','" . $_REQUEST['donor_value'] . "','" . $_REQUEST['email'] . "','" . $_REQUEST['password'] . "')");
 } else {
     echo "Registration Failed.... <br>Please Fill all the field Correctly";
 }

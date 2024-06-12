@@ -44,7 +44,7 @@ $row = mysql_fetch_array($results);
             </tr>
             <tr>
                 <td>Email:</td>
-                <td> <input name="SE_Mail" type="text" id="SE_Mail" value="<?php echo $row["SE_Mail"]; ?>" /> </td>
+                <td> <input name="email" type="text" id="email" value="<?php echo $row["email"]; ?>" /> </td>
             </tr>
             <input name="SPortrait" type="hidden" id="SPortrait" value="<?php echo $row["SPortrait"]; ?>" />
             <tr>
@@ -100,7 +100,7 @@ $row = mysql_fetch_array($results);
             </tr>
             <tr>
                 <td>User Name:</td>
-                <td> <input type"text" name="username" id="SPortrait" value="<?php echo $row["username"]; ?>" /></td>
+                <td> <input type"text" name="email" id="SPortrait" value="<?php echo $row["email"]; ?>" /></td>
             </tr>
             <tr>
                 <td> <input type="hidden" name="password" id="SPortrait" value="<?php echo $row["password"]; ?>" /></td>

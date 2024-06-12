@@ -60,9 +60,9 @@ include ('dbconnect.php'); ?>
             <?php
             } else {
               // the user has submitted the form
-              $query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID=$_POST[SMID] ");
+              $query = mysql_query("SELECT email FROM s_info WHERE SMID=$_POST[SMID] ");
               while ($row = mysql_fetch_assoc($query)) {
-                $to = $row['SE_Mail'];
+                $to = $row['email'];
                 $subject = $_POST["subject"];
                 $message = $_POST["message"];
                 $headers = 'From: farukahmed@uapians.net' . "\r\n" .

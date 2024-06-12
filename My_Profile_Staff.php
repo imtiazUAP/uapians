@@ -4,8 +4,8 @@ error_reporting(1);
 include ("dbconnect.php");
 ?>
 <?php
-$b = $_SESSION['username'];
-if (empty($_SESSION['username'])) {
+$b = $_SESSION['email'];
+if (empty($_SESSION['email'])) {
 	?>
 	<script language="JavaScript">
 		window.location = "index.php";
@@ -78,7 +78,7 @@ if (empty($_SESSION['username'])) {
 				</div>
 				<div class="body">
 					<?php include ("menu.php");
-					$strquery = "SELECT * from e_info INNER JOIN userinfo ON e_info.SID=userinfo.SID WHERE username='{$b}'";
+					$strquery = "SELECT * from e_info INNER JOIN userinfo ON e_info.SID=userinfo.SID WHERE email='{$b}'";
 					$results = mysql_query($strquery);
 					$num = mysql_numrows($results);
 					$Employee_Name = mysql_result($results, $i, "EName");

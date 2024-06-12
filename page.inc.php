@@ -381,7 +381,7 @@ class Page {
   $db->query($qry);
   while($row=$db->fetchObject())
   {
-  echo $row->username."<br>";
+  echo $row->email."<br>";
   }
   $page->get_page_nav(); // Shows the nevigation bars;
  */

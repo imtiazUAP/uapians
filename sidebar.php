@@ -2,7 +2,7 @@
 	<br>
 	<br>
 	<div style="text-decoration:none;font-size:18px; color:#FFFFFF; font-weight:bold">You are Logged in as <span
-			style="font-style: italic; font-size: 24px">...<?php print $_SESSION['username'] ?> </span> </div>
+			style="font-style: italic; font-size: 24px">...<?php print $_SESSION['email'] ?> </span> </div>
 	<br>
 	<?php
 	if (($userdata['admin'] == '3')) {

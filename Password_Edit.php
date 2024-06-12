@@ -1,7 +1,7 @@
 <html>
 <?php
 include ('dbconnect.php');
-$strquery = "SELECT SID,userid,username,password from userinfo where SID= '" . $_GET["SID"] . "' ";
+$strquery = "SELECT SID,userid,email,password from userinfo where SID= '" . $_GET["SID"] . "' ";
 $results = mysql_query($strquery);
 $row = mysql_fetch_array($results);
 ?>
@@ -16,8 +16,8 @@ $row = mysql_fetch_array($results);
   <form id="form1" name="form1" method="get" action="Password_Update.php">
     <table style="padding:30px">
       <tr>
-        <td>Your username:</td>
-        <td><?php echo $row["username"]; ?></td>
+        <td>Your email:</td>
+        <td><?php echo $row["email"]; ?></td>
       </tr>
       <tr>
         <td>Type Your New Password:</td>

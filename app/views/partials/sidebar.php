@@ -1,18 +1,11 @@
 <div class="sidebar_box">
 	<div class="sidebar_login_info">
 		You are Logged in as: <span><?php print $_SESSION['username'] ?></span>
+		<button class="button button_red" onclick="window.open('Log_Out.php','_top')"> Log Out </button>
 	</div>
 	<?php if (($userdata['admin'] == '3')) {?>
 		<a href='php_sendmail_upload1.php'>Send Email</a>
 	<?php } ?>
-	<button class="button button_red" onclick="window.open('Log_Out.php','_top')"> Log Out </button>
-
-	<div>
-		<form>
-			<input type="text" size="27" placeholder="Search for any page" onKeyUp="showResult(this.value)">
-			<div id="livesearch"></div>
-		</form>
-	</div>
 
 	<div class="sidebar_send_message">
 		<ul>
@@ -83,7 +76,6 @@
 		<?php } ?>
 	</ul>
 </div>
-
 
 <div class="sidebar_box">
 	<div class="sidebar_section_head">

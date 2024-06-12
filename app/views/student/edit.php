@@ -51,7 +51,7 @@
                 </tr>
                 <tr>
                     <td>Email:</td>
-                    <td><input name="SE_Mail" type="text" id="SE_Mail" value="<?php echo $studentInfo["SE_Mail"]; ?>" />
+                    <td><input name="email" type="text" id="email" value="<?php echo $studentInfo["email"]; ?>" />
                     </td>
                 </tr>
                 <tr>

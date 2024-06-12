@@ -52,7 +52,7 @@ $row = mysql_fetch_array($results);
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input name="SE_Mail" type="text" id="SE_Mail" value="<?php echo $row["SE_Mail"]; ?>" /></td>
+                <td><input name="email" type="text" id="email" value="<?php echo $row["email"]; ?>" /></td>
             </tr>
             <tr>
                 <td>Date of Birth:</td>

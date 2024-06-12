@@ -5,7 +5,7 @@ if (!$con) {
 }
 mysql_select_db("uapians_mylab", $con);
 $email = $_POST['email'];
-$query = "SELECT userid FROM userinfo where SE_Mail='" . $email . "'";
+$query = "SELECT userid FROM userinfo where email='" . $email . "'";
 $result = mysql_query($query, $con);
 $Results = mysql_fetch_array($result);
 $id = $Results[userid];

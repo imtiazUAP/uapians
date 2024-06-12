@@ -5,11 +5,11 @@ include_once ("page.inc.php");
 include ("dbconnect.php");
 ?>
 <?php
-$b = $_SESSION['username'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$b = $_SESSION['email'];
+$userrole = mysql_query("select * from userinfo where email='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
 //echo $userdata['admin'];
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['email'])) {
 	?>
 	<script language="JavaScript">
 		window.location = "index.php";

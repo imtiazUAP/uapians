@@ -23,7 +23,7 @@ include ("dbconnect.php");
                     <br>
                     <div style="font-size:18px; font-weight:bold; color:#FFFFFF">Sign Up</div>
                     <div style="font-size:14px">
-                        <p>After successful registration a email will be sent to your valid email account with username
+                        <p>After successful registration a email will be sent to your valid email account with email
                             and password. Use that user name and password to log in... </p>
                     </div>
                     <br>
@@ -133,8 +133,8 @@ include ("dbconnect.php");
                                     <tr>
                                         <td><label for="Portrait" class="signup_field" data-icon="u">User Name:</label>
                                         </td>
-                                        <td><input id="file" name="username" required="required" type="text"
-                                                placeholder="your desired username" /></td>
+                                        <td><input id="file" name="email" required="required" type="text"
+                                                placeholder="your desired email" /></td>
                                     </tr>
                                 </p>
                                 <p>

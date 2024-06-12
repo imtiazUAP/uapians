@@ -3,12 +3,12 @@ session_start();
 include ('dbconnect.php');
 ?>
 <?php
-$b = $_SESSION['username'];
+$b = $_SESSION['email'];
 //$c=$_SESSION['userid'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$userrole = mysql_query("select * from userinfo where email='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
 //echo $userdata['admin'];
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['email'])) {
 	?>
 	<script language="JavaScript">
 		window.location = "index.php";
@@ -38,11 +38,11 @@ if (empty($_SESSION['username'])) {
 					<?php
 					//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
-					$strquery = "SELECT SPortrait,username FROM s_info INNER JOIN userinfo ON s_info.SID=userinfo.SID WHERE username='{$b}'";
+					$strquery = "SELECT SPortrait,email FROM s_info INNER JOIN userinfo ON s_info.SID=userinfo.SID WHERE email='{$b}'";
 					$results = mysql_query($strquery);
 					$num = mysql_numrows($results);
 					$SPortrait = mysql_result($results, $i, "SPortrait");
-					$userName = mysql_result($results, $i, "username");
+					$email = mysql_result($results, $i, "email");
 					?>
 					<div id='cssmenu' align="center" style="vertical-align:middle">
 						<ul>
@@ -64,7 +64,7 @@ if (empty($_SESSION['username'])) {
 								<br>
 								<br>
 								<div style="text-decoration:none;font-size:24px; color:#FFFFFF; font-weight:bold"><span>You
-										are Logged in as <?php print $_SESSION['username'] ?></span></div>
+										are Logged in as <?php print $_SESSION['email'] ?></span></div>
 								<br>
 								<?php
 								if (($userdata['admin'] == '3')) {
@@ -207,43 +207,43 @@ if (empty($_SESSION['username'])) {
 						</div>
 						<?
 						if ($_POST[send_mail_option_id] == '1') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='1' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='1' ");
 						}
 						if ($_POST[send_mail_option_id] == '2') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='2' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='2' ");
 						}
 						if ($_POST[send_mail_option_id] == '3') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='3' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='3' ");
 						}
 						if ($_POST[send_mail_option_id] == '4') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='4' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='4' ");
 						}
 						if ($_POST[send_mail_option_id] == '5') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='5' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='5' ");
 						}
 						if ($_POST[send_mail_option_id] == '6') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='6' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='6' ");
 						}
 						if ($_POST[send_mail_option_id] == '7') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='7' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='7' ");
 						}
 						if ($_POST[send_mail_option_id] == '8') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='8' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='8' ");
 						}
 						if ($_POST[send_mail_option_id] == '9') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='1' OR SMID='2' OR SMID='3' OR SMID='4' OR SMID='5' OR SMID='6' OR SMID='7' OR SMID='8' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='1' OR SMID='2' OR SMID='3' OR SMID='4' OR SMID='5' OR SMID='6' OR SMID='7' OR SMID='8' ");
 						}
 						if ($_POST[send_mail_option_id] == '10') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info ");
+							$query = mysql_query("SELECT email FROM s_info ");
 						}
 						if ($_POST[send_mail_option_id] == '11') {
-							$query = mysql_query("SELECT SE_Mail FROM e_info ");
+							$query = mysql_query("SELECT email FROM e_info ");
 						}
 						if ($_POST[send_mail_option_id] == '12') {
-							$query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='12' ");
+							$query = mysql_query("SELECT email FROM s_info WHERE SMID='12' ");
 						}
 						while ($row = mysql_fetch_assoc($query)) {
-							$strTo = $row['SE_Mail'];
+							$strTo = $row['email'];
 							$strSubject = $_POST["txtSubject"];
 							$strMessage = nl2br($_POST["txtDescription"]);
 							//*** Uniqid Session ***//

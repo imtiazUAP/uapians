@@ -85,7 +85,7 @@
                 <td><input type"text" name="Working_At" /></td>
             </tr>
             <tr>
-                <td>SE_Mail:</td>
+                <td>email:</td>
                 <td><input type"text" name="email" /></td>
             </tr>
             <tr>

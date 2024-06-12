@@ -3,10 +3,10 @@ session_start();
 error_reporting(1);
 include ("dbconnect.php");
 include_once ("page.inc.php");
-$b = $_SESSION['username'];
-$userrole = mysqli_query("select * from userinfo where username='{$b}'");
+$b = $_SESSION['email'];
+$userrole = mysqli_query("select * from userinfo where email='{$b}'");
 $userdata = mysqli_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) { ?>
+if (empty($_SESSION['email'])) { ?>
 	<script language="JavaScript">window.location = "index.php";</script><?php
 } else { ?>
 	<html>

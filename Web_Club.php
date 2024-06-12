@@ -1,7 +1,7 @@
 <?php
 session_start(); ?>
 <?php
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['email'])) {
 	?>
 	<script language="JavaScript">
 		window.location = "index.php";
@@ -97,11 +97,11 @@ if (empty($_SESSION['username'])) {
 						<?php
 						//$connect=mysql_connect("localhost","root","");
 //$select_db=mysql_select_db("mylab");
-						$strquery = "SELECT SPortrait,username FROM s_info INNER JOIN userinfo ON s_info.SID=userinfo.SID WHERE username='{$b}'";
+						$strquery = "SELECT SPortrait,email FROM s_info INNER JOIN userinfo ON s_info.SID=userinfo.SID WHERE email='{$b}'";
 						$results = mysql_query($strquery);
 						$num = mysql_numrows($results);
 						$SPortrait = mysql_result($results, $i, "SPortrait");
-						$userName = mysql_result($results, $i, "username");
+						$email = mysql_result($results, $i, "email");
 						?>
 						<div id='cssmenu' align="center" style="vertical-align:middle">
 							<ul>

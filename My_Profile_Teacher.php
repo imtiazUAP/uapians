@@ -5,10 +5,10 @@ include ("dbconnect.php");
 include_once ("page.inc.php");
 ?>
 <?php
-$b = $_SESSION['username'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$b = $_SESSION['email'];
+$userrole = mysql_query("select * from userinfo where email='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['email'])) {
 	?>
 	<script language="JavaScript">
 		window.location = "index.php";
@@ -31,7 +31,7 @@ if (empty($_SESSION['username'])) {
 userinfo
 ON
 e_info.SID=userinfo.SID
- WHERE username='{$b}'";
+ WHERE email='{$b}'";
 						$results = mysql_query($strquery);
 						$num = mysql_numrows($results);
 						$SID = mysql_result($results, $i, "SID");

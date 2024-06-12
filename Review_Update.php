@@ -10,15 +10,15 @@ error_reporting(1);
 
 <body>
     <?php
-    $a = mysql_query($sql = "INSERT INTO s_info(SID, SPortrait, SName, SReg, district_id, SE_Mail, SMID, Blood_Group_ID, donor_value) VALUES('" . $_REQUEST['SID'] . "', '" . $_REQUEST['SPortrait'] . "', '" . $_REQUEST['SName'] . "', '" . $_REQUEST['SReg'] . "', '" . $_REQUEST['district_id'] . "', '" . $_REQUEST['SE_Mail'] . "', '" . $_REQUEST['SMID'] . "', '" . $_REQUEST['Blood_Group_ID'] . "', '" . $_REQUEST['donor_value'] . "')");
+    $a = mysql_query($sql = "INSERT INTO s_info(SID, SPortrait, SName, SReg, district_id, email, SMID, Blood_Group_ID, donor_value) VALUES('" . $_REQUEST['SID'] . "', '" . $_REQUEST['SPortrait'] . "', '" . $_REQUEST['SName'] . "', '" . $_REQUEST['SReg'] . "', '" . $_REQUEST['district_id'] . "', '" . $_REQUEST['email'] . "', '" . $_REQUEST['SMID'] . "', '" . $_REQUEST['Blood_Group_ID'] . "', '" . $_REQUEST['donor_value'] . "')");
     $password = $_REQUEST['password'];
-    mysql_query($sql = "INSERT INTO userinfo (username,password,Reg,SID,SE_Mail) VALUES ('" . $_REQUEST['username'] . "','" . md5($password) . "','" . $_REQUEST['SReg'] . "','" . $_REQUEST['SID'] . "','" . $_REQUEST['SE_Mail'] . "')");
-    $email = $_REQUEST['SE_Mail'];
-    $userName = $_REQUEST['username'];
+    mysql_query($sql = "INSERT INTO userinfo (email,password,Reg,SID,email) VALUES ('" . $_REQUEST['email'] . "','" . md5($password) . "','" . $_REQUEST['SReg'] . "','" . $_REQUEST['SID'] . "','" . $_REQUEST['email'] . "')");
+    $email = $_REQUEST['email'];
+    $email = $_REQUEST['email'];
     $pasword = $_REQUEST['password'];
     $from = "info@uapians.net"; // sender
     $subject = "Profile Activated";
-    $message = "Your Profile is Activated at http://www.uapians.net please log in to continue.... Username:$userName   Password:$pasword  Thank You!!!";
+    $message = "Your Profile is Activated at http://www.uapians.net please log in to continue.... email:$email   Password:$pasword  Thank You!!!";
     // message lines should not exceed 70 characters (PHP rule), so wrap it
     $message = wordwrap($message, 70);
     // send mail

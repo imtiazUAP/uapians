@@ -3,7 +3,7 @@ session_start();
 error_reporting(1);
 include ("dbconnect.php");
 ?>
-<?php //print $_SESSION['username'];                 ?>
+<?php //print $_SESSION['email'];                 ?>
 <html>
 
 <head>

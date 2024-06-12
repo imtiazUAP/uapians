@@ -3,7 +3,7 @@ session_start();
 error_reporting(1);
 include ("dbconnect.php");
 ?>
-<?php //print $_SESSION['username'];                 ?>
+<?php //print $_SESSION['email'];                 ?>
 <html>
 
 <head>
@@ -33,7 +33,7 @@ include ("dbconnect.php");
 						<div style="font-size:24px; font-weight:bold; padding:50; color:#FFFFFF">Your Registration is
 							Complete!!! Please wait for Admin Review (maximum 24 hour)
 							<br>
-							A confirmation a email will be sent to your valid email account with username and password.
+							A confirmation a email will be sent to your valid email account with email and password.
 							Use that user name and password to log in...
 							<br>
 							ThankYou......

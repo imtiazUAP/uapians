@@ -48,7 +48,7 @@ include ('dbconnect.php'); ?>
             if (isset($_POST["from"])) {
               $from = $_POST["from"]; // sender
               //$to='emtiaj@yahoo.com,emtiaj2011@yahoo.com';
-              $to = $SE_Mail;
+              $to = $email;
               $subject = $_POST["subject"];
               $message = $_POST["message"];
               // message lines should not exceed 70 characters (PHP rule), so wrap it
@@ -60,9 +60,9 @@ include ('dbconnect.php'); ?>
           }
           ?>
           <?php
-          $query = mysql_query("SELECT SE_Mail FROM s_info WHERE SMID='12' ");
+          $query = mysql_query("SELECT email FROM s_info WHERE SMID='12' ");
           while ($row = mysql_fetch_assoc($query)) {
-            $to = $row['SE_Mail'];
+            $to = $row['email'];
             $subject = 'the subject';
             $message = 'hello this is test 2 after database ok';
             $headers = 'From: webmaster@example.com' . "\r\n" .

@@ -1,27 +1,27 @@
 <?php
    error_reporting(1);
-   $b = $_SESSION['username'];
+   $b = $_SESSION['email'];
 ?>
 <?php
    $dbconnect = new dbClass();
    $connection = $dbconnect->getConnection();
-   $stmt = $connection->prepare("SELECT s_info.SPortrait, username FROM s_info INNER JOIN sign_up ON s_info.SID=sign_up.SID WHERE username=?");
+   $stmt = $connection->prepare("SELECT s_info.SPortrait, email FROM s_info INNER JOIN sign_up ON s_info.SID=sign_up.SID WHERE email=?");
    $stmt->bind_param("s", $b);
    $stmt->execute();
    $result = $stmt->get_result();
    $userData = $result->fetch_assoc();
    $SPortrait = $userData['SPortrait'];
-   $userName = $userData['username'];
+   $email = $userData['email'];
    $stmt->close();
 
    // For employees
-   $stmt = $connection->prepare("SELECT Employee_Portrait,username FROM e_info INNER JOIN sign_up ON e_info.SID=sign_up.SID WHERE username=?");
+   $stmt = $connection->prepare("SELECT Employee_Portrait,email FROM e_info INNER JOIN sign_up ON e_info.SID=sign_up.SID WHERE email=?");
    $stmt->bind_param("s", $b);
    $stmt->execute();
    $results = $stmt->get_result();
    $employeeData = $results->fetch_assoc();
    $Employee_Portrait = $employeeData['Employee_Portrait'];
-   $userName = $employeeData['username'];
+   $email = $employeeData['email'];
 ?>
 <div id='cssmenu_new'>
    <ul>

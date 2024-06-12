@@ -44,7 +44,7 @@ class StudentController {
                 'SHouse' => $_POST['SHouse'],
                 'district_id' => $_POST['district_id'],
                 'SPh_Number' => $_POST['SPh_Number'],
-                'SE_Mail' => $_POST['SE_Mail'],
+                'email' => $_POST['email'],
                 'SB_of_Date' => $_POST['SB_of_Date'],
                 'SPortrait' => $_POST['SPortrait'],
                 'SMID' => $_POST['SMID'],

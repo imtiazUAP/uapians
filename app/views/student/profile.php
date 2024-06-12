@@ -88,7 +88,7 @@
 		<div style=" padding-bottom:75px;" class="myprofilebox">
 			<p>
 				Phone Number: <?php echo $studentInfo["SPh_Number"]; ?> <br>
-				E_Mail: <?php echo $studentInfo["SE_Mail"]; ?> <br>
+				E_Mail: <?php echo $studentInfo["email"]; ?> <br>
 				Facebook: <?php echo $studentInfo["FB_Link"]; ?> <br>
 				Twitter: <?php echo $studentInfo["Twitter_Link"]; ?> <br>
 				Blog: <?php echo $studentInfo["Blog"]; ?> <br>

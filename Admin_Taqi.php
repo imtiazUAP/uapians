@@ -4,12 +4,12 @@ error_reporting(1);
 include ("dbconnect.php");
 ?>
 <?php
-$b = $_SESSION['username'];
+$b = $_SESSION['email'];
 //$c=$_SESSION['userid'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$userrole = mysql_query("select * from userinfo where email='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
 //echo $userdata['admin'];
-if (empty($_SESSION['username'])) {
+if (empty($_SESSION['email'])) {
 	?>
 	<script language="JavaScript">
 		window.location = "index.php";
@@ -103,7 +103,7 @@ s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID WHERE SID='117'";
 					$House = mysql_result($results, $i, "SHouse");
 					$Home_City = mysql_result($results, $i, "SHome_City");
 					$Phone_Number = mysql_result($results, $i, "SPh_Number");
-					$SE_Mail = mysql_result($results, $i, "SE_Mail");
+					$email = mysql_result($results, $i, "email");
 					$FB_Link = mysql_result($results, $i, "FB_Link");
 					$Twitter_Link = mysql_result($results, $i, "Twitter_Link");
 					$Blog = mysql_result($results, $i, "Blog");
@@ -152,7 +152,7 @@ s_info.Blood_Group_ID=blood_group_info.Blood_Group_ID WHERE SID='117'";
 						<div style=" padding-bottom:75px;">
 							<p style="width:500px;padding:10px;border:2px solid white;margin:0px; font-size:18px;">
 								Phone Number: <?php echo $Phone_Number; ?> <br>
-								E_Mail: <?php echo $SE_Mail; ?> <br>
+								E_Mail: <?php echo $email; ?> <br>
 								Facebook Link: <?php echo $FB_Link; ?> <br>
 								Twitter: <?php echo $Twitter_Link; ?> <br>
 								Blog: <?php echo $Blog; ?> <br>

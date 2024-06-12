@@ -156,7 +156,7 @@ class Student {
                 district_id=?, 
                 SPh_Number=?,
 
-                SE_Mail=?, 
+                email=?, 
                 SB_of_Date=?, 
                 SPortrait=?, 
                 SMID=?, 
@@ -187,7 +187,7 @@ class Student {
                 $data['district_id'],
                 $data['SPh_Number'],
 
-                $data['SE_Mail'],
+                $data['email'],
                 $data['SB_of_Date'],
                 $data['SPortrait'],
                 $data['SMID'],

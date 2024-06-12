@@ -4,9 +4,9 @@ error_reporting(1);
 include ("dbconnect.php");
 ?>
 <?php
-$b = $_SESSION['username'];
+$b = $_SESSION['email'];
 //$c=$_SESSION['userid'];
-$userrole = mysql_query("select * from userinfo where username='{$b}'");
+$userrole = mysql_query("select * from userinfo where email='{$b}'");
 $userdata = mysql_fetch_assoc($userrole);
 $SID = $userdata['SID'];
 ?>

@@ -4,9 +4,9 @@ class bdClass
 	//$dbuser="tangiers_tangier";
 //$pwd="user123";
 //$default_db="tangiers_InvestigatorReport";
-	function mysqlConnect($host, $userName, $password, $name)
+	function mysqlConnect($host, $email, $password, $name)
 	{
-		$connectect = @mysql_connect($host, $userName, $password) or die(mysql_error());
+		$connectect = @mysql_connect($host, $email, $password) or die(mysql_error());
 		$selected = @mysql_select_db($name) or die(mysql_error());
 	}
 	function myQuery($query, $fieldName)
