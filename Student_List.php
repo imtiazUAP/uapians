@@ -44,7 +44,6 @@ if (empty($_SESSION['username'])) {
 				fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 	</head>
-
 	<body>
 		<div id="grad1">
 			<div class="bodydiv">
