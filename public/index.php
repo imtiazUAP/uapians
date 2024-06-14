@@ -1,10 +1,16 @@
 <?php
 define('BASE_DIR', realpath(__DIR__ . '/../'));
 require_once BASE_DIR . '/app/controllers/AuthController.php';
+require_once BASE_DIR . '/app/controllers/BlogController.php';
+require_once BASE_DIR . '/app/controllers/BloodBankController.php';
+require_once BASE_DIR . '/app/controllers/CourseController.php';
 require_once BASE_DIR . '/app/controllers/HomeController.php';
+require_once BASE_DIR . '/app/controllers/ProjectController.php';
+require_once BASE_DIR . '/app/controllers/ReferenceController.php';
+require_once BASE_DIR . '/app/controllers/StaffController.php';
 require_once BASE_DIR . '/app/controllers/StudentController.php';
 require_once BASE_DIR . '/app/controllers/TeacherController.php';
-require_once BASE_DIR . '/app/controllers/StaffController.php';
+require_once BASE_DIR . '/app/controllers/TutorialController.php';
 
 // Parse the URL to separate the path and query string
 $urlParts = parse_url($_SERVER['REQUEST_URI']);
@@ -38,6 +44,26 @@ $routes = [
     'staff/profile' => ['controller' => 'StaffController', 'action' => 'profile'],
     'staff/edit' => ['controller' => 'StaffController', 'action' => 'edit'],
     'staff/update' => ['controller' => 'StaffController', 'action' => 'update'],
+    // course
+    'course/list' => ['controller' => 'CourseController', 'action' => 'list'],
+    'course/add' => ['controller' => 'CourseController', 'action' => 'add'],
+    'course/save' => ['controller' => 'CourseController', 'action' => 'save'],
+    'course/edit' => ['controller' => 'CourseController', 'action' => 'edit'],
+    'course/update' => ['controller' => 'CourseController', 'action' => 'update'],
+    'course/delete-confirm' => ['controller' => 'CourseController', 'action' => 'deleteConfirm'],
+    'course/delete-execute' => ['controller' => 'CourseController', 'action' => 'deleteExecute'],
+    // project
+    'project/category' => ['controller' => 'ProjectController', 'action' => 'category'],
+    'project/list' => ['controller' => 'ProjectController', 'action' => 'list'],
+    // Blog
+    'blog/list' => ['controller' => 'BlogController', 'action' => 'list'],
+    // Blood Bank
+    'blood-bank/list' => ['controller' => 'BloodBankController', 'action' => 'list'],
+    // Reference
+    'reference/list' => ['controller' => 'ReferenceController', 'action' => 'list'],
+    // Tutorial
+    'tutorial/category' => ['controller' => 'TutorialController', 'action' => 'category'],
+    'tutorial/list' => ['controller' => 'TutorialController', 'action' => 'list'],
 ];
 
 // Find the matching route

@@ -25,6 +25,9 @@ class BaseController
             $userInfo = User::getUserByUserId($_SESSION['user_id']);
         }
 
+        // Including admin info
+        $adminInfo = User::getAdminInfo();
+
         if ($includeLayout) {
             // rendering with the layout
             $content = BASE_DIR . '/app/views/' . $view;

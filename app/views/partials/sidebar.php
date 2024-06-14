@@ -115,31 +115,22 @@
 		<h3 align="left">Admin Panel</h3>
 	</div>
 	<ul>
-		<div class="sidebar_admin_photo">
-			<a href="/../admin/Admin_Nokib.php">
-				<li><img src="<?= BASE_URL ?>/app/assets/images/1234554321.jpg" /> Nokib Mozumder</li>
+		<?php foreach($adminInfo as $admin) { ?>
+			<div class="sidebar_admin_photo">
+			<a href="<?= BASE_URL . '/student/profile?SID=' .$admin['user_id'] ?>">
+				<li><img src="<?= BASE_URL . '/app/assets/' . $admin['SPortrait'] ?>" />  <?= $admin['SName'] ?></li>
 			</a>
-		</div>
-		<p class="bottom">Nokib Mozumder, University of Asia Pacific
-			Phone:01670756503
-			E_Mail:nokib016@gmail.com
-		</p>
-		<li><a href="send_message_to_admin.php">Send him a Message</a></li>
-		<?php if (!empty($userInfo['group_id']) && ($userInfo['group_id'] == 1)) { ?>
-			<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
-		<?php } ?>
-
-		<div class="sidebar_admin_photo">
-			<a href="Admin_Jihan.php">
-				<li><img src="<?= BASE_URL ?>/app/assets/images/Picture 2963.jpg" />MD. Mazharul islam jihan</li>
-			</a>
-		</div>
-		<p class="bottom">Jihan, University of Asia Pacific
-			Phone:+8801752512666
-			E_Mail:jihanislam007@gmail.com</p>
-		<li><a href="send_message_to_admin.php">Send him a Message</a></li>
-		<?php if (!empty($userInfo['group_id']) && ($userInfo['group_id'] == 1)) { ?>
-			<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
+			</div>
+			<p class="bottom">
+				<?= $admin['SPh_Number'] ?>
+				<?= $admin['email'] ?> <br>
+				<?= $admin['SMName'] ?> <br>
+				University of Asia Pacific
+			</p>
+			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
+			<?php if (!empty($userInfo['group_id']) && ($userInfo['group_id'] == 1)) { ?>
+				<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
+			<?php } ?>
 		<?php } ?>
 	</ul>
 </div>

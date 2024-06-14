@@ -2,12 +2,6 @@
 include_once (BASE_DIR . "/app/helpers/page.inc.php");
 
 class Student {
-    public static function getAll() {
-        $db = new dbClass();
-        $query = "SELECT * FROM blogs";
-        return $db->query($query);
-    }
-
     public static function getStudentByStudentId($studentId)
     {
         $dbconnect = new dbClass();

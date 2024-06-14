@@ -34,4 +34,29 @@ class User {
 
         return $userInfo;
     }
+
+    public static function getAdminInfo()
+    {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $qry = "SELECT s.*, u.*, SMName
+            FROM
+                user u
+                    LEFT OUTER JOIN
+                s_info s ON s.user_id = u.user_id
+                    LEFT OUTER JOIN
+                sm_info ON s.SMID = sm_info.SMID
+            WHERE
+                u.group_id = 1";
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            $stmt->execute();
+            $adminInfo = $stmt->get_result();
+            $stmt->close();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+        return $adminInfo;
+    }
 }

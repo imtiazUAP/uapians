@@ -1,0 +1,29 @@
+<?php
+
+require_once BASE_DIR . '/app/controllers/BaseController.php';
+require_once BASE_DIR . '/app/helpers/dbConnect.php';
+require_once BASE_DIR . '/app/models/Blog.php';
+require_once BASE_DIR . '/app/config/config.php';
+
+class BlogController extends BaseController
+{
+    public function category($queryParams)
+    {
+        $this->render(
+            'project/category.php',
+            []
+        );
+    }
+
+    public function list($queryParams)
+    {
+        $projectList = Project::getProjectsByCategoryId($queryParams['language_id']);
+
+        $data = compact('projectList');
+        $this->render(
+            'project/list.php',
+            $data
+        );
+    }
+
+}
