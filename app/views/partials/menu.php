@@ -8,7 +8,7 @@
          <li><a href='Admin_Control.php'><span>Administration</span></a></li>
       <?php } ?>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 2) { ?>
-         <li><a href='My_Profile_Teacher.php'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
+         <li><a href='<?= BASE_URL ?>/teacher/profile?user_id=<?= $userInfo['user_id'] ?>'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
                      src="<?php echo BASE_URL.'/app/assets/'.$userInfo['Employee_Portrait']; ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
       <?php } ?>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 3) { ?>
@@ -41,9 +41,9 @@
    </li>
    <li class='active has-sub'><a href='#'><span>Faculties & Staffs</span></a>
       <ul>
-         <li class='has-sub'><a href='Faculty_List.php'><span>Faculty</span></a>
+         <li class='has-sub'><a href='<?= BASE_URL ?>/teacher/list'><span>Faculty</span></a>
          </li>
-         <li class='has-sub'><a href='Staff_List.php'><span>Staff</span></a>
+         <li class='has-sub'><a href='<?= BASE_URL ?>/staff/list'><span>Staff</span></a>
          </li>
       </ul>
    </li>

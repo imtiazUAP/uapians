@@ -351,7 +351,7 @@ class Page {
     }
 
     function calculate() {
-        $this->page = $_REQUEST['page'];
+        $this->page = !empty($_REQUEST['page']) ? $_REQUEST['page'] : 0;
         if (!is_numeric($this->page))
             $this->page = 0;
         $this->start = $this->page * $this->records_per_page;
