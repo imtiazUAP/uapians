@@ -93,4 +93,48 @@ class AdminController extends BaseController
         }
     }
 
+    public function addStudent($queryParams)
+    {
+        $bloodGroups = BloodBank:: getAllBloodGroups(); 
+        $bloodDonorYesNo = BloodBank::getBloodDonorYesNo();
+        $districts = Student::getAllDistricts();
+        $semesters = Student:: getAllSemesters();
+
+        $data = compact('bloodGroups', 'bloodDonorYesNo', 'districts', 'semesters');
+        $this->render(
+            'admin/add-student.php',
+            $data,
+            false
+        );
+    }
+
+    public function saveStudent($queryParams) {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'SReg' => $_POST['SReg'],
+                'SName' => $_POST['SName'],
+                'SMID' => $_POST['SMID'],
+                'Blood_Group_ID' => $_POST['Blood_Group_ID'],
+                'SE_Mail' => $_POST['email'],
+                'SPh_Number' => $_POST['contact'],
+                'FB_Link' => $_POST['FB_Link'],
+                'password' => $_POST['password'],
+                'district_id' => $_POST['district_id']
+            ];
+    
+            $file = $_FILES['file'];
+    
+            $success = Admin::saveStudent($data, $file);
+    
+            if ($success) {
+                header('Location: ' . BASE_URL . '/admin/signup-review?SReg=' . $data['SReg'] . '&message=This+Profile+is+activated!+Confirmation+Email+Sent!!!+Thank+you');
+            } else {
+                header('Location: ' . BASE_URL . '/admin/signup-review?SReg=' . $data['SReg'] . '&message=Profile+Activation+Failed');
+            }
+            exit();
+        }
+    }
+    
+    
+
 }

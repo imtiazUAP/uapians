@@ -20,6 +20,44 @@ class StudentController extends BaseController
         );
     }
 
+    public function signUp() {
+        $districts = Student::getAllDistricts();
+        $semesters = Student::getAllSemesters();
+        $bloodGroups = BloodBank::getAllBloodGroups();
+        $bloodDonorYesNo = BloodBank::getBloodDonorYesNo();
+
+        $this->render(
+            'student/sign-up.php',
+            compact('districts', 'semesters', 'bloodGroups', 'bloodDonorYesNo')
+        );
+    }
+
+    public function signUpSave() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'reg' => $_POST['reg'],
+                'name' => $_POST['name'],
+                'SMID' => $_POST['SMID'],
+                'Blood_Group_ID' => $_POST['Blood_Group_ID'],
+                'donor_value' => $_POST['donor_value'],
+                'district_id' => $_POST['district_id'],
+                'email' => $_POST['email'],
+                'password' => $_POST['password']
+            ];
+    
+            $file = $_FILES['file'];
+    
+            $success = Student::signUpSave($data, $file);
+    
+            if ($success) {
+                header('Location: ' . BASE_URL . '/student/sign-up?message=Signup+Successful!!!+Thank+you');
+            } else {
+                header('Location: ' . BASE_URL . '/student/sign-up?message=Signup+Failed');
+            }
+            exit();
+        }
+    }
+
     public function profile($queryParams)
     {
         $studentInfo = Student::getStudentByStudentId($queryParams['SID']);

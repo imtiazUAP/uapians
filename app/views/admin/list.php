@@ -3,8 +3,8 @@
         <?php
         if (!empty($userInfo['group_id'] ) && $userInfo['group_id'] == 1) {
             ?>
-            <a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=600&width=350&modal=true" title="New Student"
-                class="thickbox">Create New Student</a>
+            <a href="<?= BASE_URL . '/admin/add-student?keepThis=true&TB_iframe=true&height=565&width=450&modal=true' ?>" title="New Student"
+                class="thickbox">Add New Student</a>
             <?php
         }
         ?>

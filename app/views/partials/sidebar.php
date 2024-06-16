@@ -16,7 +16,7 @@
 				<button name="login" type="Submit" class="button button_blue">Log In</button>
 			</form>
 			<button name="reset_pass" onclick="window.open('reset_pass.php','_top')" class="button button_red">Forgot Password?</button>
-			<button name="sign_up" onclick="window.open('sign_up.php','_top')" class="button button_blue">Sign Up</button>
+			<button name="sign_up" onclick="window.open('<?= BASE_URL . '/student/sign-up' ?>','_top')" class="button button_blue">Sign Up</button>
 			<?php
 			if (isset($_REQUEST['login']) && !empty($_REQUEST['email'])) {
 				$loginEmail = $_REQUEST['email'];
@@ -57,7 +57,7 @@
 			}
 			?>
 			<p id="sidebar_no_account" >Don't have an account ?</p>
-			<a id="sidebar_sign_up" href="sign_up.php">Sign up</a>
+			<a id="sidebar_sign_up" href="<?= BASE_URL . '/student/sign-up' ?>">Sign up</a>
 		</div>
 	<?php } else { ?>
 		<div class="sidebar_logout">

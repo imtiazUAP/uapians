@@ -172,4 +172,67 @@ class Student {
         }
     }
 
+    public static function signUpSave($data, $file) {
+        $data['SPortrait'] = self::savePortrait($file);
+
+        // Adding to student table
+        return self::saveSignUpInfo($data);
+    }
+    
+    public static function saveSignUpInfo($data) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+
+        $sql = "INSERT INTO sign_up
+            (SPortrait, SName, SReg, district_id, SE_Mail, SMID, Blood_Group_ID, donor_value, password)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $connection->prepare($sql);
+        if ($stmt) {
+            $stmt->bind_param(
+                "sssisiiis",
+                $data['SPortrait'],
+                $data['name'],
+                $data['reg'],
+                $data['district_id'],
+                $data['email'],
+                $data['SMID'],
+                $data['Blood_Group_ID'],
+                $data['donor_value'],
+                $data['password']
+                
+            );
+            return $stmt->execute();
+        } else {
+            die("Inser Query to s_info failed: " . $connection->error);
+        }
+    }
+    
+    
+    public static function savePortrait($file) {
+        $post_photo = $file['name'];
+        $post_photo_tmp = $file['tmp_name'];
+        $ext = pathinfo($post_photo, PATHINFO_EXTENSION);  // getting image extension 
+        if ($ext == 'png' || $ext == 'PNG' || $ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG' || $ext == 'gif' || $ext == 'GIF') {
+            if ($ext == 'jpg' || $ext == 'jpeg' || $ext == 'JPG' || $ext == 'JPEG') {
+                $src = imagecreatefromjpeg($post_photo_tmp);
+            }
+            if ($ext == 'png' || $ext == 'PNG') {
+                $src = imagecreatefrompng($post_photo_tmp);
+            }
+            if ($ext == 'gif' || $ext == 'GIF') {
+                $src = imagecreatefromgif($post_photo_tmp);
+            }
+            list($width_min, $height_min) = getimagesize($post_photo_tmp); // fetching original image width and height
+            $newwidth_min = 350; // set compressing image width
+            $newheight_min = ($height_min / $width_min) * $newwidth_min; // equation for compressed image height
+            $tmp_min = imagecreatetruecolor($newwidth_min, $newheight_min); // create frame  for compress image
+            imagecopyresampled($tmp_min, $src, 0, 0, 0, 0, $newwidth_min, $newheight_min, $width_min, $height_min); // compressing image
+            $newfilename = round(microtime(true)) . '.' . $ext; // creating a new file name as 2 photo can not be with same name
+            imagejpeg($tmp_min, BASE_DIR."/app/assets/images/" . $newfilename, 80); //copy image in folder//
+            return 'images/' . $newfilename; // new name with path to save in database
+        } else {
+            return false;
+        }
+    }
+
 }

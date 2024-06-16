@@ -35,6 +35,8 @@ $routes = [
     'student/edit' => ['controller' => 'StudentController', 'action' => 'edit'],
     'student/update' => ['controller' => 'StudentController', 'action' => 'update'],
     'student/insert' => ['controller' => 'StudentController', 'action' => 'insert'],
+    'student/sign-up' => ['controller' => 'StudentController', 'action' => 'signUp'],
+    'student/sign-up/save' => ['controller' => 'StudentController', 'action' => 'signUpSave'],
     // Teacher
     'teacher/list' => ['controller' => 'TeacherController', 'action' => 'list'],
     'teacher/profile' => ['controller' => 'TeacherController', 'action' => 'profile'],
@@ -80,6 +82,8 @@ $routes = [
     'admin/signup-approve' => ['controller' => 'AdminController', 'action' => 'signUpApprove'],
     'admin/signup-delete-confirm' => ['controller' => 'AdminController', 'action' => 'deleteConfirmSignup'],
     'admin/signup-delete-execute' => ['controller' => 'AdminController', 'action' => 'deleteExecuteSignup'],
+    'admin/add-student' => ['controller' => 'AdminController', 'action' => 'addStudent'],
+    'admin/save-student' => ['controller' => 'AdminController', 'action' => 'saveStudent'],
 ];
 
 // Find the matching route

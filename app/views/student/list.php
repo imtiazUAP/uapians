@@ -2,8 +2,8 @@
 	<form>
 		<div align="center">
 			<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
-				<a href="Student_Insert.php?keepThis=true&TB_iframe=true&height=350&width=280&modal=true"
-					title="New Student" class="thickbox">Create New Student</a>
+				<a href="<?= BASE_URL . '/admin/add-student?keepThis=true&TB_iframe=true&height=355&width=450&modal=true' ?>"
+					class="thickbox" title="New Student" class="thickbox">Create New Student</a>
 			<?php } ?>
 		</div>
 		<table class="hoverTable" border="1" align="center" width="800">

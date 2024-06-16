@@ -134,34 +134,6 @@ class Admin {
         // mail($toMail, $subject, $message, "From: $from\n");
     }
 
-    public static function updateCourse($data) {
-        $dbconnect = new dbClass();
-        $connection = $dbconnect->getConnection();
-        
-        $qry = "UPDATE c_info SET 
-                CCode=?,
-                CName=?, 
-                SMID=?
-
-                WHERE CID=?";
-                
-        $stmt = $connection->prepare($qry);
-        
-        if ($stmt) {
-            $stmt->bind_param(
-                "sssi",
-                $data['CCode'],
-                $data['CName'],
-                $data['SMID'],
-
-                $data['CID']
-            );
-            return $stmt->execute();
-        } else {
-            die("Query failed: " . $connection->error);
-        }
-    }
-
     public static function deleteSignUp($data) {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
@@ -183,5 +155,98 @@ class Admin {
             die("Query failed: " . $connection->error);
         }
     }
+
+
+    public static function getUserByEmail($email) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $qry = "SELECT * from user where email=?";
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            $stmt->bind_param("s", $email);
+            $stmt->execute();
+            $userResult = $stmt->get_result();
+            $stmt->close();
+            $user = $userResult->fetch_assoc();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+        return $user['user_id'];
+
+    }
+
+    public static function saveStudent($data, $file) {
+        $data['SPortrait'] = self::savePortrait($file);
+
+        // Adding to user table
+        self::addUser($data);
+
+        $data['SID'] = $data['user_id'] = self::getUserByEmail($data['SE_Mail']);
+
+        // Adding to student table
+        self::saveStudentInfo($data);
+
+        return true;
+    }
+    
+    public static function saveStudentInfo($data) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $insertStudentInfoQuery = "INSERT INTO s_info
+            (user_id, SID, SPortrait, SName, SReg, email, SMID, Blood_Group_ID, district_id)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = $connection->prepare($insertStudentInfoQuery);
+        if ($stmt) {
+            $stmt->bind_param(
+                "iissssiis",
+                $data['user_id'],
+                $data['SID'],
+                $data['SPortrait'],
+                $data['SName'],
+                $data['SReg'],
+                $data['email'],
+                $data['SMID'],
+                $data['Blood_Group_ID'],
+                $data['district_id']
+            );
+            return $stmt->execute();
+        } else {
+            die("Inser Query to s_info failed: " . $connection->error);
+        }
+    }
+    
+    
+    public static function savePortrait($file) {
+        $allowedExts = array("gif", "jpeg", "jpg", "png");
+        $temp = explode(".", $file["name"]);
+        $extension = end($temp);
+        if (
+            (($file["type"] == "image/gif")
+                || ($file["type"] == "image/jpeg")
+                || ($file["type"] == "image/jpg")
+                || ($file["type"] == "image/pjpeg")
+                || ($file["type"] == "image/x-png")
+                || ($file["type"] == "image/png"))
+            && in_array($extension, $allowedExts)
+        ) {
+            if ($file["error"] > 0) {
+                echo "Return Code: " . $file["error"] . "<br>";
+            } else {
+                $targetDir = BASE_DIR . "/app/assets/images/";
+                $targetFile = $targetDir . basename($file["name"]);
+                if (move_uploaded_file($file["tmp_name"], $targetFile)) {
+                    return 'images/' . basename($file["name"]);
+                } else {
+                    echo "Error moving file to target directory.";
+                    return null;
+                }
+            }
+        } else {
+            echo "Invalid file";
+            return null;
+        }
+    }
+    
 
 }
