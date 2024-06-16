@@ -3,6 +3,7 @@
 require_once BASE_DIR . '/app/controllers/BaseController.php';
 require_once BASE_DIR . '/app/helpers/dbConnect.php';
 require_once BASE_DIR . '/app/models/Student.php';
+require_once BASE_DIR . '/app/models/BloodBank.php';
 require_once BASE_DIR . '/app/config/config.php';
 
 class StudentController extends BaseController
@@ -34,7 +35,7 @@ class StudentController extends BaseController
         $studentInfo = Student::getStudentByStudentId($queryParams['SID']);
         $districts = Student::getAllDistricts();
         $semesters = Student::getAllSemesters();
-        $bloodGroups = Student::getAllBloodGroups();
+        $bloodGroups = BloodBank::getAllBloodGroups();
 
         $this->render(
             'student/edit.php',

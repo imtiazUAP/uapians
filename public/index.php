@@ -11,6 +11,8 @@ require_once BASE_DIR . '/app/controllers/StaffController.php';
 require_once BASE_DIR . '/app/controllers/StudentController.php';
 require_once BASE_DIR . '/app/controllers/TeacherController.php';
 require_once BASE_DIR . '/app/controllers/TutorialController.php';
+require_once BASE_DIR . '/app/controllers/UtilitiesController.php';
+require_once BASE_DIR . '/app/controllers/AdminController.php';
 
 // Parse the URL to separate the path and query string
 $urlParts = parse_url($_SERVER['REQUEST_URI']);
@@ -57,6 +59,13 @@ $routes = [
     'project/list' => ['controller' => 'ProjectController', 'action' => 'list'],
     // Blog
     'blog/list' => ['controller' => 'BlogController', 'action' => 'list'],
+    'blog/detail' => ['controller' => 'BlogController', 'action' => 'detail'],
+    'blog/add' => ['controller' => 'BlogController', 'action' => 'add'],
+    'blog/save' => ['controller' => 'BlogController', 'action' => 'save'],
+    'blog/edit' => ['controller' => 'BlogController', 'action' => 'edit'],
+    'blog/update' => ['controller' => 'BlogController', 'action' => 'update'],
+    'blog/delete-confirm' => ['controller' => 'BlogController', 'action' => 'deleteConfirm'],
+    'blog/delete-execute' => ['controller' => 'BlogController', 'action' => 'deleteExecute'],
     // Blood Bank
     'blood-bank/list' => ['controller' => 'BloodBankController', 'action' => 'list'],
     // Reference
@@ -64,6 +73,13 @@ $routes = [
     // Tutorial
     'tutorial/category' => ['controller' => 'TutorialController', 'action' => 'category'],
     'tutorial/list' => ['controller' => 'TutorialController', 'action' => 'list'],
+    // Utilities - Static Pages
+    'about' => ['controller' => 'UtilitiesController', 'action' => 'aboutPage'],
+    'admin/signup-list' => ['controller' => 'AdminController', 'action' => 'signUpList'],
+    'admin/signup-review' => ['controller' => 'AdminController', 'action' => 'signUpReview'],
+    'admin/signup-approve' => ['controller' => 'AdminController', 'action' => 'signUpApprove'],
+    'admin/signup-delete-confirm' => ['controller' => 'AdminController', 'action' => 'deleteConfirmSignup'],
+    'admin/signup-delete-execute' => ['controller' => 'AdminController', 'action' => 'deleteExecuteSignup'],
 ];
 
 // Find the matching route

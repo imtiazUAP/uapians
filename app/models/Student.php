@@ -43,24 +43,6 @@ class Student {
         return $studentData['total_students'];
     }
 
-    // TODO: No uyse of this function yet
-    // public static function getStudentsBySemesterId($semesterId) {
-    //     $dbconnect = new dbClass();
-    //     $connection = $dbconnect->getConnection();
-    //     $qry = "SELECT SID,SName,SReg,SPortrait,SMName FROM s_info INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE s_info.SMID=? order by SReg";
-    //     $stmt = $connection->prepare($qry);
-    //     if ($stmt) {
-    //         $stmt->bind_param("s", $semesterId);
-    //         $stmt->execute();
-    //         $students = $stmt->get_result();
-    //         $stmt->close();
-    //     } else {
-    //         die("Query failed: " . $connection->error);
-    //     }
-
-    //     return $students;
-    // }
-
     
     public static function getPaginatedStudentsBySemesterId($semesterId) {
         $totalStudents = self::getStudentsCountBySemesterId($semesterId);
@@ -120,23 +102,6 @@ class Student {
         }
 
         return $semesterData;
-    }
-
-    public static function getAllBloodGroups()
-    {
-        $dbconnect = new dbClass();
-        $connection = $dbconnect->getConnection();
-        $qry = "SELECT DISTINCT Blood_Group_ID,Blood_Group_Name FROM blood_group_info ORDER BY Blood_Group_ID";
-        $stmt = $connection->prepare($qry);
-        if ($stmt) {
-            $stmt->execute();
-            $bloodGroupData = $stmt->get_result();
-            $stmt->close();
-        } else {
-            die("Query failed: " . $connection->error);
-        }
-
-        return $bloodGroupData;
     }
 
     public static function updateStudent($data) {

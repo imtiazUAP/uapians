@@ -5,7 +5,7 @@
                      src="<?php echo BASE_URL.'/app/assets/'.$userInfo['SPortrait'] ?>" alt="Profile Picture"><span> &nbsp My Profile</span></a></li>
       <?php } ?>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
-         <li><a href='Admin_Control.php'><span>Administration</span></a></li>
+         <li><a href='<?= BASE_URL ?>/admin/signup-list'><span>Administration</span></a></li>
       <?php } ?>
       <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 2) { ?>
          <li><a href='<?= BASE_URL ?>/teacher/profile?user_id=<?= $userInfo['user_id'] ?>'><span><img class="menu_my_profile_icon img-responsive img-circle margin"
@@ -57,9 +57,9 @@
          </li>
       </ul>
    </li>
-   <li><a href='Blog_List.php'><span>CSE Blog</span></a></li>
-   <li><a href='Blood_List.php'><span>Blood Bank</span></a></li>
-   <li class='last'><a href='About.php'><span>About</span></a></li>
+   <li><a href='<?= BASE_URL ?>/blog/list'><span>CSE Blog</span></a></li>
+   <li><a href='<?= BASE_URL ?>/blood-bank/list'><span>Blood Bank</span></a></li>
+   <li class='last'><a href='<?= BASE_URL ?>/about'><span>About</span></a></li>
    </ul>
 </div>
 <div id='header_banner'>

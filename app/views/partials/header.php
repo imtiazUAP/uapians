@@ -46,3 +46,12 @@ $scriptJsPath = BASE_URL . "/app/assets/js/script.js";
 
 <div id="fb-root"></div>
 
+<!-- For Blood Bank Form -->
+<script type="text/javascript">
+  function updateFormAction() {
+    var form = document.getElementById('bloodGroupForm');
+    var selectedBloodGroupId = document.getElementById('Blood_Group_ID').value;
+    form.action = "<?= BASE_URL . '/blood-bank/list' ?>?group_id=" + selectedBloodGroupId;
+  }
+</script>
+

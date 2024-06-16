@@ -17,11 +17,13 @@ class BloodBankController extends BaseController
 
     public function list($queryParams)
     {
-        $projectList = Project::getProjectsByCategoryId($queryParams['language_id']);
+        $selectedBloodGroupId = empty($queryParams['group_id']) || $queryParams['group_id'] == 10 ? 0 : $queryParams['group_id'];
+        $bloodGroupInfo = BloodBank::getAllBloodGroups();
+        $bloodBankList = BloodBank::getBloodBankListByGroupId($selectedBloodGroupId);
 
-        $data = compact('projectList');
+        $data = compact('bloodGroupInfo', 'bloodBankList', 'selectedBloodGroupId');
         $this->render(
-            'project/list.php',
+            'blood_bank/list.php',
             $data
         );
     }
