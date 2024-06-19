@@ -48,10 +48,18 @@ $scriptJsPath = BASE_URL . "/app/assets/js/script.js";
 
 <!-- For Blood Bank Form -->
 <script type="text/javascript">
-  function updateFormAction() {
+  function updateBloodBankFormAction() {
     var form = document.getElementById('bloodGroupForm');
     var selectedBloodGroupId = document.getElementById('Blood_Group_ID').value;
     form.action = "<?= BASE_URL . '/blood-bank/list' ?>?group_id=" + selectedBloodGroupId;
+  }
+</script>
+
+<script type="text/javascript">
+  function updateDistrictFilterFormAction() {
+    var form = document.getElementById('districtFilterForm');
+    var selectedDistrictId = document.getElementById('district_id').value;
+    form.action = "<?= BASE_URL . '/student/district/list' ?>?district_id=" + selectedDistrictId;
   }
 </script>
 

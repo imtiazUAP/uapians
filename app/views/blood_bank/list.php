@@ -28,7 +28,7 @@
     <tr>
       <td>Search Blood Group:</td>
       <td>
-        <select name="Blood_Group_ID" id="Blood_Group_ID" onchange="updateFormAction()">
+        <select name="Blood_Group_ID" id="Blood_Group_ID" onchange="updateBloodBankFormAction()">
           <option value="10">All Blood Group</option>
           <?php
           foreach ($bloodGroupInfo as $row) {

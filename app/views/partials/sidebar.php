@@ -98,8 +98,8 @@
 	</div>.
 	<ul class="sidebar_links">
 		<li><a href="galary.php">Gallery</a></li>
-		<li><a href="Blood_List_All.php">Blood Bank</a></li>
-		<li><a href="Districtwise_StudentList.php">Who is from my District</a></li>
+		<li><a href="<?= BASE_URL. '/blood-bank/list' ?>">Blood Bank</a></li>
+		<li><a href="<?= BASE_URL. '/student/district/list' ?>">Who is from my District</a></li>
 		<li><a href="<?= BASE_URL. '/club/programming/detail' ?>">Programming Contest Club</a></li>
 		<li><a href="<?= BASE_URL. '/club/research/detail' ?>">Research and Publication Club</a></li>
 		<li><a href="<?= BASE_URL. '/club/sports/detail' ?>">Sports Club</a></li>

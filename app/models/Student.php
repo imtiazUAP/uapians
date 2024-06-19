@@ -70,6 +70,51 @@ class Student {
         return $paginationData;
     }
 
+    public static function getStudentsCountByDistrictId($districtId) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $qry = "SELECT COUNT(SID) as total_students FROM s_info INNER JOIN districts ON s_info.district_id = districts.district_id WHERE s_info.district_id = ? order by user_id";
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            $stmt->bind_param("i", $districtId);
+            $stmt->execute();
+            $student = $stmt->get_result();
+            $stmt->close();
+            $studentData = $student->fetch_assoc();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+        return $studentData['total_students'];
+    }
+
+    public static function getPaginatedStudentsByDistrictId($districtId) {
+        $totalStudents = self::getStudentsCountByDistrictId($districtId);
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $qry = "SELECT user_id, SID, SName, SReg, SPortrait, SMName, district_name FROM s_info LEFT OUTER JOIN sm_info ON s_info.SMID = sm_info.SMID INNER JOIN districts ON s_info.district_id = districts.district_id WHERE s_info.district_id = '" . $districtId . "' order by user_id";
+        $recordPerPage = 10;
+        $pagination = new Page();
+        $pagination->set_page_data(BASE_URL.'/student/district/list', $districtId, $totalStudents, $recordPerPage, 0, true, true, true);
+        $paginationQuery = $pagination->get_limit_query($qry);
+        $paginationStmt = $connection->prepare($paginationQuery);
+        if ($paginationStmt) {
+            $paginationStmt->execute();
+            $paginationResult = $paginationStmt->get_result();
+            $paginationStmt->close();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+        $paginationData = [
+            'pagination_nav' => $pagination->get_page_nav('', true),
+            'students' => $paginationResult
+        ];
+
+        return $paginationData;
+
+    }
+
     public static function getAllDistricts()
     {
         $dbconnect = new dbClass();

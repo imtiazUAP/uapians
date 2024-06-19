@@ -38,6 +38,7 @@ $routes = [
     'student/insert' => ['controller' => 'StudentController', 'action' => 'insert'],
     'student/sign-up' => ['controller' => 'StudentController', 'action' => 'signUp'],
     'student/sign-up/save' => ['controller' => 'StudentController', 'action' => 'signUpSave'],
+    'student/district/list' => ['controller' => 'StudentController', 'action' => 'filterDistrict'],
     // Teacher
     'teacher/list' => ['controller' => 'TeacherController', 'action' => 'list'],
     'teacher/profile' => ['controller' => 'TeacherController', 'action' => 'profile'],

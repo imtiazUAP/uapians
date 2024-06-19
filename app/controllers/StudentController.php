@@ -10,7 +10,7 @@ class StudentController extends BaseController
 {
     public function list($queryParams)
     {
-        $semesterId = $queryParams['SMID'];
+        $semesterId = !empty($queryParams['SMID']) ? $queryParams['SMID'] : 0;
         $studentsList = Student::getPaginatedStudentsBySemesterId($semesterId);
 
         $data = compact('semesterId', 'studentsList');
@@ -118,5 +118,19 @@ class StudentController extends BaseController
             }
             exit();
         }
+    }
+
+    public function filterDistrict($queryParams)
+    {
+        $districtId = !empty($queryParams['district_id']) ? $queryParams['district_id'] : 0;
+        $selectedDistrictId = $districtId;
+        $studentsList = Student::getPaginatedStudentsByDistrictId($districtId);
+        $allDistricts = Student::getAllDistricts();
+
+        $data = compact('districtId', 'selectedDistrictId', 'studentsList', 'allDistricts');
+        $this->render(
+            'student/filter-district.php',
+            $data
+        );
     }
 }
