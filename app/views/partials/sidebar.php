@@ -84,9 +84,9 @@
 		<h3 align="left">Academic Aspects</h3>
 	</div>
 	<ul class="sidebar_links">
-		<li><a href="Employee_List.php">Teachers</a></li>
-		<li><a href="Student_List.php">Students</a></li>
-		<li><a href="Course_List.php">Courses</a></li>
+		<li><a href="<?= BASE_URL . '/teacher/list' ?>">Teachers</a></li>
+		<li><a href="<?= BASE_URL . '/student/list?SMID=9' ?>">Students</a></li>
+		<li><a href="<?= BASE_URL . '/course/list' ?>">Courses</a></li>
 		<li><a href="Mark_List.php">Results</a></li>
 		<li><a href="Reference_List_All.php">References</a></li>
 	</ul>
@@ -100,12 +100,12 @@
 		<li><a href="galary.php">Gallery</a></li>
 		<li><a href="Blood_List_All.php">Blood Bank</a></li>
 		<li><a href="Districtwise_StudentList.php">Who is from my District</a></li>
-		<li><a href="Programing_Contest_Club.php">Programming Contest Club</a></li>
-		<li><a href="Research_Publication_Club.php">Research and Publication Club</a></li>
-		<li><a href="Sports_Club.php">Sports Club</a></li>
-		<li><a href="Software_Hardware_Club.php">Software and Hardware Club</a></li>
-		<li><a href="Cultural_Debating_Club.php">Cultural and Debating Club</a></li>
-		<li><a href="Web_Club.php">Web Club</a></li>
+		<li><a href="<?= BASE_URL. '/club/programming/detail' ?>">Programming Contest Club</a></li>
+		<li><a href="<?= BASE_URL. '/club/research/detail' ?>">Research and Publication Club</a></li>
+		<li><a href="<?= BASE_URL. '/club/sports/detail' ?>">Sports Club</a></li>
+		<li><a href="<?= BASE_URL. '/club/software/detail' ?>">Software and Hardware Club</a></li>
+		<li><a href="<?= BASE_URL. '/club/cultural/detail' ?>">Cultural and Debating Club</a></li>
+		<li><a href="<?= BASE_URL. '/club/web/detail' ?>">Web Club</a></li>
 	</ul>
 </div>
 

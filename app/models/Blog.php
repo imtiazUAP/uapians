@@ -88,7 +88,7 @@ class Blog {
     {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        $qry = "SELECT SName, SPortrait, Comment FROM comments INNER JOIN s_info ON comments.SID=s_info.SID WHERE Blog_ID=?";
+        $qry = "SELECT SName, SPortrait, Comment FROM comments INNER JOIN s_info ON comments.user_id=s_info.user_id WHERE Blog_ID=?";
         $stmt = $connection->prepare($qry);
         if ($stmt) {
             $stmt->bind_param("s", $blogId);
@@ -171,6 +171,33 @@ class Blog {
             return $stmt->execute();
         } else {
             die("Query failed: " . $connection->error);
+        }
+    }
+
+    public static function saveComment($data) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+    
+        $qry = "INSERT INTO comments (user_id, SID, Blog_ID, Comment) VALUES (?, ?, ?, ?)";
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            $stmt->bind_param(
+                "iiis",
+                $data['user_id'],
+                $data['user_id'],
+                $data['blog_id'],
+                $data['comment']
+            );
+    
+            if ($stmt->execute()) {
+                $stmt->close();
+                return true;
+            } else {
+                $stmt->close();
+                return false;
+            }
+        } else {
+            return false;
         }
     }
 

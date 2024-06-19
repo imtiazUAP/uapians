@@ -50,10 +50,10 @@
                 <form action="<?= BASE_URL . '/blog/comment/save' ?>" method="post">
                     <div>
                         <input value="<?php echo $userInfo['user_id']; ?>" name="user_id" type="hidden" />
-                        <input value="<?= $blogDetail['Blog_ID'] ?>" name="Blog_ID" type="hidden" />
+                        <input value="<?= $blogDetail['Blog_ID'] ?>" name="blog_id" type="hidden" />
                         <div style="font-weight:bold;font-size:20px; color:#FFFFFF;">Comments:
                         </div>
-                        <textarea name="Comment" rows="4" cols="50" placeholder="Leave your comment here..."></textarea>
+                        <textarea name="comment" rows="4" cols="50" placeholder="Leave your comment here..."></textarea>
                         <br>
                     </div>
                     <br>

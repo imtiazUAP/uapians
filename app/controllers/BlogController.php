@@ -119,4 +119,23 @@ class BlogController extends BaseController
         }
     }
 
+    public function saveComment() {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'user_id' => $_POST['user_id'],
+                'blog_id' => $_POST['blog_id'],
+                'comment' => $_POST['comment'],
+            ];
+
+            $success = Blog::saveComment($data);
+
+            if ($success) {
+                header('Location: ' . BASE_URL . '/blog/detail?Blog_ID=' . $_POST['blog_id'] .'?message=Comment+Saved+Successfully');
+            } else {
+                header('Location: ' . BASE_URL . '/blog/detail?Blog_ID=' . $_POST['blog_id'] .'?message=Comment+Save+Failed');
+            }
+            exit();
+        }
+    }
+
 }

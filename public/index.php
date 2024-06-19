@@ -13,6 +13,7 @@ require_once BASE_DIR . '/app/controllers/TeacherController.php';
 require_once BASE_DIR . '/app/controllers/TutorialController.php';
 require_once BASE_DIR . '/app/controllers/UtilitiesController.php';
 require_once BASE_DIR . '/app/controllers/AdminController.php';
+require_once BASE_DIR . '/app/controllers/ClubController.php';
 
 // Parse the URL to separate the path and query string
 $urlParts = parse_url($_SERVER['REQUEST_URI']);
@@ -48,6 +49,13 @@ $routes = [
     'staff/profile' => ['controller' => 'StaffController', 'action' => 'profile'],
     'staff/edit' => ['controller' => 'StaffController', 'action' => 'edit'],
     'staff/update' => ['controller' => 'StaffController', 'action' => 'update'],
+    // club
+    'club/cultural/detail' => ['controller' => 'ClubController', 'action' => 'culturalClubDetail'],
+    'club/programming/detail' => ['controller' => 'ClubController', 'action' => 'programmingClubDetail'],
+    'club/research/detail' => ['controller' => 'ClubController', 'action' => 'researchClubDetail'],
+    'club/software/detail' => ['controller' => 'ClubController', 'action' => 'softwareClubDetail'],
+    'club/sports/detail' => ['controller' => 'ClubController', 'action' => 'sportsClubDetail'],
+    'club/web/detail' => ['controller' => 'ClubController', 'action' => 'webClubDetail'],
     // course
     'course/list' => ['controller' => 'CourseController', 'action' => 'list'],
     'course/add' => ['controller' => 'CourseController', 'action' => 'add'],
@@ -68,6 +76,7 @@ $routes = [
     'blog/update' => ['controller' => 'BlogController', 'action' => 'update'],
     'blog/delete-confirm' => ['controller' => 'BlogController', 'action' => 'deleteConfirm'],
     'blog/delete-execute' => ['controller' => 'BlogController', 'action' => 'deleteExecute'],
+    'blog/comment/save' => ['controller' => 'BlogController', 'action' => 'saveComment'],
     // Blood Bank
     'blood-bank/list' => ['controller' => 'BloodBankController', 'action' => 'list'],
     // Reference
