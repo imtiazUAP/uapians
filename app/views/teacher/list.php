@@ -1,5 +1,5 @@
 <?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
-<a href="Employee_Insert.php?keepThis=true&TB_iframe=true&height=120&width=240&modal=true" title="New Employee"
+<a href="<?=BASE_URL . '/teacher/add?keepThis=true&TB_iframe=true&modal=true' ?>" title="New Employee"
 class="thickbox">Create New Employee</a>
 <?php } ?>
 <table class="hoverTable" border="1" style=" padding-bottom:40px;padding-left:40px;padding-right:40px;">
@@ -23,8 +23,9 @@ class="thickbox">Create New Employee</a>
 				if (!empty($userInfo['group_id']) &&  $userInfo['group_id'] == 1) {
 					?>
 					<td align="center">
-						<?php echo " <a href='teacher/edit?user_id=" . $teacher['user_id'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Employee - " . $teacher['user_id'] . "'> edit </a> "; ?>
-						| <?php echo " <a href='teacher/delete?user_id=" . $teacher['user_id'] . "'> delete </a> "; ?></td>
+						<a href="<?= BASE_URL . '/teacher/edit?user_id=' . $teacher['user_id'] . '&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' ?>" class='thickbox' title='Edit Employee' > edit </a>
+						<a href="<?= BASE_URL . '/teacher/delete-confirm?user_id=' . $teacher['user_id'] . '&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' ?>" class="thickbox"> delete </a>
+					</td>
 					<?php
 				}
 				?>

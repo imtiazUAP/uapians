@@ -97,7 +97,7 @@
 		<h3 align="left">Clubs & Social Works</h3>
 	</div>.
 	<ul class="sidebar_links">
-		<li><a href="galary.php">Gallery</a></li>
+		<li><a href="<?= BASE_URL. '/gallery/list' ?>">Gallery</a></li>
 		<li><a href="<?= BASE_URL. '/blood-bank/list' ?>">Blood Bank</a></li>
 		<li><a href="<?= BASE_URL. '/student/district/list' ?>">Who is from my District</a></li>
 		<li><a href="<?= BASE_URL. '/club/programming/detail' ?>">Programming Contest Club</a></li>

@@ -14,6 +14,7 @@ require_once BASE_DIR . '/app/controllers/TutorialController.php';
 require_once BASE_DIR . '/app/controllers/UtilitiesController.php';
 require_once BASE_DIR . '/app/controllers/AdminController.php';
 require_once BASE_DIR . '/app/controllers/ClubController.php';
+require_once BASE_DIR . '/app/controllers/GalleryController.php';
 
 // Parse the URL to separate the path and query string
 $urlParts = parse_url($_SERVER['REQUEST_URI']);
@@ -44,7 +45,10 @@ $routes = [
     'teacher/profile' => ['controller' => 'TeacherController', 'action' => 'profile'],
     'teacher/edit' => ['controller' => 'TeacherController', 'action' => 'edit'],
     'teacher/update' => ['controller' => 'TeacherController', 'action' => 'update'],
-    'teacher/insert' => ['controller' => 'TeacherController', 'action' => 'insert'],
+    'teacher/add' => ['controller' => 'TeacherController', 'action' => 'add'],
+    'teacher/save' => ['controller' => 'TeacherController', 'action' => 'save'],
+    'teacher/delete-confirm' => ['controller' => 'TeacherController', 'action' => 'deleteConfirm'],
+    'teacher/delete-execute' => ['controller' => 'TeacherController', 'action' => 'deleteExecute'],
     // Staff
     'staff/list' => ['controller' => 'StaffController', 'action' => 'list'],
     'staff/profile' => ['controller' => 'StaffController', 'action' => 'profile'],
@@ -94,6 +98,13 @@ $routes = [
     'admin/signup-delete-execute' => ['controller' => 'AdminController', 'action' => 'deleteExecuteSignup'],
     'admin/add-student' => ['controller' => 'AdminController', 'action' => 'addStudent'],
     'admin/save-student' => ['controller' => 'AdminController', 'action' => 'saveStudent'],
+    // Gallery
+    'gallery/list' => ['controller' => 'GalleryController', 'action' => 'list'],
+    'gallery/add' => ['controller' => 'GalleryController', 'action' => 'add'],
+    'gallery/save' => ['controller' => 'GalleryController', 'action' => 'save'],
+    'gallery/delete-confirm' => ['controller' => 'GalleryController', 'action' => 'deleteConfirm'],
+    'gallery/delete-execute' => ['controller' => 'GalleryController', 'action' => 'deleteExecute'],
+
 ];
 
 // Find the matching route
