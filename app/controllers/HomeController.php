@@ -63,4 +63,92 @@ class HomeController extends BaseController
             exit();
         }
     }
+
+    public function newsAdd($queryParams)
+    {
+        $this->render(
+            'home/news-add.php',
+            [],
+            false
+        );
+    }
+
+    public function newsSave()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'news_hints' => $_POST['news_hints'],
+                'news_link' => $_POST['news_link']
+            ];
+
+            $success = Home::newsSave($data);
+
+            if ($success) {
+                header('Location: ' . BASE_URL . '/news/add?message=News+Saved+Successfully');
+            } else {
+                header('Location: ' . BASE_URL . '/news/add?message=News+Save+Failed');
+            }
+            exit();
+        }
+    }
+
+    public function newsEdit($queryParams)
+    {
+        $newsInfo = Home::getNewsByNewsId($queryParams['news_id']);
+
+        $this->render(
+            'home/news-edit.php',
+            compact('newsInfo'),
+            false
+        );
+    }
+
+    public function newsUpdate()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'news_id' => $_POST['news_id'],
+                'news_hints' => $_POST['news_hints'],
+                'news_link' => $_POST['news_link']
+            ];
+
+            $success = Home::updateNews($data);
+
+            if ($success) {
+                header('Location: ' . BASE_URL . '/news/edit?news_id=' . $data['news_id'] . '&message=News+Updated+Successfully');
+            } else {
+                header('Location: ' . BASE_URL . '/news/edit?news_id=' . $data['news_id'] . '&message=News+Update+Failed');
+            }
+            exit();
+        }
+    }
+
+    public function newsDeleteConfirm($queryParams) {
+        $newsInfo = Home::getNewsByNewsId($queryParams['news_id']);
+        $this->render(
+            'home/news-delete.php',
+            compact('newsInfo'),
+            false
+        );
+
+    }
+    
+
+    public function newsDeleteExecute()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'news_id' => $_POST['news_id']
+            ];
+
+            $success = Home::deleteNews($data);
+
+            if ($success) {
+                header('Location: ' . BASE_URL . '/news/delete-confirm?news_id=' . $data['news_id'] . '&message=News+Deleted+Successfully');
+            } else {
+                header('Location: ' . BASE_URL . '/news/delete-confirm?news_id=' . $data['news_id'] . '&message=News+Delete+Failed');
+            }
+            exit();
+        }
+    }
 }

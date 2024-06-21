@@ -35,6 +35,14 @@ $routes = [
     '' => ['controller' => 'HomeController', 'action' => 'list'],
     'notice/edit' => ['controller' => 'HomeController', 'action' => 'edit'],
     'notice/update' => ['controller' => 'HomeController', 'action' => 'update'],
+
+    'news/add' => ['controller' => 'HomeController', 'action' => 'newsAdd'],
+    'news/save' => ['controller' => 'HomeController', 'action' => 'newsSave'],
+    'news/edit' => ['controller' => 'HomeController', 'action' => 'newsEdit'],
+    'news/update' => ['controller' => 'HomeController', 'action' => 'newsUpdate'],
+    'news/delete-confirm' => ['controller' => 'HomeController', 'action' => 'newsDeleteConfirm'],
+    'news/delete-execute' => ['controller' => 'HomeController', 'action' => 'newsDeleteExecute'],
+
     // Student
     'student/list' => ['controller' => 'StudentController', 'action' => 'list'],
     'student/profile' => ['controller' => 'StudentController', 'action' => 'profile'],
@@ -76,6 +84,8 @@ $routes = [
     // project
     'project/category' => ['controller' => 'ProjectController', 'action' => 'category'],
     'project/list' => ['controller' => 'ProjectController', 'action' => 'list'],
+    'project/add' => ['controller' => 'ProjectController', 'action' => 'add'],
+    'project/save' => ['controller' => 'ProjectController', 'action' => 'save'],
     // Blog
     'blog/list' => ['controller' => 'BlogController', 'action' => 'list'],
     'blog/detail' => ['controller' => 'BlogController', 'action' => 'detail'],
@@ -99,6 +109,8 @@ $routes = [
     // Tutorial
     'tutorial/category' => ['controller' => 'TutorialController', 'action' => 'category'],
     'tutorial/list' => ['controller' => 'TutorialController', 'action' => 'list'],
+    'tutorial/add' => ['controller' => 'TutorialController', 'action' => 'add'],
+    'tutorial/save' => ['controller' => 'TutorialController', 'action' => 'save'],
     // Utilities - Static Pages
     'about' => ['controller' => 'UtilitiesController', 'action' => 'aboutPage'],
     'admin/signup-list' => ['controller' => 'AdminController', 'action' => 'signUpList'],

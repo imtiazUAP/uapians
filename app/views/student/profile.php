@@ -9,7 +9,6 @@
 					class='thickbox' title='Edit Student - " . $studentInfo["SName"] . "'> Edit my Profile </a>
 				|
 				<?php echo " <a href='Password_Edit.php?SID=" . $studentInfo['user_id'] . "&keepThis=true&TB_iframe=true&height=200&width=300&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $studentInfo["SName"] . "'> Change my Password </a> "; ?>
-				| <?php echo " <a href='Single_Mark_List.php? SID=" . $studentInfo["user_id"] . "'> My  Results Vault </a> " ?>
 				| <?php echo " <a href='Message_List_personal.php? SID=" . $studentInfo["user_id"] . "'> My Messages </a>" ?>
 				| <?php echo " <a href='Upload_Project.php?SID=" . $studentInfo["user_id"] . "'> | upload project  </a>" ?>
 			</div>

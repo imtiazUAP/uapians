@@ -1,4 +1,11 @@
 <div>
+<?php
+if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
+    <div>
+        <a href="<?= BASE_URL . '/tutorial/add?keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' ?>"
+            class='thickbox' title='Add tutorial'> Add a Tutorial </a>
+    </div>
+<?php } ?>
     <table>
         <tr>
             <td>

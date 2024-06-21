@@ -20,7 +20,7 @@
 		<?php
 		if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 			<div class="news_new">
-				<a href="News_Insert.php?keepThis=true&TB_iframe=true&height=150&width=400&modal=true" title="New Course"
+				<a href="<?= BASE_URL .'/news/add?keepThis=true&TB_iframe=true&height=150&width=400&modal=true' ?>" title="New News"
 					class="thickbox">Add New News</a>
 			</div>
 			<?php
@@ -32,9 +32,9 @@
 			</div>
 			<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
 				<div class="news_actions">
-					<?php echo " <a href='News_Edit.php?News_ID=" . $news['News_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $news['News_ID'] . "'> edit </a> "; ?>
+					<a href="<?= BASE_URL . '/news/edit?news_id=' . $news['News_ID'] . '&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' ?>" class='thickbox' title='Edit News'> edit </a>
 					|
-					<?php echo " <a href='News_Delete.php?News_ID=" . $news['News_ID'] . "'> delete </a> "; ?>
+					<a href="<?= BASE_URL . '/news/delete-confirm?news_id=' . $news['News_ID']. '&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true'  ?>" class='thickbox' title='Delete News'> delete </a>
 				</div>
 			<?php }
 		} ?>

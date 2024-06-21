@@ -5,5 +5,5 @@ values
 if (!mysql_query($sql)) {
 	die('Error:' . mysql_error());
 }
-header('location: https://localhost/uapians/Message_Sent_Notification.php ');
+header('location: https://localhost/uapians/Message_Sent_Notification.php');
 ?>

@@ -3,49 +3,6 @@ include_once (BASE_DIR . "/app/helpers/page.inc.php");
 
 class Tutorial {
 
-    public static function getAllCourses()
-    {
-        $dbconnect = new dbClass();
-        $connection = $dbconnect->getConnection();
-        $qry = "SELECT c_info.CID, c_info.CCode, c_info.CName, sm_info.SMID, sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID = sm_info.SMID AND c_info.deleted = 0";
-        $stmt = $connection->prepare($qry);
-        if ($stmt) {
-            $stmt->execute();
-            $courseData = $stmt->get_result();
-            $stmt->close();
-        } else {
-            die("Query failed: " . $connection->error);
-        }
-
-        return $courseData;
-    }
-
-    public static function courseSave($data) {
-        $dbconnect = new dbClass();
-        $connection = $dbconnect->getConnection();
-    
-        $qry = "INSERT INTO c_info (CCode, CName, SMID) VALUES (?, ?, ?)";
-        $stmt = $connection->prepare($qry);
-        if ($stmt) {
-            $stmt->bind_param(
-                "sss",
-                $data['CCode'],
-                $data['CName'],
-                $data['SMID']
-            );
-    
-            if ($stmt->execute()) {
-                $stmt->close();
-                return true;
-            } else {
-                $stmt->close();
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-
     public static function getTutorialsByCategoryId($categoryId) {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
@@ -54,9 +11,8 @@ class Tutorial {
         if ($stmt) {
             $stmt->bind_param("s", $categoryId);
             $stmt->execute();
-            $result = $stmt->get_result();
+            $tutorialData = $stmt->get_result();
             $stmt->close();
-            $tutorialData = $result->fetch_assoc();
         } else {
             die("Query failed: " . $connection->error);
         }
@@ -64,54 +20,47 @@ class Tutorial {
         return $tutorialData;
     }
 
-    public static function updateCourse($data) {
+    public static function tutorialSave($data, $file)
+    {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        
-        $qry = "UPDATE c_info SET 
-                CCode=?,
-                CName=?, 
-                SMID=?
 
-                WHERE CID=?";
-                
-        $stmt = $connection->prepare($qry);
-        
+        $tutorialLink = self::convertToEmbedUrl($data['tutorial_link']);
+        $sql = "INSERT INTO tutorial
+            (tutorial_name, tutorial_link, category_id, added_by)
+            VALUES (?, ?, ?, ?)";
+        $stmt = $connection->prepare($sql);
         if ($stmt) {
             $stmt->bind_param(
-                "sssi",
-                $data['CCode'],
-                $data['CName'],
-                $data['SMID'],
-
-                $data['CID']
+                "ssii",
+                $data['tutorial_name'],
+                $tutorialLink,
+                $data['category_id'],
+                $data['added_by']
             );
             return $stmt->execute();
         } else {
-            die("Query failed: " . $connection->error);
+            die("Inser Query to project failed: " . $connection->error);
         }
     }
 
-    public static function deleteCourse($data) {
-        $dbconnect = new dbClass();
-        $connection = $dbconnect->getConnection();
-        
-        $qry = "UPDATE c_info SET 
-                deleted=1
 
-                WHERE CID=?";
-                
-        $stmt = $connection->prepare($qry);
-        
-        if ($stmt) {
-            $stmt->bind_param(
-                "i",
-                $data['CID']
-            );
-            return $stmt->execute();
-        } else {
-            die("Query failed: " . $connection->error);
+    public static function convertToEmbedUrl($url) {
+        $parsedUrl = parse_url($url);
+        if (!isset($parsedUrl['query'])) {
+            return false;
         }
+    
+        parse_str($parsedUrl['query'], $queryParams);
+        if (!isset($queryParams['v'])) {
+            return false;
+        }
+    
+        $videoId = $queryParams['v'];
+        $newUrl = "https://www.youtube.com/v/" . $videoId;
+    
+        return $newUrl;
     }
+
 
 }

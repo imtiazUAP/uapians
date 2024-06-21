@@ -13,7 +13,6 @@
 				<td bgcolor="588C73" width="100px"> Portrait </td>
 				<td bgcolor="588C73"> Semester </td>
 				<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
-					<td bgcolor="#006699"> Results </td>
 					<td bgcolor="#006699" width="100"> Admin|Panel </td>
 				<?php } ?>
 			</tr>
@@ -34,9 +33,6 @@
 					</td>
 					<td width="200"><?= $student['SMName'] ?></td>
 					<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
-						<td> <a href='Single_Mark_List.php? SID=<?= $student['user_id'] ?>'> Results
-							</a>
-						</td>
 						<td width="100">
 							<a href=<?= BASE_URL . "/app/views/student/Student_Edit.php?SID=" . $student['SID'] ?>&keepThis=true&TB_iframe=true&height=300&width=350&do=edit&modal=true" class="thickbox">
 								edit
