@@ -3,35 +3,20 @@ include_once (BASE_DIR . "/app/helpers/page.inc.php");
 
 class Reference {
 
-    public static function getAllCourses()
-    {
-        $dbconnect = new dbClass();
-        $connection = $dbconnect->getConnection();
-        $qry = "SELECT c_info.CID, c_info.CCode, c_info.CName, sm_info.SMID, sm_info.SMName FROM c_info INNER JOIN sm_info ON c_info.SMID = sm_info.SMID AND c_info.deleted = 0";
-        $stmt = $connection->prepare($qry);
-        if ($stmt) {
-            $stmt->execute();
-            $courseData = $stmt->get_result();
-            $stmt->close();
-        } else {
-            die("Query failed: " . $connection->error);
-        }
-
-        return $courseData;
-    }
-
-    public static function courseSave($data) {
+    public static function referenceSave($data) {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
     
-        $qry = "INSERT INTO c_info (CCode, CName, SMID) VALUES (?, ?, ?)";
+        $qry = "INSERT INTO reference_info (CID, SMID, Detail, Reference_Link, user_id) VALUES (?, ?, ?, ?, ?)";
         $stmt = $connection->prepare($qry);
         if ($stmt) {
             $stmt->bind_param(
-                "sss",
-                $data['CCode'],
-                $data['CName'],
-                $data['SMID']
+                "iissi",
+                $data['CID'],
+                $data['SMID'],
+                $data['Detail'],
+                $data['Reference_Link'],
+                $data['user_id']
             );
     
             if ($stmt->execute()) {
@@ -46,45 +31,76 @@ class Reference {
         }
     }
 
-    public static function getCourseByCourseId($courseId) {
+    public static function getReferencesByCourseId($CID) {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        $qry = "SELECT * FROM c_info WHERE CID=?";
+        $qry = "SELECT ref_id, CCode, CName, user.email, Reference_Link, Detail, SMName FROM reference_info
+            INNER JOIN c_info
+                ON reference_info.CID=c_info.CID
+            LEFT OUTER JOIN user
+                ON user.user_id = reference_info.user_id
+            INNER JOIN sm_info
+                ON reference_info.SMID=sm_info.SMID WHERE reference_info.CID=? AND reference_info.deleted = 0";
         $stmt = $connection->prepare($qry);
         if ($stmt) {
-            $stmt->bind_param("s", $courseId);
+            $stmt->bind_param("s", $CID);
             $stmt->execute();
-            $result = $stmt->get_result();
+            $courseReferences = $stmt->get_result();
             $stmt->close();
-            $courseData = $result->fetch_assoc();
         } else {
             die("Query failed: " . $connection->error);
         }
 
-        return $courseData;
+        return $courseReferences;
     }
 
-    public static function updateCourse($data) {
+    public static function getReferenceByReferenceId($refId) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        $qry = "SELECT ref_id, CCode, CName, Reference_Link, Detail, SMName FROM reference_info
+            INNER JOIN c_info
+                ON reference_info.CID=c_info.CID
+            INNER JOIN sm_info
+                ON reference_info.SMID=sm_info.SMID WHERE reference_info.ref_id=?";
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            $stmt->bind_param("s", $refId);
+            $stmt->execute();
+            $referenceResults = $stmt->get_result();
+            $referenceInfo = $referenceResults->fetch_assoc();
+            $stmt->close();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+        return $referenceInfo;
+    }
+
+    public static function updateReference($data) {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
         
-        $qry = "UPDATE c_info SET 
-                CCode=?,
-                CName=?, 
-                SMID=?
+        $qry = "UPDATE reference_info SET 
+                CID=?,
+                SMID=?, 
+                Detail=?,
+                Reference_Link=?,
+                user_id=?
 
-                WHERE CID=?";
+                WHERE ref_id=?";
                 
         $stmt = $connection->prepare($qry);
         
         if ($stmt) {
             $stmt->bind_param(
-                "sssi",
-                $data['CCode'],
-                $data['CName'],
+                "iissii",
+                $data['CID'],
                 $data['SMID'],
+                $data['Detail'],
+                $data['Reference_Link'],
+                $data['user_id'],
 
-                $data['CID']
+                $data['ref_id']
             );
             return $stmt->execute();
         } else {
@@ -92,21 +108,21 @@ class Reference {
         }
     }
 
-    public static function deleteCourse($data) {
+    public static function deleteReference($data) {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
         
-        $qry = "UPDATE c_info SET 
+        $qry = "UPDATE reference_info SET 
                 deleted=1
 
-                WHERE CID=?";
+                WHERE ref_id=?";
                 
         $stmt = $connection->prepare($qry);
         
         if ($stmt) {
             $stmt->bind_param(
                 "i",
-                $data['CID']
+                $data['ref_id']
             );
             return $stmt->execute();
         } else {

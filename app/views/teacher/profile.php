@@ -2,8 +2,7 @@
 if ($userInfo['user_id'] == $teacherInfo['user_id'] || ( !empty($userInfo['group_id']) && $userInfo['group_id']) == 1) {
     ?>
     <div align="center" style="width:700px; height:20px">
-        <a href="<?= BASE_URL. '/teacher/edit?user_id=' . $teacherInfo['user_id'].'&keepThis=true&TB_iframe=true&height=543&width=400&do=edit&modal=true' ?>" class='thickbox'> Edit Profile </a>"
-        <a href='Reference_Upload.php?user_id=" . $teacherInfo['user_id'] . "'> Upload File </a>" ?>
+        <a href="<?= BASE_URL. '/teacher/edit?user_id=' . $teacherInfo['user_id'].'&keepThis=true&TB_iframe=true&height=543&width=400&do=edit&modal=true' ?>" class='thickbox'> Edit Profile </a>
     </div>
     <?php
 }

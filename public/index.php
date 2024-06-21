@@ -29,8 +29,12 @@ parse_str($queryString, $queryParams);
 
 // Define routes
 $routes = [
-    '' => ['controller' => 'HomeController', 'action' => 'list'],
+    // Auth
     'logout' => ['controller' => 'AuthController', 'action' => 'logOut'],
+    // Home
+    '' => ['controller' => 'HomeController', 'action' => 'list'],
+    'notice/edit' => ['controller' => 'HomeController', 'action' => 'edit'],
+    'notice/update' => ['controller' => 'HomeController', 'action' => 'update'],
     // Student
     'student/list' => ['controller' => 'StudentController', 'action' => 'list'],
     'student/profile' => ['controller' => 'StudentController', 'action' => 'profile'],
@@ -86,6 +90,12 @@ $routes = [
     'blood-bank/list' => ['controller' => 'BloodBankController', 'action' => 'list'],
     // Reference
     'reference/list' => ['controller' => 'ReferenceController', 'action' => 'list'],
+    'reference/add' => ['controller' => 'ReferenceController', 'action' => 'add'],
+    'reference/save' => ['controller' => 'ReferenceController', 'action' => 'save'],
+    'reference/edit' => ['controller' => 'ReferenceController', 'action' => 'edit'],
+    'reference/update' => ['controller' => 'ReferenceController', 'action' => 'update'],
+    'reference/delete-confirm' => ['controller' => 'ReferenceController', 'action' => 'deleteConfirm'],
+    'reference/delete-execute' => ['controller' => 'ReferenceController', 'action' => 'deleteExecute'],
     // Tutorial
     'tutorial/category' => ['controller' => 'TutorialController', 'action' => 'category'],
     'tutorial/list' => ['controller' => 'TutorialController', 'action' => 'list'],

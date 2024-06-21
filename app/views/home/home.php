@@ -47,18 +47,14 @@
 		<h1>Notice!</h1>
 	</div>
 	<div id="notice_board">
-		<?php
-		foreach ($noticeResults as $notice) {
-			?>
 			<Div class="notice_content">
 				<p>
-					<?php echo $notice['Notice']; ?><br><br> Thank You
+					<?php echo $noticeInfo['Notice']; ?><br><br> Thank You
 					<?php if (!empty($userInfo['group_id']) && $userInfo['group_id'] == 1) { ?>
-						<?php echo " <a href='Notice_Edit.php?Notice_ID=" . $notice['Notice_ID'] . "&keepThis=true&TB_iframe=true&height=300&width=500&do=edit&modal=true' class='thickbox' title='Edit Course - " . $notice['Notice_ID'] . "'> Update Notice </a> "; ?>
+						<a href="<?= BASE_URL . '/notice/edit?notice_id=' . $noticeInfo['Notice_ID'] . '&keepThis=true&TB_iframe=true&height=400&width=700&do=edit&modal=true' ?>" class='thickbox' title='Edit Notice'> Update Notice </a>
 					<?php } ?>
 				</p>
 			</Div>
-		<?php } ?>
 	</div>
 </div>
 

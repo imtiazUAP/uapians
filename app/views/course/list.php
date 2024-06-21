@@ -37,7 +37,7 @@ $colorIndex = 0;
         <tr align="center" style="background-color: <?php echo $bgColor; ?>;">
             <td height="40"><?php echo $course['CCode']; ?></td>
             <td><?php echo $course['CName']; ?></td>
-            <td><?php echo " <a href='Reference_List.php?CCode=" . $course['CCode'] . "'>Reference Source</a>" ?></td>
+            <td><a href="<?= BASE_URL . '/reference/list?CID=' . $course['CID'] ?>">Reference Source</a>></td>
             <td><?php echo $course['SMName'] ?></td>
             <?php if ($userInfo['group_id'] == '1') { ?>
                 <td>

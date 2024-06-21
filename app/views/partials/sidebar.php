@@ -88,7 +88,6 @@
 		<li><a href="<?= BASE_URL . '/student/list?SMID=9' ?>">Students</a></li>
 		<li><a href="<?= BASE_URL . '/course/list' ?>">Courses</a></li>
 		<li><a href="Mark_List.php">Results</a></li>
-		<li><a href="Reference_List_All.php">References</a></li>
 	</ul>
 </div>
 

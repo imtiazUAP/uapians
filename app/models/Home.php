@@ -1,7 +1,7 @@
 <?php
 
 class Home {
-    public static function getAllNotice()
+    public static function getNoticeInfo()
     {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
@@ -10,12 +10,13 @@ class Home {
         if ($stmt) {
             $stmt->execute();
             $noticeResults = $stmt->get_result();
+            $noticeInfo = $noticeResults->fetch_assoc();
             $stmt->close();
         } else {
             die("Query failed: " . $connection->error);
         }
 
-        return $noticeResults;
+        return $noticeInfo;
     }
 
     public static function getAllNews()
@@ -50,5 +51,29 @@ class Home {
         }
 
         return $homePageContents;
+    }
+
+    public static function updateNotice($data) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        
+        $qry = "UPDATE notice_info SET 
+                Notice=?
+
+                WHERE Notice_ID=?";
+                
+        $stmt = $connection->prepare($qry);
+        
+        if ($stmt) {
+            $stmt->bind_param(
+                "si",
+                $data['Notice'],
+                $data['Notice_ID']
+            );
+            return $stmt->execute();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
     }
 }

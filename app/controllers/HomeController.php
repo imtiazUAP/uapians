@@ -10,7 +10,7 @@ class HomeController extends BaseController
 {
     public function list()
     {
-        $noticeResults = Home::getAllNotice();
+        $noticeInfo = Home::getNoticeInfo();
         $newsResults = Home::getAllNews();
         $homePageContents = Home::getHomePageContents();
 
@@ -30,7 +30,37 @@ class HomeController extends BaseController
             }
         }
 
-        $data = compact('noticeResults', 'newsResults', 'introTitle', 'intro', 'missionTitle', 'mission', 'aboutTitle', 'about');
+        $data = compact('noticeInfo', 'newsResults', 'introTitle', 'intro', 'missionTitle', 'mission', 'aboutTitle', 'about');
         $this->render('home/home.php', $data);
+    }
+
+    public function edit($queryParams)
+    {
+        $noticeInfo = Home::getNoticeInfo();
+
+        $this->render(
+            'home/notice-edit.php',
+            compact('noticeInfo'),
+            false
+        );
+    }
+
+    public function update()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'Notice_ID' => $_POST['notice_id'],
+                'Notice' => $_POST['notice'],
+            ];
+
+            $success = Home::updateNotice($data);
+
+            if ($success) {
+                header('Location: ' . BASE_URL . '/notice/edit?notice_id=' . $data['Notice_ID'] . '&message=Notice+Updated+Successfully');
+            } else {
+                header('Location: ' . BASE_URL . '/notice/edit?notice_id=' . $data['Notice_ID'] . '&message=Notice+Update+Failed');
+            }
+            exit();
+        }
     }
 }
