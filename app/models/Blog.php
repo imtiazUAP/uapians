@@ -7,7 +7,7 @@ class Blog {
     {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        $qry = "SELECT DISTINCT blog.Blog, blog.SID, blog.user_id, blog.Date, Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.SID=s_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMIDE deleted = 0 ORDER BY Blog_ID desc";
+        $qry = "SELECT DISTINCT blog.Blog, blog.SID, blog.user_id, blog.Date, Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.SID=s_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMIDE blog.deleted = 0 ORDER BY Blog_ID desc";
         $stmt = $connection->prepare($qry);
         if ($stmt) {
             $stmt->execute();
@@ -43,7 +43,7 @@ class Blog {
         $totalBlogs = self::getBlogsCount();
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        $qry = "SELECT DISTINCT blog.Blog, blog.SID, blog.user_id, blog.Date, Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.user_id=s_info.user_id INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE deleted = 0 ORDER BY Blog_ID desc";
+        $qry = "SELECT DISTINCT blog.Blog, blog.SID, blog.user_id, blog.Date, Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.user_id=s_info.user_id INNER JOIN sm_info ON s_info.SMID=sm_info.SMID WHERE blog.deleted = 0 ORDER BY Blog_ID desc";
         $recordPerPage = 5;
         $pagination = new Page();
         $pagination->set_page_data(BASE_URL.'/blog/list', 1, $totalBlogs, $recordPerPage, 0, true, true, true);
@@ -69,7 +69,7 @@ class Blog {
     {
         $dbconnect = new dbClass();
         $connection = $dbconnect->getConnection();
-        $qry = "SELECT DISTINCT blog.blog, blog.SID, blog.Date, blog.Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.SID=s_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID where Blog_ID=? AND deleted = 0";
+        $qry = "SELECT DISTINCT blog.blog, blog.SID, blog.Date, blog.Blog_ID, SName, SReg, SPortrait, SMName FROM blog INNER JOIN s_info ON blog.SID=s_info.SID INNER JOIN sm_info ON s_info.SMID=sm_info.SMID where Blog_ID=? AND blog.deleted = 0";
         $stmt = $connection->prepare($qry);
         if ($stmt) {
             $stmt->bind_param("s", $blogId);
