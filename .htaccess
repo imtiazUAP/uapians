@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /uapians/
+
+# Don't rewrite requests for existing files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Don't rewrite requests for index.php itself to prevent looping
+RewriteCond %{REQUEST_URI} !/uapians/public/index.php$
+
+# Rewrite all other requests to index.php
+RewriteRule ^(.*)$ public/index.php [L]
+
+# Ensure DirectoryIndex is set to the default routing file
+DirectoryIndex public/index.php
