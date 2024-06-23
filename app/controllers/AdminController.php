@@ -134,6 +134,78 @@ class AdminController extends BaseController
             exit();
         }
     }
+
+    public function updatePassword()
+    {
+        $this->render(
+            'admin/update-password.php',
+            [],
+            false
+        );
+    }
+
+    public function saveNewPassword()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $data = [
+                'user_id' => $_POST['user_id'],
+                'new_password' => $_POST['new_password']
+            ];
+
+            $success = Admin::updatePassword($data);
+            if ($success) {
+                header('Location: ' . BASE_URL . '/admin/update-password?message=Password+Updated+Successfully');
+            } else {
+                header('Location: ' . BASE_URL . '/admin/update-password?message=Password+Update+Failed');
+            }
+            exit();
+        }
+    }
+
+    public function resetPassword()
+    {
+        $this->render(
+            'admin/reset-password.php',
+            [],
+            false
+        );
+    }
+
+
+    public function resetPasswordConfirm()
+    {
+        $success = false;
+        
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $userId = Admin::getUserByEmail($_POST['email']);
+            if ($userId) {
+                $randomNumber = date("Y-m-d H:i:s");
+                $encrypt = md5($randomNumber * 109 * 19 + $userId);
+                $message = "Your password reset link send to your e-mail address.";
+                $to = $_POST['email'];
+                $subject = "Forget Password";
+                $from = 'emtiaj@yahoo.com';
+                $body = 'Hi, <br/> <br/>Your Membership ID is ' . $userId . ' <br><br>Click here to reset your password https://localhost/uapians/reset_pass.php?encrypt=' . $encrypt . '&action=reset   <br/> <br/>--<br>UAPians.Net Team<br>Solve your problems.';
+                $headers = "From: " . strip_tags($from) . "\r\n";
+                $headers .= "Reply-To: " . strip_tags($from) . "\r\n";
+                $headers .= "MIME-Version: 1.0\r\n";
+                $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+                Admin:: updateRecovery($encrypt, $userId);
+                // TODO: Enable when go live
+                // $success = mail($to, $subject, $body, $headers);
+                header('location:reset_pass.php?message=confirmation_mail');
+            } else {
+                header('location:reset_pass.php?message=account_not_found');
+            }
+
+            if ($success) {
+                header('Location: ' . BASE_URL . '/admin/reset-password?message=confirmation_mail');
+            } else {
+                header('Location: ' . BASE_URL . '/admin/reset-password?message=account_not_found');
+            }
+            exit();
+        }
+    }
     
     
 

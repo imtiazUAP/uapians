@@ -8,15 +8,15 @@
 				<a href="<?= BASE_URL . '/student/edit?SID=' . $studentInfo["user_id"] . '&keepThis=true&TB_iframe=true&height=543&width=400&do=edit&modal=true' ?>"
 					class='thickbox' title='Edit Student - " . $studentInfo["SName"] . "'> Edit my Profile </a>
 				|
-				<?php echo " <a href='Password_Edit.php?SID=" . $studentInfo['user_id'] . "&keepThis=true&TB_iframe=true&height=200&width=300&do=edit&modal=true'     	class='thickbox' title='Change Password - " . $studentInfo["SName"] . "'> Change my Password </a> "; ?>
-				| <?php echo " <a href='Message_List_personal.php? SID=" . $studentInfo["user_id"] . "'> My Messages </a>" ?>
+				<a href="<?= BASE_URL . '/admin/update-password?keepThis=true&TB_iframe=true&height=265&width=500&do=edit&modal=true' ?>" class='thickbox' title='Change Password'> Change my Password </a>
+				| <a href="<?= BASE_URL . '/message/personal-messages?receiver_user_id='. $studentInfo['user_id'] ?>"> My Messages </a>
 				| <?php echo " <a href='Upload_Project.php?SID=" . $studentInfo["user_id"] . "'> | upload project  </a>" ?>
 			</div>
 		<?php } ?>
 	</div>
 	<div style="font-weight:bold; font-size:16px; padding-left:10px; color:#0099FF">
 		<ul>
-			<li><a href="send_message_to_your_friend.php">Send a Message...</a></li>
+			<li><a href="<?= BASE_URL . '/message/compose?receiver_user_id='. $studentInfo['user_id'] ?>">Send a Message...</a></li>
 		</ul>
 	</div>
 	<div id="content">

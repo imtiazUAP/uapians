@@ -7,3 +7,4 @@ foreach ($tutorialList as $tutorial) { ?>
     </div>
 <?php } ?>
 </div>
+

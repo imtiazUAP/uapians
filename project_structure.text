@@ -9,38 +9,220 @@
   - uapians.iml
   - vcs.xml
   - workspace.xml
-- About.php
-- About_for_index.php
-- Admin_Control.php
-- Admin_Jihan.php
-- Admin_Nokib.php
-- Admin_Sayem.php
-- Admin_Taqi.php
 - app
+  - assets
+    - css
+      - main_menu_style.css
+      - style.css
+      - thickbox.css
+    - Cultural_Club
+      - data1
+        - images
+          - 1176353_10201824031220250_299244289_n.jpg
+          - 12177_4319308698703_1275228451_n.jpg
+          - 20140228_154735.jpg
+          - 20140228_155057.jpg
+          - 971296_594950683868503_1156440747_n.jpg
+          - img_1894.jpg
+          - img_2109.jpg
+          - img_2141.jpg
+          - img_2161.jpg
+        - tooltips
+          - 1176353_10201824031220250_299244289_n.jpg
+          - 12177_4319308698703_1275228451_n.jpg
+          - 20140228_154735.jpg
+          - 20140228_155057.jpg
+          - 971296_594950683868503_1156440747_n.jpg
+          - img_1894.jpg
+          - img_2109.jpg
+          - img_2141.jpg
+          - img_2161.jpg
+      - engine1
+        - arrows.png
+        - bullet.png
+        - fullscreen.png
+        - jquery.js
+        - pause.png
+        - play.png
+        - script.js
+        - shadow.png
+        - style.css
+        - style.mod.css
+        - triangle.png
+        - wowslider.js
+        - wowslider.mod.js
+      - iframe_index.html
+      - index.html
+    - custom_fonts
+      - AlexBrush-Regular.ttf
+      - AllerDisplay.ttf
+      - Aller_Bd.ttf
+      - Aller_BdIt.ttf
+      - Aller_It.ttf
+    - data1
+      - images
+        - slide0.jpg
+        - slide1.jpg
+        - slide2.jpg
+        - slide3.jpg
+      - tooltips
+        - slide0.jpg
+        - slide1.jpg
+        - slide2.jpg
+        - slide3.jpg
+    - engine1
+      - arrows.png
+      - bullet.png
+      - fullscreen.png
+      - jquery.js
+      - pause.png
+      - play.png
+      - script.js
+      - style.css
+      - style.mod.css
+      - triangle.png
+      - wowslider.js
+      - wowslider.mod.js
+    - images
+      - ALL IMAGES
+    - js
+      - jquery.js
+      - Slider.js
+      - thickbox-compressed.js
+      - thickbox.js
+  - config
+    - config.php
   - controllers
+    - AdminController.php
+    - AuthController.php
+    - BaseController.php
+    - BlogController.php
+    - BloodBankController.php
+    - ClubController.php
+    - CourseController.php
+    - GalleryController.php
     - HomeController.php
+    - MessageController.php
+    - ProjectController.php
+    - ReferenceController.php
+    - StaffController.php
     - StudentController.php
+    - TeacherController.php
+    - TutorialController.php
+    - UtilitiesController.php
   - helpers
     - dbConnect.php
+    - page.inc.php
   - models
+    - Admin.php
+    - Blog.php
+    - BloodBank.php
+    - Course.php
+    - Gallery.php
+    - Home.php
+    - Message.php
+    - Project.php
+    - Reference.php
+    - Staff.php
     - Student.php
+    - Teacher.php
+    - Tutorial.php
+    - User.php
+    - Utilities.php
   - views
+    - admin
+      - add-student.php
+      - list.php
+      - reset-password.php
+      - signup-delete.php
+      - signup-review.php
+      - update-password.php
+    - blog
+      - add.php
+      - delete.php
+      - detail.php
+      - edit.php
+      - list.php
+    - blood_bank
+      - list.php
+    - club
+      - cultural.php
+      - programming.php
+      - research.php
+      - software.php
+      - sports.php
+      - web.php
+    - clubs
+    - course
+      - add.php
+      - delete.php
+      - edit.php
+      - list.php
+    - gallery
+      - add.php
+      - delete.php
+      - list.php
     - home
       - home.php
+      - news-add.php
+      - news-delete.php
+      - news-edit.php
+      - notice-edit.php
+    - layouts
+      - layout.php
+    - message
+      - admin-messages.php
+      - compose-mail.php
+      - compose.php
+      - delete.php
+      - personal-messages.php
     - partials
+      - footer.php
       - header.php
+      - login-request.php
       - logo.php
       - menu.php
       - sidebar.php
       - slider1.php
-    - student
+    - project
+      - add.php
+      - category.php
       - list.php
+    - reference
+      - add.php
+      - delete.php
+      - edit.php
+      - list.php
+    - staff
+      - edit.php
+      - list.php
+      - profile.php
+    - student
+      - add.php
+      - delete.php
+      - edit.php
+      - filter-district.php
+      - list.php
+      - profile.php
+      - sign-up.php
+    - teacher
+      - add.php
+      - delete.php
+      - edit.php
+      - list.php
+      - profile.php
+    - tutorial
+      - add.php
+      - category.php
+      - list.php
+    - utilities
+      - about.php
 - assets
   - css
     - Profile_List.css
     - Slider.css
     - style.css
-    - main_menu_style.css
+    - style_new.css
     - thickbox.css
   - Cultural_Club
     - data1
@@ -115,961 +297,13 @@
     - Slider.js
     - thickbox-compressed.js
     - thickbox.js
-- auto_search.php
-- Blog_Delete.php
-- Blog_Edit.php
-- Blog_Insert.php
-- Blog_List.php
-- Blog_Save.php
-- Blog_Update.php
-- Blood_List.php
-- Blood_List_All.php
-- Comment_Save.php
-- config
-- contact-test.php
-- Course_Delete.php
-- Course_Edit.php
-- Course_Insert.php
-- Course_List.php
-- Course_Save.php
-- Course_Update.php
-- Cultural_Debating_Club.php
 - database
   - uapians.sql
-- db.php
-- dbconnect.php
-- db_connect.php
-- default.css
-- Designation_Insert.php
-- Designation_Save.php
-- Districtwise_StudentList.php
-- Employee_Delete.php
-- Employee_Edit.php
-- Employee_Insert.php
-- Employee_List.php
-- Employee_Save.php
-- Employee_Update.php
-- error_log
-- ExStudents1.php
-- Facebook.html
-- Faculty_List.php
-- fb.html
-- footer.php
-- galary.php
-- Gallery_Delete.php
-- Gallery_Insert.php
-- Gallery_Save.php
-- header.php
-- Home.php
-- images
-  - 001.jpg
-  - 007699-glossy-black-3d-button-icon-arrows-arrow-circle-refresh.png
-  - 0077.jpg
-  - 02nahid.jpg
-  - 05082013024-002.jpg
-  - 1.gif
-  - 1.jpg
-  - 1.png
-  - 10.jpg
-  - 10001271_1478980875647493_1591312948_o.jpg
-  - 10003361_520486324728862_7886134346356443814_a.jpg
-  - 10003464_625914734143533_2075054908_n.jpg
-  - 10007490_491885164271547_4623196777550734665_n.jpg
-  - 10014626_317334375089674_3301293229218255383_n.jpg
-  - 1001586_256363604514065_708203388_n.jpg
-  - 1003229_427652934036062_387383085_n.jpg
-  - 1003242_224204367747904_1880240254_n.jpg
-  - 1003297_1385327338355276_1753521303_n.jpg
-  - 1004548_10201564908338062_2003756196_n.jpg
-  - 1005633_490814711004403_2061067856_n.jpg
-  - 10150552_809028292483479_8045175309296285072_n.jpg
-  - 10154631_837608416255105_637555159_n.jpg
-  - 10154900_496937227073517_6620417239002380640_n.jpg
-  - 10155542_241693102705246_7960431271594375614_n.jpg
-  - 1016448_1406738646246459_656893837_n.jpg
-  - 10169437_1417480558514270_1594709325929787614_n.jpg
-  - 10170769_1420416704877730_1561525713_n.jpg
-  - 10176020_258386790998182_5973587707637263294_n.jpg
-  - 10250337_270129699825987_7731548561277742625_n.jpg
-  - 10252026_280350445473710_8999295856745597663_n.jpg
-  - 10258650_1572610902971633_7188673222523065139_o.jpg
-  - 10259923_1475254896042003_6270963852846229431_n.jpg
-  - 10262194_266031503579398_6856765085673585350_n.jpg
-  - 10268486_717147451668940_8144763152877202821_n.jpg
-  - 10273169_681861388534691_6118301465029620748_o.jpg
-  - 10300780_299524230258479_8050480778884252039_n.jpg
-  - 10303295_568009229975150_1189240044269002913_n.jpg
-  - 10304794_1615357182023954_7658662070442962533_n.jpg
-  - 10305169_10202684892150807_6483704379885635067_n.jpg
-  - 10305520_617378341669528_2069059154716465415_n.jpg
-  - 10308147_692336724153205_2770457989432029884_n.jpg
-  - 10314457_795736240438147_6427879444342682432_n.jpg
-  - 10325768_10203711935376477_2717100097864974809_n.jpg
-  - 10330420_708276332597252_5967660430232412605_n.jpg
-  - 10341419_671726699578214_7919345742346801779_n.jpg
-  - 10343493_1408547206093994_5088881357735340138_n.jpg
-  - 10348299_349228758590932_7472641275676143579_n.jpg
-  - 10353394_1446818592235072_5299772880380091142_o.jpg
-  - 10354070_1501786433414346_67987159144926934_n.jpg
-  - 10360561_1451090628478303_3785439704004452409_n.jpg
-  - 10364149_1466632246952802_8964898437538652903_n.jpg
-  - 10365996_635986653159809_6922002059594729886_n.jpg
-  - 10372355_774692779231750_2398908771483680906_n.jpg
-  - 10376296_799551746745323_7344814197122763662_n.jpg
-  - 10377260_994705720544326_9008804096860301414_n.jpg
-  - 10377987_302133136649916_4253504701545271003_n.jpg
-  - 10382175_702216576527436_2950247600042172738_n.jpg
-  - 10384964_761165617247732_1811048481_n.jpg
-  - 10386820_892053250819957_6117005360127573121_n.jpg
-  - 10397824_349553395211571_219988957537504458_n.jpg
-  - 10401373_1441314709478809_1807919784772095851_n.jpg
-  - 10406457_888076507873915_773202181461072876_n.jpg
-  - 10407278_1467027443555344_4851176331360625419_n.jpg
-  - 10408655_313468648840504_5648297546500639247_n.jpg
-  - 10410118_699612786789605_7549537739291338305_n.jpg
-  - 10413352_406508229499169_646207913412479660_n.jpg
-  - 10420286_493025347505798_1843490373187191917_n.jpg
-  - 10428096_599943190131439_147137125316875453_n.jpg
-  - 10433123_357150011112166_5050628603737338966_n.jpg
-  - 10435464_664150763675303_5317229214981198811_n.jpg
-  - 10438344_301866693309246_871668080039839968_n.jpg
-  - 10440091_603313833127645_8299659612667823041_n.jpg
-  - 10440140_347018855479723_671734983187865983_n.jpg
-  - 10453447_1458322004413624_8501606471519669505_n.jpg
-  - 10457895_680602172022659_7051118815187938084_n.jpg
-  - 10462696_666159733475009_2365093117076909788_n.jpg
-  - 10469150_763150203744377_6555303389603524243_o.jpg
-  - 10480190_659865770797170_6406352179969072570_n.jpg
-  - 10491221_514118018717279_764799271002641172_n.jpg
-  - 10492249_736453259746928_3690924061334236878_n.jpg
-  - 10498020_509212492541988_8362811073823063885_o.jpg
-  - 10510281_464303200338924_138019791_n.jpg
-  - 10516764_759428694129970_2634914136539655407_n.jpg
-  - 10517518_647445965353449_4505512998499679829_n.jpg
-  - 10526074_550338281763709_2677361913491942546_n.jpg
-  - 10533554_526266337520001_2658944365972706735_n.jpg
-  - 10537138_1529372720632639_5300802171449467290_n.jpg
-  - 10544330_290620201144497_3472863209492862819_n.jpg
-  - 10544330_731535380247619_211482742052165724_n.jpg
-  - 10548013_10204351996217689_4826674022457364689_o.jpg
-  - 10556907_710738912329381_8000.jpg
-  - 10557311_269774599881125_4724369575154502673_n.jpg
-  - 10559812_1449608935317915_3982536826818909165_n.jpg
-  - 10568940_1490110581251267_341843990323370640_n.jpg
-  - 10570538_335417113283444_7377220567335634823_n.jpg
-  - 10584075_306835806164368_4187400041062105265_n.jpg
-  - 10612933_348195915329642_8151897503789342208_n.jpg
-  - 10614127_1453826034882431_7748872352044971713_n.jpg
-  - 10620028_692982810786084_1231982522996216690_o.jpg
-  - 10624557_1558970081000171_1247440989817413694_n.jpg
-  - 10629672_1483848695214798_4759717043066825684_n.jpg
-  - 10635862_1523813007863183_28491121360597380_n.jpg
-  - 10635993_811983978862136_6663508253910954375_n.jpg
-  - 10649430_620458868098029_6179656013664874112_n.jpg
-  - 10649982_1491984201074145_6535308316895852004_n.jpg
-  - 10659033_10203601221488899_3868982940667441159_o.jpg
-  - 10660337_1513139972265664_995071625657017039_n.jpg
-  - 10671355_370490266449634_1999084426663952377_n.jpg
-  - 10676258_393920690755283_6576241559316231417_n.jpg
-  - 10685571_775161415859255_2216790437268973852_n.jpg
-  - 10710627_314684618718238_5642311046985217510_n.jpg
-  - 10710643_835680789798163_1901441571253350837_n.jpg
-  - 10710992_346370848877384_8836902860109973327_n.jpg
-  - 10711067_587115798061083_4002769380555307091_n.jpg
-  - 10717910_715015801901167_1229896697_n.jpg
-  - 10801877_811198948942144_374818224785570467_n.jpg
-  - 10838226_10205522346995836_2688334731030070888_o.jpg
-  - 10995303_737740523005241_2958578596520415517_n.jpg
-  - 11.jpg
-  - 11.png
-  - 11034199_1029994810349698_536298858475565478_n.jpg
-  - 11068345_406417316229315_1428389472110485997_n.jpg
-  - 11083825_1625659701001033_2030719609279585324_n.jpg
-  - 11101001.jpg
-  - 11201002.jpg
-  - 11201003.jpg
-  - 11201005.jpg
-  - 11201007.jpg
-  - 11201009.jpg
-  - 11201012.jpg
-  - 11201013.jpg
-  - 11201015.jpg
-  - 11201019.jpg
-  - 11201024.jpg
-  - 11201027.jpg
-  - 11201028.jpg
-  - 11201030.jpg
-  - 11201031.jpg
-  - 11201035.jpg
-  - 11201037.jpg
-  - 11201040.jpg
-  - 11201043.jpg
-  - 11201048.jpg
-  - 11391528_926647094024700_3742502908562004938_n.jpg
-  - 11393148_10205249229248063_5176404391522020027_n.jpg
-  - 1146163_797216903628221_1164932014_o.jpg
-  - 1146163_797216903628221_1164932014_oaaa.jpg
-  - 1146838_10151757886268548_833790146_o.jpg
-  - 1148815_1374730172757085_1430478860_n.jpg
-  - 11705213_907885202617651_1501139362781166162_n.jpg
-  - 11722240_10205522358196116_8220767524065565668_o.jpg
-  - 11754796_10205522380396671_5992917940417255275_o.jpg
-  - 11800101_980735331990631_1213504949400430244_n.jpg
-  - 12.jpg
-  - 12027196_777874775658257_8991727555454063058_o.jpg
-  - 12101045.jpg
-  - 12101052.jpg
-  - 12201001.jpg
-  - 12201005.jpg
-  - 12201013.jpg
-  - 12201047.png
-  - 1233586_621785307855027_772487481_n.jpg
-  - 1234195_502839203143957_1802258752_n.jpg
-  - 1234554321.jpg
-  - 123456789123456789.jpg
-  - 123456789123456789123456789.jpg
-  - 1240142_614141295297398_1724515869_n.jpg
-  - 1244558_10151662353987725_483480081_o.jpg
-  - 1267476_552110594856498_1108832687_o.jpg
-  - 12717171_775450875922910_1204969283826223891_n.jpg
-  - 1272919_620066828015854_133567729_o.jpg
-  - 12944.jpg
-  - 13.jpg
-  - 13083256_1032654890162633_9037507763842210855_n.jpg
-  - 13101057.jpg
-  - 13101061.png
-  - 131394_270156819771686_2096257844_o.jpg
-  - 13219691_934491076670097_1556263588_n.jpg
-  - 13235695_10207551889293125_4868534374867144138_o.jpg
-  - 13239339_1728274190764000_2880996844617824627_n.jpg
-  - 13271472_1700372230228312_1519942876_o.jpg
-  - 13432305_1632927240287226_8001475845902107771_n.jpg
-  - 1376377_10203604532500899_1285344917_n.jpg
-  - 1376384_640352436031228_441267175_n.jpg
-  - 137e97113304bc9db0a4693e0bf4a199.jpg
-  - 1380504_4688132539221_113262320068368289_n.jpg
-  - 1381346_424714197650364_282360503_n.jpg
-  - 1393852_496828737097879_1348723478_n.jpg
-  - 1397775_570621646338202_110982238_o.jpg
-  - 1397802518307[1].jpg
-  - 1398363_10206890086428358_3277840158857859843_o.jpg
-  - 1401380_417946188328053_393566355_o.jpg
-  - 14101013.png
-  - 14101033.png
-  - 14101041.jpg
-  - 14101043.jpg
-  - 14101046.jpg
-  - 14101053.jpg
-  - 14101056.jpg
-  - 14101070.jpg
-  - 14101071.jpg
-  - 14101074.jpg
-  - 1424551_1670458109847093_864592004416984667_n.jpg
-  - 1451475_697277413680859_1771512844583559851_n.jpg
-  - 1452105_373107959487593_622205785_n.jpg
-  - 1453457_474060429380161_680412851_n.jpg
-  - 1456624_549590225135417_492131188_n.jpg
-  - 1467139597.JPG
-  - 1467139677.JPG
-  - 1467139832.JPG
-  - 1469767_241865515980254_699498130_n.jpg
-  - 1472678905.jpg
-  - 1472852326.jpg
-  - 1472853364.jpg
-  - 1475184319.jpg
-  - 1475184407.jpg
-  - 1475268011.jpg
-  - 1475269296.jpg
-  - 1475269435.jpg
-  - 1475283088.jpg
-  - 1475283104.jpg
-  - 1475283160.jpg
-  - 1475283252.jpg
-  - 1475284886.jpg
-  - 1475355804.jpg
-  - 1475357377.jpg
-  - 1475358684.jpg
-  - 1475414261.jpg
-  - 1475414475.jpg
-  - 1475414754.jpg
-  - 1475415039.jpg
-  - 1475415382.jpg
-  - 1475415763.jpg
-  - 1475417120.jpg
-  - 1475417303.jpg
-  - 1475417335.jpg
-  - 1475417352.jpg
-  - 1475417561.jpg
-  - 1475417644.jpg
-  - 1475418711.jpg
-  - 1475419115.jpg
-  - 1475419357.jpg
-  - 1475419486.jpg
-  - 1475419748.jpg
-  - 1475419930.jpg
-  - 1475420431.jpg
-  - 1475437685.jpg
-  - 1475438672.jpg
-  - 1475812231.jpg
-  - 1475812651.jpg
-  - 1475812765.jpg
-  - 1475812785.jpg
-  - 1475812896.jpg
-  - 1475812953.jpg
-  - 1475812993.jpg
-  - 1475813020.jpg
-  - 1475813079.jpg
-  - 1475813155.jpg
-  - 1475813176.jpg
-  - 1475813220.jpg
-  - 1475813311.jpg
-  - 1475813381.jpg
-  - 1475814181.jpg
-  - 1475814214.jpg
-  - 1475814238.jpg
-  - 1475814512.jpg
-  - 1475814542.PNG
-  - 1475814573.jpg
-  - 1475814779.jpg
-  - 1475815229.jpg
-  - 1475815318.png
-  - 1475815347.png
-  - 1475815374.PNG
-  - 1475815701.jpg
-  - 1475815787.JPG
-  - 1475818913.JPG
-  - 1475820031.JPG
-  - 1475820567.JPG
-  - 1475820919.JPG
-  - 1475821026.JPG
-  - 1475821318.JPG
-  - 1475821735.JPG
-  - 1475821764.JPG
-  - 1475821789.JPG
-  - 1475821849.JPG
-  - 1475821899.JPG
-  - 1475821921.JPG
-  - 1475822010.JPG
-  - 1475823318.JPG
-  - 1475823882.JPG
-  - 1475939837.jpg
-  - 1475939857.jpg
-  - 1475939878.jpg
-  - 1475939903.jpg
-  - 1475940009.jpg
-  - 1475940340.jpg
-  - 1475942377.jpg
-  - 1482752_620414231356305_865241924_n.jpg
-  - 1483197_222670907933072_2030777904_n.jpg
-  - 1484124_595164977222360_387470801_n.jpg
-  - 15.jpg
-  - 1504075_252585251566960_1601040860_n.jpg
-  - 1506035_705459722818322_118635111_n.jpg
-  - 1506073_10202065588153177_1785216535_n.jpg
-  - 15101141.jpg
-  - 1511043_279317188899280_533221305_n.jpg
-  - 1513672_1480086978918796_6892453755577730320_n.jpg
-  - 1515035_648197248572514_1259371168_n.jpg
-  - 1546269_518516111596727_957853392_n.jpg
-  - 1551691_1496565680620998_78296404498605456_n.jpg
-  - 1554544_563937610365385_1009996154_n.jpg
-  - 16002896-1.jpg
-  - 1620643_454587064684071_2152237300528142823_n.jpg
-  - 1621955_818828128132087_1248127790_n.jpg
-  - 1622743_693014247429324_998306618_n.jpg
-  - 1625517_386163434866297_6543849690004191624_n.jpg
-  - 1653776_589377801161539_3235778140451655824_n.jpg
-  - 1660528_278630645636667_1020987052_n.jpg
-  - 166671_114879128584510_5348094_n.jpg
-  - 17.png
-  - 17062008455.jpg
-  - 1796571_603139319767073_906900502_n.jpg
-  - 1836858_818817224799844_1125444582_o.jpg
-  - 1901353_1427088084202035_1509270555_n.jpg
-  - 1904068_299649663553903_6752219028434743966_n.jpg
-  - 1910446_10152795519487485_7197304996917724653_n.jpg
-  - 1911211_676552792383115_1306285055_o.jpg
-  - 1912207_667947763269297_1766732963_o.jpg
-  - 1925311_436456523154939_1195538673_n.jpg
-  - 1926661_10201871924782673_1151645867_n.jpg
-  - 1939435_663606293686034_1392674342_o.jpg
-  - 1958287_641887155878841_1690147033_n.jpg
-  - 1960032_366986116776727_612097967_n.jpg
-  - 1962403_679869235410483_1260319428_o.jpg
-  - 1962727_694969320562722_1717298201_n.jpg
-  - 1970767_1408550656064895_1134303289_n.jpg
-  - 1972301_660853870617986_1936435182_n.jpg
-  - 1974705_696670697042155_1291497370_n.jpg
-  - 1982323_623940924343214_397808690092732234_n.jpg
-  - 1_04_25_2014_12221104amportrait_share.jpg
-  - 2.png
-  - 20120115351.jpg
-  - 20131109_170444.jpg
-  - 20131123_125616.jpg
-  - 2014-05-08-059.jpg
-  - 2014-06-20-153131.jpg
-  - 20140109_203114.jpg
-  - 20140120_095041.jpg
-  - 20140121_145218.jpg
-  - 20140225_132127.jpg
-  - 20140425_085558.jpg
-  - 20140504_094510.jpg
-  - 20140804_122332.jpg
-  - 20140806_140719.jpg
-  - 20140830_163630.jpg
-  - 2015-10-08-17-36-26-347.jpg
-  - 20150106_162809.jpg
-  - 21329_107655446108529_1346709715_n.jpg
-  - 24.png
-  - 25.jpg
-  - 28.png
-  - 29082014308.jpg
-  - 3.jpg
-  - 3.png
-  - 300122_592080454135391_1051595417_n.jpg
-  - 304984_339507169476262_471771378_n.jpg
-  - 36-0.jpg
-  - 37.jpg
-  - 379738_209431909195550_1593048504_n.jpg
-  - 381338_288497811188119_1026602573_n.jpg
-  - 383357_411878955540568_548750009_n.jpg
-  - 390369_287145648000931_780080808_n.jpg
-  - 447998_1353780479736_500_281.jpg
-  - 44860_10201572789576844_1038536260_n.jpg
-  - 458535_10151107362388124_1026694981_o.jpg
-  - 479758_300345323402961_821945403_n.jpg
-  - 485638_271272749684843_1793184642_n.jpg
-  - 5.png
-  - 50.jpg
-  - 526607_485800068150209_723412854_n.jpg
-  - 527913_361775493894984_456550050_n.jpg
-  - 561858_524295634309271_2032403515_n.jpg
-  - 564481_491658667546470_1528803854_n.jpg
-  - 576618_419494808176956_1644673248_n.jpg
-  - 579051_620167911368092_643107638_n.jpg
-  - 6.jpg
-  - 6.png
-  - 60226_635896773130082_1763738345_n.jpg
-  - 602291_447829318587425_1186973849_nokia110.jpg
-  - 63472846_pDhsU6EzK-1.jpg
-  - 65281_558740940803271_443205401_n.jpg
-  - 7.jpg
-  - 702447_666231160090893_1306901067_n.jpg
-  - 75-BMA-75L517387.jpg
-  - 75990_235775379869355_772751082_n.jpg
-  - 800px-Beautiful-pink-flower_-_West_Virginia_-_ForestWander.jpg
-  - 888eecda-5ebe-4a85-bf80-26da8b3791ff.jpg
-  - 9.png
-  - 943168_551962308189266_707212715_n.jpg
-  - 970459_364467800350654_115952073_n.jpg
-  - 971123_10152653536038998_997159410_n.jpg
-  - 971264_277686249064847_1420595427_n.jpg
-  - 971296_594950683868503_1156440747_n.jpg
-  - 977497_265658830240205_1191086721_o.jpg
-  - a1.jpg
-  - abcd.jpg
-  - abedinsir.JPG
-  - ad.gif
-  - ad.jpg
-  - ad1.gif
-  - africabg25.jpg
-  - akib.hosain.jpg
-  - allegheny-national-forest-pennsylvania-wallpaper-1600x1200.jpg
-  - Amir.jpg
-  - ami[4].jpg
-  - ananna.png
-  - angry_birds_seasons_wallpaper_mobile_iphone_hd-iphone.jpg
-  - AnikPhoto.jpg
-  - anonymous.jpg
-  - Antor.jpg
-  - Antor_parvez.jpg
-  - Arif.jpg
-  - Ashik 01.jpg
-  - asifahmed11.jpg
-  - asifsir.JPG
-  - atikuzzaman.jpg
-  - autumn-hd-wallpaper.jpg
-  - Aviary Stock Photo 3.jpg
-  - back.gif
-  - back10.png
-  - back2.png
-  - back3.png
-  - back4.png
-  - back5.png
-  - back6.png
-  - back7.png
-  - back8.png
-  - back9.png
-  - background.jpg
-  - backgrounds
-    - texture1.svg
-  - Batasia_Loop_Darjeeling.jpg
-  - BeFunky.jpg
-  - bigstock-Visualization-Of-Mathematics-43605037.jpg
-  - bijansir.jpg
-  - Bijan_Paul.jpg
-  - bird1.gif
-  - birds2.jpg
-  - birds9.gif
-  - board.jpg
-  - breaking_out_1680x1050_HD_wallpaper.jpg
-  - brightsir.jpg
-  - c++.jpg
-  - c2.jpg
-  - cave.jpg
-  - cccccccccccc.jpg
-  - chandrima_mam.jpg
-  - chotonggeek.png
-  - Chrysanthemum.jpg
-  - CIMG5286.jpg
-  - circuit1.jpg
-  - collage_20140320220133702_20140328230839182.jpg
-  - Cover.jpg
-  - Cover111.jpg
-  - Cover1111.jpg
-  - Cultural Club
-    - 1176353_10201824031220250_299244289_n.jpg
-    - 12177_4319308698703_1275228451_n.jpg
-    - 971296_594950683868503_1156440747_n.jpg
-  - dddssdd.jpg
-  - dep_1417819-Floral-design-elements.jpg
-  - Desert.jpg
-  - desp1.png
-  - desp2.png
-  - dog.gif
-  - Donate_Blood.jpg
-  - DSC01212_4.jpg
-  - DSC03986.jpg
-  - DSC_0024.jpg
-  - DSC_0057-009.jpg
-  - DSC_0172.jpg
-  - DSC_0499.jpg
-  - dsc_1536_001.jpg
-  - DSC_1961 (2).jpg
-  - DSC_3138copy.jpg
-  - ecommerce.jpg
-  - edit.jpg
-  - eee.jpg
-  - fahimvia.jpg
-  - faria.jpg
-  - Faruk_Ahmed.jpg
-  - farzanarahman.png
-  - FB_Icon.png
-  - firozsir.jpg
-  - FooterBackground.png
-  - FooterBackground2.png
-  - FooterBackground3.png
-  - fy-ww-baby-growth-and-behavior.jpg
-  - Google_Icon2.png
-  - gyt.jpg
-  - h3tfj9039937-01.jpg
-  - HanifBack.jpg
-  - hhh.jpg
-  - high hihhjhjghh.jpg
-  - homepage.png
-  - homer_points_gun_wallpaper_-_1024x768.jpg
-  - Hydrangeas.jpg
-  - i-am-the-devil.png
-  - i1.jpg
-  - image.jpg
-  - images.jpg
-  - img005.gif
-  - IMG0069A.jpg
-  - img01.gif
-  - img01.jpg
-  - img02.jpg
-  - img03.gif
-  - img03.jpg
-  - img04.gif
-  - img04.jpg
-  - img05.gif
-  - img06.gif
-  - img06.jpg
-  - img07.gif
-  - img08.gif
-  - img09.gif
-  - img11.gif
-  - IMG_#U09e8#U09e6#U09e7#U09ea#U09e6#U09ec#U09e6#U09e9_#U09e8#U09e6#U09e7#U09ea#U09ea#U09e9.jpg
-  - IMG_123.jpg
-  - IMG_136654001913007_20140201214628235.jpg
-  - IMG_20130802_200526.jpg
-  - IMG_20130824_232420 (2).jpg
-  - IMG_20131213_181129bbbbbbb.jpg
-  - IMG_20140216_125113.jpg
-  - IMG_20140318_225709.jpg
-  - IMG_20140513_131109.jpg
-  - IMG_20140513_133226.jpg
-  - IMG_20140708_034314.jpg
-  - IMG_20141008_150942.jpg
-  - IMG_20141027_170321-1[1].jpg
-  - IMG_20141109_235838.jpg
-  - IMG_20141113_165629.jpg
-  - IMG_20141113_165727.jpg
-  - IMG_20150308_235006.jpg
-  - IMG_20150502_181354.jpg
-  - IMG_20150805_145641.jpg
-  - IMG_20150814_160147.jpg
-  - IMG_20160807_143850-01.jpg
-  - IMG_20160807_164529.jpg
-  - IMG_217027700491391.jpeg
-  - IMG_3441.jpg
-  - IMG_6123.JPG
-  - IMG_6135.JPG
-  - IMG_6821_1.jpg
-  - IMG_6891_1.jpg
-  - IMG_২০১৪০৬০৩_২০১৪৪৩.jpg
-  - in.php.jpg
-  - index.jpg
-  - j9.gif
-  - JOY.jpg
-  - JU 300 300-1012x1012-1600x1600.jpg
-  - khan.jpg
-  - khansaheb.jpg
-  - Lake.jpg
-  - Lighthouse.jpg
-  - loadingAnimation.gif
-  - location.jpg
-  - Logo-Version-1.png
-  - Logo-Version-1_1.png
-  - Love.jpg
-  - Maruf-Marufuni2.jpg
-  - mazedulBack.jpg
-  - me.jpg
-  - Mehedi.jpg
-  - meherul.jpg
-  - meherul.png
-  - mhd.jpg
-  - minions.jpg
-  - mmmm.jpg
-  - mollasir.jpg
-  - moon.jpg
-  - mowa.jpg
-  - my_Pic.jpg
-  - Nahid99.jpg
-  - nahidamam.jpg
-  - nain.jpg
-  - najiauap008.png
-  - Najmus_Sadat.jpg
-  - nawazesh.jpg
-  - neo 09.jpg
-  - New folder3.jpg
-  - niloy.jpg
-  - niloy_buet.jpg
-  - NIPABhowmik.jpg
-  - noisy5.png
-  - NoticeBoard.jpg
-  - NoticeBoard.png
-  - OfficialPhoto(me).jpg
-  - onlinetapu.jpg
-  - o_facecoverz.com-1317912175824.jpg
-  - paper_boats_in_rain-wallpaper-1920x1080.jpg
-  - Penguins.jpg
-  - Photo-0043.jpg
-  - photo.jpg
-  - photo0039.jpg
-  - Photo0251_001.jpg
-  - photo1015_001.jpg
-  - picnic1.jpg
-  - picnic10.jpg
-  - picnic11.jpg
-  - picnic12.jpg
-  - picnic2.jpg
-  - picnic3.jpg
-  - picnic4.jpg
-  - picnic5.jpg
-  - picnic6.jpg
-  - picnic7.jpg
-  - picnic8.jpg
-  - picnic9.jpg
-  - PicsArt_1413659108197.jpg
-  - Picture 2963.jpg
-  - Picture.jpg
-  - Picture1.jpg
-  - Picture_20143411123444-1.jpg
-  - pro_pic.jpg
-  - Rafsan.jpg
-  - ramadan_karim-t1.jpg
-  - ratul.jpg
-  - razakar.jpg
-  - received_1038510889523772-1.jpg
-  - received_959463210793183.jpg
-  - riad043.png
-  - Runa.jpg
-  - saad.jpg
-  - sadatsir.jpg
-  - saheramam.jpg
-  - Saidur_Rahman.jpg
-  - sak99.jpg
-  - sarnalimam.jpg
-  - sb6.jpg
-  - ScreenHunter_40 May. 28 21.21.jpg
-  - sds.jpg
-  - shahriarsir.JPG
-  - shaila_mam.jpg
-  - shaila_mam1.jpg
-  - shammi_mam.png
-  - sharif.JPG
-  - Sharif_Zaman.jpg
-  - Sheikh_Hasina (1).jpg
-  - sherlockholmes110914000424.jpg
-  - shiplusir.jpg
-  - shishir1.jpg
-  - shot-20140506-19938-khfro2-0.jpeg
-  - showmo21.png
-  - Sitamayerselenupur.jpg
-  - slshuvo.png
-  - smile.gif
-  - sourav.jpg
-  - SP.Antor.jpg
-  - spacer.gif
-  - Sports Club
-    - 1779232_251311011703906_1025516691_n.jpg
-    - 253285_10200387998156043_1515638908_n.jpg
-    - 268213_250126248333793_1444394_n.jpg
-    - 268255_250746288271789_3522628_n.jpg
-    - 34539_132289470142081_7241903_n.jpg
-  - stork.gif
-  - supercut.jpg
-  - suporna.jpg
-  - surovi.jpg
-  - Syed Parvez.jpg
-  - system_images
-    - 1234554321.jpg
-    - about_icon.png
-    - academic_icon.png
-    - admin_icon.png
-    - blood_groups
-      - A+.png
-      - A-.png
-      - AB+.png
-      - AB-.png
-      - B+.png
-      - B-.png
-      - O+.png
-      - O-.png
-      - Originals
-        - A+.png
-        - A-.png
-        - AB+.png
-        - AB-.png
-        - B+.png
-        - B-.png
-        - O+.png
-        - O-.png
-        - Unknown.png
-      - Unknown.png
-    - blue1.jpg
-    - blue2.jpg
-    - blue3.jpg
-    - blue4.jpg
-    - blue5.jpg
-    - blue7.jpg
-    - check_mark.png
-    - club_icon.png
-    - contact_icon.png
-    - contributors
-      - Bijan_Paul.jpg
-      - Faruk_Ahmed.jpg
-      - Najmus_Sadat.jpg
-      - rana.jpg
-      - Sharif_Zaman.jpg
-    - cover.jpg
-    - cover1.jpg
-    - cross_mark.png
-    - developer_icon.png
-    - Donate_Blood.jpg
-    - features_icon.png
-    - founder_icon.png
-    - icon_news.jpg
-    - jihan.jpg
-    - loadingAnimation.gif
-    - mission_icon.png
-    - news_icon.png
-    - NoticeBoard.png
-    - notice_icon.png
-    - project_thumbnails
-      - android.jpg
-      - assembly.jpg
-      - c#.jpg
-      - c++.jpg
-      - c.jpg
-      - csharp.jpg
-      - database.jpg
-      - graphics.jpg
-      - java.jpg
-      - others.jpg
-      - php.jpg
-      - python.jpg
-      - webapps.jpg
-      - wordpress.jpg
-    - tiittleimage.ico
-    - tittleimage.png
-    - tutorial_thumbnails
-      - aja.png
-      - and.png
-      - asp.png
-      - boot.png
-      - c++.png
-      - c.png
-      - cake.png
-      - code.png
-      - csharp.png
-      - css.png
-      - gra.png
-      - html.png
-      - html5.png
-      - illus.png
-      - java.png
-      - joom.png
-      - jq.png
-      - js.png
-      - mssql.png
-      - mysql.png
-      - odesk.png
-      - others.jpg
-      - photo.png
-      - php.png
-      - python.png
-      - seo.png
-      - twitter.png
-      - word.png
-    - welcome_icon_two.png
-  - Tanaya.jpg
-  - the Biggest size.jpg
-  - The-Un16.jpg
-  - Tulips.jpg
-  - tutorial.png
-  - tutorial1111.gif
-  - Twitter_Icon.png
-  - u1.gif
-  - uapins.jpg
-  - UC_Photo_0.png
-  - ulta_pulta.jpg
-  - under_development.jpg
-  - waterfall-1.jpg
-  - waterfall-3.jpg
-  - whitelotus.png
-  - WMP.jpg
-  - WP_20120901_002.jpg
-  - yeazsp.png
-  - zahidpb.png
-  - zahids photo.jpg
-  - ~JOJJI20.jpg
-  - ~ROMEL~ (3).gif
-  - ~ROMEL~ (3).jpg
-  - ~ROMEL~ (36).jpg
-  - ~ROMEL~ (4).jpg
-  - ~ROMEL~ (5).jpg
-- image_insert.php
-- image_list.php
-- image_save.php
-- index.php
-- index_06_04_2014.html
-- jquery-1.8.0.min.js
-- links.xml
-- livesearch.php
-- Login_Request.php
-- logo.php
-- logo_for_index.php
 - logs
-- Log_Out.php
-- mail.php
-- Main.php
-- Mark_Insert.php
-- Mark_List.php
-- Mark_Save.php
-- menu.php
-- menu_for_index.php
-- Message_Delete.php
-- Message_List_for_Admin.php
-- Message_List_personal.php
-- Message_Save.php
-- Message_Save_to_your_friend.php
-- Message_Sent_Notification.php
-- My_Profile.php
-- My_Profile_Staff.php
-- My_Profile_Teacher.php
-- My_profile_Teacher_Edit.php
-- my_profile_teacher_update.php
-- News_Delete.php
-- News_Edit.php
-- News_Insert.php
-- News_Save.php
-- News_Update.php
-- nokib2.css
-- Notice_Edit.php
-- Notice_Update.php
-- null.php
-- page.inc.php
-- page.inc2.php
-- Password_Edit.php
-- Password_Update.php
-- pear-installer.php
-- php_sendmail_upload1.php
-- php_sendmail_upload2.php
-- Profile_List.php
-- Programing_Contest_Club.php
-- projects.php
-- Project_Gallery.php
+- project_structure.text
 - public
   - .htaccess
   - index.php
 - Read me
   - semester update query.txt
 - README.md
-- reference_delete.php
-- reference_edit.php
-- Reference_List.php
-- Reference_List_All.php
-- Reference_Save.php
-- Reference_Save_Confirmation.php
-- Reference_Update.php
-- Reference_Upload.php
-- Research_Publication_Club.php
-- reset_pass.php
-- reset_pass_request.php
-- Review_Update.php
-- RFC822.php
-- search.php
-- semester_students.php
-- Semister_Insert.php
-- Semister_Save.php
-- send-email-form.php
-- send_message_to_admin.php
-- send_message_to_your_friend.php
-- sidebar.php
-- sidebar_for_index.php
-- sign_up.php
-- sign_up_notification.php
-- Sign_Up_Review.php
-- Sign_Up_Review_Delete.php
-- sign_up_save.php
-- Single_Blog_List.php
-- Single_Mark_List.php
-- slider1.php
-- Software_Hardware_Club.php
-- Sports_Club.php
-- Staff_List.php
-- Student_Delete.php
-- Student_Edit.php
-- Student_Edit_10_05_2014.php
-- Student_Insert.php
-- Student_insert1.php
-- Student_List.php
-- Student_Save.php
-- Student_Update.php
-- Student_Update_10_05_2014.php
-- style.css
-- main_menu_style.css
-- table.css
-- Teacher_Profile_List.php
-- Upload_Project.php
-- Upload_Project_Save.php
-- Upload_Project_Save_Confirmation.php
-- upload_video_tutorial.php
-- upload_video_tutorial_save.php
-- upload_video_tutorial_save_confirmation.php
-- Video.php
-- video_tutorial.php
-- Video_Tutorial_Gallery.php
-- Web_Club.php

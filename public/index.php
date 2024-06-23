@@ -15,6 +15,7 @@ require_once BASE_DIR . '/app/controllers/UtilitiesController.php';
 require_once BASE_DIR . '/app/controllers/AdminController.php';
 require_once BASE_DIR . '/app/controllers/ClubController.php';
 require_once BASE_DIR . '/app/controllers/GalleryController.php';
+require_once BASE_DIR . '/app/controllers/MessageController.php';
 
 // Parse the URL to separate the path and query string
 $urlParts = parse_url($_SERVER['REQUEST_URI']);
@@ -120,13 +121,25 @@ $routes = [
     'admin/signup-delete-execute' => ['controller' => 'AdminController', 'action' => 'deleteExecuteSignup'],
     'admin/add-student' => ['controller' => 'AdminController', 'action' => 'addStudent'],
     'admin/save-student' => ['controller' => 'AdminController', 'action' => 'saveStudent'],
+    'admin/update-password' => ['controller' => 'AdminController', 'action' => 'updatePassword'],
+    'admin/save-password' => ['controller' => 'AdminController', 'action' => 'saveNewPassword'],
+    'admin/reset-password' => ['controller' => 'AdminController', 'action' => 'resetPassword'],
+    'admin/reset-password-confirm' => ['controller' => 'AdminController', 'action' => 'resetPasswordConfirm'],
     // Gallery
     'gallery/list' => ['controller' => 'GalleryController', 'action' => 'list'],
     'gallery/add' => ['controller' => 'GalleryController', 'action' => 'add'],
     'gallery/save' => ['controller' => 'GalleryController', 'action' => 'save'],
     'gallery/delete-confirm' => ['controller' => 'GalleryController', 'action' => 'deleteConfirm'],
     'gallery/delete-execute' => ['controller' => 'GalleryController', 'action' => 'deleteExecute'],
-
+    // Message
+    'message/admin-messages' => ['controller' => 'MessageController', 'action' => 'messageListAdmin'],
+    'message/personal-messages' => ['controller' => 'MessageController', 'action' => 'messageListPersonal'],
+    'message/compose' => ['controller' => 'MessageController', 'action' => 'composeMessage'],
+    'message/send' => ['controller' => 'MessageController', 'action' => 'sendMessage'],
+    'message/delete-confirm' => ['controller' => 'MessageController', 'action' => 'deleteConfirm'],
+    'message/delete-execute' => ['controller' => 'MessageController', 'action' => 'deleteExecute'],
+    'mail/compose' => ['controller' => 'MessageController', 'action' => 'composeMail'],
+    'mail/send' => ['controller' => 'MessageController', 'action' => 'sendMail'],
 ];
 
 // Find the matching route

@@ -4,7 +4,7 @@ class dbClass
     private $connection;
     function __construct()
     {
-        $this->mysqlConnect('localhost', 'root', '', 'uapians_mylab');
+        $this->mysqlConnect('localhost', 'root', '', 'uapians');
     }
     private function mysqlConnect($host, $userName, $password, $name)
     {

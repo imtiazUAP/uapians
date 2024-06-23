@@ -15,7 +15,7 @@
 				</div>
 				<button name="login" type="Submit" class="button button_blue">Log In</button>
 			</form>
-			<button name="reset_pass" onclick="window.open('reset_pass.php','_top')" class="button button_red">Forgot Password?</button>
+			<a href="<?= BASE_URL . '/admin/reset-password?keepThis=true&TB_iframe=true&height==400&width=600&do=edit&modal=true' ?>" class="thickbox button button_red" style="color: black">Forgot Password</a>
 			<button name="sign_up" onclick="window.open('<?= BASE_URL . '/student/sign-up' ?>','_top')" class="button button_blue">Sign Up</button>
 			<?php
 			if (isset($_REQUEST['login']) && !empty($_REQUEST['email'])) {
@@ -50,7 +50,7 @@
 				} elseif (empty($_SESSION['email'])) {
 					?>
 					<script language="JavaScript">
-						window.location = "reset_pass.php?message=wrong_login_id__or_pass";
+						window.location = "<?= BASE_URL . '/admin/reset-password?message=wrong_login_id__or_pass'  ?>";
 					</script>
 					<?php
 				}
@@ -67,14 +67,8 @@
 
 			</div>
 			<?php if (($userInfo['group_id'] == 1)) {?>
-				<a href='php_sendmail_upload1.php'>Send Email</a>
+				<a href="<?= BASE_URL . '/mail/compose' ?>">Send Email</a>
 			<?php } ?>
-
-			<div class="sidebar_send_message">
-				<ul>
-					<li><a href="send_message_to_your_friend.php">Send a Message...</a></li>
-				</ul>
-			</div>
 		</div>
 	<?php } ?>
 </div>
@@ -125,9 +119,9 @@
 				<?= $admin['SMName'] ?> <br>
 				University of Asia Pacific
 			</p>
-			<li><a href="send_message_to_admin.php">Send him a Message</a></li>
+			<li><a href="<?= BASE_URL . '/message/compose?receiver_user_id=' . $admin['user_id'] ?>">Send him a Message</a></li>
 			<?php if (!empty($userInfo['group_id']) && ($userInfo['group_id'] == 1)) { ?>
-				<li><a href="Message_List_for_Admin.php"> My Messages</a></li>
+				<li><a href="<?= BASE_URL . '/message/personal-messages?receiver_user_id=' . $admin['user_id'] ?>"> My Messages</a></li>
 			<?php } ?>
 		<?php } ?>
 	</ul>

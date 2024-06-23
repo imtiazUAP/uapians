@@ -156,6 +156,58 @@ class Admin {
         }
     }
 
+    public static function updatePassword($data) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        
+        $qry = "UPDATE
+                    user
+                SET 
+                    password = ?
+                WHERE
+                    user_id = ?";
+                
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            // TODO: Md5
+		    // $stmt->bind_param("si", md5($data['new_password']),$data['user_id']);
+            $stmt->bind_param(
+                "si",
+                $data['new_password'],
+                $data['user_id']
+            );
+            return $stmt->execute();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+    }
+
+    public static function updateRecovery($recovery, $userId) {
+        $dbconnect = new dbClass();
+        $connection = $dbconnect->getConnection();
+        
+        $qry = "UPDATE
+                    user
+                SET 
+                    recovery = ?
+                WHERE
+                    user_id = ?";
+                
+        $stmt = $connection->prepare($qry);
+        if ($stmt) {
+            $stmt->bind_param(
+                "si",
+                $recovery,
+                $userId
+            );
+            return $stmt->execute();
+        } else {
+            die("Query failed: " . $connection->error);
+        }
+
+    }
+
 
     public static function getUserByEmail($email) {
         $dbconnect = new dbClass();

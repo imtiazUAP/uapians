@@ -42,7 +42,7 @@ class CourseController extends BaseController
             $success = Course::courseSave($data);
 
             if ($success) {
-                header('Location: ' . BASE_URL . '/course/add?message=Course_Saved+Successfully');
+                header('Location: ' . BASE_URL . '/course/add?message=Course+Saved+Successfully');
             } else {
                 header('Location: ' . BASE_URL . '/course/add?message=Course+Save+Failed');
             }
